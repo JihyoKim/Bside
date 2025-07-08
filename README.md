@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 # Bside
 =======
+김나영 수정했습니다
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
