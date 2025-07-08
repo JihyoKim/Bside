@@ -1,5 +1,6 @@
-.BottomNav {position: fixed; left: 0; bottom: 0; z-index: 9990;}
-/* nav {position: fixed; left: 0; bottom: 0; width: 393px; z-index: 9999; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
-nav a { flex: 1; text-align: center; color: white; text-decoration: none; font-size: 14px; } */
+.BottomNav {position: absolute; left: 0; bottom: 0; z-index: 9990;}
 .BottomNav img {display: inline;}
 .BottomNav img {vertical-align: bottom;}
+
+/* nav {position: fixed; left: 0; bottom: 0; width: 393px; z-index: 9999; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+nav a { flex: 1; text-align: center; color: white; text-decoration: none; font-size: 14px; } */

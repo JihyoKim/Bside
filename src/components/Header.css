@@ -1,1 +1,19 @@
-.tempImgTop {position: fixed; left: 0; top: 0; z-index: 9999;}
+header {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #000;
+  }
+  
+  .logo {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .tempImgTop {
+    display: block;
+    width: 100%;
+    max-width: 393px; /* ✨ 중요: 부모보다 안 커지게 함 */
+    height: auto;
+  }
