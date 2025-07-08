@@ -10,6 +10,7 @@ import Media from '../pages/ArtistPage/Media';
 import Notice from '../pages/artistPage/Notice';
 import Event from '../pages/artistPage/Event';
 import Fan from '../pages/artistPage/Fan';
+import MoreArtist from '../pages/MoreArtist';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path='music' element={<Music />} />
         <Route path='shop' element={<Shop />} />
         <Route path='mypage' element={<MyPage />} />
+        <Route path='moreArtist' element={<MoreArtist />} />
         <Route path='artistpage' element={<ArtistPage />} >
           <Route index element={<Media />} />
           <Route path='media' element={<Media />} />
