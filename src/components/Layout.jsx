@@ -21,7 +21,7 @@ const Layout = () => {
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div style={{ display: 'flex', minHeight: '100vh' }}>
       <HeaderComponent />
       <main style={{ flex: 1, /*padding: '20px'*/ }}>
         <Outlet />

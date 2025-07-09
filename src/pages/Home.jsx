@@ -13,7 +13,7 @@ const Home = () => {
     <div className="home-container">
       <ArtistList />
       <MainBanner />
-      <NewItems />
+      {/* <NewItems /> */}
       <MyArtistStroy />
       <ArtistFeed />
       <EventBanner />
