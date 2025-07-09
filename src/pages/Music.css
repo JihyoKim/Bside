@@ -1,7 +1,4 @@
-.music-container { position: relative; padding-bottom: 90px; }
-.lyrics { position: fixed; bottom: -100%; left: 0; max-height: 100vh; overflow-y: auto; background: #fff; transition: bottom 0.3s ease-in-out; box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15); z-index: 1000; }
-.lyrics.show { bottom: 0; }
-.tab-buttons { position: absolute; top: 80px; left: 0; width: 100%; z-index: 10; display: flex; justify-content: center; gap: 80px; }
-.tab-buttons button { padding: 8px 16px; background: #eee; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
-.tab-buttons button.active { background: #333; color: #fff; }
-/* .lyrics-content { text-align: center; } */
+.music-container {
+    position: relative;
+    padding-bottom: 90px; /* BottomNav 여백 */
+  }

@@ -1,0 +1,67 @@
+.lyrics-panel {
+    position: fixed;
+    left: 0;
+    background: #fff;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    transform: translateY(100%);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .lyrics-panel.show {
+    transform: translateY(0);
+  }
+  
+  .lyrics-tabs {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .lyrics-tabs button {
+    flex: 1;
+    padding: 12px 0;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+  }
+  
+  .lyrics-tabs button.active {
+    border-bottom: 3px solid #ff7fa4;
+    color: #ff7fa4;
+  }
+  
+  .lyrics-content {
+    flex: 1;
+    overflow: hidden; /* 여기서 스크롤 안 함 */
+    position: relative;
+    padding-bottom: 200px; 
+
+  }
+  
+  .lyrics-scroll-inner {
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+  }
+  
+  /* 스크롤바 */
+  .lyrics-scroll-inner::-webkit-scrollbar {
+    width: 6px;
+  }
+  .lyrics-scroll-inner::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 127, 164, 0.6);
+    border-radius: 3px;
+  }
+  

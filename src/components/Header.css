@@ -1,8 +1,9 @@
 header {
-    padding: 0;
-    margin: 0;
+    position: fixed;
+    top: 0;
     box-sizing: border-box;
     background: #000;
+    z-index: 9999;
   }
   
   .logo {
@@ -17,3 +18,5 @@ header {
     max-width: 393px; /* ✨ 중요: 부모보다 안 커지게 함 */
     height: auto;
   }
+
+  .lyrics-content {min-height: 100vh;}

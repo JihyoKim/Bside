@@ -1,12 +1,9 @@
-import React from 'react';
-import lyricsPron from '../../assets/music2.png';
+import './Lyrics.css';
 
-const LyricsPron = () => {
-  return (
-    <div>
-        <img src={lyricsPron} alt="" />
-    </div>
-  )
-}
-
+const LyricsPron = () => (
+  <>
+    <p><strong>가사:</strong> Hello, it's me</p>
+    <p><strong>발음:</strong> 헬로, 잇츠 미</p>
+  </>
+);
 export default LyricsPron;
