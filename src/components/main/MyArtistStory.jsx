@@ -14,9 +14,10 @@ const MyArtistStroy = () => {
   return (
     <div className='artist-story-wrapper'>
       <div className="artist-story-text">나의 아티스트 스토리</div>
+      <div className="artist-story-slider">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
-        slidesPerView="auto"
+        slidesPerView={'auto'}
         spaceBetween={8}
         // navigation
         pagination={{clickable:true}}
@@ -91,7 +92,8 @@ const MyArtistStroy = () => {
             </div>
           </div>
         </SwiperSlide>
-      </Swiper>      
+      </Swiper>   
+      </div>   
     </div>
   );
 };

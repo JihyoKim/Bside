@@ -1,1 +1,6 @@
-.home-container {padding: 60px 0 90px;}
+.home-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 60px 3.08vw 90px;
+    box-sizing: border-box;
+}

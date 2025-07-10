@@ -20,6 +20,8 @@ const MainBanner = () => {
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={1}
+        centeredSlides={true}
+        spaceBetween={12}
         // navigation
         pagination={{clickable:true}}
         autoplay={{delay: 3000}}

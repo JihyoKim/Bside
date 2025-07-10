@@ -1,0 +1,126 @@
+.home-notice-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    overflow: visible;
+    border-radius: 20px; /* 둥근 모서리 */
+    position: relative; /* 검은 배경 혹은 필요 시 덮어쓰기 */
+  }
+  
+  /* Swiper 슬라이드 크기 및 스타일 */
+  .home-notice-wrapper .swiper-slide {
+    width: 320px; /* 이미지와 텍스트 합친 너비 조정 */
+    flex-shrink: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* 카드 전체 */
+  .home-notice-wrapper .artist-card {
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* 이미지 */
+  .home-notice-wrapper .artist-card .image-wrapper {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  .home-notice-wrapper .artist-card .image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px 20px 0 0; /* 위쪽만 둥글게 */
+    object-fit: cover;
+  }
+  
+  /* 텍스트 정보 박스 */
+  .home-notice-wrapper .artist-card .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110px; /* 필요에 따라 조절 */
+    background: rgba(0, 0, 0, 0.6); /* 반투명 검정 배경 */
+    padding: 16px 20px;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 0 0 20px 20px; /* 아래쪽 둥글게 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* 핑크색 강조 텍스트 */
+  .home-notice-wrapper .artist-card .info .pink {
+    color: #e9c4cd;
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-size: 16px;
+  }
+  
+  /* 제목 */
+  .home-notice-wrapper .artist-card .info .title {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    line-height: 1.2;
+  }
+  
+  /* 본문 */
+  .home-notice-wrapper .artist-card .info p {
+    font-size: 12px;
+    line-height: 1.3;
+    white-space: pre-wrap; /* 줄바꿈 적용 */
+    margin: 0;
+    color: #ddd;
+  }
+  
+  /* "Notice" 텍스트 스타일 */
+  .home-notice-wrapper .home-notice-text {
+    padding: 20px 0 12px 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0,0,0,0.7);
+    pointer-events: none;
+  }
+  
+  /* 댓글 입력창(하단에 추가하려면) */
+  .home-notice-wrapper .comment-input {
+    position: relative;
+    margin-top: 12px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .home-notice-wrapper .comment-input input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 14px;
+  }
+  
+  .home-notice-wrapper .comment-input button {
+    background: transparent;
+    border: none;
+    color: #e9c4cd;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  

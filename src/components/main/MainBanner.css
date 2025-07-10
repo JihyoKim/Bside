@@ -1,3 +1,10 @@
+.main-banner-wrapper {
+  width: clamp(300px, 93.6vw, 100%);
+  /* margin: 0 auto; */
+  box-sizing: border-box;
+  }
+
+.main-banner-wrapper .swiper {border-radius: 15px;}
 .main-banner-wrapper .swiper-slide img {width: 100%; object-fit:cover; display: block;}
 .main-banner-wrapper .swiper-pagination-bullet { background-color: #ccc;opacity: 1; }
 .main-banner-wrapper .swiper-pagination-bullet-active { background-color: #e9c4cd;}
@@ -8,7 +15,6 @@
 .main-banner-wrapper .swiper-button-next::after,
 .main-banner-wrapper .swiper-button-prev::after { font-size: 24px;}
 
-.main-banner-wrapper {width: clamp(300px, 93.6vw, 400px); margin: 0 auto;}
 .main-banner-wrapper .now-open-text { padding-bottom: 16px;
     color: white;
     font-size: 18px ;

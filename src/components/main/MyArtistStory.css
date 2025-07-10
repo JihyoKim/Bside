@@ -1,4 +1,18 @@
-.artist-story-wrapper {width: clamp(300px, 93.6vw, 400px); margin: 0 auto; overflow: visible;}
+.artist-story-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    overflow: visible;
+  }
+.artist-story-wrapper .artist-story-slider {
+    width: calc(100% + 6.16vw);
+    margin-left: -3.08vw;
+    padding-left: 3.08vw;  /* 내부 슬라이드 좌측 간격 유지 */
+    overflow: visible;
+    box-sizing: border-box;
+  }
+
+
 .artist-story-wrapper .artist-story-text {padding: 40px 0 16px;
     color: white;
     font-size: 18px ;
@@ -8,7 +22,10 @@
     pointer-events: none; 
 }
 
-.artist-story-wrapper .swiper-slide {width: 196px;}
+.artist-story-wrapper .swiper-slide {
+    width: 196px;
+    flex-shrink: 0;   /* 줄어들지 않게 */
+  }
 
 
 .artist-story-wrapper .info { padding: 16px 8px; background: #262626; width: 196px;}
