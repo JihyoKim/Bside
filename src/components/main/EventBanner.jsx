@@ -14,7 +14,7 @@ import event1 from '../../assets/Home_Event/01x2.png'
 const EventBanner = () => {
   return (
     <div className='event-banner-wrapper'>
-      <div className="event-test">Events</div>
+      <div className="event-text">Events</div>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={1}

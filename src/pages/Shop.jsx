@@ -1,5 +1,6 @@
 import React from 'react'
 import ShopTemp from '../components/ShopTemp'
+// import './Shop.css'
 
 const Shop = () => {
   return (

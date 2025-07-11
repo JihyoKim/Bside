@@ -1,6 +1,8 @@
 .home-container {
-    width: 100%;
+    width: 100vw;
     max-width: 480px;
-    padding: 60px 3.08vw 90px;
+    min-width: 320px;
+    padding: 80px clamp(9.56px, 3.08vw, 14.78px) 120px;
     box-sizing: border-box;
+    background: #000 url('../assets/mainBg.png') no-repeat center / cover ;
 }

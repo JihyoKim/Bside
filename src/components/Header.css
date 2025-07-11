@@ -1,25 +1,38 @@
+.fixed-header {
+  position: fixed;
+  width: 100vw;
+  max-width: 480px;
+  top: 0;
+  height: 80px;
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  z-index: 1000;
+}
 
-header {
-    position: fixed;
-    top: 0;
-    box-sizing: border-box;
-    background: #000;
-    z-index: 9999;
-  }
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 5%;
+}
+
+.dropdown-icon {
+  margin-top: 6px;
+  width: 12px;
+  height: 6px;
   
-  .logo {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  
-  .tempImgTop {
-    display: block;
-    width: 100%;
-    max-width: 393px; /* ✨ 중요: 부모보다 안 커지게 함 */
-    height: auto;
-  }
+}
 
-  .lyrics-content {min-height: 100vh;}
+.header-right {
+  display: flex;
+  align-items: center;
+  padding-top: 5%;
+}
 
-
+.alarm-icon {
+  width: 30px;
+}

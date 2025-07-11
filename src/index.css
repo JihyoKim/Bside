@@ -4,14 +4,62 @@
 	font-style: normal;
 	font-display: swap;
 	src: url('/public/PretendardVariable.woff2') format('woff2-variations');
-}
-
-
-* {font-family: 'Pretendard Variable'; font-weight: bold; box-sizing: border-box; margin: 0; padding: 0;}
-a {text-decoration: none; color: inherit;}
-body {display: flex; margin: 0; padding: 0; box-sizing: border-box; overflow-x: hidden; background: #555; }
-#root {width: 100%; max-width: 480px; min-width: 320px; margin: 0 auto;  position: relative;background: rgb(255, 236, 239); overflow: hidden;}
-
-/* @media (max-width: 1024px) {
-	#root { transform: translateX(-50%); }
-} */
+  }
+  
+  * {
+	font-family: 'Pretendard Variable';
+	font-weight: bold;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  
+  a {
+	text-decoration: none;
+	color: inherit;
+  }
+  
+  html, body {
+	height: 100%;
+	overflow: hidden;            /* 전체 페이지 스크롤 숨기기 */
+	-ms-overflow-style: none;    /* IE, Edge */
+	scrollbar-width: none;       /* Firefox */
+  }
+  
+  body::-webkit-scrollbar {
+	display: none;               /* Chrome, Safari */
+  }
+  
+  body {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	background: #555 url('assets/indexBg.png') no-repeat center center;
+	background-size: 100% 100%;
+  }
+  
+  /* 기본: 좌측 기준으로 정렬 */
+  #root {
+	position: relative;
+	width: 100%;
+	max-width: 480px;
+	min-width: 320px;
+	height: 100vh;
+	background: #050305;
+	overflow-y: auto;
+  
+	margin-left: 50%;    /* 화면 가로의 중간쯤에서 시작 */
+	margin-right: auto;
+  }
+  
+  #root::-webkit-scrollbar {
+	display: none;
+  }
+  
+  /* 👉 화면 너비가 1024px 이하일 경우: 가운데 정렬로 전환 */
+  @media (max-width: 1024px) {
+	#root {
+	  margin: 0 auto;
+	}
+	body {background: #000;}
+  }
