@@ -8,7 +8,7 @@ import downWhite from '../assets/symbol/white/down.png'
 
 const Header = () => {
   return (
-    <header className="fixed-header">
+    <header className="fixed-header black">
       <div className="header-left">
         <img src={logo} alt="B-side" className="logo" />
         <img src={downWhite} alt="dropdown" className="dropdown-icon" />

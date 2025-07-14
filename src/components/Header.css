@@ -4,13 +4,20 @@
   max-width: 480px;
   top: 0;
   height: 80px;
-  background-color: #000;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
   z-index: 1000;
+}
+
+.fixed-header.black {
+  background-color: #000;
+}
+
+.fixed-header.pink {
+  background-color: #FFCFD7;
 }
 
 .header-left {
