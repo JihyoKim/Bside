@@ -1,10 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Music.css';
 import albumImage from '../assets/sampleAlbum.png';
 import albumIcon from '../assets/icon_album.png';
 import questionIcon from '../assets/icon_question.png';
+import LyricsPanel from '../components/music/LyricsPanel';
 
 const Music = () => {
+  const [showLyrics, setShowLyrics] = useState(false);
+  const [lyricsStyle, setLyricsStyle] = useState({});
+
+  useEffect(() => {
+    const handler = () => setShowLyrics(false);
+    window.addEventListener('closeLyricsPanel', handler);
+    return () => window.removeEventListener('closeLyricsPanel', handler);
+  }, []);
+  
+  useEffect(() => {
+    const updateLyricsPosition = () => {
+      const header = document.querySelector('header');
+      const headerHeight = header?.offsetHeight || 80; // 헤더 높이
+      const bottomNavHeight = 90;
+
+      setLyricsStyle({
+        top: `${headerHeight}px`,
+        left: 0,
+        width: '100%',
+        height: `calc(100vh - ${headerHeight + bottomNavHeight}px)`,
+      });
+    };
+
+    updateLyricsPosition();
+    window.addEventListener('resize', updateLyricsPosition);
+    return () => window.removeEventListener('resize', updateLyricsPosition);
+  }, []);
+
   return (
     <div className="music-container">
       <div className="music-top">
@@ -22,7 +51,10 @@ const Music = () => {
       </div>
 
       <div className="music-bottom">
-        <div className="lyrics-preview">
+        <div
+          className="lyrics-preview"
+          onClick={() => setShowLyrics(true)}
+        >
           <p className="pink">영원할 줄 알았던 사람도 저물고</p>
           <p>이젠 그 흔한 친구마저 떠나 가네요</p>
         </div>
@@ -52,6 +84,15 @@ const Music = () => {
           </div>
         </div>
       </div>
+
+      {/* 가사 패널 */}
+      {showLyrics && (
+        <LyricsPanel
+          visible={showLyrics}
+          onClose={() => setShowLyrics(false)}
+          style={lyricsStyle}
+        />
+      )}
     </div>
   );
 };
