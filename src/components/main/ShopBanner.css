@@ -1,0 +1,29 @@
+.shop-banner-wrapper {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;     /* 뷰포트 너비로 꽉 채우기 */
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .shop-banner-wrapper .swiper-slide img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+
+.shop-banner-wrapper .swiper {margin-top: 47px; }
+.shop-banner-wrapper .swiper-slide img {width: 100%; object-fit:cover; display: block;}
+.shop-banner-wrapper .swiper-pagination-bullet { background-color: #ccc;opacity: 1; }
+.shop-banner-wrapper .swiper-pagination-bullet-active { background-color: #e9c4cd;}
+
+
+
+.shop-banner-wrapper .swiper-pagination {
+    position: relative;  /* 기본 absolute를 relative로 */
+    margin-top: 16px;
+    text-align: center;     /* 또는 center, 원하는 위치 */
+    padding-left: 8px;    /* 카드와 정렬 맞추기 위함 */
+}

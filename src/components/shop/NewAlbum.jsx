@@ -1,5 +1,5 @@
 import React from 'react';
-import shopTempImg from '../assets/shop.png';
+import newAlbum from '../../assets/Shop/newAlbum.png';
 
 const ShopTemp = () => {
   return (
@@ -8,7 +8,7 @@ const ShopTemp = () => {
         minWidth: '320px',
         maxWidth: '480px',
     }}>
-      <img src={shopTempImg} alt="Shop Temp. Img" style={{ width: '100%' }} />
+      <img src={newAlbum} alt="Shop Temp. Img" style={{ width: '100%' }} />
     </div>
   );
 };

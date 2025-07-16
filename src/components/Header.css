@@ -9,7 +9,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 16px;
-  z-index: 1000;
+  z-index: 2000;
+  transition: background-color 0.3s ease;
 }
 
 .fixed-header.black {
@@ -17,7 +18,7 @@
 }
 
 .fixed-header.pink {
-  background-color: #FFCFD7;
+  background-color: transparent;
 }
 
 .header-left {
@@ -25,6 +26,7 @@
   align-items: center;
   gap: 14px;
   padding-top: 5%;
+  padding-left: 5px;
 }
 
 .dropdown-icon {
@@ -41,5 +43,14 @@
 }
 
 .alarm-icon {
-  width: 30px;
+  height: 27px;
+}
+
+.message-icon {
+  height: 27px;
+  padding-right: 16px;
+}
+
+.menu-icon {
+  width: 25px;
 }

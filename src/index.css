@@ -19,10 +19,13 @@
   }
   
   html, body {
-	height: 100%;
-	overflow: hidden;            /* 전체 페이지 스크롤 숨기기 */
-	-ms-overflow-style: none;    /* IE, Edge */
-	scrollbar-width: none;       /* Firefox */
+	height: auto;
+	overflow: auto;
+	scroll-behavior: smooth;
+  }
+
+  html::-webkit-scrollbar {
+	display: none;
   }
   
   body::-webkit-scrollbar {
@@ -43,10 +46,10 @@
 	width: 100%;
 	max-width: 480px;
 	min-width: 320px;
-	height: 100vh;
 	background: #050305;
-	overflow-y: auto;
-  
+	height: auto;
+	overflow-y: visible;
+
 	margin-left: 50%;    /* 화면 가로의 중간쯤에서 시작 */
 	margin-right: auto;
   }

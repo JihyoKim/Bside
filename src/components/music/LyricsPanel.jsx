@@ -4,7 +4,7 @@ import LyricsTrans from './LyricsTrans';
 import LyricsPron from './LyricsPron';
 import './Lyrics.css';
 
-const LyricsPanel = ({ visible, onClose, style }) => {
+const LyricsPanel = ({ visible, onClose }) => {
   const [selectedTab, setSelectedTab] = useState('lyrics');
 
   const renderContent = () => {
@@ -23,7 +23,6 @@ const LyricsPanel = ({ visible, onClose, style }) => {
   return (
     <div
       className={`lyrics-panel ${visible ? 'show' : ''}`}
-      style={style}
     >
       <div className="lyrics-tabs">
         <button className={selectedTab === 'lyrics' ? 'active' : ''} onClick={() => setSelectedTab('lyrics')}>가사</button>

@@ -3,85 +3,103 @@ import './Lyrics.css';
 const LyricsOnly = () => (
     <p style={{ whiteSpace: 'pre-wrap' }}>
       {`
-  [Intro]
-  Hey, hey
-  Hey, hey
-  Hey
-  
-  [Verse 1: Jinu]
-  Don't want you, need you
-  Yeah, I need you to fill me up
-  마시고 마셔 봐도
-  성에 차지 않아
-  Got a feeling that, oh, yeah (Yeah)
-  You could be everything that
-  That I need (Need), taste so sweet (Sweet)
-  Every sip makes me want more, yeah
-  
-  [Verse 2: Mystery, Romance, Abby]
-  Lookin' like snacks 'cause you got it like that (Woo)
-  Take a big bite, want another bite, yeah
-  너의 모든 걸 난 원해, 원해, 원해
-  너 말곤 모두 뻔해, 뻔해, 뻔해
-  When you're in my arms, I hold you so tight (So tight)
-  Can't let go, no, no, not tonight
-  
-  [Pre-Chorus: Jinu, Romance, All, Baby]
-  지금 당장 날 봐 시간 없잖아
-  넌 내꺼야 이미 알고 있잖아
-  'Cause I need you to need me
-  I'm empty, you feed me so refreshing
-  My little soda pop
-
-  [Chorus: All]
-You're all I can think of
-Every drop I drink up
-You're my soda pop
-My little soda pop
-Cool me down, you're so hot
-Pour me up, I won't stop
-You're my soda pop
-My little soda pop
-
-[Post-Chorus: All]
-My little soda pop
-
-[Verse 3: Baby, Abby]
-Uh, make me wanna flip the top
-한 모금에 you hit the spot
-Every little drip and drop, fizz and pop, ah
-소름 돋아 it's gettin' hot
-Yes, I'm sippin' when it's drippin' now
-It's done? I need a second round
-And pour a lot and don't you stop
-'Til my soda pop fizzles out
-
-[Pre-Chorus: Romance, Mystery, Abby, Romance & Mystery]
-꿈 속에 그려왔던 너
-난 절대 놓칠 수 없어
-널 원해 꼭
-I waited so long for a taste of soda
-So, the wait is over, baby
-Come and fill me up
-Just can't get enough
+Oh, oh
 Oh
 
+분명 나쁜 아이는 아니어도
+또 틀에 가두면, we break it
+Bum, no bigger than the girl next door
+무대 서면, we fake it
+No white collar, 근데 얜 좀 쳐
+When I put mans in their places
+모든 시선들은 날 따라와
+But we ain't even famous
 
-[Chorus: All]
-You're all I can think of
-Every drop I drink up
-You're my soda pop
-My little soda pop (Yeah, yeah)
-Cool me down, you're so hot
-Pour me up, I won't stop (Oh, oh)
-You're my soda pop
-My little soda pop
+Don't you try me, I want some more
+Don't you play me, we on the floor
+Don't you try me, I want some more
+We ain't even famous
+Don't you try me, I want some more
+Don't you play me, we on the floor
+Don't you try me, I want some more
+We ain't even famous
+See upcoming rap shows
+Get tickets for your favorite artists
 
-[Outro: Jinu]
-Ooh, ooh
-Ooh, ooh
-You're my soda pop
-Gotta drink every drop
+You might also like
+ALLDAY PROJECT - FAMOUS (Romanized)
+Genius Romanizations
+Gabriela
+KATSEYE
+WICKED
+ALLDAY PROJECT
+
+Money don't make friends, only got my fam
+Pull up with my M's and I make thе money dance
+Funny how it goes, but this is how it еnds
+This is how I live by the name Tarzzan
+I ain't even famous
+다들 날 보면 오, they say less
+And my kit in my whip is the latest
+내 가친 조 단위 임마 불러봐, name is The Greatest Unfamous
+
+느껴져 내 분위기
+When I walk, 다 돌아봐
+I be gettin' what I need
+Those things I've got
+Think it's going to my head
+Know you lookin' when I dance
+Take a quick pic for your friend
+내 이름 알아둬
+
+분명 나쁜 아이는 아니어도
+또 틀에 가두면, we break it
+Bum, no bigger than the girl next door
+무대 서면, we fake it
+No white collar, 근데 얜 좀 쳐
+When I put mans in their places
+모든 시선들은 날 따라와
+But we ain't even famous
+
+I'm stacking my dollars, 난 뿌리부터 달라
+초록 빛깔 color, 감출 수 없어, 나잖아 빛이
+Not even famous, but they wanna be us
+같은 공기지만 우린 너무 다른 위치
+비교 말어 걔넨 전부 구려
+똑같은 걸 해도, I do it better
+말해 뭐해, I'm a trendsetter
+ALLDAY, I show 'em, 끝없는 체력
+
+내 표적은 네 머리
+When I walk, 다 돌아봐
+I be gettin' what I need
+Those things I've got
+Think it's going to my head
+Know you lookin' when I dance
+Take a quick pic for your friend
+내 이름 알아둬
+
+분명 나쁜 아이는 아니어도
+또 틀에 가두면, we break it
+범 무서운지 모르고 덤벼
+겁 없이, I just face it
+No white collar, 근데 얜 좀 쳐
+When I put mans in their places
+모든 시선들은 날 따라와
+But we ain't even famous (We ain't even famous)
+
+(Don't) Don't you try me, I want some more
+(Don't) Don't you play me, we on the floor
+(Don't) Don't you try me, I want some more
+We ain't even famous
+(Don't) Don't you try me, I want some more
+(Don't) Don't you play me, we on the floor
+(Don't) Don't you try me, I want some more
+We ain't even famous
+
+다들 날 보면 오, they say less (Oh, oh)
+Bang— (Oh, oh)
+(Oh, oh-oh)
     `}
     </p>
 );

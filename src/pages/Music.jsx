@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Music.css';
-import albumImage from '../assets/sampleAlbum.png';
+import albumImage from '../assets/adpAlbum.png';
+import albumCD from '../assets/album_cd.png'
 import albumIcon from '../assets/icon_album.png';
 import questionIcon from '../assets/icon_question.png';
 import LyricsPanel from '../components/music/LyricsPanel';
@@ -37,15 +38,17 @@ const Music = () => {
   return (
     <div className="music-container">
       <div className="music-top">
-        <h2 className="song-title">Last Dance</h2>
+        <h2 className="song-title">FAMOUS</h2>
         <div className="time-bar">
-          <span>00:06</span>
-          <span>04:39</span>
+          <span>00:16</span>
+          <span>02:57</span>
         </div>
         <div className="album-art-wrap">
           <div className="album-art-frame">
             <img className="album-art" src={albumImage} alt="앨범" />
-            <div className="album-center-hole"></div>
+            <div className="album-center-hole">
+              <img className="album-cd" src={albumCD} alt="앨범" />
+            </div>
           </div>
         </div>
       </div>
@@ -55,8 +58,8 @@ const Music = () => {
           className="lyrics-preview"
           onClick={() => setShowLyrics(true)}
         >
-          <p className="pink">영원할 줄 알았던 사람도 저물고</p>
-          <p>이젠 그 흔한 친구마저 떠나 가네요</p>
+          <p className="pink">분명 나쁜 아이는 아니어도</p>
+          <p>또 틀에 가두면 we break it</p>
         </div>
 
         <div className="bottom-row">
@@ -86,13 +89,7 @@ const Music = () => {
       </div>
 
       {/* 가사 패널 */}
-      {showLyrics && (
-        <LyricsPanel
-          visible={showLyrics}
-          onClose={() => setShowLyrics(false)}
-          style={lyricsStyle}
-        />
-      )}
+      <LyricsPanel visible={showLyrics} onClose={() => setShowLyrics(false)} />
     </div>
   );
 };

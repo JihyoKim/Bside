@@ -1,11 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Profile from '../components/mypage/Profile';
+import Post from '../components/mypage/Post';
 
 const MyPage = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-export default MyPage
+  return (
+    <div className="mypage-container">
+      <Profile />
+      <Post onScrollToTop={scrollToTop} />
+    </div>
+  );
+};
+
+export default MyPage;

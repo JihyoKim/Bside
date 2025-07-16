@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Header.css';
-import goback from '../assets/symbol/black/goback.png';
-import alarm from '../assets/symbol/alarmIcon_black.svg';
+import goback from '../assets/symbol/white/goback.png';
+import alarm from '../assets/symbol/alarmIcon_white_pink.svg';
 
 const Header_Sub = () => {
   const navigate = useNavigate();

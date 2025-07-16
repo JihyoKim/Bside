@@ -1,14 +1,14 @@
 .music-container {
   width: 100%;
   max-width: 480px;
-  margin: 0 auto;
+  margin: 0 auto 120px;
   box-sizing: border-box;
   color: #fff;
   font-family: 'Pretendard Variable';
 }
 
 .music-top {
-  background-color: #FFCFD7;
+  background: linear-gradient(to bottom, #010E18, #05497A);
   height: 250px;
   padding: 80px 20px 40px;
   text-align: center;
@@ -19,7 +19,7 @@
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #000;
+  color: #fff;
   text-align: left;
 }
 
@@ -31,8 +31,8 @@
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  font-weight: 600;
-  color: #333;
+  font-weight: 400;
+  color: #fff;
   padding: 0 12px 10px;
 }
 
@@ -65,16 +65,16 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 40px;
-  height: 40px;
-  background: #000;
+  /* width: 40px; */
+  /* height: 40px; */
+  /* background: #000; */
   border-radius: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
 }
 
 .music-bottom {
-  padding: 160px 30px 0px;
+  padding: 160px 30px 8px;
   background-color: #000;
   display: flex;
   flex-direction: column;
@@ -89,9 +89,10 @@
   color: #CECECE;
   line-height: 2;
   text-align: center;
+  cursor: pointer;
 }
 
-.lyrics-preview .pink {color: #FFCFD7;}
+.lyrics-preview .pink {color: #A7DAFF;}
 
 .bottom-row {
   display: flex;
@@ -101,7 +102,7 @@
 }
 
 .album-card {
-  background: #fff;
+  background: #969696;
   color: #000;
   border-radius: 36px;
   width: 48%;
@@ -130,7 +131,7 @@
 .album-add-btn {
   font-size: 28px;
   background: #000;
-  color: #fff;
+  color: #969696;
   border: none;
   border-radius: 50%;
   width: 48px;
@@ -141,7 +142,7 @@
 
 .album-card .sub {
   font-size: 11px;
-  color: #666;
+  color: #333;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -164,7 +165,7 @@
 .streaming-stats h4 {
   font-size: 15px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin: 24px 0 24px;
   color: #fff;
   text-align: center;
 }
@@ -184,12 +185,12 @@
 
 .reward-tip {
   font-size: 12px;
-  margin-top: 10px;
+  margin: 28px 0 24px;
   color: #aaa;
 }
 
 .reward-tip .highlight {
-  color: #ff7fa4;
+  color: #A7DAFF;
   font-weight: bold;
   text-decoration: underline;
 }
