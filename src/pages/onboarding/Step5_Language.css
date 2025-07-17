@@ -1,0 +1,140 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');  /* 일본어 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap');  /* 중국어 간체 */
+
+/* 전체 컨테이너 기본 폰트 Pretendard */
+.step5-container {
+  padding: 40px 12px;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* 일본어 선택 시: 하위 모든 요소에 Noto Sans JP 적용 */
+.step5-container.jp-font,
+.step5-container.jp-font * {
+  font-family: 'Noto Sans JP', sans-serif !important;
+}
+
+/* 중국어 선택 시: 하위 모든 요소에 Noto Sans SC 적용 */
+.step5-container.zh-font,
+.step5-container.zh-font * {
+  font-family: 'Noto Sans SC', sans-serif !important;
+}
+
+.step5-header {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.step5-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 19px;
+}
+
+.step5-title {
+  margin: 40px 0 45px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.step5-subtext {
+  color: #FFA3EB;
+  font-size: 13px;
+}
+
+.step5-image {
+  width: 25%;
+  display: block;
+  margin: 40px auto;
+}
+
+.step5-dropdown {
+  margin: 0 auto 12px;
+  border: 1px solid #FFA3EB;
+  border-radius: 10px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  cursor: pointer;
+  background-color: #000;
+}
+
+.step5-dropdown-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.step5-dropdown-menu {
+  position: absolute;
+  bottom: 4%;
+  left: 2.5%;
+  width: 95%;
+  height: 55%;
+  background: white;
+  color: black;
+  border-radius: 30px;
+  padding: 20px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.step5-dropdown-menu h4 {
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.step5-guide {
+  font-size: 13px;
+  margin-bottom: 12px;
+  color: #999;
+}
+
+.step5-dropdown-item {
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.step5-dropdown-item.selected {
+  color: #FFA3EB;
+  font-weight: bold;
+}
+
+.step5-next-btn {
+  margin-top: auto;
+  background-color: #FFA3EB;
+  color: black;
+  padding: 14px 0;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+}
