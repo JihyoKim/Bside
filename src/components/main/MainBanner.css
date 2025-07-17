@@ -15,7 +15,8 @@
 .main-banner-wrapper .swiper-button-next::after,
 .main-banner-wrapper .swiper-button-prev::after { font-size: 24px;}
 
-.main-banner-wrapper .now-open-text { padding-bottom: 16px;
+.main-banner-wrapper .now-open-text { 
+  padding: 30px 0 12px 12px;
     color: white;
     font-size: 18px ;
     font-weight: bold;

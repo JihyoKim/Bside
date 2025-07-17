@@ -15,6 +15,10 @@ import Layout from '../components/Layout';
 import Home from '../pages/Home';
 import Music from '../pages/Music';
 import Shop from '../pages/Shop';
+import GDShop from '../pages/shopPage/GDShop'
+import ADPShop from '../pages/shopPage/ADPShop'
+import RiizeShop from '../pages/shopPage/RiizeShop'
+import BPShop from '../pages/shopPage/BPShop'
 import MyPage from '../pages/MyPage';
 import MoreArtist from '../pages/MoreArtist';
 
@@ -40,19 +44,25 @@ const App = () => {
       {/* 👉 메인 앱 라우팅 (공통 Layout 포함) */}
       <Route path="/main" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="music" element={<Music />} />
-        <Route path="shop" element={<Shop />} />
-        <Route path="mypage" element={<MyPage />} />
-        <Route path="moreArtist" element={<MoreArtist />} />
-        
-        {/* 아티스트 상세 페이지 내 탭 구조 */}
-        <Route path="artistpage" element={<ArtistPage />}>
+
+        <Route path='music' element={<Music />} />
+        <Route path='shop' element={<Shop />} >
+          <Route index element={<GDShop />} />
+          <Route path='gdshop' element={<GDShop />} />
+          <Route path='adpshop' element={<ADPShop />} />
+          <Route path='riizeshop' element={<RiizeShop />} />
+          <Route path='blackpinkshop' element={<BPShop />} />
+        </Route>
+        <Route path='mypage' element={<MyPage />} />
+        <Route path='moreArtist' element={<MoreArtist />} />
+        <Route path='artistPage' element={<ArtistPage />} >
           <Route index element={<Media />} />
           <Route path="media" element={<Media />} />
           <Route path="notice" element={<Notice />} />
           <Route path="event" element={<Event />} />
           <Route path="fan" element={<Fan />} />
         </Route>
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
   );

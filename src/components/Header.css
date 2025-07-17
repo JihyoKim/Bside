@@ -1,25 +1,56 @@
+.fixed-header {
+  position: fixed;
+  width: 100vw;
+  max-width: 480px;
+  top: 0;
+  height: 80px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  z-index: 2000;
+  transition: background-color 0.3s ease;
+}
 
-header {
-    position: fixed;
-    top: 0;
-    box-sizing: border-box;
-    background: #000;
-    z-index: 9999;
-  }
+.fixed-header.black {
+  background-color: #000;
+}
+
+.fixed-header.pink {
+  background-color: transparent;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 5%;
+  padding-left: 5px;
+}
+
+.dropdown-icon {
+  margin-top: 6px;
+  width: 12px;
+  height: 6px;
   
-  .logo {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  
-  .tempImgTop {
-    display: block;
-    width: 100%;
-    max-width: 393px; /* ✨ 중요: 부모보다 안 커지게 함 */
-    height: auto;
-  }
+}
 
-  .lyrics-content {min-height: 100vh;}
+.header-right {
+  display: flex;
+  align-items: center;
+  padding-top: 5%;
+}
 
+.alarm-icon {
+  height: 27px;
+}
 
+.message-icon {
+  height: 27px;
+  padding-right: 16px;
+}
+
+.menu-icon {
+  width: 25px;
+}

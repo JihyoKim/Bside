@@ -1,0 +1,71 @@
+.artist-scroll-outer {
+  overflow: hidden;
+  width: 100%;
+  max-width: 480px; /* 부모 최대 너비와 일치 */
+  box-sizing: border-box;
+}
+  
+  .artist-scroll-outer .artist-scroll-inner {
+    display: flex;
+    align-items: center;
+    cursor: grab;
+    min-width: max-content;
+  }
+  
+  .artist-scroll-outer .artist-box-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding-top: 10px;
+    /* padding: 10px 12px; */
+    gap: 14px;
+    flex-shrink: 0;
+  }
+  
+  .artist-scroll-outer .artist-box {
+    display: flex;
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    padding: 10px 12px;
+    gap: 14px;
+    flex-shrink: 0;
+  }
+  
+  .artist-scroll-outer .artist-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    flex-shrink: 0;
+  }
+  
+  .artist-scroll-outer .artist-img {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .artist-scroll-outer .artist-name {
+    font-size: 11px;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    margin-top: 6px;
+  }
+  
+  .artist-scroll-outer .artist-add-btn {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  
+  .artist-scroll-outer .artist-add-btn img {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    object-fit: cover;
+  }
+   

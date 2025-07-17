@@ -1,126 +1,200 @@
+/* 전체 래퍼 */
 .home-notice-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  overflow: visible;
+  position: relative;
+}
+
+/* Swiper 패딩으로 오른쪽 슬라이드 여유 확보 */
+.notice-swiper {
+  padding-right: 20px;
+  overflow: visible;
+}
+
+/* 텍스트 "Notice" */
+.home-notice-wrapper .home-notice-text {
+  padding: 30px 0 12px 12px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
+
+/* 슬라이드 크기 */
+.home-notice-wrapper .swiper-slide {
+  width: 326px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* 카드 */
+.notice-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
     width: 100%;
-    box-sizing: border-box;
-    padding: 0;
-    overflow: visible;
-    border-radius: 20px; /* 둥근 모서리 */
-    position: relative; /* 검은 배경 혹은 필요 시 덮어쓰기 */
-  }
-  
-  /* Swiper 슬라이드 크기 및 스타일 */
-  .home-notice-wrapper .swiper-slide {
-    width: 320px; /* 이미지와 텍스트 합친 너비 조정 */
-    flex-shrink: 0;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  /* 카드 전체 */
-  .home-notice-wrapper .artist-card {
-    margin: 0;
-    padding: 0;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  /* 이미지 */
-  .home-notice-wrapper .artist-card .image-wrapper {
-    margin: 0;
-    padding: 0;
-    position: relative;
-  }
-  
-  .home-notice-wrapper .artist-card .image-wrapper img {
+    height: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 이미지 */
+.notice-card .image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.notice-card .image-wrapper img {
     display: block;
     width: 100%;
     height: auto;
-    margin: 0;
-    padding: 0;
-    border-radius: 20px 20px 0 0; /* 위쪽만 둥글게 */
     object-fit: cover;
-  }
-  
-  /* 텍스트 정보 박스 */
-  .home-notice-wrapper .artist-card .info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 110px; /* 필요에 따라 조절 */
-    background: rgba(0, 0, 0, 0.6); /* 반투명 검정 배경 */
-    padding: 16px 20px;
-    box-sizing: border-box;
-    color: white;
-    border-radius: 0 0 20px 20px; /* 아래쪽 둥글게 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  /* 핑크색 강조 텍스트 */
-  .home-notice-wrapper .artist-card .info .pink {
-    color: #e9c4cd;
-    font-weight: bold;
-    margin-bottom: 4px;
-    font-size: 16px;
-  }
-  
-  /* 제목 */
-  .home-notice-wrapper .artist-card .info .title {
-    font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 6px;
-    line-height: 1.2;
-  }
-  
-  /* 본문 */
-  .home-notice-wrapper .artist-card .info p {
-    font-size: 12px;
-    line-height: 1.3;
-    white-space: pre-wrap; /* 줄바꿈 적용 */
-    margin: 0;
-    color: #ddd;
-  }
-  
-  /* "Notice" 텍스트 스타일 */
-  .home-notice-wrapper .home-notice-text {
-    padding: 20px 0 12px 12px;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-shadow: 0 0 5px rgba(0,0,0,0.7);
-    pointer-events: none;
-  }
-  
-  /* 댓글 입력창(하단에 추가하려면) */
-  .home-notice-wrapper .comment-input {
-    position: relative;
-    margin-top: 12px;
-    padding: 8px 12px;
     border-radius: 20px;
-    background: rgba(255,255,255,0.1);
+}
+
+/* info 박스 - 카드 위에 떠 있는 회색 반투명 */
+.home-notice-wrapper .info {
+    position: absolute;
+    bottom: 80px;
+    left: 12px;
+    right: 12px;
+    height: 118px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px 16px 0 0;
+    padding: 16px;
+    color: white;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* ★ 중요! */
+}
+
+.home-notice-wrapper .info.black {
+    background: rgba(0, 0, 0, 0.25);
+}
+.home-notice-wrapper .info.white {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
+.home-notice-wrapper .info .artist {
+    font-size: 16px;
+    font-weight: 500;
+}
+/* G-DRAGON 핑크 글자 */
+.home-notice-wrapper .info .pink {
+    color: #FFBFF1;
+}
+
+.home-notice-wrapper .info .blue {
+    color: #8FD1FF;
+}
+
+/* 제목 */
+.home-notice-wrapper .info .title {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 4px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;/* ✅ 최대 2줄까지만 표시 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;/* ✅ 넘친 내용 숨기기 */
+    text-overflow: ellipsis; /* ✅ ... 표시 */
+    word-break: keep-all;/* ✅ 한글 단어 단위로 줄바꿈 */
+}
+
+/* 댓글 입력 */
+.home-notice-wrapper .comment-input {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #eee;
+}
+
+.home-notice-wrapper .notice-card .comment-input {
+    position: absolute;
+    bottom: 16px;
+    left: 12px;
+    right: 12px;
+    height: 73px;
+    background: #2F2F2F;
+    border-radius: 0 0 16px 16px;
+    padding: 10px 9px 0 9px;
+    font-size: 12px;
+    color: #ccc;
+    z-index: 3; /* info보다 위 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    
+  }
+  
+  .home-notice-wrapper .comment-test {
     display: flex;
     align-items: center;
-    gap: 8px;
+    /* gap: 4px; */
+  }
+  
+  .home-notice-wrapper .inline-message {
+    display: inline;
+    margin: 0;
+    white-space: nowrap; /* 줄바꿈 방지 */
+    overflow: hidden; /* 넘친 텍스트 숨김 */
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 300;
+  }
+  
+
+  .home-notice-wrapper .comment-input .user {
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+    padding: 0 11px 0 14px;
+    font-size: 12px;
+    font-weight: 400;
   }
   
   .home-notice-wrapper .comment-input input {
-    flex-grow: 1;
-    background: transparent;
+    height: 30px;
+    margin-top: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
     border: none;
-    color: white;
     outline: none;
-    font-size: 14px;
+    background: #4C4C4C;
+    color: white;
+    font-size: 13px;
+    width: 100%;
+  }
+
+  .home-notice-wrapper .comment-input input::placeholder {
+    font-size: 12px;
+    color: #BCBCBC; 
+}
+
+.write-comment {position: relative;}
+.input-icons {
+    position: absolute;
+    top: 35%;
+    right: 10px;
+    display: flex;
+    gap: 7px;
   }
   
-  .home-notice-wrapper .comment-input button {
-    background: transparent;
-    border: none;
-    color: #e9c4cd;
+  .input-icons .icon {
+    width: 17px;
+    height: 17px;
+    fill: #BCBCBC;
     cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
   }
-  
+  .input-icons .icon.send {width: 13px; height: auto;}
+
+
+  .home-notice-wrapper .swiper-pagination {
+    position: relative;  /* 기본 absolute를 relative로 */
+    margin-top: 16px;
+    text-align: center;     /* 또는 center, 원하는 위치 */
+    padding-left: 8px;    /* 카드와 정렬 맞추기 위함 */
+}
+
+.home-notice-wrapper .swiper-pagination-bullet { background-color: #3C3C3C;opacity: 1; }
+.home-notice-wrapper .swiper-pagination-bullet-active { background-color: #e9c4cd;}

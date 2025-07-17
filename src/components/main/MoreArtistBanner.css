@@ -1,0 +1,29 @@
+.more-artist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .top-spacer {
+    height: 30px;
+  }
+  
+  .divider {
+    width: 100%;
+    border-top: 1px solid #515151;
+    margin: 10px 0;
+  }
+  
+  /* 👇 전체 너비로 확장 */
+  .banner-wrapper {
+    width: 100vw;
+    max-width: 480px;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+  
+  .banner-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
