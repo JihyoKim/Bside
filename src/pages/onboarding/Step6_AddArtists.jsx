@@ -66,7 +66,7 @@ const Step6_AddArtists = () => {
         {renderColumn(column3)}
       </div>
 
-      <button className="step6-next-btn" onClick={() => navigate('/complete')}>
+      <button className="step6-next-btn" onClick={() => navigate('/onboarding/complete')}>
         다음
       </button>
       <div className="step6-gradient-overlay" />

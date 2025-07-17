@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 // ✅ 온보딩 페이지
 import Step1 from '../pages/onboarding/Step1_Account';
@@ -10,41 +10,39 @@ import Step5 from '../pages/onboarding/Step5_Language';
 import Step6 from '../pages/onboarding/Step6_AddArtists';
 import Step7 from '../pages/onboarding/Step7_Complete';
 
-// ✅ 메인 페이지 및 레이아웃
 import Layout from '../components/Layout';
 import Home from '../pages/Home';
 import Music from '../pages/Music';
 import Shop from '../pages/Shop';
-import GDShop from '../pages/shopPage/GDShop'
-import ADPShop from '../pages/shopPage/ADPShop'
-import RiizeShop from '../pages/shopPage/RiizeShop'
-import BPShop from '../pages/shopPage/BPShop'
+import GDShop from '../pages/shopPage/GDShop';
+import ADPShop from '../pages/shopPage/ADPShop';
+import RiizeShop from '../pages/shopPage/RiizeShop';
+import BPShop from '../pages/shopPage/BPShop';
 import MyPage from '../pages/MyPage';
-import MoreArtist from '../pages/MoreArtist';
-
-// ✅ 아티스트 관련 페이지 (서브탭 포함)
-import ArtistPage from '../pages/ArtistPage';
-import Media from '../pages/ArtistPage/Media';
+import ArtistPage from '../pages/ArtistPage'; 
+import Media from '../pages/ArtistPage/Media'; 
 import Notice from '../pages/artistPage/Notice';
 import Event from '../pages/artistPage/Event';
 import Fan from '../pages/artistPage/Fan';
+import MoreArtist from '../pages/MoreArtist';
 
 const App = () => {
   return (
     <Routes>
-      {/* 👉 온보딩 플로우 */}
-      <Route path="/" element={<Step1 />} />
-      <Route path="/pin" element={<Step2 />} />
-      <Route path="/password" element={<Step3 />} />
-      <Route path="/nickname" element={<Step4 />} />
-      <Route path="/language" element={<Step5 />} />
-      <Route path="/addartists" element={<Step6 />} />
-      <Route path="/complete" element={<Step7 />} />
+      {/* ✅ 온보딩 경로 분리 */}
+      <Route path="/onboarding">
+        <Route index element={<Step1 />} />
+        <Route path="pin" element={<Step2 />} />
+        <Route path="password" element={<Step3 />} />
+        <Route path="nickname" element={<Step4 />} />
+        <Route path="language" element={<Step5 />} />
+        <Route path="addartists" element={<Step6 />} />
+        <Route path="complete" element={<Step7 />} />
+      </Route>
 
-      {/* 👉 메인 앱 라우팅 (공통 Layout 포함) */}
-      <Route path="/main" element={<Layout />}>
+      {/* ✅ 메인 앱 라우트 */}
+      <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
-
         <Route path='music' element={<Music />} />
         <Route path='shop' element={<Shop />} >
           <Route index element={<GDShop />} />
@@ -57,11 +55,12 @@ const App = () => {
         <Route path='moreArtist' element={<MoreArtist />} />
         <Route path='artistPage' element={<ArtistPage />} >
           <Route index element={<Media />} />
-          <Route path="media" element={<Media />} />
-          <Route path="notice" element={<Notice />} />
-          <Route path="event" element={<Event />} />
-          <Route path="fan" element={<Fan />} />
+          <Route path='media' element={<Media />} />
+          <Route path='notice' element={<Notice />} />
+          <Route path='event' element={<Event />} />
+          <Route path='fan' element={<Fan />} />
         </Route>
+        {/* 잘못된 경로는 홈으로 이동 */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

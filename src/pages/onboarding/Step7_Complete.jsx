@@ -16,7 +16,7 @@ const Step7_Complete = ({ nickname = '88년동안너마늘♡' }) => {
         </p>
       </div>
 
-      <button className="step7-main-btn" onClick={() => navigate('/main')}>
+      <button className="step7-main-btn" onClick={() => navigate('/')}>
         메인 홈으로 이동
       </button>
       <p className="step7-start-text">Start Now!</p>

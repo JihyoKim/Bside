@@ -9,7 +9,7 @@ const Step4_Nickname = () => {
 
   const handleNext = () => {
     if (nickname.trim()) {
-      navigate('/language');
+      navigate('/onboarding/language');
     }
   };
 

@@ -10,7 +10,7 @@ const Step3_Password = () => {
 
   const handleNext = () => {
     if (password && password === confirmPassword) {
-      navigate('/nickname');
+      navigate('/onboarding/nickname');
     }
   };
 

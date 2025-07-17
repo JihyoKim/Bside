@@ -117,7 +117,7 @@ const Step5_Language = () => {
         </div>
       )}
 
-      <button className="step5-next-btn" onClick={() => navigate('/addartists')}>
+      <button className="step5-next-btn" onClick={() => navigate('/onboarding/addartists')}>
         {text.nextBtn}
       </button>
     </div>

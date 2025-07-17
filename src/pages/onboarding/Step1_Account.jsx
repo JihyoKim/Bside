@@ -40,7 +40,7 @@ const Step1_Account = () => {
             <a href="#">LINE</a>
             </div>
             <button
-            onClick={() => navigate('/pin')}
+            onClick={() => navigate('/onboarding/pin')}
             className="step1-create-btn"
             >
             Create an account

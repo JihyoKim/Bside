@@ -39,7 +39,7 @@ const Step2_Pin = () => {
         ))}
       </div>
 
-      <button className="step2-submit" onClick={() => navigate('/password')}>
+      <button className="step2-submit" onClick={() => navigate('/onboarding/password')}>
         인증하기
       </button>
     </div>
