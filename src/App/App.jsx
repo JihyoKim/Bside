@@ -31,7 +31,7 @@ const App = () => {
         </Route>
         <Route path='mypage' element={<MyPage />} />
         <Route path='moreArtist' element={<MoreArtist />} />
-        <Route path='artistpage' element={<ArtistPage />} >
+        <Route path='artistPage' element={<ArtistPage />} >
           <Route index element={<Media />} />
           <Route path='media' element={<Media />} />
           <Route path='notice' element={<Notice />} />

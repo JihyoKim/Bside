@@ -22,6 +22,7 @@
 	height: auto;
 	overflow: auto;
 	scroll-behavior: smooth;
+	overflow-x: hidden; 
   }
 
   html::-webkit-scrollbar {
@@ -49,6 +50,7 @@
 	background: #050305;
 	height: auto;
 	overflow-y: visible;
+	overflow-x: hidden;
 
 	margin-left: 50%;    /* 화면 가로의 중간쯤에서 시작 */
 	margin-right: auto;

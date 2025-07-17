@@ -14,7 +14,7 @@ const Layout = () => {
 
   if (path.startsWith('/mypage')) {
     HeaderComponent = HeaderMypage;
-  } else if (path.startsWith('/music')) {
+  } else if (path.startsWith('/music') || path.startsWith('/artistPage')) {
     HeaderComponent = HeaderSub;
   } else {
     HeaderComponent = Header;
