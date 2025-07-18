@@ -2,16 +2,11 @@ import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './ArtistMember.css';
 
-import member1 from '../../assets/ArtistPage/asepa/member1.png';
-import member2 from '../../assets/ArtistPage/asepa/member2.png';
-import member3 from '../../assets/ArtistPage/asepa/member3.png';
-import member4 from '../../assets/ArtistPage/asepa/member4.png';
-
-const ArtistMember = () => {
+const ArtistMember = ({ data }) => {
   const scrollRef = useRef();
   const [dragLimit, setDragLimit] = useState(0);
 
-  const members = [member1, member2, member3, member4]; 
+  const { memberImgs } = data;  // props로 받은 데이터 사용
 
   const updateDragLimit = () => {
     const outer = scrollRef.current;
@@ -23,8 +18,7 @@ const ArtistMember = () => {
     const outerWidth = outer.offsetWidth;
     const wrapperWidth = wrapper.scrollWidth;
 
-    const paddingRight = 16;
-    const maxScroll = wrapperWidth - outerWidth + paddingRight;
+    const maxScroll = wrapperWidth - outerWidth;
     setDragLimit(maxScroll > 0 ? -maxScroll : 0);
   };
 
@@ -32,7 +26,7 @@ const ArtistMember = () => {
     updateDragLimit();
     window.addEventListener('resize', updateDragLimit);
     return () => window.removeEventListener('resize', updateDragLimit);
-  }, [members.length]);
+  }, [memberImgs.length]); // 멤버 수 바뀔 때도 갱신
 
   return (
     <div className="artist-member-wrapper" ref={scrollRef}>
@@ -44,7 +38,7 @@ const ArtistMember = () => {
         dragElastic={0.2}
       >
         <div className="member-box-wrapper">
-          {members.map((img, idx) => (
+          {memberImgs.map((img, idx) => (
             <div className="member-slide" key={idx}>
               <img src={img} alt={`member${idx + 1}`} draggable="false" />
             </div>

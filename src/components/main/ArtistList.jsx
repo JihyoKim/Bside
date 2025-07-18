@@ -71,7 +71,7 @@ const ArtistList = () => {
                 key={idx}
                 onClick={() => {
                   if (artist.name === 'KiiiKiii') {
-                    navigate('/artistPage');
+                    navigate('/artistPage/aespa');
                   }
                   // 그 외에는 클릭해도 이동 안 함
                 }}

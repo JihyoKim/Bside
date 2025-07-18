@@ -2,7 +2,7 @@ import React from 'react';
 import artistVote from '../../assets/vote.png';
 
 
-const Event = () => {
+const Vote = () => {
   return (
     <div className="event-container">
       <img src={artistVote} alt="Event" />
@@ -10,4 +10,4 @@ const Event = () => {
   );
 };
 
-export default Event;
+export default Vote;

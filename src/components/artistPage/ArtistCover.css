@@ -37,7 +37,7 @@
     margin-bottom: 16px;
   }
   
-  .follow-btn {
+  .artist-cover-container .follow-btn {
     border: none;
     padding: 8px 16px;
     border-radius: 20px;
@@ -50,7 +50,7 @@
     transition: all 0.2s ease;
   }
   
-  .follow-icon {
+  .artist-info img {
     width: 16px;
     height: 16px;
   }

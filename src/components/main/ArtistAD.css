@@ -41,9 +41,9 @@
     transition: transform 0.2s ease;
   }
 
-  .ad-card:hover .ad-inner {
+  /* .ad-card:hover .ad-inner {
     transform: scale(1.12);
-  }
+  } */
   
   .ad-image {
     width: 100%;

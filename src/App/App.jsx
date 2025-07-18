@@ -10,9 +10,9 @@ import RiizeShop from '../pages/shopPage/RiizeShop'
 import BPShop from '../pages/shopPage/BPShop'
 import MyPage from '../pages/MyPage';
 import ArtistPage from '../pages/ArtistPage'; 
-import Media from '../pages/ArtistPage/Media'; 
+import Media from '../pages/artistPage/Media'; 
 import Notice from '../pages/artistPage/Notice';
-import Event from '../pages/artistPage/Event';
+import Vote from '../pages/artistPage/Vote';
 import Fan from '../pages/artistPage/Fan';
 import MoreArtist from '../pages/MoreArtist';
 
@@ -31,11 +31,18 @@ const App = () => {
         </Route>
         <Route path='mypage' element={<MyPage />} />
         <Route path='moreArtist' element={<MoreArtist />} />
-        <Route path='artistPage' element={<ArtistPage />} >
+        <Route path='artistPage/:artistId' element={<ArtistPage />} >
           <Route index element={<Media />} />
           <Route path='media' element={<Media />} />
           <Route path='notice' element={<Notice />} />
-          <Route path='event' element={<Event />} />
+          <Route path='vote' element={<Vote />} />
+          <Route path='fan' element={<Fan />} />
+        </Route>        
+          <Route path='artistPage/:artistId' element={<ArtistPage />} >
+          <Route index element={<Media />} />
+          <Route path='media' element={<Media />} />
+          <Route path='notice' element={<Notice />} />
+          <Route path='vote' element={<Vote />} />
           <Route path='fan' element={<Fan />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />

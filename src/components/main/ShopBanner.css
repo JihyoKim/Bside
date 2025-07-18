@@ -2,7 +2,8 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 100vw;     /* 뷰포트 너비로 꽉 채우기 */
+    width: 100vw;
+    max-width: 480px;
     box-sizing: border-box;
     overflow: hidden;
   }

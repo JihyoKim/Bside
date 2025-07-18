@@ -7,6 +7,7 @@ import settingIcon from '../../assets/mypage/setting.png';
 import ticketIcon from '../../assets/mypage/ticket.svg';
 import pointIcon from '../../assets/mypage/point_white.svg';
 
+
 const preventLink = (e) => {
   e.preventDefault();
 };
