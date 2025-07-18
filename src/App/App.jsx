@@ -67,7 +67,7 @@ const App = () => {
       </Route>
 
       {/* 잘못된 경로는 온보딩으로 */}
-      <Route path="*" element={<Navigate to="/onboarding" replace />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };
