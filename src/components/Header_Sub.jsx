@@ -15,7 +15,7 @@ const Header_Sub = () => {
       const closeEvent = new CustomEvent('closeLyrics');
       window.dispatchEvent(closeEvent);
     } else {
-      navigate('/');
+      navigate('/main');
     }
   };
 
@@ -32,7 +32,7 @@ const Header_Sub = () => {
       // 열려있으면 닫기 (상태를 Music.jsx에서 관리할 경우에는 prop으로 받아야함)
       window.dispatchEvent(new Event('closeLyricsPanel'));
     } else {
-      window.location.href = '/'; // 홈으로 이동
+      window.location.href = '/main'; // 홈으로 이동
     }
   }}
 />

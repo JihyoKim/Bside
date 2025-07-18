@@ -146,7 +146,7 @@ const BPShop = () => {
                       if (btn.disabled) {
                         alert('준비 중입니다.');
                       } else {
-                        navigate(`/shop/${btn.path}`);
+                        navigate(`/main/shop/${btn.path}`);
                       }
                     }}
                   >

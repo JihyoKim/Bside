@@ -12,9 +12,9 @@ const Layout = () => {
 
   let HeaderComponent;
 
-  if (path.startsWith('/mypage')) {
+  if (path.startsWith('/main/mypage')) {
     HeaderComponent = HeaderMypage;
-  } else if (path.startsWith('/music') || path.startsWith('/artistPage')) {
+  } else if (path.startsWith('/main/music') || path.startsWith('/main/artistPage')) {
     HeaderComponent = HeaderSub;
   } else {
     HeaderComponent = Header;
