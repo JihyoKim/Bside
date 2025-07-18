@@ -139,14 +139,19 @@
 }
 
 .step5-next-btn {
-  margin-top: auto;
+  position: absolute;
+  bottom: 40px; /* ✅ 화면 하단에서 40px 위에 고정 */
+  left: 16px;
+  right: 16px;
+  padding: 17px;
+  font-size: 16px;
   background-color: #FFA3EB;
   color: black;
-  padding: 14px 0; font-weight: bold;
   border: none;
   border-radius: 30px;
-  font-size: 16px;
+  font-weight: bold;
 }
+
 
 /* 일본어만 폰트 조금 줄이기 */
 .lang-jp {

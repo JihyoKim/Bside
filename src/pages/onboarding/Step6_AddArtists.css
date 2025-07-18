@@ -1,4 +1,8 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+.step6-wrapper {
+  background-color: black;
+  min-height: 100vh;
+}
 
 .step6-container {
   padding: 40px 16px;

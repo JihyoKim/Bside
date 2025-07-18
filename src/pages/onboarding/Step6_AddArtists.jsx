@@ -56,7 +56,6 @@ const Step6_AddArtists = () => {
     }
   };
 
-  // ✅ 아티스트 2행 6열
   const column1 = ['Stray Kids', 'G-DRAGON', 'TWICE'];
   const column2 = ['ALLDAYPRO', 'RIIZE', 'IVE'];
   const column3 = ['aespa', 'BLACKPINK', 'BTS'];
@@ -85,43 +84,45 @@ const Step6_AddArtists = () => {
   );
 
   return (
-    <div className="step6-container">
-      <div className="step6-header">
-        <button className="step6-skip" onClick={() => navigate('/onboarding/complete')}>
-          건너뛰기
+    <div className="step6-wrapper">{/* ✅ 최상위 컨테이너 추가 */}
+      <div className="step6-container">
+        <div className="step6-header">
+          <button className="step6-skip" onClick={() => navigate('/onboarding/complete')}>
+            건너뛰기
+          </button>
+        </div>
+
+        <p className="step6-subtitle">이제 마지막 단계예요!</p>
+        <h2 className="step6-title">나만의 아티스트를 추가해 주세요</h2>
+
+        <div className="step6-search-bar">
+          <input type="text" placeholder="검색" />
+          <img src={searchIcon} alt="검색" className="search-icon-img" />
+        </div>
+
+        <div className="step6-tabs">
+          <button className="active">GROUP</button>
+          <button>SOLO</button>
+        </div>
+
+        <div className="step6-artist-layout">
+          <div className="artist-row">
+            {renderColumn(column1)}
+            {renderColumn(column2)}
+            {renderColumn(column3)}
+          </div>
+          <div className="artist-row">
+            {renderColumn(column4)}
+            {renderColumn(column5)}
+            {renderColumn(column6)}
+          </div>
+        </div>
+
+        <button className="step6-next-btn" onClick={() => navigate('/onboarding/complete')}>
+          다음
         </button>
+        <div className="step6-gradient-overlay" />
       </div>
-
-      <p className="step6-subtitle">이제 마지막 단계예요!</p>
-      <h2 className="step6-title">나만의 아티스트를 추가해 주세요</h2>
-
-      <div className="step6-search-bar">
-        <input type="text" placeholder="검색" />
-        <img src={searchIcon} alt="검색" className="search-icon-img" />
-      </div>
-
-      <div className="step6-tabs">
-        <button className="active">GROUP</button>
-        <button>SOLO</button>
-      </div>
-
-      <div className="step6-artist-layout">
-        <div className="artist-row">
-          {renderColumn(column1)}
-          {renderColumn(column2)}
-          {renderColumn(column3)}
-        </div>
-        <div className="artist-row">
-          {renderColumn(column4)}
-          {renderColumn(column5)}
-          {renderColumn(column6)}
-        </div>
-      </div>
-
-      <button className="step6-next-btn" onClick={() => navigate('/onboarding/complete')}>
-        다음
-      </button>
-      <div className="step6-gradient-overlay" />
     </div>
   );
 };

@@ -1,72 +1,84 @@
 .step4-container {
-    background: black;
-    color: white;
-    height: 100vh;
-    padding: 40px 16px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .step4-header {
-    display: flex; padding: 10px;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 18px;
-  }
-  
-  .step4-header button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 19px;
-  }
-  
-  .step4-title {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 40px 0 30px;
-  }
-  
-  .step4-guide {
-    color: #FFA3EB;
-    font-size: 13px;
-    margin-bottom: 60px;
-    line-height: 1.5;
-  }
-  
-  .step4-profile-section {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-  }
-  
-  .step4-profile-img {
-    width: 90px;
-    height: 90px;
-  }
-  
-  .step4-input-block {
-    margin-bottom: 40px;
-  }
+  background: black;
+  color: white;
+  height: 100vh;
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+}
 
-  .step4-input {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #666;
-    background: transparent;
-    color: white;
-    font-size: 16px;
-    padding: 8px 0; margin-top: 5px;
-    outline: none;
-  }
-  
-  .step4-next-btn {
-    margin-top: auto;
-    background-color: #FFA3EB;
-    color: black;
-    padding: 14px 0; font-weight: bold;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-  }
-  
+.step4-header {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.step4-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 19px;
+}
+
+/* ✅ 콘텐츠 영역을 버튼 포함해서 나눔 */
+.step4-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.step4-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 40px 0 30px;
+}
+
+.step4-guide {
+  color: #FFA3EB;
+  font-size: 13px;
+  margin-bottom: 60px;
+  line-height: 1.5;
+}
+
+.step4-profile-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.step4-profile-img {
+  width: 25%;
+  height: auto;
+}
+
+.step4-input-block {
+  margin-bottom: 40px;
+}
+
+.step4-input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #666;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 8px 0;
+  margin-top: 5px;
+  outline: none;
+}
+
+/* ✅ step3 버튼과 완전히 동일하게 적용 */
+.step4-next-btn {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 17px;
+  font-size: 16px;
+  background-color: #FFA3EB;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
