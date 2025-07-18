@@ -1,0 +1,32 @@
+.ticket-card {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  .ticket-img {
+    width: 100px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .ticket-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .ticket-title {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ticket-date,
+  .ticket-location {
+    font-size: 0.85rem;
+    color: #ccc;
+  }

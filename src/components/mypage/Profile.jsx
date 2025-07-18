@@ -1,5 +1,6 @@
 import React from 'react';
 import './Profile.css';
+import { useNavigate } from 'react-router-dom';
 
 import profileHeader from '../../assets/mypage/profile_header.png';
 import profilePhoto from '../../assets/mypage/profile.png';
@@ -13,6 +14,13 @@ const preventLink = (e) => {
 };
 
 const Profile = () => {
+  const navigate = useNavigate(); // ✅ 라우터 훅
+
+  const goToTicket = (e) => {
+    e.preventDefault(); // 링크 기본 동작 방지
+    navigate('/mypage/ticket'); // ✅ /ticket 페이지로 이동
+  };
+
   return (
     <div className="profile-section">
       {/* 배경 이미지 + 그라데이션 */}
@@ -41,7 +49,7 @@ const Profile = () => {
       <div className="profile-stats">
         <div className="stat">
           <div className="stat-top">
-            <a href="#" onClick={preventLink}>
+            <a href="#" onClick={goToTicket}>
               <img src={ticketIcon} alt="ticket" className="ticket" />
             </a>
           </div>
