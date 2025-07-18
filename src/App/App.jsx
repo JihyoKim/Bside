@@ -52,6 +52,7 @@ const App = () => {
           <Route path='blackpinkshop' element={<BPShop />} />
         </Route>
         <Route path='mypage' element={<MyPage />} />
+        <Route path='mypage/ticket' element={<Ticket />} />
         <Route path='moreArtist' element={<MoreArtist />} />
         <Route path='artistPage/:artistId' element={<ArtistPage />} >
           <Route index element={<Media />} />
