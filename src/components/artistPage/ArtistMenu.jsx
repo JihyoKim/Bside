@@ -13,7 +13,7 @@ const ArtistMenu = ({ data }) => {
   useEffect(() => {
     const currentPath = location.pathname.split('/').pop();
     const activeIndex = tabs.findIndex(
-      (tab) => tab === currentPath || (location.pathname === `/artistPage/${artistId}` && tab === 'media')
+      (tab) => tab === currentPath || (location.pathname === `/main/artistPage/${artistId}` && tab === 'media')
     );
 
     if (tabRefs.current[activeIndex]) {
@@ -32,13 +32,13 @@ const ArtistMenu = ({ data }) => {
       <div className="media-tabs">
         {tabs.map((tab, idx) => {
           const isActive =
-            location.pathname === `/artistPage/${artistId}/${tab}` ||
-            (location.pathname === `/artistPage/${artistId}` && tab === 'media');
+            location.pathname === `/main/artistPage/${artistId}/${tab}` ||
+            (location.pathname === `/main/artistPage/${artistId}` && tab === 'media');
 
           return (
             <NavLink
               key={tab}
-              to={`/artistPage/${artistId}/${tab}`}
+              to={`/main/artistPage/${artistId}/${tab}`}
               ref={(el) => (tabRefs.current[idx] = el)}
               className="tab"
               style={{
