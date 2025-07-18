@@ -2,6 +2,7 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Step2_Pin.css';
+import closeIcon from '../../assets/x.png'; // ✕ 아이콘 이미지
 
 const Step2_Pin = () => {
   const navigate = useNavigate();
@@ -16,9 +17,17 @@ const Step2_Pin = () => {
 
   return (
     <div className="step2-container">
+      {/* ✅ 상단 로고 & 닫기버튼 */}
       <div className="step2-header">
-        <h1 className="logo">B-side <span className="sub">account</span></h1>
-        <button className="close-btn" onClick={() => navigate('/onboarding')}>✕</button>
+        <h1 className="logo">
+          B-side <span className="sub">account</span>
+        </h1>
+        <img
+          src={closeIcon}
+          alt="닫기"
+          className="step2-close-btn"
+          onClick={() => navigate('/onboarding')}
+        />
       </div>
 
       <h2 className="step2-title">인증번호를 입력해 주세요</h2>
@@ -39,7 +48,10 @@ const Step2_Pin = () => {
         ))}
       </div>
 
-      <button className="step2-submit" onClick={() => navigate('/onboarding/password')}>
+      <button
+        className="step2-submit"
+        onClick={() => navigate('/onboarding/password')}
+      >
         인증하기
       </button>
     </div>

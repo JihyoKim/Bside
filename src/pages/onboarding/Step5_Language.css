@@ -1,8 +1,7 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');  /* 일본어 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap');  /* 중국어 간체 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap');
 
-/* 전체 컨테이너 기본 폰트 Pretendard */
 .step5-container {
   padding: 40px 16px;
   height: 100vh;
@@ -11,16 +10,18 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  font-family: 'Pretendard', sans-serif;
+  font-family: 'Pretendard', sans-serif; user-select: none;
+}
+input, textarea {
+  user-select: text !important;
 }
 
-/* 일본어 선택 시: 하위 모든 요소에 Noto Sans JP 적용 */
+
 .step5-container.jp-font,
 .step5-container.jp-font * {
   font-family: 'Noto Sans JP', sans-serif !important;
 }
 
-/* 중국어 선택 시: 하위 모든 요소에 Noto Sans SC 적용 */
 .step5-container.zh-font,
 .step5-container.zh-font * {
   font-family: 'Noto Sans SC', sans-serif !important;
@@ -34,11 +35,11 @@
   font-size: 18px;
 }
 
-.step5-header button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 19px;
+.step5-icon-btn {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 .step5-title {
@@ -59,13 +60,14 @@
 }
 
 .step5-fixed-label {
-  font-size: 14px; letter-spacing: -0.5px;
+  font-size: 14px;
+  letter-spacing: -0.5px;
   font-weight: 500;
   color: #aaa;
-  margin-bottom: 8px; padding-left: 2.5%;
+  margin-bottom: 8px;
+  padding-left: 2.5%;
   text-align: left;
 }
-
 
 .step5-dropdown {
   margin: 0 auto 12px;
@@ -82,11 +84,11 @@
 
 .step5-dropdown-icon {
   width: 16px;
-  height: 16px;
+  height: auto;
 }
 
 .step5-dropdown-menu {
-  position: absolute; font-weight: 600;
+  position: absolute;
   bottom: 4%;
   left: 2.5%;
   width: 95%;
@@ -130,7 +132,8 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  font-size: 16.5px; font-weight: 600;
+  font-size: 16.5px;
+  font-weight: 600;
 }
 
 .step5-dropdown-item.selected {
@@ -140,7 +143,7 @@
 
 .step5-next-btn {
   position: absolute;
-  bottom: 40px; /* ✅ 화면 하단에서 40px 위에 고정 */
+  bottom: 60px;
   left: 16px;
   right: 16px;
   padding: 17px;
@@ -152,13 +155,10 @@
   font-weight: bold;
 }
 
-
-/* 일본어만 폰트 조금 줄이기 */
 .lang-jp {
   font-size: 14px;
 }
 
-/* 중국어 간체/번체만 폰트 조금 줄이기 */
 .lang-zh {
   font-size: 14px;
 }

@@ -23,7 +23,6 @@ import StrayKids from '../../assets/onboarding/Stray Kids.png';
 import TOMORROW from '../../assets/onboarding/TOMORROW.png';
 import TWICE from '../../assets/onboarding/TWICE.png';
 
-// ✅ 이름-이미지 매핑 객체
 const artistImages = {
   'aespa': aespa,
   'ALLDAYPRO': ALLDAYPRO,
@@ -60,28 +59,32 @@ const Step6_AddArtists = () => {
   const column2 = ['ALLDAYPRO', 'RIIZE', 'IVE'];
   const column3 = ['aespa', 'BLACKPINK', 'BTS'];
   const column4 = ['EXO', 'MEOVV', 'ILLIT'];
-  const column5 = ['ENHYPEN','LE SSERAFIM'];
+  const column5 = ['ENHYPEN', 'LE SSERAFIM'];
   const column6 = ['NewJeans', 'TOMORROW', 'ITZY'];
 
-  const renderColumn = (list) => (
-    <div className="artist-column-wrapper">
+  const renderColumn = (list, columnIndex) => (
+    <div
+      className={`artist-column-wrapper ${
+        columnIndex === 2 || columnIndex === 5 ? 'extra-margin' : ''
+      }`}
+    >
       <div className="artist-column">
-          {list.map((name) => (
-            <div
-              key={name}
-              className={`artist-box ${selected.includes(name) ? 'selected' : ''}`}
-              onClick={() => toggleSelect(name)}
-            >
-              <img src={artistImages[name]} alt={name} className="artist-img" />
-              {selected.includes(name) && (
-                <div className="overlay">
-                  <img src={heartIcon} alt="하트" className="heart-icon" />
-                </div>
-              )}
-              <p className="artist-name">{name}</p>
-            </div>
-          ))}
-        </div>
+        {list.map((name) => (
+          <div
+            key={name}
+            className={`artist-box ${selected.includes(name) ? 'selected' : ''}`}
+            onClick={() => toggleSelect(name)}
+          >
+            <img src={artistImages[name]} alt={name} className="artist-img" />
+            {selected.includes(name) && (
+              <div className="overlay">
+                <img src={heartIcon} alt="하트" className="heart-icon" />
+              </div>
+            )}
+            <p className="artist-name">{name}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 
@@ -108,23 +111,23 @@ const Step6_AddArtists = () => {
 
       <div className="step6-artist-layout">
         <div className="artist-row">
-          {renderColumn(column1)}
-          {renderColumn(column2)}
-          {renderColumn(column3)}
+          {renderColumn(column1, 1)}
+          {renderColumn(column2, 2)}
+          {renderColumn(column3, 3)}
         </div>
         <div className="artist-row">
-          {renderColumn(column4)}
-          {renderColumn(column5)}
-          {renderColumn(column6)}
+          {renderColumn(column4, 4)}
+          {renderColumn(column5, 5)}
+          {renderColumn(column6, 6)}
         </div>
       </div>
 
+      <div className="step6-gradient-overlay" />
       <button className="step6-next-btn" onClick={() => navigate('/onboarding/complete')}>
         다음
       </button>
-      <div className="step6-gradient-overlay" />
     </div>
-  ); 
+  );
 };
 
 export default Step6_AddArtists;
