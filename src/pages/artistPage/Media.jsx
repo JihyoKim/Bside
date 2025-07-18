@@ -3,7 +3,7 @@ import './Media.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
-import { useOutletContext } from 'react-router-dom';
+import { useOutletContext, useNavigate, useParams } from 'react-router-dom';
 
 const Media = () => {
   const {
@@ -12,6 +12,9 @@ const Media = () => {
     mediaThumbnails,
     mvThumbnails
   } = useOutletContext();
+
+  const navigate = useNavigate();
+  const { artistId } = useParams(); // 아티스트 ID 가져옴
 
   return (
     <div className="media-container">
@@ -42,7 +45,20 @@ const Media = () => {
           <span className="more-btn">더보기</span>
         </div>
         {mediaThumbnails.map((item, idx) => (
-          <div className="media-item" key={idx}>
+          <div
+            className="media-item"
+            key={idx}
+            onClick={() => {
+              if (item.mediaId === 'live-giselle') {
+                navigate(`/main/artistPage/${artistId}/media/${item.mediaId}`);
+              } else if (item.link) {
+                window.open(item.link, '_blank'); // ✅ 외부 링크 열기
+              } else {
+                alert('해당 콘텐츠는 준비 중입니다.');
+              }
+            }}
+            style={{ cursor: 'pointer' }}
+          >
             <div className="media-thumbnail">
               <img src={item.img} alt={item.title} />
               {item.live && <span className="live-badge">Live</span>}
@@ -65,7 +81,18 @@ const Media = () => {
           <span className="more-btn">더보기</span>
         </div>
         {mvThumbnails.map((item, idx) => (
-          <div className="media-item" key={idx}>
+          <div
+            className="media-item"
+            key={idx}
+            onClick={() => {
+              if (item.link) {
+                window.open(item.link, '_blank');
+              } else {
+                alert('링크가 없습니다.');
+              }
+            }}
+            style={{ cursor: 'pointer' }}
+          >
             <div className="media-thumbnail">
               <img src={item.img} alt={item.title} />
               <span className="time-badge">{item.time}</span>

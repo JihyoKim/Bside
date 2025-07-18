@@ -33,6 +33,7 @@ export const artistData = {
     // ✅ Media 콘텐츠 목록
     mediaThumbnails: [
       {
+        mediaId: 'live-giselle',
         img: media1,
         title: 'aespa 에스파 지젤 생방송 라이브',
         uploader: 'aespa',
@@ -40,6 +41,7 @@ export const artistData = {
         viewers: '2.1만 명 시청 중'
       },
       {
+        mediaId: 'dirtywork-mv',
         img: media2,
         title: "aespa 에스파 'Dirty Work' MV Clip",
         uploader: 'aespa',
@@ -47,11 +49,13 @@ export const artistData = {
         views: '380만회 · 3일 전'
       },
       {
+        mediaId: 'dirtywork-fancam',
         img: media3,
         title: "[직캠]에스파 전체 직캠 8K 'Dirty Work'",
         uploader: 'MBCKpop',
         time: '4:12',
-        views: '256회 · 5일 전'
+        views: '256회 · 5일 전',
+        link: 'https://m.youtube.com/watch?v=mY8vJRoa0IM'
       }
     ],
   
@@ -62,21 +66,24 @@ export const artistData = {
         title: "aespa 에스파 'Dirty Work' MV",
         uploader: 'SMTOWN',
         time: '3:17',
-        views: '4211만회 · 2주 전'
+        views: '4211만회 · 2주 전',
+        link: 'https://m.youtube.com/watch?v=M2WTUoy4y6E'
       },
       {
         img: mv2,
         title: "aespa 에스파 'Whiplash' MV",
         uploader: 'SMTOWN',
         time: '3:04',
-        views: '2억회 · 8개월 전'
+        views: '2억회 · 8개월 전',
+        link: 'https://m.youtube.com/watch?v=jWQx2f-CErU'
       },
       {
         img: mv3,
         title: "aespa 에스파 'Supernova' MV",
         uploader: 'SMTOWN',
         time: '3:48',
-        views: '2억회 · 1년 전'
+        views: '2억회 · 1년 전',
+        link: 'https://m.youtube.com/watch?v=phuiiNCxRMg'
       }
     ],
   //Notice 탭

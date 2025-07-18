@@ -22,6 +22,7 @@ import BPShop from '../pages/shopPage/BPShop';
 import MyPage from '../pages/MyPage';
 import ArtistPage from '../pages/ArtistPage';
 import Media from '../pages/artistPage/Media';
+import MediaDetailLive from '../pages/artistPage/MediaDetailLive';
 import Notice from '../pages/artistPage/Notice';
 import Vote from '../pages/artistPage/Vote';
 import Fan from '../pages/artistPage/Fan';
@@ -66,6 +67,7 @@ const App = () => {
           <Route path="vote" element={<Vote />} />
           <Route path="fan" element={<Fan />} />
         </Route>
+        <Route path="artistPage/:artistId/media/:mediaId" element={<MediaDetailLive />} />
       </Route>
 
       {/* 존재하지 않는 경로 → 온보딩으로 */}
