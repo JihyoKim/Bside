@@ -112,7 +112,7 @@ input, textarea {
 }
 
 /* ✅ 3열 행 묶음 */
-.artist-row {
+.step6-container .artist-row {
   display: flex;
   justify-content: space-between;
   gap: 8px;
@@ -124,7 +124,7 @@ input, textarea {
 }
 
 /* ✅ 아티스트 열 */
-.artist-column {
+.step6-container .artist-column {
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -132,7 +132,7 @@ input, textarea {
 }
 
 /* ✅ 아티스트 박스 */
-.artist-box {
+.step6-container .artist-box {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
@@ -142,7 +142,7 @@ input, textarea {
 }
 
 /* ✅ 아티스트 이미지 */
-.artist-img {
+.step6-container .artist-img {
   width: 80%;
   margin: 0 auto;
   border-radius: 10px;
@@ -151,24 +151,24 @@ input, textarea {
 }
 
 /* ✅ 선택 시 어두워짐 */
-.artist-box.selected .artist-img {
+.step6-container .artist-box.selected .artist-img {
   opacity: 0.5;
 }
 
 /* ✅ 하트 오버레이 */
-.overlay {
+.step6-container .overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.heart-icon {
+.step6-container .heart-icon {
   width: 75%;
   height: auto;
 }
 
 /* ✅ 아티스트 이름 */
-.artist-name {
+.step6-container .artist-name {
   color: #FFA3EB;
   font-weight: 500;
   font-size: 13px;
