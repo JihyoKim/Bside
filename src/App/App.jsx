@@ -66,8 +66,8 @@ const App = () => {
         </Route>
       </Route>
 
-      {/* 잘못된 경로는 온보딩으로 */}
-      <Route path="*" element={<Navigate to="/" replace />} />
+      {/* 잘못된 경로는 메인으로 */}
+      <Route path="*" element={<Navigate to="/main" replace />} />
     </Routes>
   );
 };
