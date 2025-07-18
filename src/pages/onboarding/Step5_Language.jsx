@@ -4,6 +4,8 @@ import './Step5_Language.css';
 import dropdownIcon from '../../assets/dropdown.png';
 import languageImg from '../../assets/language.png';
 import checkIcon from '../../assets/check.png';
+import prevB from '../../assets/prevB.png';
+import closeIcon from '../../assets/x.png';
 
 const languages = [
   '한국어', 'English', '日本語', '中文 (简体)', '中文 (繁體)',
@@ -68,61 +70,55 @@ const Step5_Language = () => {
   };
 
   return (
-    <div className={containerClass}>
-      <div className="step5-header">
-        <button className="step5-back" onClick={() => navigate(-1)}>{'<'}</button>
-        <span>{text.header}</span>
-        <button className="step5-close" onClick={() => navigate('/onboarding')}>✕</button>
-      </div>
-
-      <h2 className="step5-title">{text.title}</h2>
-      <p className="step5-subtext">{text.subtitle}</p>
-
-      <img src={languageImg} alt="언어 이미지" className="step5-image" />
-
-      {/* ✅ 추가된 상단 표시 텍스트 */}
-      <p className="step5-fixed-label">Language (번역 언어)</p>
-
-      <div className="step5-dropdown" onClick={handleLanguageClick}>
-        <span>{selectedLanguage}</span>
-        <img
-          src={dropdownIcon}
-          alt="드롭다운"
-          className="step5-dropdown-icon"
-          style={{ width: '16px', height: '16px', objectFit: 'contain' }}
-        />
-      </div>
-
-      {showDropdown && (
-        <div className="step5-dropdown-menu">
-          <h4>{text.dropdownTitle}</h4>
-          <p className="step5-guide">{text.dropdownGuide}</p>
-          {languages.map((lang) => {
-            const fontStyle =
-              lang === '日本語'
-                ? { fontFamily: "'Noto Sans JP', sans-serif" }
-                : lang.includes('中文')
-                ? { fontFamily: "'Noto Sans SC', sans-serif" }
-                : {};
-
-            const extraClass =
-              lang === '日本語' ? 'lang-jp' :
-              lang.includes('中文') ? 'lang-zh' : '';
-
-            return (
-              <div
-                key={lang}
-                className={`step5-dropdown-item ${lang === selectedLanguage ? 'selected' : ''} ${extraClass}`}
-                onClick={() => handleSelect(lang)}
-                style={fontStyle}
-              >
-                {lang}
-                {lang === selectedLanguage && <img src={checkIcon} alt="선택됨" />}
-              </div>
-            );
-          })}
+    <div className="step5-wrapper">
+      <div className={containerClass}>
+        <div className="step5-header">
+          <img src={prevB} alt="뒤로가기" className="step5-icon-btn" onClick={() => navigate(-1)} />
+          <span>{text.header}</span>
+          <img src={closeIcon} alt="닫기" className="step5-icon-btn" onClick={() => navigate('/onboarding')} />
         </div>
-      )}
+
+        <h2 className="step5-title">{text.title}</h2>
+        <p className="step5-subtext">{text.subtitle}</p>
+
+        <img src={languageImg} alt="언어 이미지" className="step5-image" />
+
+        <p className="step5-fixed-label">Language (번역 언어)</p>
+
+        <div className="step5-dropdown" onClick={handleLanguageClick}>
+          <span>{selectedLanguage}</span>
+          <img src={dropdownIcon} alt="드롭다운" className="step5-dropdown-icon" />
+        </div>
+
+        {showDropdown && (
+          <div className="step5-dropdown-menu">
+            <h4>{text.dropdownTitle}</h4>
+            <p className="step5-guide">{text.dropdownGuide}</p>
+            {languages.map((lang) => {
+              const fontStyle =
+                lang === '日本語' ? { fontFamily: "'Noto Sans JP', sans-serif" } :
+                lang.includes('中文') ? { fontFamily: "'Noto Sans SC', sans-serif" } :
+                {};
+
+              const extraClass =
+                lang === '日本語' ? 'lang-jp' :
+                lang.includes('中文') ? 'lang-zh' : '';
+
+              return (
+                <div
+                  key={lang}
+                  className={`step5-dropdown-item ${lang === selectedLanguage ? 'selected' : ''} ${extraClass}`}
+                  onClick={() => handleSelect(lang)}
+                  style={fontStyle}
+                >
+                  {lang}
+                  {lang === selectedLanguage && <img src={checkIcon} alt="선택됨" />}
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
 
       <button className="step5-next-btn" onClick={() => navigate('/onboarding/addartists')}>
         {text.nextBtn}

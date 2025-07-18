@@ -4,8 +4,12 @@
   height: 100vh;
   padding: 40px 16px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; user-select: none;
 }
+input, textarea {
+  user-select: text !important;
+}
+
 
 .step4-header {
   display: flex;
@@ -15,11 +19,11 @@
   font-size: 18px;
 }
 
-.step4-header button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 19px;
+.step4-icon-btn {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 /* ✅ 콘텐츠 영역을 버튼 포함해서 나눔 */
@@ -70,7 +74,7 @@
   outline: none;
 }
 
-/* ✅ step3 버튼과 완전히 동일하게 적용 */
+/* ✅ step3 버튼과 동일 */
 .step4-next-btn {
   width: 100%;
   margin-bottom: 20px;

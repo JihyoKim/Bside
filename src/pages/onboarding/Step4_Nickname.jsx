@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Step4_Nickname.css';
 import profileImage from '../../assets/profile.png';
+import prevB from '../../assets/prevB.png';
+import closeIcon from '../../assets/x.png';
 
 const Step4_Nickname = () => {
   const navigate = useNavigate();
@@ -16,9 +18,19 @@ const Step4_Nickname = () => {
   return (
     <div className="step4-container">
       <div className="step4-header">
-        <button className="step4-back" onClick={() => navigate(-1)}>{'<'}</button>
+        <img
+          src={prevB}
+          alt="뒤로가기"
+          className="step4-icon-btn"
+          onClick={() => navigate(-1)}
+        />
         <span>닉네임 입력</span>
-        <button className="step4-close" onClick={() => navigate('/onboarding')}>✕</button>
+        <img
+          src={closeIcon}
+          alt="닫기"
+          className="step4-icon-btn"
+          onClick={() => navigate('/onboarding')}
+        />
       </div>
 
       <div className="step4-content">
@@ -45,7 +57,6 @@ const Step4_Nickname = () => {
           </div>
         </div>
 
-        {/* ✅ 위치 고정된 하단 버튼 */}
         <button className="step4-next-btn" onClick={handleNext}>
           다음
         </button>

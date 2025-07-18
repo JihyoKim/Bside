@@ -9,6 +9,10 @@
   display: flex;
   flex-direction: column;
   font-family: 'Pretendard', sans-serif;
+  overflow: hidden; user-select: none;
+}
+input, textarea {
+  user-select: text !important;
 }
 
 .step6-header {
@@ -86,57 +90,49 @@
   color: #FFA3EB;
 }
 
-/* ✅ 아티스트 전체 영역 (세로 스크롤) */
+/* ✅ 아티스트 전체 영역 (스크롤 영역) */
 .step6-artist-layout {
   display: flex;
   flex-direction: column;
-  gap: 18px; width: 95%;
-margin: 0 auto;  flex: 1;
+  gap: 18px;
+  width: 95%;
+  margin: 0 auto;
+  flex: 1;
   overflow-y: auto;
   padding-right: 0px;
-  margin-bottom: 20px;
-  max-height: 500px;
+  margin-bottom: 100px;
+  max-height: 460px;
 
   /* 스크롤바 숨기기 */
-  scrollbar-width: none;          /* Firefox */
-  -ms-overflow-style: none;       /* IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 .step6-artist-layout::-webkit-scrollbar {
-  display: none;                  /* Chrome/Safari/Opera */
+  display: none;
 }
 
-/* ✅ 각 3열 행을 묶는 컨테이너 */
-.step6-container .artist-row {
+/* ✅ 3열 행 묶음 */
+.artist-row {
   display: flex;
   justify-content: space-between;
   gap: 8px;
 }
 
-.step6-container .artist-row:nth-child(2) {
-  margin-top: -20%;
+/* ✅ column2, column5에만 margin-top 적용 */
+.artist-column-wrapper.extra-margin {
+  margin-top: 19%;
 }
 
-/* ✅ 아티스트 열(column) */
-.artist-column-wrapper .artist-column {
+/* ✅ 아티스트 열 */
+.artist-column {
   display: flex;
   flex-direction: column;
   gap: 14px;
   flex: 1;
 }
 
-/* 두 번째 열 (column2) */
-.artist-row:first-of-type .artist-column-wrapper:nth-of-type(2) {
-  margin-top: 19%;
-}
-
-/* 다섯 번째 열 (column5) */
-.artist-row:last-of-type .artist-column-wrapper:nth-of-type(2) {
-  margin-top: 19%;
-}
-
-
 /* ✅ 아티스트 박스 */
-.artist-column-wrapper .artist-box {
+.artist-box {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
@@ -146,7 +142,7 @@ margin: 0 auto;  flex: 1;
 }
 
 /* ✅ 아티스트 이미지 */
-.artist-column-wrapper .artist-img {
+.artist-img {
   width: 80%;
   margin: 0 auto;
   border-radius: 10px;
@@ -155,43 +151,47 @@ margin: 0 auto;  flex: 1;
 }
 
 /* ✅ 선택 시 어두워짐 */
-.artist-column-wrapper .artist-box.selected .artist-img {
+.artist-box.selected .artist-img {
   opacity: 0.5;
 }
 
 /* ✅ 하트 오버레이 */
-.artist-column-wrapper .overlay {
+.overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-.artist-column-wrapper .heart-icon {
+.heart-icon {
   width: 75%;
   height: auto;
 }
 
 /* ✅ 아티스트 이름 */
-.artist-column-wrapper .artist-name {
+.artist-name {
   color: #FFA3EB;
   font-weight: 500;
   font-size: 13px;
   margin-top: 6px;
 }
 
-/* ✅ 다음 버튼 */
+/* ✅ 다음 버튼 (고정) */
 .step6-next-btn {
-  margin-top: auto;
+  position: absolute;
+  bottom: 60px;
+  left: 16px;
+  right: 16px;
   background-color: #FFA3EB;
   color: black;
-  padding: 14px 0;
+  padding: 17px;
   border: none;
   border-radius: 30px;
-  font-size: 16px; font-weight: bold;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 20;
 }
 
-/* ✅ 하단 그라데이션 오버레이 */
+/* ✅ 하단 그라디언트 오버레이 */
 .step6-gradient-overlay {
   position: absolute;
   bottom: 90px;

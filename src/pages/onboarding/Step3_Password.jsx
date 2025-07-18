@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Step3_Password.css';
 import eyeIcon from '../../assets/eye.png';
+import prevB from '../../assets/prevB.png';
+import closeIcon from '../../assets/x.png';
 
 const Step3_Password = () => {
   const navigate = useNavigate();
@@ -16,14 +18,24 @@ const Step3_Password = () => {
 
   return (
     <div className="step3-container">
-      {/* 상단 헤더 */}
+      {/* ✅ 이미지 헤더 */}
       <div className="step3-header">
-        <button className="step3-back" onClick={() => navigate(-1)}>{'<'}</button>
+        <img
+          src={prevB}
+          alt="뒤로가기"
+          className="step3-icon-btn"
+          onClick={() => navigate(-1)}
+        />
         <span>회원가입</span>
-        <button className="step3-close" onClick={() => navigate('/onboarding')}>✕</button>
+        <img
+          src={closeIcon}
+          alt="닫기"
+          className="step3-icon-btn"
+          onClick={() => navigate('/onboarding')}
+        />
       </div>
 
-      {/* 비밀번호 관련 입력 필드 + 버튼 포함 */}
+      {/* ✅ 본문 */}
       <div className="step3-content">
         <div>
           <h2 className="step3-title">비밀번호를 설정해 주세요</h2>

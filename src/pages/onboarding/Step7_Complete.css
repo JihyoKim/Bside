@@ -9,7 +9,10 @@
   color: white;
   padding: 0 24px;
   font-family: 'Pretendard', sans-serif;
-  position: relative;
+  position: relative; user-select: none;
+}
+input, textarea {
+  user-select: text !important;
 }
 
 .step7-content {padding-bottom: 60%;}
@@ -41,22 +44,22 @@
 
 .step7-main-btn {
     position: absolute;
-    bottom: 40px;
-    left: 2.5%;
-    width: 95%;
+    bottom: 60px;
+    left: 4%;
+    width: 92%;
     background-color: #fff;
     color: black; font-weight: 600;
     border: none;
     border-radius: 30px;
     font-size: 16px;
-    padding: 14px 0;
+    padding: 17px;
   }
 
   .step7-start-text {
     font-size: 12px;
     color: #E8B5D9;
     position: absolute;
-    bottom: 10px; font-weight: 500;
-    left: 50%;
+    bottom: 30px; font-weight: 500;
+    left: 50%; 
     transform: translateX(-50%);
   }
