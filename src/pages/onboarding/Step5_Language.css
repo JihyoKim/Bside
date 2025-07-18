@@ -4,7 +4,7 @@
 
 /* 전체 컨테이너 기본 폰트 Pretendard */
 .step5-container {
-  padding: 40px 12px;
+  padding: 40px 16px;
   height: 100vh;
   background-color: black;
   color: white;
@@ -42,7 +42,7 @@
 }
 
 .step5-title {
-  margin: 40px 0 45px;
+  margin: 40px 0 30px;
   font-size: 22px;
   font-weight: bold;
 }
@@ -55,8 +55,17 @@
 .step5-image {
   width: 25%;
   display: block;
-  margin: 40px auto;
+  margin: 60px auto 70px;
 }
+
+.step5-fixed-label {
+  font-size: 14px; letter-spacing: -0.5px;
+  font-weight: 500;
+  color: #aaa;
+  margin-bottom: 8px; padding-left: 2.5%;
+  text-align: left;
+}
+
 
 .step5-dropdown {
   margin: 0 auto 12px;
@@ -77,7 +86,7 @@
 }
 
 .step5-dropdown-menu {
-  position: absolute;
+  position: absolute; font-weight: 600;
   bottom: 4%;
   left: 2.5%;
   width: 95%;
@@ -105,23 +114,23 @@
 
 .step5-dropdown-menu h4 {
   margin-bottom: 4px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 .step5-guide {
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 12px;
   color: #999;
 }
 
 .step5-dropdown-item {
-  padding: 8px 0;
+  padding: 6px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 16.5px; font-weight: 600;
 }
 
 .step5-dropdown-item.selected {
@@ -133,8 +142,18 @@
   margin-top: auto;
   background-color: #FFA3EB;
   color: black;
-  padding: 14px 0;
+  padding: 14px 0; font-weight: bold;
   border: none;
   border-radius: 30px;
   font-size: 16px;
+}
+
+/* 일본어만 폰트 조금 줄이기 */
+.lang-jp {
+  font-size: 14px;
+}
+
+/* 중국어 간체/번체만 폰트 조금 줄이기 */
+.lang-zh {
+  font-size: 14px;
 }

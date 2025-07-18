@@ -19,7 +19,6 @@ const BottomNav = () => {
 
   const handleNavClick = (path) => {
     if (currentPath === path) {
-      // 이미 현재 페이지일 경우 -> 맨 위로 스크롤
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       navigate(path);
@@ -28,17 +27,17 @@ const BottomNav = () => {
 
   return (
     <div className="BottomNav">
-      <button onClick={() => handleNavClick('/')}>
-        <img src={currentPath === '/' ? menuHomeOn : menuHomeOff} alt="Home" />
+      <button onClick={() => handleNavClick('/main')}>
+        <img src={currentPath === '/main' ? menuHomeOn : menuHomeOff} alt="Home" />
       </button>
-      <button onClick={() => handleNavClick('/music')}>
-        <img src={currentPath === '/music' ? menuMusicOn : menuMusicOff} alt="Music" />
+      <button onClick={() => handleNavClick('/main/music')}>
+        <img src={currentPath === '/main/music' ? menuMusicOn : menuMusicOff} alt="Music" />
       </button>
-      <button onClick={() => handleNavClick('/shop')}>
-        <img src={currentPath === '/shop' ? menuShopOn : menuShopOff} alt="Shop" />
+      <button onClick={() => handleNavClick('/main/shop')}>
+        <img src={currentPath === '/main/shop' ? menuShopOn : menuShopOff} alt="Shop" />
       </button>
-      <button onClick={() => handleNavClick('/mypage')}>
-        <img src={currentPath === '/mypage' ? menuMyOn : menuMyOff} alt="My Page" />
+      <button onClick={() => handleNavClick('/main/mypage')}>
+        <img src={currentPath === '/main/mypage' ? menuMyOn : menuMyOff} alt="My Page" />
       </button>
     </div>
   );

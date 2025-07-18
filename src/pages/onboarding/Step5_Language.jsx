@@ -52,7 +52,6 @@ const Step5_Language = () => {
 
   const text = TEXTS[selectedLanguage] || TEXTS['한국어'];
 
-  // 전체 폰트 클래스 (외부에도 적용되게)
   const containerClass = [
     'step5-container',
     selectedLanguage === '日本語' ? 'jp-font' : '',
@@ -71,15 +70,18 @@ const Step5_Language = () => {
   return (
     <div className={containerClass}>
       <div className="step5-header">
-        <button className="step5-back">{'<'}</button>
+        <button className="step5-back" onClick={() => navigate(-1)}>{'<'}</button>
         <span>{text.header}</span>
-        <button className="step5-close">✕</button>
+        <button className="step5-close" onClick={() => navigate('/onboarding')}>✕</button>
       </div>
 
       <h2 className="step5-title">{text.title}</h2>
       <p className="step5-subtext">{text.subtitle}</p>
 
       <img src={languageImg} alt="언어 이미지" className="step5-image" />
+
+      {/* ✅ 추가된 상단 표시 텍스트 */}
+      <p className="step5-fixed-label">Language (번역 언어)</p>
 
       <div className="step5-dropdown" onClick={handleLanguageClick}>
         <span>{selectedLanguage}</span>
@@ -102,10 +104,15 @@ const Step5_Language = () => {
                 : lang.includes('中文')
                 ? { fontFamily: "'Noto Sans SC', sans-serif" }
                 : {};
+
+            const extraClass =
+              lang === '日本語' ? 'lang-jp' :
+              lang.includes('中文') ? 'lang-zh' : '';
+
             return (
               <div
                 key={lang}
-                className={`step5-dropdown-item ${lang === selectedLanguage ? 'selected' : ''}`}
+                className={`step5-dropdown-item ${lang === selectedLanguage ? 'selected' : ''} ${extraClass}`}
                 onClick={() => handleSelect(lang)}
                 style={fontStyle}
               >
