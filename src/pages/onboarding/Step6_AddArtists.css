@@ -1,8 +1,4 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-.step6-wrapper {
-  background-color: black;
-  min-height: 100vh;
-}
 
 .step6-container {
   padding: 40px 16px;
@@ -110,31 +106,31 @@ margin: 0 auto;  flex: 1;
 }
 
 /* ✅ 각 3열 행을 묶는 컨테이너 */
-.artist-row {
+.step6-container .artist-row {
   display: flex;
   justify-content: space-between;
   gap: 8px;
 }
 
-.artist-row:nth-child(2) {
+.step6-container .artist-row:nth-child(2) {
   margin-top: -20%;
 }
 
 /* ✅ 아티스트 열(column) */
-.artist-column {
+.artist-column-wrapper .artist-column {
   display: flex;
   flex-direction: column;
   gap: 14px;
   flex: 1;
 }
 
-.artist-column:nth-of-type(2),
-.artist-column:nth-of-type(5) {
+.artist-column-wrapper .artist-column:nth-of-type(2),
+.artist-column-wrapper .artist-column:nth-of-type(5) {
   margin-top: 19%;
 }
 
 /* ✅ 아티스트 박스 */
-.artist-box {
+.artist-column-wrapper .artist-box {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
@@ -144,7 +140,7 @@ margin: 0 auto;  flex: 1;
 }
 
 /* ✅ 아티스트 이미지 */
-.artist-img {
+.artist-column-wrapper .artist-img {
   width: 80%;
   margin: 0 auto;
   border-radius: 10px;
@@ -153,25 +149,25 @@ margin: 0 auto;  flex: 1;
 }
 
 /* ✅ 선택 시 어두워짐 */
-.artist-box.selected .artist-img {
+.artist-column-wrapper .artist-box.selected .artist-img {
   opacity: 0.5;
 }
 
 /* ✅ 하트 오버레이 */
-.overlay {
+.artist-column-wrapper .overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.heart-icon {
+.artist-column-wrapper .heart-icon {
   width: 75%;
   height: auto;
 }
 
 /* ✅ 아티스트 이름 */
-.artist-name {
+.artist-column-wrapper .artist-name {
   color: #FFA3EB;
   font-weight: 500;
   font-size: 13px;
