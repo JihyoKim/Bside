@@ -1,18 +1,18 @@
-import aespaCover from '../assets/ArtistPage/asepa/artistCover-aespa.png';
-import aespa_member1 from '../assets/ArtistPage/asepa/member1.png';
-import aespa_member2 from '../assets/ArtistPage/asepa/member2.png';
-import aespa_member3 from '../assets/ArtistPage/asepa/member3.png';
-import aespa_member4 from '../assets/ArtistPage/asepa/member4.png';
+import aespaCover from '../assets/ArtistPage/aespa/artistCover-aespa.png';
+import aespa_member1 from '../assets/ArtistPage/aespa/member1.png';
+import aespa_member2 from '../assets/ArtistPage/aespa/member2.png';
+import aespa_member3 from '../assets/ArtistPage/aespa/member3.png';
+import aespa_member4 from '../assets/ArtistPage/aespa/member4.png';
 
-import new1 from '../assets/ArtistPage/asepa/new1.png';
-import new2 from '../assets/ArtistPage/asepa/new2.png';
-import new3 from '../assets/ArtistPage/asepa/new3.png';
-import media1 from '../assets/ArtistPage/asepa/media1.png';
-import media2 from '../assets/ArtistPage/asepa/media2.png';
-import media3 from '../assets/ArtistPage/asepa/media3.png';
-import mv1 from '../assets/ArtistPage/asepa/mv1.png';
-import mv2 from '../assets/ArtistPage/asepa/mv2.png';
-import mv3 from '../assets/ArtistPage/asepa/mv3.png';
+import new1 from '../assets/ArtistPage/aespa/new1.png';
+import new2 from '../assets/ArtistPage/aespa/new2.png';
+import new3 from '../assets/ArtistPage/aespa/new3.png';
+import media1 from '../assets/ArtistPage/aespa/media1.png';
+import media2 from '../assets/ArtistPage/aespa/media2.png';
+import media3 from '../assets/ArtistPage/aespa/media3.png';
+import mv1 from '../assets/ArtistPage/aespa/mv1.png';
+import mv2 from '../assets/ArtistPage/aespa/mv2.png';
+import mv3 from '../assets/ArtistPage/aespa/mv3.png';
 
 
 

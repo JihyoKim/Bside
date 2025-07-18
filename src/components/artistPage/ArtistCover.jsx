@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './ArtistCover.css';
 
-import artistCover from '../../assets/ArtistPage/asepa/artistCover-aespa.png';
 import followIcon from '../../assets/ArtistPage/follow_b.svg';
 import followingIcon from '../../assets/ArtistPage/following.svg';
 
