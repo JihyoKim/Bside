@@ -14,7 +14,7 @@
     padding: 90px 0 120px;
   }
   
-  .gradient-overlay {
+  .artist-cover-container .gradient-overlay {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -23,14 +23,14 @@
     z-index: 1;
   }
   
-  .artist-info {
+  .artist-cover-container .artist-info {
     position: relative;
     z-index: 2;
     text-align: center;
     padding: 30px;
   }
   
-  .artist-info h2 {
+  .artist-cover-container .artist-info h2 {
     color: #fff;
     font-size: 28px;
     font-weight: 700;
@@ -50,7 +50,7 @@
     transition: all 0.2s ease;
   }
   
-  .artist-info img {
+  .artist-cover-container .artist-info img {
     width: 16px;
     height: 16px;
   }

@@ -1,5 +1,6 @@
 .notice-card-wrapper {
-    padding: 0 16px 0;
+    width: 100vw; 
+    padding: 0 16px;
   }
   
   .notice-card-wrapper h4 {
@@ -9,7 +10,8 @@
   }
   
   .notice-card-wrapper .notice-card {
-    width: 352px;
+    width: 100%;
+    max-width: 352px;
     height: 104px;
     border-radius: 16px;
     padding: 20px;

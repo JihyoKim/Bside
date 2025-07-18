@@ -8,7 +8,7 @@ const NoticeCard = ({ noticeList }) => {
     <div className="notice-card-wrapper">
       <h4>공지사항</h4>
       <Swiper
-        spaceBetween={1}
+        spaceBetween={0}
         slidesPerView={'1'}
       >
         {noticeList.map((notice, idx) => (

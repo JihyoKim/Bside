@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-// 온보딩
+// ✅ 온보딩 페이지
 import Step1 from '../pages/onboarding/Step1_Account';
 import Step2 from '../pages/onboarding/Step2_Pin';
 import Step3 from '../pages/onboarding/Step3_Password';
@@ -10,7 +10,6 @@ import Step5 from '../pages/onboarding/Step5_Language';
 import Step6 from '../pages/onboarding/Step6_AddArtists';
 import Step7 from '../pages/onboarding/Step7_Complete';
 
-// 메인
 import Layout from '../components/Layout';
 import Home from '../pages/Home';
 import Music from '../pages/Music';
@@ -20,8 +19,8 @@ import ADPShop from '../pages/shopPage/ADPShop';
 import RiizeShop from '../pages/shopPage/RiizeShop';
 import BPShop from '../pages/shopPage/BPShop';
 import MyPage from '../pages/MyPage';
-import ArtistPage from '../pages/ArtistPage';
-import Media from '../pages/artistPage/Media';
+import ArtistPage from '../pages/ArtistPage'; 
+import Media from '../pages/artistPage/Media'; 
 import Notice from '../pages/artistPage/Notice';
 import Vote from '../pages/artistPage/Vote';
 import Fan from '../pages/artistPage/Fan';
@@ -30,10 +29,7 @@ import MoreArtist from '../pages/MoreArtist';
 const App = () => {
   return (
     <Routes>
-      {/* 기본 진입 시 온보딩으로 이동 */}
-      <Route path="/" element={<Navigate to="/onboarding" replace />} />
-
-      {/* 온보딩 */}
+      {/* ✅ 온보딩 경로 분리 */}
       <Route path="/onboarding">
         <Route index element={<Step1 />} />
         <Route path="pin" element={<Step2 />} />
@@ -44,8 +40,8 @@ const App = () => {
         <Route path="complete" element={<Step7 />} />
       </Route>
 
-      {/* 메인 앱 라우트 */}
-      <Route path="/main" element={<Layout />}>
+      {/* ✅ 메인 앱 라우트 */}
+      <Route path='/' element={<Layout />}>
         <Route index element={<Home />} />
         <Route path='music' element={<Music />} />
         <Route path='shop' element={<Shop />} >
@@ -64,10 +60,9 @@ const App = () => {
           <Route path='vote' element={<Vote />} />
           <Route path='fan' element={<Fan />} />
         </Route>
+        {/* 잘못된 경로는 홈으로 이동 */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
-
-      {/* 잘못된 경로는 메인으로 */}
-      <Route path="*" element={<Navigate to="/main" replace />} />
     </Routes>
   );
 };
