@@ -26,6 +26,8 @@ import MediaDetailLive from '../pages/artistPage/MediaDetailLive';
 import Notice from '../pages/artistPage/Notice';
 import Vote from '../pages/artistPage/Vote';
 import Fan from '../pages/artistPage/Fan';
+import FanAll from '../pages/artistPage/FanAll';
+import FanFollowing from '../pages/artistPage/FanFollowing';
 import MoreArtist from '../pages/MoreArtist';
 import Ticket from '../pages/myPage/Ticket';
 
@@ -65,7 +67,10 @@ const App = () => {
           <Route path="media" element={<Media />} />
           <Route path="notice" element={<Notice />} />
           <Route path="vote" element={<Vote />} />
-          <Route path="fan" element={<Fan />} />
+          <Route path="fan" element={<Fan />} >
+            <Route index element={<FanAll />} />
+            <Route path="following" element={<FanFollowing />} />
+          </Route>
         </Route>
         <Route path="artistPage/:artistId/media/:mediaId" element={<MediaDetailLive />} />
       </Route>

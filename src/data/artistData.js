@@ -14,6 +14,8 @@ import mv1 from '../assets/ArtistPage/asepa/mv1.png';
 import mv2 from '../assets/ArtistPage/asepa/mv2.png';
 import mv3 from '../assets/ArtistPage/asepa/mv3.png';
 
+
+
 export const artistData = {
   aespa: {
     id: 'aespa',
@@ -47,6 +49,7 @@ export const artistData = {
         uploader: 'aespa',
         time: '5:37',
         views: '380만회 · 3일 전'
+
       },
       {
         mediaId: 'dirtywork-fancam',
@@ -119,6 +122,35 @@ export const artistData = {
     },
   ],
 
+  fanPosts: [
+    {
+      id: 1,
+      nickname: '온리유찌민',
+      time: '29분전',
+      profile: '/assets/ArtistPage/aespa/fanProfile01.png',
+      text: '김민정은 사랑이에요 🤍',
+      images: [
+        '/assets/ArtistPage/aespa/fanPost01.png'
+      ],
+      likes: 2,
+      comments: 0
+    }
+  ],
+
+  fanFollowingPosts: [
+    {
+      id: 1,
+      nickname: '윈터최고',
+      time: '1시간전',
+      profile: '/assets/ArtistPage/aespa/fanProfile01.png',
+      images: [
+        '/assets/ArtistPage/aespa/fanPost01.png',
+      ],
+      text: '윈터 언니 무대 미쳤다... 💙',
+      likes: 14,
+      comments: 3,
+    }
+  ]
 
   },
 
