@@ -28,6 +28,7 @@ import Vote from '../pages/artistPage/Vote';
 import Fan from '../pages/artistPage/Fan';
 import FanAll from '../pages/artistPage/FanAll';
 import FanFollowing from '../pages/artistPage/FanFollowing';
+import PostDetail from '../pages/artistPage/PostDetail';
 import MoreArtist from '../pages/MoreArtist';
 import Ticket from '../pages/myPage/Ticket';
 
@@ -73,6 +74,7 @@ const App = () => {
           </Route>
         </Route>
         <Route path="artistPage/:artistId/media/:mediaId" element={<MediaDetailLive />} />
+        <Route path="artistPage/:artistId/post/:postId" element={<PostDetail />} />
       </Route>
 
       {/* 존재하지 않는 경로 → 온보딩으로 */}
