@@ -53,7 +53,7 @@ const Profile = () => {
               <img src={ticketIcon} alt="ticket" className="ticket" />
             </a>
           </div>
-          <div className="stat-bottom">3</div>
+          <div className="stat-bottom">6</div>
         </div>
 
         <div className="stat">

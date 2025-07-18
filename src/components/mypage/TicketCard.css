@@ -1,32 +1,37 @@
 .ticket-card {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0px;
+    padding: 30px 0;
     color: white;
+    border-bottom: 1px solid #414141;
   }
   
-  .ticket-img {
-    width: 100px;
-    height: 130px;
+  /* .ticket-img {
     object-fit: cover;
-    border-radius: 6px;
-  }
+  } */
   
   .ticket-info {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
   }
   
   .ticket-title {
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 16px;
   }
   
-  .ticket-date,
+  .ticket-date {
+    font-weight: 300;
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 4px;
+  }
   .ticket-location {
-    font-size: 0.85rem;
+    font-weight: 600;
+    font-size: 14px;
     color: #ccc;
   }
