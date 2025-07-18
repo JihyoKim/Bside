@@ -1,11 +1,11 @@
 import React from 'react';
-import TicketCard from '../../components/ticket/TicketCard';
+import TicketCard from '../../components/mypage/TicketCard';
 import './Ticket.css';
 
-import poster1 from '../../assets/ticket/poster1.png';
-import poster2 from '../../assets/ticket/poster2.png';
-import poster3 from '../../assets/ticket/poster3.png';
-import poster4 from '../../assets/ticket/poster4.png';
+import poster1 from '../../assets/ticket/img01.png';
+import poster2 from '../../assets/ticket/img02.png';
+import poster3 from '../../assets/ticket/img03.png';
+import poster4 from '../../assets/ticket/img04.png';
 
 const Ticket = () => {
   const tickets = [

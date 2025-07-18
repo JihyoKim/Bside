@@ -18,7 +18,7 @@ const Profile = () => {
 
   const goToTicket = (e) => {
     e.preventDefault(); // 링크 기본 동작 방지
-    navigate('/mypage/ticket'); // ✅ /ticket 페이지로 이동
+    navigate('/main/ticket'); // ✅ /ticket 페이지로 이동
   };
 
   return (
