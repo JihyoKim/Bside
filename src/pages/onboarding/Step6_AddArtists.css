@@ -1,7 +1,7 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 .step6-container {
-  padding: 40px 12px;
+  padding: 40px 16px;
   height: 100vh;
   background-color: black;
   color: white;
@@ -28,15 +28,16 @@
   cursor: pointer;
 }
 
+.step6-subtitle {
+  color: #FFA3EB;
+  font-size: 13px;
+  margin-top: 40px;
+}
+
 .step6-title {
   margin: 20px 0 10px;
   font-size: 22px;
   font-weight: bold;
-}
-
-.step6-subtitle {
-  color: #FFA3EB;
-  font-size: 13px; margin-top: 40px;
 }
 
 .step6-search-bar {
@@ -50,7 +51,7 @@
 
 .step6-search-bar input {
   background: transparent;
-  border: none; 
+  border: none;
   color: #FFA3EB;
   flex: 1;
   outline: none;
@@ -66,7 +67,7 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .step6-tabs button {
@@ -81,47 +82,78 @@
 }
 
 .step6-tabs button.active {
-  background-color: #6E6E6E; 
+  background-color: #6E6E6E;
   color: #FFA3EB;
-  font-weight: 400;
 }
 
+/* ✅ 아티스트 전체 영역 (세로 스크롤) */
 .step6-artist-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 18px; width: 95%;
+margin: 0 auto;  flex: 1;
+  overflow-y: auto;
+  padding-right: 0px;
+  margin-bottom: 20px;
+  max-height: 500px;
+
+  /* 스크롤바 숨기기 */
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE/Edge */
+}
+.step6-artist-layout::-webkit-scrollbar {
+  display: none;                  /* Chrome/Safari/Opera */
+}
+
+/* ✅ 각 3열 행을 묶는 컨테이너 */
+.artist-row {
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  flex: 1;
-  overflow-y: auto;
 }
 
+.artist-row:nth-child(2) {
+  margin-top: -20%;
+}
+
+/* ✅ 아티스트 열(column) */
 .artist-column {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
   flex: 1;
 }
-.artist-column:nth-child(2) {margin-top: 18%;
-  }
 
+.artist-column:nth-of-type(2),
+.artist-column:nth-of-type(5) {
+  margin-top: 19%;
+}
+
+/* ✅ 아티스트 박스 */
 .artist-box {
   position: relative;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
   text-align: center;
+  margin-bottom: 15%;
 }
 
+/* ✅ 아티스트 이미지 */
 .artist-img {
-  width: 87%; margin: 0 auto;
-  border-radius: 12px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
   display: block;
   transition: opacity 0.2s;
 }
 
+/* ✅ 선택 시 어두워짐 */
 .artist-box.selected .artist-img {
   opacity: 0.5;
 }
 
+/* ✅ 하트 오버레이 */
 .overlay {
   position: absolute;
   top: 50%;
@@ -131,32 +163,41 @@
 
 .heart-icon {
   width: 75%;
-  height:auto;
+  height: auto;
 }
 
+/* ✅ 아티스트 이름 */
 .artist-name {
-  color: #FFA3EB; font-weight: 500;
+  color: #FFA3EB;
+  font-weight: 500;
   font-size: 13px;
   margin-top: 6px;
 }
 
+/* ✅ 다음 버튼 */
 .step6-next-btn {
-    margin-top: auto;
-    background-color: #FFA3EB;
-    color: black;
-    padding: 14px 0;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
+  margin-top: auto;
+  background-color: #FFA3EB;
+  color: black;
+  padding: 14px 0;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px; font-weight: bold;
 }
 
+/* ✅ 하단 그라데이션 오버레이 */
 .step6-gradient-overlay {
-    position: absolute;
-    bottom: 90px;
-    left: 0;
-    width: 100%;
-    height: 160px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, black 100%);
-    pointer-events: none; /* 클릭 방해하지 않도록 */
-    z-index: 10;
-  }
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 13%,
+    rgba(0, 0, 0, 0.72) 53%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  pointer-events: none;
+  z-index: 10;
+}

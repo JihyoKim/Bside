@@ -18,9 +18,9 @@ const Step3_Password = () => {
     <div className="step3-container">
       {/* 상단 헤더 */}
       <div className="step3-header">
-        <button className="step3-back">{'<'}</button>
+      <button className="step3-back" onClick={() => navigate(-1)}>{'<'}</button>
         <span>회원가입</span>
-        <button className="step3-close">✕</button>
+        <button className="step3-close" onClick={() => navigate('/onboarding')}>✕</button>
       </div>
 
       {/* 비밀번호 관련 입력 필드 */}

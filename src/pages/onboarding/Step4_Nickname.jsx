@@ -16,9 +16,10 @@ const Step4_Nickname = () => {
   return (
     <div className="step4-container">
       <div className="step4-header">
-        <button className="step4-back">{'<'}</button>
+      <button className="step4-back" onClick={() => navigate(-1)}>{'<'}</button>
         <span>닉네임 입력</span>
-        <button className="step4-close">✕</button>
+        <button className="step4-close" onClick={() => navigate('/onboarding')}>✕</button>
+
       </div>
 
       <h2 className="step4-title">프로필을 설정해 주세요</h2>

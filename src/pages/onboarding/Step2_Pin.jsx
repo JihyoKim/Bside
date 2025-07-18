@@ -18,7 +18,7 @@ const Step2_Pin = () => {
     <div className="step2-container">
       <div className="step2-header">
         <h1 className="logo">B-side <span className="sub">account</span></h1>
-        <button className="close-btn">✕</button>
+        <button className="close-btn" onClick={() => navigate('/onboarding')}>✕</button>
       </div>
 
       <h2 className="step2-title">인증번호를 입력해 주세요</h2>

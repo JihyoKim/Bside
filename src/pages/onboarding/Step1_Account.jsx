@@ -36,8 +36,8 @@ const Step1_Account = () => {
 
         <div className="step1-bottom-links">
             <div className="step1-left-links">
-            <a href="#">WeChat</a>
-            <a href="#">LINE</a>
+                <a href="#">WeChat</a>
+                <a href="#">LINE</a>
             </div>
             <button
             onClick={() => navigate('/onboarding/pin')}

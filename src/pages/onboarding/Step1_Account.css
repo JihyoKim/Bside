@@ -6,7 +6,7 @@
     height: 100vh;
     background-color: #000;
     color: #fff;
-    padding: 40px 12px;
+    padding: 40px 16px;
     box-sizing: border-box;
   }
   
@@ -57,7 +57,7 @@
   .step1-bottom-links {
     display: flex;
     justify-content: space-between;
-    align-items: center; margin: 25px 15px 0 15px;
+    align-items: center; margin: 25px 25px 0 25px;
     font-size: 13px;
   }
   

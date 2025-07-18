@@ -2,7 +2,7 @@
     background: black;
     color: white;
     height: 100vh;
-    padding: 40px 12px;
+    padding: 40px 16px;
     display: flex;
     flex-direction: column;
   }
@@ -24,20 +24,20 @@
   .step4-title {
     font-size: 22px;
     font-weight: bold;
-    margin: 40px 0 50px;
+    margin: 40px 0 30px;
   }
   
   .step4-guide {
     color: #FFA3EB;
     font-size: 13px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     line-height: 1.5;
   }
   
   .step4-profile-section {
     display: flex;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
   }
   
   .step4-profile-img {
@@ -64,7 +64,7 @@
     margin-top: auto;
     background-color: #FFA3EB;
     color: black;
-    padding: 14px 0;
+    padding: 14px 0; font-weight: bold;
     border: none;
     border-radius: 30px;
     font-size: 16px;

@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Step7_Complete.css';
 
-const Step7_Complete = ({ nickname = '88년동안너마늘♡' }) => {
+const Step7_Complete = ({ nickname = '쥐들에곤히잠들다' }) => {
   const navigate = useNavigate();
 
   return (
@@ -16,7 +16,7 @@ const Step7_Complete = ({ nickname = '88년동안너마늘♡' }) => {
         </p>
       </div>
 
-      <button className="step7-main-btn" onClick={() => navigate('/')}>
+      <button className="step7-main-btn" onClick={() => navigate('/main')}>
         메인 홈으로 이동
       </button>
       <p className="step7-start-text">Start Now!</p>

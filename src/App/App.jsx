@@ -29,6 +29,9 @@ import MoreArtist from '../pages/MoreArtist';
 const App = () => {
   return (
     <Routes>
+      {/* ✅ 기본 경로 진입 시 온보딩으로 리디렉션 */}
+      <Route path="/" element={<Navigate to="/onboarding" replace />} />
+
       {/* ✅ 온보딩 경로 분리 */}
       <Route path="/onboarding">
         <Route index element={<Step1 />} />
@@ -41,7 +44,7 @@ const App = () => {
       </Route>
 
       {/* ✅ 메인 앱 라우트 */}
-      <Route path='/' element={<Layout />}>
+      <Route path="/main" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path='music' element={<Music />} />
         <Route path='shop' element={<Shop />} >
@@ -67,8 +70,8 @@ const App = () => {
           <Route path='vote' element={<Vote />} />
           <Route path='fan' element={<Fan />} />
         </Route>
-        {/* 잘못된 경로는 홈으로 이동 */}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        {/* 잘못된 경로는 메인 홈으로 이동 */}
+        <Route path="*" element={<Navigate to="/main" replace />} />
       </Route>
     </Routes>
   );
