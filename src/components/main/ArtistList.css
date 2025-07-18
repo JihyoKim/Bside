@@ -1,7 +1,7 @@
 .artist-scroll-outer {
   overflow: hidden;
   width: 100%;
-  max-width: 480px; /* 부모 최대 너비와 일치 */
+  max-width: 390px; 
   box-sizing: border-box;
 }
   

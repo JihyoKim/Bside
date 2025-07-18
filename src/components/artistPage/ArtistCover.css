@@ -1,9 +1,9 @@
 .artist-cover-container {
     position: relative;
     width: 100%;
-    max-width: 480px;
+    max-width: 390px;
     height: 109.64vw;
-    max-height: 526px;
+    max-height: 427px;
     background-size: cover;
     background-position: top;
     display: flex;
