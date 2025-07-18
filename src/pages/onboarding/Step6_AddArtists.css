@@ -1,0 +1,162 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+.step6-container {
+  padding: 40px 12px;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.step6-header {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+}
+
+.step6-skip {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.step6-title {
+  margin: 20px 0 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.step6-subtitle {
+  color: #FFA3EB;
+  font-size: 13px; margin-top: 40px;
+}
+
+.step6-search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #FFA3EB;
+  border-radius: 25px;
+  padding: 10px 15px;
+  margin: 20px 0;
+}
+
+.step6-search-bar input {
+  background: transparent;
+  border: none; 
+  color: #FFA3EB;
+  flex: 1;
+  outline: none;
+}
+
+.search-icon-img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.step6-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.step6-tabs button {
+  border-radius: 20px;
+  font-size: 14px;
+  padding: 8px 18px;
+  border: none;
+  background-color: #333;
+  color: #FFA3EB;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.step6-tabs button.active {
+  background-color: #6E6E6E; 
+  color: #FFA3EB;
+  font-weight: 400;
+}
+
+.step6-artist-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.artist-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+.artist-column:nth-child(2) {margin-top: 18%;
+  }
+
+.artist-box {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+}
+
+.artist-img {
+  width: 87%; margin: 0 auto;
+  border-radius: 12px;
+  display: block;
+  transition: opacity 0.2s;
+}
+
+.artist-box.selected .artist-img {
+  opacity: 0.5;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heart-icon {
+  width: 75%;
+  height:auto;
+}
+
+.artist-name {
+  color: #FFA3EB; font-weight: 500;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.step6-next-btn {
+    margin-top: auto;
+    background-color: #FFA3EB;
+    color: black;
+    padding: 14px 0;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.step6-gradient-overlay {
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, black 100%);
+    pointer-events: none; /* 클릭 방해하지 않도록 */
+    z-index: 10;
+  }
