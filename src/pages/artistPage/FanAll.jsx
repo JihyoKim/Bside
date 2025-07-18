@@ -41,7 +41,7 @@ const FanAll = () => {
   };
 
   const goToPost = (postId) => {
-    navigate(`post/${postId}`);
+    navigate(`/main/artistPage/${artistId}/post/${postId}`);
   };
 
   return (

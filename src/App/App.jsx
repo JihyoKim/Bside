@@ -31,6 +31,7 @@ import FanFollowing from '../pages/artistPage/FanFollowing';
 import PostDetail from '../pages/artistPage/PostDetail';
 import MoreArtist from '../pages/MoreArtist';
 import Ticket from '../pages/myPage/Ticket';
+import PointCard from '../pages/myPage/PointCard';
 
 const App = () => {
   return (
@@ -61,7 +62,8 @@ const App = () => {
           <Route path="blackpinkshop" element={<BPShop />} />
         </Route>
         <Route path="mypage" element={<MyPage />} />
-        <Route path="ticket" element={<Ticket />} />
+        <Route path="mypage/ticket" element={<Ticket />} />
+        <Route path="mypage/point" element={<PointCard />} />
         <Route path="moreArtist" element={<MoreArtist />} />
         <Route path="artistPage/:artistId" element={<ArtistPage />}>
           <Route index element={<Media />} />

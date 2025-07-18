@@ -12,11 +12,16 @@ const Layout = () => {
 
   let HeaderComponent;
 
-  if (path.startsWith('/main/mypage')) {
+  if (
+    path.startsWith('/main/mypage/ticket') ||
+    path.startsWith('/main/mypage/point')
+  ) {
+    HeaderComponent = HeaderSub;
+  } else if (path.startsWith('/main/mypage')) {
     HeaderComponent = HeaderMypage;
-  } else if (path.startsWith('/main/music') 
-    || path.startsWith('/main/artistPage')
-    || path.startsWith('/main/ticket')
+  } else if (
+    path.startsWith('/main/music') ||
+    path.startsWith('/main/artistPage')
   ) {
     HeaderComponent = HeaderSub;
   } else {

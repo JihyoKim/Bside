@@ -18,7 +18,12 @@ const Profile = () => {
 
   const goToTicket = (e) => {
     e.preventDefault(); // 링크 기본 동작 방지
-    navigate('/main/ticket'); // ✅ /ticket 페이지로 이동
+    navigate('/main/mypage/ticket'); // ✅ /ticket 페이지로 이동
+  };
+
+  const goToPoint = (e) => {
+    e.preventDefault();
+    navigate('/main/mypage/point'); // ✅ 포인트 페이지로 이동
   };
 
   return (
@@ -58,7 +63,7 @@ const Profile = () => {
 
         <div className="stat">
           <div className="stat-top">
-            <a href="#" onClick={preventLink}>
+            <a href="#" onClick={goToPoint}>
               <img src={pointIcon} alt="point" className="point" />
             </a>
           </div>
