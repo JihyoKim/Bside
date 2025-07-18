@@ -8,7 +8,7 @@
 }
 
 /* Swiper 패딩으로 오른쪽 슬라이드 여유 확보 */
-.notice-swiper {
+.home-notice-wrapper .notice-swiper {
   padding-right: 20px;
   overflow: visible;
 }
@@ -30,7 +30,7 @@
 }
 
 /* 카드 */
-.notice-card {
+.home-notice-wrapper .notice-card {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
@@ -40,12 +40,12 @@
 }
 
 /* 이미지 */
-.notice-card .image-wrapper {
+.home-notice-wrapper .notice-card .image-wrapper {
   width: 100%;
   overflow: hidden;
   border-radius: 20px;
 }
-.notice-card .image-wrapper img {
+.home-notice-wrapper .notice-card .image-wrapper img {
     display: block;
     width: 100%;
     height: auto;
@@ -171,8 +171,8 @@
     color: #BCBCBC; 
 }
 
-.write-comment {position: relative;}
-.input-icons {
+.home-notice-wrapper .write-comment {position: relative;}
+.home-notice-wrapper .input-icons {
     position: absolute;
     top: 35%;
     right: 10px;
@@ -180,13 +180,13 @@
     gap: 7px;
   }
   
-  .input-icons .icon {
+  .home-notice-wrapper .input-icons .icon {
     width: 17px;
     height: 17px;
     fill: #BCBCBC;
     cursor: pointer;
   }
-  .input-icons .icon.send {width: 13px; height: auto;}
+  .home-notice-wrapper .input-icons .icon.send {width: 13px; height: auto;}
 
 
   .home-notice-wrapper .swiper-pagination {

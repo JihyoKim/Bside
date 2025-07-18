@@ -3,7 +3,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
-    max-width: 480px;
+    max-width: 390px;
     box-sizing: border-box;
     overflow: hidden;
   }

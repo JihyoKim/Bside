@@ -1,7 +1,7 @@
 .BottomNav {
     position: fixed;
     width: 100vw;
-    max-width: 480px;
+    max-width: 390px;
     min-width: 320px;
     bottom: 0;
     height: 120px;

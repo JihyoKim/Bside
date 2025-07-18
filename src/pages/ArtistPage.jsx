@@ -1,3 +1,6 @@
+import React from 'react';
+import './ArtistPage.css';
+
 import { useParams } from 'react-router-dom';
 import { artistData } from '../data/artistData';
 import ArtistCover from '../components/artistPage/ArtistCover';
@@ -15,8 +18,8 @@ const ArtistPage = () => {
     <div className="artist-container">
       <ArtistCover data={data} />
       <ArtistMember data={data} />
-      <ArtistMenu />
-      <Outlet />
+      <ArtistMenu data={{ ...data, id: artistId }} />
+      <Outlet context={data} />
     </div>
   );
 };
