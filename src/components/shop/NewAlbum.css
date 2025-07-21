@@ -1,0 +1,113 @@
+/* CSS 파일 맨 위에 추가 */
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;700&display=swap');
+
+/* NewAlbum.css */
+
+/* .shop-wrapper {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    padding-top: 20px;
+  } */
+  
+  .shop-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .shop-header p {
+    font-size: 12px;
+    font-weight: 300;
+    color: #AEAEAE;
+    margin: 0;
+    font-family: 'Red Rose', serif; /* 추가 */
+  }
+  
+  .shop-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Red Rose', serif; /* 추가 */
+  }
+  
+  .shop-slider-container {
+    width: 100vw;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  
+  .album-slide {
+    text-align: center;
+  }
+  
+  .album-slide img {
+    width: 50%;
+    /* border-radius: 10px; */
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .album-name {
+    color: #ff2a2a;
+    margin: 16px 0 4px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Red Rose', serif; /* 추가 */
+  }
+  
+  .album-desc {
+    color: #ccc;
+    font-size: 14px;
+    font-family: 'Red Rose', serif; /* 추가 */
+  }
+
+  .shop-wrapper {
+    background-color: #000;
+    color: #fff;
+    min-height: 44vh;
+    padding: 20px 0 40px; /* 상하 여백 조절 */
+  }
+
+  /* Swiper 페이지네이션 점 위치 조정 */
+.swiper-pagination {
+    margin-top:50px;  /* ✅ 텍스트와 점 사이 간격 */
+    position: relative; /* Swiper 내부에서 흐름에 맞게 배치되도록 */
+  }
+
+.swiper-pagination-bullet {
+background: #ccc;      /* 회색 점 */
+opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+background: #FFB9F0;   /* 활성 점은 빨간색 */
+}
+
+
+/* 화살표 크기 & 위치 줄이기 */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+  width: 12px;
+  height: 12px;
+  top: 30%; /* ✅ 원하는 위치로 숫자 조절 (예: 20% ~ 40%) */
+  transform: translateY(-50%); /* ✅ 중앙 정렬 */
+  opacity: 0.7;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* 양 옆 여백 조정 */
+.swiper-button-prev {
+  left: 30px;
+}
+
+.swiper-button-next {
+  right: 30px;
+}
+
+/* 🔽 화살표 아이콘 자체 크기 줄이기 */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px;  /* ✅ 아이콘 자체 크기 작게 */
+}

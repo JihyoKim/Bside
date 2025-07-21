@@ -18,7 +18,10 @@ import mv3 from '../../assets/ArtistPage/aespa/mv3.png';
 const aespaData = {
     id: 'aespa',
     name: 'aespa',
+<<<<<<< HEAD
     members: ['aespa', '카리나', '윈터', '지젤', '닝닝'],
+=======
+>>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     coverImg: aespaCover,
     followColor: '#FF8031',
     memberImgs: [aespa_member1, aespa_member2, aespa_member3, aespa_member4],
@@ -128,12 +131,18 @@ const aespaData = {
       nickname: '온리유찌민',
       time: '29분전',
       profile: '/assets/ArtistPage/aespa/user5.png',
+<<<<<<< HEAD
       text: '김민정은 사랑이에요 🤍',
       translatedText: '',
+=======
+      text: 'Kim Min-jung is love 🤍',
+      translatedText: '김민정은 사랑이에요 🤍',
+>>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
       images: [
         '/assets/ArtistPage/aespa/aespa-fanPost1.png'
       ],
       likes: 2,
+<<<<<<< HEAD
       comments: 0,
       showFollowButton: true
     },
@@ -344,6 +353,26 @@ const aespaData = {
       question: '다음 가사 중 빈칸에 들어갈 말은 무엇일까요?',
     },
   ],
+=======
+      comments: 0
+    }
+  ],
+
+  fanFollowingPosts: [
+    {
+      id: 1,
+      nickname: '윈터최고',
+      time: '1시간전',
+      profile: '/assets/ArtistPage/aespa/user5.png',
+      images: [
+        '/assets/ArtistPage/aespa/aespa-fanPost1.png',
+      ],
+      text: '윈터 언니 무대 미쳤다... 💙',
+      likes: 14,
+      comments: 3,
+    }
+  ]
+>>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
 
 };
 

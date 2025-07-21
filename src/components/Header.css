@@ -29,28 +29,48 @@
   padding-left: 5px;
 }
 
+<<<<<<< HEAD
 .fixed-header .dropdown-icon {
+=======
+.dropdown-icon {
+>>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
   margin-top: 6px;
   width: 12px;
   height: 6px;
   
 }
 
+<<<<<<< HEAD
 .fixed-header .header-right {
+=======
+.header-right {
+>>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
   display: flex;
   align-items: center;
   padding-top: 5%;
 }
 
+<<<<<<< HEAD
 .fixed-header .alarm-icon {
   height: 27px;
 }
 
 .fixed-header .message-icon {
+=======
+.alarm-icon {
+  height: 27px;
+}
+
+.message-icon {
+>>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
   height: 27px;
   padding-right: 16px;
 }
 
+<<<<<<< HEAD
 .fixed-header .menu-icon {
+=======
+.menu-icon {
+>>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
   width: 25px;
 }

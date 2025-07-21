@@ -34,6 +34,7 @@
     height: 40px;
     border-radius: 50%;
   }
+<<<<<<< HEAD
   
   .fan-user-info {
     flex: 1;
@@ -48,6 +49,16 @@
     font-weight: bold;
   }
   .fan-post-card .time {
+=======
+  .fan-user-info {
+    flex: 1;
+    margin-left: 10px;
+  }
+  .nickname {
+    font-weight: bold;
+  }
+  .time {
+>>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     font-size: 12px;
     color: #999;
   }
@@ -79,6 +90,7 @@
   
   .fan-images {
     margin-top: 10px;
+<<<<<<< HEAD
     overflow: hidden; 
     border-radius: 8px; 
   }
@@ -142,26 +154,56 @@
     border-radius: 0;
   }
 
+=======
+  }
+  .fan-images.two {
+    display: flex;
+    gap: 6px;
+  }
+  .fan-img-wrapper {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .fan-img-wrapper img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+>>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
   
   .fan-icons {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     justify-content: center;
     margin: 16px 0 4px;
     font-size: 15px;
     gap: 8px;
+=======
+    justify-content: space-between;
+    margin-top: 8px;
+>>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
   }
   .fan-icons span {
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     gap: 4.5px;
+=======
+    gap: 4px;
+>>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
   }
   .save-icon {
     margin-left: auto;
   }
+<<<<<<< HEAD
   
   .like-count {
     display: inline-block;
     min-width: 28px; 
     text-align: left;
   }
+=======
+  
+>>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
