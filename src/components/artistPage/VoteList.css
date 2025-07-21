@@ -1,0 +1,42 @@
+.vote-subvote-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .vote-subvote-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .vote-icon-box {
+    background-color: #333;
+    border-radius: 12px;
+    padding: 8px 10px;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .vote-icon-box img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .point {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 4px;
+    padding-right: 2px;
+  }
+  
+  .vote-question {
+    font-size: 14px;
+    color: white;
+  }
+  

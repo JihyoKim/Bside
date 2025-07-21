@@ -34,14 +34,20 @@
     height: 40px;
     border-radius: 50%;
   }
+  
   .fan-user-info {
     flex: 1;
-    margin-left: 10px;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    gap: 3px;
   }
-  .nickname {
+
+  .fan-post-card .nickname {
+    font-size: 15px;
     font-weight: bold;
   }
-  .time {
+  .fan-post-card .time {
     font-size: 12px;
     color: #999;
   }
@@ -73,34 +79,89 @@
   
   .fan-images {
     margin-top: 10px;
+    overflow: hidden; 
+    border-radius: 8px; 
   }
+  
   .fan-images.two {
     display: flex;
-    gap: 6px;
+    gap: 0;
+    overflow: hidden;        
+    border-radius: 8px;     
   }
-  .fan-img-wrapper {
+  
+  .fan-images.three {
+    display: flex;
+    aspect-ratio: 3 / 2; /* 비율 조정 가능 */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  
+  .left-img {
     flex: 1;
     overflow: hidden;
-    border-radius: 8px;
   }
-  .fan-img-wrapper img {
+  
+  .left-img img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
   }
   
+  .right-imgs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .top-img,
+  .bottom-img {
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .top-img img,
+  .bottom-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .fan-img-wrapper {
+    flex: 1;
+  }
+  
+  .fan-img-wrapper img {
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+  }
+
+  
   .fan-icons {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 8px;
+    justify-content: center;
+    margin: 16px 0 4px;
+    font-size: 15px;
+    gap: 8px;
   }
   .fan-icons span {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 4.5px;
   }
   .save-icon {
     margin-left: auto;
   }
   
+  .like-count {
+    display: inline-block;
+    min-width: 28px; 
+    text-align: left;
+  }

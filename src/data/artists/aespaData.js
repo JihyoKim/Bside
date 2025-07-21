@@ -18,6 +18,7 @@ import mv3 from '../../assets/ArtistPage/aespa/mv3.png';
 const aespaData = {
     id: 'aespa',
     name: 'aespa',
+    members: ['aespa', '카리나', '윈터', '지젤', '닝닝'],
     coverImg: aespaCover,
     followColor: '#FF8031',
     memberImgs: [aespa_member1, aespa_member2, aespa_member3, aespa_member4],
@@ -127,30 +128,222 @@ const aespaData = {
       nickname: '온리유찌민',
       time: '29분전',
       profile: '/assets/ArtistPage/aespa/user5.png',
-      text: 'Kim Min-jung is love 🤍',
-      translatedText: '김민정은 사랑이에요 🤍',
+      text: '김민정은 사랑이에요 🤍',
+      translatedText: '',
       images: [
         '/assets/ArtistPage/aespa/aespa-fanPost1.png'
       ],
       likes: 2,
-      comments: 0
-    }
+      comments: 0,
+      showFollowButton: true
+    },
+    {
+      id: 2,
+      nickname: '지젤리좋아',
+      time: '29분전',
+      profile: '/assets/ArtistPage/aespa/user2.png',
+      text: 'so cute with her STITCH hairband OMG',
+      translatedText: '스티치 머리띠 한 거 너무 귀여워 진짜 OMG',
+      images: [
+        '/assets/ArtistPage/aespa/aespa-fanPost2-1.png',
+        '/assets/ArtistPage/aespa/aespa-fanPost2-2.png',
+      ],
+      likes: 5,
+      comments: 0,
+      showFollowButton: true
+    },
+    {
+      id: 3,
+      nickname: '닝덕사냥',
+      time: '38분전',
+      profile: '/assets/ArtistPage/aespa/user3.png',
+      text: '카닝의 조화 최고댜★ 닝닝 계속 뿌가머리해줘!!',
+      translatedText: '',
+      images: [
+        '/assets/ArtistPage/aespa/aespa-fanPost3-1.png',
+        '/assets/ArtistPage/aespa/aespa-fanPost3-2.png',
+      ],
+      likes: 13,
+      comments: 0,
+      showFollowButton: true
+    },
+    {
+      id: 4,
+      nickname: '갓스파',
+      time: '40분전',
+      profile: '/assets/ArtistPage/aespa/user4.png',
+      text: '우리애들 너무 고생했어ㅠㅠ 다음 음악방송도 1위!!',
+      translatedText: '',
+      images: [
+        '/assets/ArtistPage/aespa/aespa-fanPost4.png'
+      ],
+      likes: 10,
+      comments: 0,
+      showFollowButton: true
+    },
   ],
 
+
+  
   fanFollowingPosts: [
     {
       id: 1,
-      nickname: '윈터최고',
-      time: '1시간전',
+      nickname: '온리유찌민',
+      time: '29분전',
       profile: '/assets/ArtistPage/aespa/user5.png',
+      text: '김민정은 사랑이에요 🤍',
+      translatedText: '',
       images: [
-        '/assets/ArtistPage/aespa/aespa-fanPost1.png',
+        '/assets/ArtistPage/aespa/aespa-fanPost1.png'
       ],
-      text: '윈터 언니 무대 미쳤다... 💙',
-      likes: 14,
-      comments: 3,
-    }
-  ]
+      likes: 2,
+      comments: 0,
+      showFollowButton: false,
+    },
+    {
+      id: 5,
+      nickname: '온리유찌민',
+      time: '07. 14.',
+      profile: '/assets/ArtistPage/aespa/user5.png',
+      text: '에어팟 한쪽 잃어버렸다,,',
+      translatedText: '',
+      images: [
+        '/assets/ArtistPage/aespa/aespa-fanPost5.png'
+      ],
+      likes: 5,
+      comments: 0,
+      showFollowButton: false,
+    },
+    {
+      id: 6,
+      nickname: '온리유찌민',
+      time: '07. 13.',
+      profile: '/assets/ArtistPage/aespa/user5.png',
+      text: '오늘은 졸린하루 입니댜 =v=',
+      translatedText: '',
+      images: [
+        '/assets/ArtistPage/aespa/aespa-fanPost6.png'
+      ],
+      likes: 4,
+      comments: 0,
+      showFollowButton: false,
+    },
+  ],
+
+
+  // 공지-달력
+  noticeSchedule: [
+    {
+      date: '2025-08-12',
+      type: 'content',
+      typeName: '콘텐츠',
+      title: "‘Dirty Work’ 발매 기념 사인회 - CJ E&M CENTER",
+      time: "오전 11:30",
+      artists: ['aespa', '카리나', '닝닝']
+    },
+    {
+      date: '2025-08-12',
+      type: 'fan',
+      typeName: '팬 소통',
+      title: "에스파 in Seoul 라이브 생방송",
+      time: "오후 14:00",
+      artists: ['aespa',]
+    },
+    {
+      date: '2025-07-28',
+      type: 'media',
+      typeName: '방송 미디어',
+      title: '(자동 추가) 2025-07-28 media',
+      time: '',
+      artists: ['aespa']
+    },
+    {
+      date: '2025-07-29',
+      type: 'content',
+      typeName: '콘텐츠',
+      title: '(자동 추가) 2025-07-29 content',
+      time: '',
+      artists: ['aespa']
+    },
+    {
+      date: '2025-08-01',
+      type: 'media',
+      typeName: '방송 미디어',
+      title: '(자동 추가) 2025-08-01 media',
+      time: '',
+      artists: ['aespa']
+    },
+    {
+      date: '2025-08-03',
+      type: 'content',
+      typeName: '콘텐츠',
+      title: '(자동 추가) 2025-08-03 content',
+      time: '',
+      artists: ['aespa']
+    },
+    {
+      date: '2025-08-04',
+      type: 'media',
+      typeName: '방송 미디어',
+      title: '(자동 추가) 2025-08-04 media',
+      time: '',
+      artists: ['aespa']
+    },
+    {
+      date: '2025-08-16',
+      type: 'anniversary',
+      typeName: '공연/행사',
+      title: "test",
+      time: "오후 17:00",
+      artists: ['aespa',]
+    },
+    {
+      date: '2025-08-19',
+      type: 'event',
+      typeName: '공연/행사',
+      title: '(자동 추가) 2025-08-19 event',
+      time: '',
+      artists: ['aespa']
+    },
+    {
+      date: '2025-08-19',
+      type: 'event',
+      typeName: '공연/행사',
+      title: '(자동 추가) 2025-08-19 event2',
+      time: '',
+      artists: ['aespa']
+    },
+    {
+      date: '2025-08-19',
+      type: 'event',
+      typeName: '공연/행사',
+      title: '(자동 추가) 2025-08-19 event3',
+      time: '',
+      artists: ['aespa']
+    },
+  ],
+
+
+  voteSubList : [
+    {
+      id: 1,
+      icon: 'orange', // 'orange', 'blue', 'pink'
+      point: 30,
+      question: '양콘에서 불러줬으면 하는 커버곡은? 🎶',
+    },
+    {
+      id: 2,
+      icon: 'blue',
+      point: 20,
+      question: '블랙핑크가 찍어줬으면 하는 여름 콘텐츠는?',
+    },
+    {
+      id: 3,
+      icon: 'pink',
+      point: 10,
+      question: '다음 가사 중 빈칸에 들어갈 말은 무엇일까요?',
+    },
+  ],
 
 };
 

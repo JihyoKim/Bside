@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import './Notice.css';
@@ -12,13 +12,22 @@ const Notice = () => {
     noticeList = [],
     noticeSummary = {},
     noticeSchedule = [],
+    members = [],
   } = useOutletContext();
 
+  const [selectedDate, setSelectedDate] = useState('2025-08-12');
+  const filteredSchedule = noticeSchedule.filter(item => item.date === selectedDate);
+  
   return (
     <div className="notice-container">
       <NoticeCard noticeList={noticeList} />
-       <NoticeCal summary={noticeSummary} />
-      <NoticeSched schedule={noticeSchedule} />
+      <NoticeCal
+        noticeSchedule={noticeSchedule}
+        selectedDate={selectedDate}
+        onSelectDate={setSelectedDate}
+        artistList={members}
+      />
+      <NoticeSched schedule={filteredSchedule} />
     </div>
   );
 };

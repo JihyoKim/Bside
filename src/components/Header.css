@@ -29,28 +29,28 @@
   padding-left: 5px;
 }
 
-.dropdown-icon {
+.fixed-header .dropdown-icon {
   margin-top: 6px;
   width: 12px;
   height: 6px;
   
 }
 
-.header-right {
+.fixed-header .header-right {
   display: flex;
   align-items: center;
   padding-top: 5%;
 }
 
-.alarm-icon {
+.fixed-header .alarm-icon {
   height: 27px;
 }
 
-.message-icon {
+.fixed-header .message-icon {
   height: 27px;
   padding-right: 16px;
 }
 
-.menu-icon {
+.fixed-header .menu-icon {
   width: 25px;
 }

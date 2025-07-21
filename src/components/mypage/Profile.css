@@ -1,4 +1,4 @@
-.profile-section {
+.mypage-container .profile-section {
     width: 100%;
     height: 520px;
     position: relative;
@@ -7,21 +7,21 @@
     font-family: sans-serif;
 }
 
-.profile-bg {
+.mypage-container .profile-bg {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
-.bg-img {
+.mypage-container .bg-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
 }
 
-.bg-gradient {
+.mypage-container .bg-gradient {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -34,7 +34,7 @@
     left: 0;
 }
 
-.profile-center {
+.mypage-container .profile-center {
     position: relative;
     z-index: 2;
     display: flex;
@@ -43,27 +43,27 @@
     padding-top: 220px;
 }
 
-.profile-photo-wrap {
+.mypage-container .profile-photo-wrap {
     position: relative;
     width: 84px;
     height: 84px;
 }
 
-.profile-photo {
+.mypage-container .profile-photo {
     width: 84px;
     height: 84px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.setting-icon {
+.mypage-container .setting-icon {
     position: absolute;
     bottom: 0;
     right: 3px;
     width: 30px;
 }
 
-.today-badge {
+.mypage-container .today-badge {
     position: absolute;
     top: -52px;
     left: 0;
@@ -76,19 +76,19 @@
     border: 1px solid #fff;
 }
 
-.nickname {
+.mypage-container .nickname {
     margin-top: 17px;
     font-size: 17px;
     font-weight: 600;
 }
 
-.status {
+.mypage-container .status {
     font-size: 13px;
     color: #ccc;
     margin-top: 8px;
 }
 
-.profile-stats {
+.mypage-container .profile-stats {
     position: absolute;
     bottom: 50px;
     width: 100%;
@@ -98,14 +98,14 @@
     padding: 0 8px;
 }
 
-.stat {
+.mypage-container .stat {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 60px; 
 }
 
-.stat-top {
+.mypage-container .stat-top {
     height: 20px;
     display: flex;
     align-items: center;
@@ -113,22 +113,22 @@
     margin-bottom: 6px;
 }
 
-.stat-top .ticket {
+.mypage-container .stat-top .ticket {
     width: auto;
     height: 18px;
 }
-.stat-top .point {
+.mypage-container .stat-top .point {
     width: auto;
     height: 22px;
 }
 
 
-.stat-label {
+.mypage-container .stat-label {
     font-size: 18px;
     color: #fff;
 }
 
-.stat-bottom {
+.mypage-container .stat-bottom {
     font-size: 14px;
     font-weight: 300;
     color: #bbb;

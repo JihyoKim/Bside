@@ -16,15 +16,22 @@ const FanAll = () => {
   const posts = artistData[artistId]?.fanPosts || [];
 
   const [likes, setLikes] = useState(posts.map(() => false));
+  const [likeCounts, setLikeCounts] = useState(posts.map(post => post.likes));
   const [saves, setSaves] = useState(posts.map(() => false));
+  const [followings, setFollowings] = useState(posts.map(() => false));
   const [showTranslated, setShowTranslated] = useState(posts.map(() => false));
-
+  
   const toggleLike = (index, e) => {
     e.stopPropagation();
-    const updated = [...likes];
-    updated[index] = !updated[index];
-    setLikes(updated);
-  };
+    const updatedLikes = [...likes];
+    const updatedCounts = [...likeCounts];
+  
+    updatedLikes[index] = !updatedLikes[index];
+    updatedCounts[index] += updatedLikes[index] ? 1 : -1;
+  
+    setLikes(updatedLikes);
+    setLikeCounts(updatedCounts);
+  };  
 
   const toggleSave = (index, e) => {
     e.stopPropagation();
@@ -32,6 +39,13 @@ const FanAll = () => {
     updated[index] = !updated[index];
     setSaves(updated);
   };
+
+  const toggleFollow = (index, e) => {
+    e.stopPropagation(); // 부모 클릭 방지
+    const updated = [...followings];
+    updated[index] = !updated[index];
+    setFollowings(updated);
+  };  
 
   const toggleTranslation = (index, e) => {
     e.stopPropagation();
@@ -60,7 +74,15 @@ const FanAll = () => {
               <span className="time">{post.time}</span>
             </div>
             <div className="fan-follow-more">
-              <button className="follow-btn">팔로우</button>
+              {post.showFollowButton && (
+                <button
+                  className="follow-btn"
+                  onClick={(e) => toggleFollow(index, e)}
+                  style={{ color: followings[index] ? '#fff' : '#00acee' }}
+                >
+                  {followings[index] ? '팔로잉' : '팔로우'}
+                </button>
+              )}
               <img src={option} alt="more" />
             </div>
           </div>
@@ -83,20 +105,37 @@ const FanAll = () => {
           )}
 
           {/* 이미지 */}
-          <div className={`fan-images ${post.images.length === 2 ? 'two' : ''}`}>
-            {post.images.map((img, idx) => (
-              <div key={idx} className="fan-img-wrapper">
-                <img src={img} alt={`post-${idx}`} />
+          {post.images.length === 3 ? (
+            <div className="fan-images three">
+              <div className="left-img">
+                <img src={post.images[0]} alt="left" />
               </div>
-            ))}
-          </div>
+              <div className="right-imgs">
+                <div className="top-img">
+                  <img src={post.images[1]} alt="top-right" />
+                </div>
+                <div className="bottom-img">
+                  <img src={post.images[2]} alt="bottom-right" />
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className={`fan-images ${post.images.length === 2 ? 'two' : ''}`}>
+              {post.images.map((img, idx) => (
+                <div key={idx} className="fan-img-wrapper">
+                  <img src={img} alt={`post-${idx}`} />
+                </div>
+              ))}
+            </div>
+          )}
 
           {/* 아이콘 */}
           <div className="fan-icons">
-            <span onClick={(e) => toggleLike(index, e)}>
-              <img src={likes[index] ? likeFilled : like} alt="like" /> {post.likes}
-            </span>
-            <span>
+          <span className="like-icon" onClick={(e) => toggleLike(index, e)}>
+            <img src={likes[index] ? likeFilled : like} alt="like" />
+            <span className="like-count">{likeCounts[index]}</span>
+          </span>
+            <span className='comment-icon'>
               <img src={comment} alt="comment" /> {post.comments}
             </span>
             <img
