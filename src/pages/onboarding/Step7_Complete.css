@@ -1,0 +1,65 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+.step7-container {
+  height: 100vh;
+  background: linear-gradient(to bottom, #000000 60%, #9B4A61 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding: 0 24px;
+  font-family: 'Pretendard', sans-serif;
+  position: relative; user-select: none;
+}
+input, textarea {
+  user-select: text !important;
+}
+
+.step7-content {padding-bottom: 60%;}
+
+
+.step7-welcome {
+  font-size: 24px; font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.step7-logo {
+    font-size: 45px; font-weight: 400;
+    letter-spacing: 8px; margin-bottom: 30px;
+    font-family: 'Lexend Zetta', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+
+.step7-nickname {
+  font-size: 14.5px; font-weight: 400;
+  line-height: 1.6; letter-spacing: 0.6px;
+}
+
+.step7-nickname .highlight {
+  color: #FFA3EB;
+  font-weight: 500;
+}
+
+.step7-main-btn {
+    position: absolute;
+    bottom: 60px;
+    left: 4%;
+    width: 92%;
+    background-color: #fff;
+    color: black; font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 17px;
+  }
+
+  .step7-start-text {
+    font-size: 12px;
+    color: #E8B5D9;
+    position: absolute;
+    bottom: 30px; font-weight: 500;
+    left: 50%; 
+    transform: translateX(-50%);
+  }

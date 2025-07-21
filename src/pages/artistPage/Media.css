@@ -1,0 +1,141 @@
+.media-container {
+    width: 100vw;
+    max-width: 390px;
+    color: white;
+    /* padding-bottom: 120px; */
+  }
+  
+  .media-section {
+    padding: 0 16px;
+  }
+  
+  .media-section.new-section {
+    padding: 0 16px 67.5px;
+  }
+
+  .media-section.new-section h4 {
+    padding: 30px 0 31px;
+  }
+  
+  .media-section h4 {
+    font-size: 21px;
+    color: #fff;
+    padding: 0 0 25px;
+  }
+  
+  .new-slide {
+    width: 175px !important;
+    flex-shrink: 0;
+  }
+  
+  .new-slide-img {
+    width: auto;
+    height: 256px;
+    object-fit: cover;
+  }
+  
+  /* Swiper 전체 영역 오버플로우 보여지게 */
+  .media-swiper {
+    overflow: visible;
+  }
+  
+  .media-swiper .swiper-pagination {
+    position: relative;
+    margin-top: 16px;
+    text-align: left;
+    padding-left: 15px;
+  }
+  
+  .media-swiper .swiper-pagination-bullet {
+    background-color: #3C3C3C;
+    opacity: 1;
+  }
+  
+  .media-swiper .swiper-pagination-bullet-active {
+    background-color: #FF8031;
+  }
+  
+  .media-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .media-thumbnail {
+    position: relative;
+    width: 150px;
+    flex-shrink: 0;
+  }
+  
+  .media-thumbnail img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .time-badge,
+  .live-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 6px;
+  }
+  
+  .live-badge {
+    background: #FF3B3B;
+  }
+  
+  .media-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+  }
+  
+  .media-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .media-meta {
+    font-size: 12px;
+    color: #ccc;
+  }
+  
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .section-header h4 {
+    margin: 0;
+    font-size: 21px;
+    color: #fff;
+  }
+
+  .section-header.mv {
+    margin-top: 40px;
+  }
+  
+  .more-btn {
+    font-size: 15px;
+    color: #aaa;
+    cursor: pointer;
+    flex-shrink: 0;  
+    padding: 0 0 25px;
+  }
+
+  .media-swiper .swiper-slide {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+  
+  .media-swiper .swiper-slide-active {
+    opacity: 1;
+  }
+

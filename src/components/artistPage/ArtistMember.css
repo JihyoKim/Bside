@@ -1,0 +1,46 @@
+.artist-member-wrapper {
+  padding: 24px 0 0;
+  overflow: hidden;
+  width: 100vw;
+  max-width: 390px;
+  min-width: 320px;
+  box-sizing: border-box;
+}
+
+.artist-member-wrapper h3 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  padding-left: 16px;
+}
+
+.member-scroll-inner {
+  display: flex;
+  align-items: center;
+  cursor: grab;
+  min-width: max-content;
+  /* padding 제거 */
+}
+
+.member-box-wrapper {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+  padding-left: 16px; /* 패딩은 여기서 시작 */
+}
+
+.member-slide {
+  width: 83px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.member-slide img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+  pointer-events: none; /* 이미지 끌려나오는 현상 방지 */
+}

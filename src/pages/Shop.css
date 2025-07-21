@@ -1,0 +1,7 @@
+.shop-container {    
+    width: 100vw;
+    max-width: 390px;
+    min-width: 320px;
+    padding: 80px 0 120px;
+    box-sizing: border-box;
+}

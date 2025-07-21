@@ -1,0 +1,209 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+.step6-container {
+  padding: 40px 16px;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Pretendard', sans-serif;
+  overflow: hidden; user-select: none;
+}
+input, textarea {
+  user-select: text !important;
+}
+
+.step6-header {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+}
+
+.step6-skip {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.step6-subtitle {
+  color: #FFA3EB;
+  font-size: 13px;
+  margin-top: 40px;
+}
+
+.step6-title {
+  margin: 20px 0 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.step6-search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #FFA3EB;
+  border-radius: 25px;
+  padding: 10px 15px;
+  margin: 20px 0;
+}
+
+.step6-search-bar input {
+  background: transparent;
+  border: none;
+  color: #FFA3EB;
+  flex: 1;
+  outline: none;
+}
+
+.search-icon-img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.step6-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.step6-tabs button {
+  border-radius: 20px;
+  font-size: 14px;
+  padding: 8px 18px;
+  border: none;
+  background-color: #333;
+  color: #FFA3EB;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.step6-tabs button.active {
+  background-color: #6E6E6E;
+  color: #FFA3EB;
+}
+
+/* ✅ 아티스트 전체 영역 (스크롤 영역) */
+.step6-artist-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 95%;
+  margin: 0 auto;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0px;
+  margin-bottom: 100px;
+  max-height: 460px;
+
+  /* 스크롤바 숨기기 */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.step6-artist-layout::-webkit-scrollbar {
+  display: none;
+}
+
+/* ✅ 3열 행 묶음 */
+.step6-container .artist-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* ✅ column2, column5에만 margin-top 적용 */
+.artist-column-wrapper.extra-margin {
+  margin-top: 19%;
+}
+
+/* ✅ 아티스트 열 */
+.step6-container .artist-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1;
+}
+
+/* ✅ 아티스트 박스 */
+.step6-container .artist-box {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 15%;
+}
+
+/* ✅ 아티스트 이미지 */
+.step6-container .artist-img {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: block;
+  transition: opacity 0.2s;
+}
+
+/* ✅ 선택 시 어두워짐 */
+.step6-container .artist-box.selected .artist-img {
+  opacity: 0.5;
+}
+
+/* ✅ 하트 오버레이 */
+.step6-container .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.step6-container .heart-icon {
+  width: 75%;
+  height: auto;
+}
+
+/* ✅ 아티스트 이름 */
+.step6-container .artist-name {
+  color: #FFA3EB;
+  font-weight: 500;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* ✅ 다음 버튼 (고정) */
+.step6-next-btn {
+  position: absolute;
+  bottom: 60px;
+  left: 16px;
+  right: 16px;
+  background-color: #FFA3EB;
+  color: black;
+  padding: 17px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 20;
+}
+
+/* ✅ 하단 그라디언트 오버레이 */
+.step6-gradient-overlay {
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 13%,
+    rgba(0, 0, 0, 0.72) 53%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  pointer-events: none;
+  z-index: 10;
+}

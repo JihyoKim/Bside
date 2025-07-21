@@ -1,0 +1,56 @@
+.point-card-container {
+  padding: 100px 16px 120px;
+}
+
+.point-card {
+    background: white;
+    color: black;
+    text-align: center;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .point-card-container .label, .expire {
+    font-size: 0.875rem;
+    color: gray;
+  }
+  
+  .point-card-container .point {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ec4899;
+    margin: 0.5rem 0;
+  }
+  
+  .point-card-container .survey-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .point-card-container .survey-item {
+    background-color: #18181b;
+    color: white;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .point-card-container .question {
+    font-weight: 500;
+  }
+  
+  .point-card-container .meta {
+    font-size: 0.75rem;
+    color: #a1a1aa;
+    margin-top: 0.25rem;
+  }
+  
+  .point-card-container .reward {
+    font-weight: bold;
+    color: #ec4899;
+    font-size: 1.25rem;
+  }

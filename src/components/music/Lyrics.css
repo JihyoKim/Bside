@@ -1,0 +1,108 @@
+.lyrics-panel {
+  position: fixed;
+  bottom: 0; /* 아래 기준으로 고정 */
+  left: 0;
+  right: 0;
+  max-width: 390px;
+  height: 100%;
+  background: linear-gradient(to bottom, #000 0%, #010F1A 68%, #054778 100%);
+  z-index: 1000;
+
+  /* 슬라이드 초기 상태: 아래로 숨김 */
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out;
+  
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 80px 0 90px;
+
+  margin-left: 50%;
+  margin-right: auto;
+}
+
+@media (max-width: 1024px) {
+  .lyrics-panel {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+
+.lyrics-panel.show {
+  transform: translateY(0);
+}
+
+  .lyrics-tabs {
+    position: sticky;
+    top: 0;
+    background: transparent;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .lyrics-tabs button {
+    flex: 1;
+    padding: 12px 0;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    color: #fff;
+  }
+  
+  .lyrics-tabs button.active {
+    border-bottom: 2px solid #A7DAFF;
+    color: #A7DAFF;
+  }
+  
+  .lyrics-content {
+    flex: 1;
+    overflow: hidden; /* 여기서 스크롤 안 함 */
+    position: relative;
+    padding: 0px 4px 30px; 
+    color: #fff;
+    line-height: 2;
+
+  }
+  
+  .lyrics-scroll-inner {
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+  }
+  
+  /* 스크롤바 */
+  .lyrics-scroll-inner::-webkit-scrollbar {
+    width: 6px;
+  }
+  .lyrics-scroll-inner::-webkit-scrollbar-thumb {
+    background-color: rgba(166, 218, 255, 0.5);
+    border-radius: 3px;
+  }
+  
+
+  .lyrics-wrapper {
+    white-space: pre-wrap;
+    padding: 20px;
+  }
+  
+  .lyric-pair {
+    margin-bottom: 16px;
+  }
+  
+  .lyric-pair .original {
+    color: #fff;
+  }
+  
+  .lyric-pair .translated,
+  .lyric-pair .pronunciation {
+    color: #A7DAFF;
+  }
+  

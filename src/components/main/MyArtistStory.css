@@ -1,0 +1,52 @@
+.artist-story-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    overflow: visible;
+  }
+.artist-story-wrapper .artist-story-slider {
+    width: calc(100% + 6.16vw);
+    margin-left: -3.08vw;
+    padding-left: 3.08vw;  /* 내부 슬라이드 좌측 간격 유지 */
+    overflow: visible;
+    box-sizing: border-box;
+  }
+
+
+.artist-story-wrapper .artist-story-text {
+    padding: 67px 0 12px 12px;
+    color: white;
+    font-size: 18px ;
+    font-weight: bold;
+    z-index: 10;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    pointer-events: none; 
+}
+
+.artist-story-wrapper .swiper-slide {
+    width: 196px;
+    flex-shrink: 0;   /* 줄어들지 않게 */
+  }
+
+
+.artist-story-wrapper .info { padding: 16px 8px; background: #262626; width: 196px;}
+.artist-story-wrapper .info h3 { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
+.artist-story-wrapper .info h3.blue { color: #A7DAFF;}
+.artist-story-wrapper .info h3.pink { color: #FFBDF1;}
+.artist-story-wrapper .info p { font-size: 12px; font-weight: 300; color: #A0A0A0; }
+
+.artist-story-wrapper .artist-card {margin: 0; padding: 0; border-radius: 10px; overflow: hidden;}
+.artist-story-wrapper .artist-card .image-wrapper {margin: 0; padding: 0;}
+.artist-story-wrapper .artist-card .image-wrapper img {display: block; width: 100%; height: auto; margin: 0; padding: 0;}
+.artist-story-wrapper .artist-card .info {margin: 0; padding: 16px 8px; width: 196px; height: 94px;}
+
+
+.artist-swiper .swiper-pagination {
+    position: relative;  /* 기본 absolute를 relative로 */
+    margin-top: 16px;
+    text-align: center;     /* 또는 center, 원하는 위치 */
+    padding-left: 8px;    /* 카드와 정렬 맞추기 위함 */
+}
+
+.artist-swiper .swiper-pagination-bullet { background-color: #3C3C3C;opacity: 1; }
+.artist-swiper .swiper-pagination-bullet-active { background-color: #e9c4cd;}

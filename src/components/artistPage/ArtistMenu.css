@@ -1,0 +1,28 @@
+.menu_container {
+  width: 100%;
+  /* padding: 0 16px; */
+  box-sizing: border-box;
+}
+
+.media-tabs {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #404040;
+}
+
+.media-tabs .tab {
+  position: relative;
+  padding: 20px 0 5px;
+  font-size: 16px;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  transition: all 0.3s ease;
+  z-index: 0;
+}

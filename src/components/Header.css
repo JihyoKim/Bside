@@ -1,0 +1,56 @@
+.fixed-header {
+  position: fixed;
+  width: 100vw;
+  max-width: 390px;
+  top: 0;
+  height: 80px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  z-index: 2000;
+  transition: background-color 0.3s ease;
+}
+
+.fixed-header.black {
+  background-color: #000;
+}
+
+.fixed-header.pink {
+  background-color: transparent;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 5%;
+  padding-left: 5px;
+}
+
+.dropdown-icon {
+  margin-top: 6px;
+  width: 12px;
+  height: 6px;
+  
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  padding-top: 5%;
+}
+
+.alarm-icon {
+  height: 27px;
+}
+
+.message-icon {
+  height: 27px;
+  padding-right: 16px;
+}
+
+.menu-icon {
+  width: 25px;
+}
