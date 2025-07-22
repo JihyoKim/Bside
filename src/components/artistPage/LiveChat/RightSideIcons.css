@@ -1,0 +1,31 @@
+.icon-panel {
+    position: absolute;
+    right: 16px;
+    bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    z-index: 10;
+  }
+  
+  .icon-panel button {
+    background: none; margin-bottom: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .icon-panel button img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.2s;
+  }
+  
+  .icon-panel button span {
+    font-size: 12px;
+    color: white;
+    margin-top: 4px;
+    display: block;
+  }
+  

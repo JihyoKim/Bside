@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Media.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -14,7 +14,9 @@ const Media = () => {
   } = useOutletContext();
 
   const navigate = useNavigate();
-  const { artistId } = useParams(); // 아티스트 ID 가져옴
+  const { artistId } = useParams();
+
+  const [activeImage, setActiveImage] = useState(null); // 모달 이미지 상태
 
   return (
     <div className="media-container">
@@ -32,7 +34,12 @@ const Media = () => {
         >
           {newSlides.map((img, idx) => (
             <SwiperSlide key={idx} className="new-slide">
-              <img src={img} alt={`new${idx + 1}`} className="new-slide-img" />
+              <img
+                src={img}
+                alt={`new${idx + 1}`}
+                className="new-slide-img"
+                onClick={() => setActiveImage(img)}
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -52,7 +59,7 @@ const Media = () => {
               if (item.mediaId === 'live-giselle') {
                 navigate(`/main/artistPage/${artistId}/media/${item.mediaId}`);
               } else if (item.link) {
-                window.open(item.link, '_blank'); // ✅ 외부 링크 열기
+                window.open(item.link, '_blank');
               } else {
                 alert('해당 콘텐츠는 준비 중입니다.');
               }
@@ -104,6 +111,14 @@ const Media = () => {
           </div>
         ))}
       </div>
+
+      {/* 🔍 모달 이미지 뷰 */}
+      {activeImage && (
+        <div className="media-modal" onClick={() => setActiveImage(null)}>
+          <div className="modal-overlay" />
+          <img src={activeImage} alt="확대 이미지" className="modal-img" />
+        </div>
+      )}
     </div>
   );
 };

@@ -197,4 +197,4 @@
 }
 
 .home-notice-wrapper .swiper-pagination-bullet { background-color: #3C3C3C;opacity: 1; }
-.home-notice-wrapper .swiper-pagination-bullet-active { background-color: #e9c4cd;}
+.home-notice-wrapper .swiper-pagination-bullet-active { background-color: var(--pagination-bullet);}

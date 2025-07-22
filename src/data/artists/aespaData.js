@@ -18,9 +18,11 @@ import mv3 from '../../assets/ArtistPage/aespa/mv3.png';
 const aespaData = {
     id: 'aespa',
     name: 'aespa',
+    memberTitle: 'Member',
     members: ['aespa', '카리나', '윈터', '지젤', '닝닝'],
     coverImg: aespaCover,
     followColor: '#FF8031',
+    isFollowing: false,
     memberImgs: [aespa_member1, aespa_member2, aespa_member3, aespa_member4],
     tabColor: '#FF8031',
     underlineColor: '#FF8031',
@@ -292,7 +294,7 @@ const aespaData = {
     {
       date: '2025-08-16',
       type: 'anniversary',
-      typeName: '공연/행사',
+      typeName: '기념일',
       title: "test",
       time: "오후 17:00",
       artists: ['aespa',]
@@ -342,6 +344,30 @@ const aespaData = {
       icon: 'pink',
       point: 10,
       question: '다음 가사 중 빈칸에 들어갈 말은 무엇일까요?',
+    },
+    {
+      id: 4,
+      icon: 'gray',
+      point: 5,
+      question: '가장 기대되는 컴백 콘텐츠는? 💖 ',
+    },
+    {
+      id: 5,
+      icon: 'gray',
+      point: 5,
+      question: '오늘 로제의 공항패션 속 벌칙 아이템은?',
+    },
+    {
+      id: 6,
+      icon: 'gray',
+      point: 5,
+      question: '최애가 찍어줬으면 하는 Vlog주제는?',
+    },
+    {
+      id: 7,
+      icon: 'gray',
+      point: 5,
+      question: '콘서트에서 가장 기대되는 순간은? 🔥',
     },
   ],
 

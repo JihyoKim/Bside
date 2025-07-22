@@ -6,7 +6,7 @@ const ArtistMember = ({ data }) => {
   const scrollRef = useRef();
   const [dragLimit, setDragLimit] = useState(0);
 
-  const { memberImgs } = data;  // props로 받은 데이터 사용
+  const { memberImgs, memberTitle } = data;  // memberTitle도 구조 분해
 
   const updateDragLimit = () => {
     const outer = scrollRef.current;
@@ -26,11 +26,11 @@ const ArtistMember = ({ data }) => {
     updateDragLimit();
     window.addEventListener('resize', updateDragLimit);
     return () => window.removeEventListener('resize', updateDragLimit);
-  }, [memberImgs.length]); // 멤버 수 바뀔 때도 갱신
+  }, [memberImgs.length]);
 
   return (
     <div className="artist-member-wrapper" ref={scrollRef}>
-      <h3>Member</h3>
+      <h3>{memberTitle || 'Member'}</h3> {/* 기본값은 'Member' */}
       <motion.div
         className="member-scroll-inner"
         drag="x"

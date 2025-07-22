@@ -8,6 +8,8 @@
   
 :root {
 	--max-width: 390px;
+	--pagination-bullet: #FF72E0; 
+	/* var(--pagination-bullet) */
 }
 
   * {

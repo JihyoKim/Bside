@@ -32,9 +32,8 @@ const ArtistMenu = ({ data }) => {
       <div className="media-tabs">
         {tabs.map((tab, idx) => {
           const isActive =
-            location.pathname === `/main/artistPage/${artistId}/${tab}` ||
+            location.pathname.startsWith(`/main/artistPage/${artistId}/${tab}`) ||
             (location.pathname === `/main/artistPage/${artistId}` && tab === 'media');
-
           return (
             <NavLink
               key={tab}

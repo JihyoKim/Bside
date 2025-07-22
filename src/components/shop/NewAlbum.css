@@ -36,18 +36,18 @@
     margin: 0 auto;
   }
   
-  .album-slide {
+  .shop-container .album-slide {
     text-align: center;
   }
   
-  .album-slide img {
+  .shop-container .album-slide img {
     width: 50%;
     /* border-radius: 10px; */
     margin: 0 auto;
     display: block;
   }
   
-  .album-name {
+  .shop-container .album-name {
     color: #ff2a2a;
     margin: 16px 0 4px;
     font-weight: bold;
@@ -55,7 +55,7 @@
     font-family: 'Red Rose', serif; /* 추가 */
   }
   
-  .album-desc {
+  .shop-container .album-desc {
     color: #ccc;
     font-size: 14px;
     font-family: 'Red Rose', serif; /* 추가 */
@@ -71,24 +71,24 @@
   }
 
   /* Swiper 페이지네이션 점 위치 조정 */
-.swiper-pagination {
+.shop-container .swiper-pagination {
     margin-top:50px;  /* ✅ 텍스트와 점 사이 간격 */
     position: relative; /* Swiper 내부에서 흐름에 맞게 배치되도록 */
   }
 
-.swiper-pagination-bullet {
+  .shop-container .swiper-pagination-bullet {
 background: #ccc;      /* 회색 점 */
 opacity: 1;
 }
 
-.swiper-pagination-bullet-active {
+.shop-container .swiper-pagination-bullet-active {
 background: #FFB9F0;   /* 활성 점은 빨간색 */
 }
 
 
 /* 화살표 크기 & 위치 줄이기 */
-.swiper-button-prev,
-.swiper-button-next {
+.shop-container .swiper-button-prev,
+.shop-container .swiper-button-next {
   color: #fff;
   width: 12px;
   height: 12px;
@@ -100,16 +100,16 @@ background: #FFB9F0;   /* 활성 점은 빨간색 */
 }
 
 /* 양 옆 여백 조정 */
-.swiper-button-prev {
+.shop-container .swiper-button-prev {
   left: 30px;
 }
 
-.swiper-button-next {
+.shop-container .swiper-button-next {
   right: 30px;
 }
 
 /* 🔽 화살표 아이콘 자체 크기 줄이기 */
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.shop-container .swiper-button-prev::after,
+.shop-container .swiper-button-next::after {
   font-size: 20px;  /* ✅ 아이콘 자체 크기 작게 */
 }

@@ -5,8 +5,8 @@ import followIcon from '../../assets/ArtistPage/follow_b.svg';
 import followingIcon from '../../assets/ArtistPage/following.svg';
 
 const ArtistCover = ({ data }) => {
-  const { name, coverImg, followColor } = data;
-  const [isFollowing, setIsFollowing] = useState(false);
+  const { name, coverImg, followColor, isFollowing: initialFollowState } = data;
+  const [isFollowing, setIsFollowing] = useState(initialFollowState ?? false); // 초기값 설정
 
   return (
     <div className="artist-cover-container" style={{ backgroundImage: `url(${coverImg})` }}>

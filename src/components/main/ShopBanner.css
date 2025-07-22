@@ -18,7 +18,7 @@
 .shop-banner-wrapper .swiper {margin-top: 47px; }
 .shop-banner-wrapper .swiper-slide img {width: 100%; object-fit:cover; display: block;}
 .shop-banner-wrapper .swiper-pagination-bullet { background-color: #ccc;opacity: 1; }
-.shop-banner-wrapper .swiper-pagination-bullet-active { background-color: #e9c4cd;}
+.shop-banner-wrapper .swiper-pagination-bullet-active { background-color: var(--pagination-bullet);}
 
 
 

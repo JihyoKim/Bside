@@ -7,17 +7,20 @@ import { artistData } from '../../data/artistData'; // ✅ 중괄호 사용 주�
 import pointIconOrange from '../../assets/symbol/pointIcon_orange.svg';
 import pointIconBlue from '../../assets/symbol/pointIcon_blue.svg';
 import pointIconPink from '../../assets/symbol/pointIcon_pink.svg';
+import pointIconGray from '../../assets/symbol/pointIcon_gray.svg';
 
 const iconMap = {
   orange: pointIconOrange,
   blue: pointIconBlue,
   pink: pointIconPink,
+  gray: pointIconGray,
 };
 
 const pointColorMap = {
   orange: '#FF6C00',
   blue: '#00BFFF',
   pink: '#FF4DA6',
+  gray: '#FFFFFF',
 };
 
 const VoteList = () => {

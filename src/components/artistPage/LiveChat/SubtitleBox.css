@@ -1,0 +1,58 @@
+/* ✅ 반드시 맨 위에 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap');
+
+.subtitle-box-container {
+  position: absolute;
+  bottom: 150px;
+  left: -20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.subtitle-box {
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 295px;
+  min-height: 70px;
+  max-height: 72px;
+  overflow: hidden;
+}
+
+/* ✅ 언어 태그 */
+.language-tag {
+  font-size: 11px;
+  color: #fffff0;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* ✅ 자막 텍스트 */
+.subtitle-text {
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 500;
+  white-space: normal;
+  word-break: keep-all;
+}
+
+/* ✅ 일본어 폰트 */
+.subtitle-box.jp {
+  font-family: 'Noto Sans JP', sans-serif !important;
+}
+
+/* ✅ 중국어 폰트 */
+.subtitle-box.cn {
+  font-family: 'Noto Sans SC', sans-serif !important;
+}

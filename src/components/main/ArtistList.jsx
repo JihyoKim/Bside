@@ -18,9 +18,9 @@ const ArtistList = () => {
   
 
   const artists = [
-    { name: 'G-DRAGON', img: artist1 },
-    { name: 'RIIZE', img: artist2 },
     { name: 'ALLDAY PROJECT', img: artist3 },
+    { name: 'RIIZE', img: artist2 },
+    { name: 'G-DRAGON', img: artist1 },
     { name: 'KiiiKiii', img: artist4 },
     { name: 'KiiiKiii', img: artist4 },
     { name: 'KiiiKiii', img: artist4 },
@@ -72,7 +72,9 @@ const ArtistList = () => {
                 onClick={() => {
                   if (artist.name === 'KiiiKiii') {
                     navigate('/main/artistPage/aespa');
-                  }
+                  } else if (artist.name === 'G-DRAGON') {
+                    navigate('/main/artistPage/gdragon');
+                  } 
                   // 그 외에는 클릭해도 이동 안 함
                 }}
                 style={{ cursor: artist.name === 'KiiiKiii' ? 'pointer' : 'default' }}

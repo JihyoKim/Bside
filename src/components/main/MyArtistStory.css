@@ -49,4 +49,4 @@
 }
 
 .artist-swiper .swiper-pagination-bullet { background-color: #3C3C3C;opacity: 1; }
-.artist-swiper .swiper-pagination-bullet-active { background-color: #e9c4cd;}
+.artist-swiper .swiper-pagination-bullet-active { background-color: var(--pagination-bullet);}
