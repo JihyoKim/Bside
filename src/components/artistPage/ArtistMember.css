@@ -2,7 +2,7 @@
   padding: 24px 0 0;
   overflow: hidden;
   width: 100vw;
-  max-width: 390px;
+  max-width: var(--max-width);
   min-width: 320px;
   box-sizing: border-box;
 }

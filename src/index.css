@@ -6,6 +6,10 @@
 	src: url('/public/PretendardVariable.woff2') format('woff2-variations');
   }
   
+:root {
+	--max-width: 390px;
+}
+
   * {
 	font-family: 'Pretendard Variable';
 	box-sizing: border-box;
@@ -39,13 +43,14 @@
 	padding: 0;
 	background: #555 url('assets/indexBg.png') no-repeat center center;
 	background-size: 100% 100%;
+	background-attachment: fixed;
   }
   
   /* 기본: 좌측 기준으로 정렬 */
   #root {
 	position: relative;
 	width: 100%;
-	max-width: 390px;
+	max-width: var(--max-width);
 	min-width: 320px;
 	background: #050305;
 	height: auto;
@@ -65,5 +70,5 @@
 	#root {
 	  margin: 0 auto;
 	}
-	body {background: #000;}
+	/* body {background: #000;} */
   }

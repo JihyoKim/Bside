@@ -1,6 +1,6 @@
 .media-container {
     width: 100vw;
-    max-width: 390px;
+    max-width: var(--max-width);
     color: white;
     /* padding-bottom: 120px; */
   }

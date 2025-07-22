@@ -52,7 +52,7 @@ const ArtistList = () => {
   }, [artists.length]);
 
   const goToMoreArtist = () => {
-    navigate('/moreArtist');
+    navigate('/main/moreArtist');
   };
 
   return (

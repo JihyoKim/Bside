@@ -1,6 +1,6 @@
 .home-container {
     width: 100vw;
-    max-width: 390px;
+    max-width: var(--max-width);
     min-width: 320px;
     padding: 80px clamp(9.56px, 3.08vw, 14.78px) 120px;
     box-sizing: border-box;

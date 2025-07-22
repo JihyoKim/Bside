@@ -1,7 +1,7 @@
 .fixed-header {
   position: fixed;
   width: 100vw;
-  max-width: 390px;
+  max-width: var(--max-width);
   top: 0;
   height: 80px;
   color: white;
