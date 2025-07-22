@@ -1,209 +1,161 @@
+/* 📌 상단 탭 (전체 / 팔로잉) */
 .fan-tab {
-    display: flex;
-    gap: 10px;
-    padding: 14px 12px;
-  }
-  .fan-tab a {
-    padding: 6px 14px;
-    font-size: 14px;
-    border-radius: 999px;
-    background: #2a2a2a;
-    color: #aaa;
-    text-decoration: none;
-  }
-  .fan-tab a.active {
-    background: #ff6600;
-    color: white;
-  }
-  
-  .fan-post-card {
-    background: #1a1a1a;
-    color: white;
-    border-radius: 12px;
-    margin: 10px 12px;
-    padding: 14px;
-  }
-  
-  .fan-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .fan-profile-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-<<<<<<< HEAD
-  
-  .fan-user-info {
-    flex: 1;
-    margin-left: 16px;
-    display: flex;
-    flex-direction: column; /* 세로 정렬 */
-    gap: 3px;
-  }
+  display: flex;
+  gap: 10px;
+  padding: 14px 12px;
+}
+.fan-tab a {
+  padding: 6px 14px;
+  font-size: 14px;
+  border-radius: 999px;
+  background: #2a2a2a;
+  color: #aaa;
+  text-decoration: none;
+}
+.fan-tab a.active {
+  background: #ff6600;
+  color: white;
+}
 
-  .fan-post-card .nickname {
-    font-size: 15px;
-    font-weight: bold;
-  }
-  .fan-post-card .time {
-=======
-  .fan-user-info {
-    flex: 1;
-    margin-left: 10px;
-  }
-  .nickname {
-    font-weight: bold;
-  }
-  .time {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
-    font-size: 12px;
-    color: #999;
-  }
-  .fan-follow-more {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .follow-btn {
-    background: none;
-    color: #00acee;
-    border: none;
-    font-size: 14px;
-  }
-  
-  .fan-text {
-    margin-top: 10px;
-    font-size: 14px;
-    white-space: pre-line;
-  }
+/* 📌 게시글 카드 */
+.fan-post-card {
+  background: #1a1a1a;
+  color: white;
+  border-radius: 12px;
+  margin: 10px 12px;
+  padding: 14px;
+}
 
-  .translate-toggle {
-    font-size: 13px;
-    color: #aaa;
-    text-decoration: underline;
-    cursor: pointer;
-    margin-top: 6px;
-  }
-  
-  .fan-images {
-    margin-top: 10px;
-<<<<<<< HEAD
-    overflow: hidden; 
-    border-radius: 8px; 
-  }
-  
-  .fan-images.two {
-    display: flex;
-    gap: 0;
-    overflow: hidden;        
-    border-radius: 8px;     
-  }
-  
-  .fan-images.three {
-    display: flex;
-    aspect-ratio: 3 / 2; /* 비율 조정 가능 */
-    border-radius: 8px;
-    overflow: hidden;
-    margin-top: 10px;
-  }
-  
-  .left-img {
-    flex: 1;
-    overflow: hidden;
-  }
-  
-  .left-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .right-imgs {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .top-img,
-  .bottom-img {
-    flex: 1;
-    overflow: hidden;
-  }
-  
-  .top-img img,
-  .bottom-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  
-  .fan-img-wrapper {
-    flex: 1;
-  }
-  
-  .fan-img-wrapper img {
-    width: 100%;
-    height: 100%;   
-    object-fit: cover;
-    display: block;
-    border-radius: 0;
-  }
+/* 📌 유저 정보 */
+.fan-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fan-profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.fan-user-info {
+  flex: 1;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.fan-post-card .nickname {
+  font-size: 15px;
+  font-weight: bold;
+}
+.fan-post-card .time {
+  font-size: 12px;
+  color: #999;
+}
+.fan-follow-more {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.follow-btn {
+  background: none;
+  color: #00acee;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
 
-=======
-  }
-  .fan-images.two {
-    display: flex;
-    gap: 6px;
-  }
-  .fan-img-wrapper {
-    flex: 1;
-    overflow: hidden;
-    border-radius: 8px;
-  }
-  .fan-img-wrapper img {
-    width: 100%;
-    object-fit: cover;
-    display: block;
-  }
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
-  
-  .fan-icons {
-    display: flex;
-    align-items: center;
-<<<<<<< HEAD
-    justify-content: center;
-    margin: 16px 0 4px;
-    font-size: 15px;
-    gap: 8px;
-=======
-    justify-content: space-between;
-    margin-top: 8px;
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
-  }
-  .fan-icons span {
-    display: flex;
-    align-items: center;
-<<<<<<< HEAD
-    gap: 4.5px;
-=======
-    gap: 4px;
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
-  }
-  .save-icon {
-    margin-left: auto;
-  }
-<<<<<<< HEAD
-  
-  .like-count {
-    display: inline-block;
-    min-width: 28px; 
-    text-align: left;
-  }
-=======
-  
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
+/* 📌 게시글 내용 + 번역 */
+.fan-text {
+  margin-top: 10px;
+  font-size: 14px;
+  white-space: pre-line;
+}
+.translate-toggle {
+  font-size: 13px;
+  color: #aaa;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+/* 📌 이미지 영역 - 기본 */
+.fan-images {
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.fan-img-wrapper {
+  flex: 1;
+}
+.fan-img-wrapper img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+/* 📌 이미지 2개일 때 옆으로 나란히 */
+.fan-images.two {
+  display: flex;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* 📌 이미지 3개 레이아웃 (왼쪽1 + 오른쪽 2단) */
+.fan-images.three {
+  display: flex;
+  aspect-ratio: 3 / 2;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.left-img {
+  flex: 1;
+  overflow: hidden;
+}
+.left-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.right-imgs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.top-img, .bottom-img {
+  flex: 1;
+  overflow: hidden;
+}
+.top-img img, .bottom-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 📌 아이콘 영역 (좋아요, 댓글, 저장) */
+.fan-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0 4px;
+  font-size: 15px;
+  gap: 8px;
+}
+.fan-icons span {
+  display: flex;
+  align-items: center;
+  gap: 4.5px;
+}
+.save-icon {
+  margin-left: auto;
+}
+.like-count {
+  display: inline-block;
+  min-width: 28px;
+  text-align: left;
+}

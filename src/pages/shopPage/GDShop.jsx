@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState } from 'react';
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
 import { useNavigate } from 'react-router-dom';
 import './ArtistShop.css';
 
 import bgGDragon from '../../assets/Shop/gdBg.png';
 import searchIcon from '../../assets/symbol/search.svg';
-<<<<<<< HEAD
-=======
 
 // 🔽 상품 이미지들 (product1~24) 순서대로 import
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
 import product1 from '../../assets/Shop/products/product1.png';
 import product2 from '../../assets/Shop/products/product2.png';
 import product3 from '../../assets/Shop/products/product3.png';
@@ -21,9 +14,6 @@ import product5 from '../../assets/Shop/products/product5.png';
 import product6 from '../../assets/Shop/products/product6.png';
 import product7 from '../../assets/Shop/products/product7.png';
 import product8 from '../../assets/Shop/products/product8.png';
-<<<<<<< HEAD
-
-=======
 import product9 from '../../assets/Shop/products/product9.png';
 import product10 from '../../assets/Shop/products/product10.png';
 import product11 from '../../assets/Shop/products/product11.png';
@@ -40,7 +30,6 @@ import product21 from '../../assets/Shop/products/product21.png';
 import product22 from '../../assets/Shop/products/product22.png';
 import product23 from '../../assets/Shop/products/product23.png';
 import product24 from '../../assets/Shop/products/product24.png';
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
 
 const GDShop = () => {
   const navigate = useNavigate();
@@ -70,67 +59,6 @@ const GDShop = () => {
   ];
 
   const products = [
-<<<<<<< HEAD
-    {
-      id: 1,
-      name: 'G-DRAGON 공식 응원봉',
-      image: product1,
-      price: 58000,
-      soldOut: true,
-    },
-    {
-      id: 2,
-      name: 'G-DRAGON 공식 응원봉 크래들',
-      image: product2,
-      price: 25000,
-      soldOut: true,
-    },
-    {
-      id: 3,
-      name: 'G-DRAGON 응원봉 크래들 커버 / G-DRAGON 2025 WORLD TOUR IN KOREA',
-      image: product3,
-      price: 22000,
-      soldOut: false,
-    },
-    {
-      id: 4,
-      name: 'G-DRAGON 응원봉 넥커프 세트 / G-DRAGON 2025 WORLD TOUR IN KOREA',
-      image: product4,
-      price: 20000,
-      soldOut: false,
-    },
-    {
-      id: 5,
-      name: 'G-DRAGON 슬로건 / G-DRAGON 2025 WORLD TOUR IN KOREA',
-      image: product5,
-      price: 15000,
-      soldOut: true,
-    },
-    {
-      id: 6,
-      name: 'G-DRAGON 포토 티켓 / G-DRAGON 2025 WORLD TOUR IN KOREA',
-      image: product6,
-      price: 7000,
-      soldOut: true,
-    },
-    {
-      id: 7,
-      name: 'G-DRAGON 후디 / G-DRAGON 2025 WORLD TOUR IN KOREA',
-      image: product7,
-      price: 119000,
-      soldOut: true,
-    },
-    {
-      id: 8,
-      name: 'G-DRAGON 슬리퍼 / G-DRAGON 2025 WORLD TOUR IN KOREA',
-      image: product8,
-      price: 55000,
-      soldOut: true,
-    },
-
-  ];
-
-=======
     { id: 1, name: '응원봉', image: product1, price: 58000, soldOut: true },
     { id: 2, name: '크래들', image: product2, price: 25000, soldOut: true },
     { id: 3, name: '크래들 커버', image: product3, price: 22000, soldOut: false },
@@ -160,7 +88,6 @@ const GDShop = () => {
   const [visibleCount, setVisibleCount] = useState(8);
   const showMore = () => setVisibleCount((prev) => prev + 8);
 
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
   const buttonRows = [];
   for (let i = 0; i < buttons.length; i += 3) {
     buttonRows.push(buttons.slice(i, i + 3));
@@ -173,13 +100,8 @@ const GDShop = () => {
         backgroundImage: `url(${bgGDragon})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% auto',
-<<<<<<< HEAD
-        backgroundPosition: 'top',          
-        backgroundColor: '#fff', 
-=======
         backgroundPosition: 'top',
         backgroundColor: '#fff',
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
         color: fontColor,
       }}
     >
@@ -227,43 +149,12 @@ const GDShop = () => {
       </div>
 
       <div className="artist-product-list">
-<<<<<<< HEAD
-        <div
-          className="product-title-box"
-          style={{ backgroundColor: titleBackgroundColor }}
-        >
-          <h2 className="product-title"
-            style={{ backgroundColor: 'transparent'}}>
-=======
         <div className="product-title-box" style={{ backgroundColor: titleBackgroundColor }}>
           <h2 className="product-title" style={{ backgroundColor: 'transparent' }}>
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
             {activeTag.toUpperCase()}
           </h2>
         </div>
         <div className="product-grid">
-<<<<<<< HEAD
-          {products.map((item) => (
-            <div className="product-card" key={item.id}>
-              <img src={item.image} alt={item.name} />
-              <p className="product-name"
-                style={{ color: productFontColor }}>
-                {item.name}
-              </p>
-              <div className="product-meta">
-              <span className="product-price" style={{ color: priceColor }}>
-                ₩ {item.price.toLocaleString()}
-              </span>
-                {item.soldOut && (
-                  <span
-                    className="sold-out-badge"
-                    style={{
-                      background: soldOutBgColor,
-                      color: soldOutTextColor,
-                    }}
-                  >
-                    SOLD OUT</span>)}
-=======
           {products.slice(0, visibleCount).map((item) => (
             <div className="product-card" key={item.id}>
               <img src={item.image} alt={item.name} />
@@ -280,17 +171,11 @@ const GDShop = () => {
                     SOLD OUT
                   </span>
                 )}
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
               </div>
             </div>
           ))}
         </div>
       </div>
-<<<<<<< HEAD
-      <div className="shop-footer">
-        <button className="load-more-btn">더보기</button>
-      </div>
-=======
 
       {visibleCount < products.length ? (
       <div className="shop-footer">
@@ -305,7 +190,6 @@ const GDShop = () => {
         </button>
       </div>
     )}
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     </div>
   );
 };

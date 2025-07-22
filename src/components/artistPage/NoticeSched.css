@@ -1,106 +1,108 @@
 .notice-sched-container {
-    padding: 24px 16px 16px;
-  }
-  
-  .sched-title {
-    font-size: 21px;
-    font-weight: bold;
-    margin-bottom: 6px;
-  }
-  
-  .sched-date {
-    font-size: 17px;
-    font-weight: 500;
-    color: #fff;
-    margin-bottom: 16px;
-  }
-  
-  .sched-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .sched-item {
-    display: flex;
-    position: relative;
-  }
-  
-  .notice-container .dot-line-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 12px;
-    position: relative;
-  }
-  
-  .notice-container .dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    margin-top: 4px;
-    margin-bottom: 4px;
-  }
+  width: 100%;
+  max-width: 390px;
+  padding: 24px 16px 16px;
+}
 
-  .notice-container .dot-line-wrap .dot {
-    width: 12px;
-    height: 12px;
-  }
-  
-  .notice-container .dot.content, .vertical-line.content {background-color: #A566FF;}
-  .notice-container .dot.fan, .vertical-line.fan {background-color: #FF4D6D;}
-  .notice-container .dot.media, .vertical-line.media {background-color: #00D8D8;}  
-  .notice-container .dot.event, .vertical-line.event {background-color: #3E90F0;}  
-  .notice-container .dot.anniversary, .vertical-line.anniversary {background-color: #FF2BAC;}
-  
+.sched-title {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.sched-date {
+  font-size: 17px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.sched-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sched-item {
+  display: flex;
+  position: relative;
+}
+
+.notice-container .dot-line-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 12px;
+  position: relative;
+}
+
+.notice-container .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.notice-container .dot-line-wrap .dot {
+  width: 12px;
+  height: 12px;
+}
+
+.notice-container .dot.content, .vertical-line.content {background-color: #A566FF;}
+.notice-container .dot.fan, .vertical-line.fan {background-color: #FF4D6D;}
+.notice-container .dot.media, .vertical-line.media {background-color: #00D8D8;}  
+.notice-container .dot.event, .vertical-line.event {background-color: #3E90F0;}  
+.notice-container .dot.anniversary, .vertical-line.anniversary {background-color: #FF2BAC;}
+
 /* 선 */
 .notice-container .vertical-line {
-    width: 2px;
-    flex-grow: 1;
-    margin: 2px auto 0;
-  }
-  
-  /* 마지막 선은 짧게 — 상자 높이만큼만 */
-  .notice-container .vertical-line.last {
-    height: 50px; /* 카드 높이에 맞게 조정 */
-    flex-grow: 0;
-  }
-  
-  .sched-content {
-    background-color: #222;
-    border-radius: 14px;
-    padding: 12px 14px;
-    flex-grow: 1;
-    color: white;
-  }
-  
-  .notice-container .tag {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 600;
-    margin-bottom: 6px;
-  }
-  
-  .notice-container .tag.content {color: #A566FF;}
-  .notice-container .tag.fan {color: #FF4D6D;}
-  .notice-container .tag.media {color: #00D8D8;}
-  .notice-container .tag.event { color: #3E90F0;}
-  .notice-container .tag.anniversary {color: #FF2BAC;}
-  
-  .notice-container .title {
-    font-size: 14px;
-    margin-bottom: 4px;
-  }
-  
-  .notice-container .time {
-    font-size: 12px;
-    color: #ccc;
-  }
-  
-  .time-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 3px;
-    vertical-align: middle;
-    opacity: 0.7; /* 필요시 조절 */
-  }
+  width: 2px;
+  flex-grow: 1;
+  margin: 2px auto 0;
+}
+
+/* 마지막 선은 짧게 — 상자 높이만큼만 */
+.notice-container .vertical-line.last {
+  height: 50px; /* 카드 높이에 맞게 조정 */
+  flex-grow: 0;
+}
+
+.sched-content {
+  background-color: #222;
+  border-radius: 14px;
+  padding: 12px 14px;
+  flex-grow: 1;
+  color: white;
+}
+
+.notice-container .tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.notice-container .tag.content {color: #A566FF;}
+.notice-container .tag.fan {color: #FF4D6D;}
+.notice-container .tag.media {color: #00D8D8;}
+.notice-container .tag.event { color: #3E90F0;}
+.notice-container .tag.anniversary {color: #FF2BAC;}
+
+.notice-container .title {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.notice-container .time {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.time-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 3px;
+  vertical-align: middle;
+  opacity: 0.7; /* 필요시 조절 */
+}

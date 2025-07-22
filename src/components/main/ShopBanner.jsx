@@ -26,17 +26,10 @@ const ShopBanner = () => {
         autoplay={{ delay: 3000 }}
         loop={true}
       >
-<<<<<<< HEAD
         <SwiperSlide onClick={() => navigate('/main/shop/blackpinkshop')}>
           <img src={shopBanner1} alt="slide1" />
         </SwiperSlide>
         <SwiperSlide onClick={() => navigate('/main/shop/riizeshop')}>
-=======
-        <SwiperSlide onClick={() => navigate('/shop/blackpinkshop')}>
-          <img src={shopBanner1} alt="slide1" />
-        </SwiperSlide>
-        <SwiperSlide onClick={() => navigate('/shop/riizeshop')}>
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
           <img src={shopBanner2} alt="slide2" />
         </SwiperSlide>
       </Swiper>

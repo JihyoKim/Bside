@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
-import React from 'react';
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import './Notice.css';
@@ -16,7 +12,6 @@ const Notice = () => {
     noticeList = [],
     noticeSummary = {},
     noticeSchedule = [],
-<<<<<<< HEAD
     members = [],
   } = useOutletContext();
 
@@ -33,15 +28,6 @@ const Notice = () => {
         artistList={members}
       />
       <NoticeSched schedule={filteredSchedule} />
-=======
-  } = useOutletContext();
-
-  return (
-    <div className="notice-container">
-      <NoticeCard noticeList={noticeList} />
-       <NoticeCal summary={noticeSummary} />
-      <NoticeSched schedule={noticeSchedule} />
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     </div>
   );
 };

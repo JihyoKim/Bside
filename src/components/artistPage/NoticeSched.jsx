@@ -1,7 +1,6 @@
 import React from 'react';
 import './NoticeSched.css';
 
-<<<<<<< HEAD
 import timeIcon from '../../assets/symbol/timeIcon.svg';
 
 const NoticeSched = ({ schedule }) => {
@@ -38,17 +37,6 @@ const NoticeSched = ({ schedule }) => {
           </div>
         ))}
       </div>
-=======
-const NoticeSched = ({ schedule }) => {
-  return (
-    <div className="notice-sched">
-      {schedule.map((item, idx) => (
-        <div className="schedule-item" key={idx}>
-          <span className="time">{item.time}</span>
-          <span className="desc">{item.desc}</span>
-        </div>
-      ))}
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     </div>
   );
 };

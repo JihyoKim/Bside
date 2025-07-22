@@ -1,17 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import newAlbum from '../../assets/Shop/newAlbum.png';
-
-const ShopTemp = () => {
-  return (
-    <div style={{
-        width: '100vw',
-        minWidth: '320px',
-        maxWidth: '480px',
-    }}>
-      <img src={newAlbum} alt="Shop Temp. Img" style={{ width: '100%' }} />
-    </div>
-=======
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation  } from 'swiper/modules';
 import 'swiper/css';
@@ -110,7 +97,6 @@ const ShopTemp = () => {
         </Swiper>
       </div>
     </main>
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
   );
 };
 

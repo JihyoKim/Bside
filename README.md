@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 # Bside
-=======
 김나영 수정했습니다
 # React + Vite
 

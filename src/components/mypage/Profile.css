@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 .mypage-container .profile-section {
-=======
-.profile-section {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     width: 100%;
     height: 520px;
     position: relative;
@@ -11,33 +7,21 @@
     font-family: sans-serif;
 }
 
-<<<<<<< HEAD
 .mypage-container .profile-bg {
-=======
-.profile-bg {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
-<<<<<<< HEAD
 .mypage-container .bg-img {
-=======
-.bg-img {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
 }
 
-<<<<<<< HEAD
 .mypage-container .bg-gradient {
-=======
-.bg-gradient {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     position: absolute;
     width: 100%;
     height: 100%;
@@ -50,11 +34,7 @@
     left: 0;
 }
 
-<<<<<<< HEAD
 .mypage-container .profile-center {
-=======
-.profile-center {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     position: relative;
     z-index: 2;
     display: flex;
@@ -63,43 +43,27 @@
     padding-top: 220px;
 }
 
-<<<<<<< HEAD
 .mypage-container .profile-photo-wrap {
-=======
-.profile-photo-wrap {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     position: relative;
     width: 84px;
     height: 84px;
 }
 
-<<<<<<< HEAD
 .mypage-container .profile-photo {
-=======
-.profile-photo {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     width: 84px;
     height: 84px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-<<<<<<< HEAD
 .mypage-container .setting-icon {
-=======
-.setting-icon {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     position: absolute;
     bottom: 0;
     right: 3px;
     width: 30px;
 }
 
-<<<<<<< HEAD
 .mypage-container .today-badge {
-=======
-.today-badge {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     position: absolute;
     top: -52px;
     left: 0;
@@ -112,31 +76,19 @@
     border: 1px solid #fff;
 }
 
-<<<<<<< HEAD
 .mypage-container .nickname {
-=======
-.nickname {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     margin-top: 17px;
     font-size: 17px;
     font-weight: 600;
 }
 
-<<<<<<< HEAD
 .mypage-container .status {
-=======
-.status {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     font-size: 13px;
     color: #ccc;
     margin-top: 8px;
 }
 
-<<<<<<< HEAD
 .mypage-container .profile-stats {
-=======
-.profile-stats {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     position: absolute;
     bottom: 50px;
     width: 100%;
@@ -146,22 +98,14 @@
     padding: 0 8px;
 }
 
-<<<<<<< HEAD
 .mypage-container .stat {
-=======
-.stat {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 60px; 
 }
 
-<<<<<<< HEAD
 .mypage-container .stat-top {
-=======
-.stat-top {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     height: 20px;
     display: flex;
     align-items: center;
@@ -169,38 +113,22 @@
     margin-bottom: 6px;
 }
 
-<<<<<<< HEAD
 .mypage-container .stat-top .ticket {
     width: auto;
     height: 18px;
 }
 .mypage-container .stat-top .point {
-=======
-.stat-top .ticket {
     width: auto;
     height: 18px;
 }
-.stat-top .point {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
-    width: auto;
-    height: 22px;
-}
 
 
-<<<<<<< HEAD
 .mypage-container .stat-label {
-=======
-.stat-label {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     font-size: 18px;
     color: #fff;
 }
 
-<<<<<<< HEAD
 .mypage-container .stat-bottom {
-=======
-.stat-bottom {
->>>>>>> 4fdd8305d799f61023082518c635f1a8874c94db
     font-size: 14px;
     font-weight: 300;
     color: #bbb;
