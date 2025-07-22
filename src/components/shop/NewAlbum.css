@@ -32,7 +32,7 @@
   
   .shop-slider-container {
     width: 100vw;
-    max-width: 480px;
+    max-width: var(--max-width);
     margin: 0 auto;
   }
   
@@ -63,6 +63,8 @@
 
   .shop-wrapper {
     background-color: #000;
+    width: 100vw;
+    max-width: var(--max-width);
     color: #fff;
     min-height: 44vh;
     padding: 20px 0 40px; /* 상하 여백 조절 */
