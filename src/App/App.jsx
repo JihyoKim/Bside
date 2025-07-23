@@ -32,6 +32,9 @@ import PostDetail from '../pages/artistPage/PostDetail';
 import MoreArtist from '../pages/MoreArtist';
 import Ticket from '../pages/myPage/Ticket';
 import PointCard from '../pages/myPage/PointCard';
+import VoteList from '../pages/artistPage/vote/VoteList';
+import VoteResult from '../pages/artistPage/vote/VoteResult';
+import VoteComplete from '../pages/artistPage/vote/VoteComplete';
 
 const App = () => {
   return (
@@ -77,6 +80,13 @@ const App = () => {
         </Route>
         <Route path="artistPage/:artistId/media/:mediaId" element={<MediaDetailLive />} />
         <Route path="artistPage/:artistId/post/:postId" element={<PostDetail />} />
+
+        <Route path="artistPage/:artistId/vote/list/" element={<VoteList />} />
+        <Route path="artistPage/:artistId/vote/result/" element={<VoteResult />} />
+        <Route path="artistPage/:artistId/vote/complete/" element={<VoteComplete />} />
+        {/* <Route path="artistPage/:artistId/vote/list/:voteId" element={<VoteList />} />
+        <Route path="artistPage/:artistId/vote/result/:voteId" element={<VoteResult />} />
+        <Route path="artistPage/:artistId/vote/complete/:voteId" element={<VoteComplete />} /> */}
       </Route>
 
       {/* 존재하지 않는 경로 → 온보딩으로 */}

@@ -159,3 +159,15 @@
   min-width: 28px;
   text-align: left;
 }
+
+
+.no-posts-message {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;  
+  padding: 40px 0;
+  color: #aaa;
+  font-size: 15px;
+  height: 250px;
+}

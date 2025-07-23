@@ -236,7 +236,7 @@ const gdData = {
       nickname: '쥐들에곤히잠들다',
       time: '45분전',
       profile: '/assets/ArtistPage/gdragon/user1.png',
-      text: '더현대 팝업 MD 존 응원봉 구매 성공 MD존 선착순 예매 겨우 성공해서 데이지봉+크래들 구매 성공! 진짜 이렇게 줄 길게 서 본 적은 처음이에요...',
+      text: '더현대 팝업 MD 존 응원봉 구매 성공',
       translatedText: '',
       images: [
         '/assets/ArtistPage/gdragon/allpost1.png'
@@ -247,46 +247,32 @@ const gdData = {
     },
     {
       id: 2,
-      nickname: '지젤리좋아',
-      time: '29분전',
-      profile: '/assets/ArtistPage/aespa/user2.png',
-      text: 'so cute with her STITCH hairband OMG',
-      translatedText: '스티치 머리띠 한 거 너무 귀여워 진짜 OMG',
+      nickname: 'hazelnut',
+      time: '1시간전',
+      profile: '/assets/ArtistPage/gdragon/user2.png',
+      text: 'GD is currently the most viewed K-pop male idol on rednote.',
+      translatedText: 'GD는 현재 레드노트에서 가장 많이 조회된 K-POP 남자 아이돌입니다.',
       images: [
-        '/assets/ArtistPage/aespa/aespa-fanPost2-1.png',
-        '/assets/ArtistPage/aespa/aespa-fanPost2-2.png',
+        '/assets/ArtistPage/gdragon/allpost1-1.png',
+        '/assets/ArtistPage/gdragon/allpost1-2.png',
       ],
-      likes: 5,
-      comments: 0,
+      likes: 37,
+      comments: 3,
       showFollowButton: true
     },
     {
       id: 3,
-      nickname: '닝덕사냥',
-      time: '38분전',
-      profile: '/assets/ArtistPage/aespa/user3.png',
-      text: '카닝의 조화 최고댜★ 닝닝 계속 뿌가머리해줘!!',
+      nickname: '믿을건지용이뿐',
+      time: '2시간 전',
+      profile: '/assets/ArtistPage/gdragon/user3.png',
+      text: '지디 모자 거꾸로 쓰면 데뷔초로 돌아가 ㅎ',
       translatedText: '',
       images: [
-        '/assets/ArtistPage/aespa/aespa-fanPost3-1.png',
-        '/assets/ArtistPage/aespa/aespa-fanPost3-2.png',
+        '/assets/ArtistPage/gdragon/allpost2-1.png',
+        '/assets/ArtistPage/gdragon/allpost2-2.png',
       ],
-      likes: 13,
-      comments: 0,
-      showFollowButton: true
-    },
-    {
-      id: 4,
-      nickname: '갓스파',
-      time: '40분전',
-      profile: '/assets/ArtistPage/aespa/user4.png',
-      text: '우리애들 너무 고생했어ㅠㅠ 다음 음악방송도 1위!!',
-      translatedText: '',
-      images: [
-        '/assets/ArtistPage/aespa/aespa-fanPost4.png'
-      ],
-      likes: 10,
-      comments: 0,
+      likes: 88,
+      comments: 4,
       showFollowButton: true
     },
   ],
@@ -294,48 +280,20 @@ const gdData = {
 
   
   fanFollowingPosts: [
-    {
-      id: 1,
-      nickname: '온리유찌민',
-      time: '29분전',
-      profile: '/assets/ArtistPage/aespa/user5.png',
-      text: '김민정은 사랑이에요 🤍',
-      translatedText: '',
-      images: [
-        '/assets/ArtistPage/aespa/aespa-fanPost1.png'
-      ],
-      likes: 2,
-      comments: 0,
-      showFollowButton: false,
-    },
-    {
-      id: 5,
-      nickname: '온리유찌민',
-      time: '07. 14.',
-      profile: '/assets/ArtistPage/aespa/user5.png',
-      text: '에어팟 한쪽 잃어버렸다,,',
-      translatedText: '',
-      images: [
-        '/assets/ArtistPage/aespa/aespa-fanPost5.png'
-      ],
-      likes: 5,
-      comments: 0,
-      showFollowButton: false,
-    },
-    {
-      id: 6,
-      nickname: '온리유찌민',
-      time: '07. 13.',
-      profile: '/assets/ArtistPage/aespa/user5.png',
-      text: '오늘은 졸린하루 입니댜 =v=',
-      translatedText: '',
-      images: [
-        '/assets/ArtistPage/aespa/aespa-fanPost6.png'
-      ],
-      likes: 4,
-      comments: 0,
-      showFollowButton: false,
-    },
+    // {
+    //   id: 1,
+    //   nickname: '온리유찌민',
+    //   time: '29분전',
+    //   profile: '/assets/ArtistPage/gdragon/user5.png',
+    //   text: '김민정은 사랑이에요 🤍',
+    //   translatedText: '',
+    //   images: [
+    //     '/assets/ArtistPage/gdragon/allpost1.png'
+    //   ],
+    //   likes: 2,
+    //   comments: 0,
+    //   showFollowButton: false,
+    // },
   ],
 
 
