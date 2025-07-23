@@ -3,7 +3,7 @@ import './ShareModal.css';
 
 import x from '../../../assets/live/x.png';
 import youtube from '../../../assets/live/youtube.png';
-import instagram from '../../../assets/live/instagram.png';
+import instagram from '../../../assets/live/Instagram.png';
 import tiktok from '../../../assets/live/tiktok.png';
 import weibo from '../../../assets/live/weibo.png';
 import more from '../../../assets/live/more.png';
