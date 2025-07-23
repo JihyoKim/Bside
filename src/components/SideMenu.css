@@ -1,0 +1,133 @@
+/* SideMenu.css */
+
+.mypage-side-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3000;
+}
+
+.side-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.side-overlay.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.side-menu {
+  position: absolute;
+  top: 0;
+  left: -302px;
+  width: 302px;
+  height: 100%;
+  background-color: #000;
+  color: white;
+  transition: left 0.3s ease;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 95px 16px 50px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  pointer-events: auto;
+  overflow-x: hidden; 
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.mypage-side-container .close-btn {
+  position: absolute;
+  top: 30px;
+  left: 16px;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 3;
+}
+
+.mypage-side-container .close-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+/* 메뉴 그룹을 박스 단위로 묶기 */
+.menu-group {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 6px 0;
+  margin-bottom: 12px;
+}
+
+/* 각 항목 li */
+.menu-group li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  font-size: 14px;
+}
+
+/* 아이콘 이미지 */
+.menu-group li img {
+  width: 20px;
+  height: 20px;
+}
+
+.logout {
+  margin: 16px 16px 64px;
+  font-size: 12px;
+  color: #666;
+  /* text-align: right; */
+}
+
+.bottom-actions {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6px;
+}
+
+.bottom-actions div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.action-circle {
+  width: 46px;
+  height: 46px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-circle img {
+  width: 22px;
+  height: 22px;
+}
+
+

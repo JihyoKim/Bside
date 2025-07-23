@@ -10,6 +10,7 @@
   align-items: center;
   padding: 0 16px;
   z-index: 2000;
+
   transition: background-color 0.3s ease;
 }
 
@@ -25,8 +26,8 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  padding-top: 5%;
-  padding-left: 5px;
+  /* padding-top: 5%; */
+  /* padding-left: 5px; */
 }
 
 .fixed-header .dropdown-icon {
@@ -42,19 +43,18 @@
   padding-top: 5%;
 }
 
-.fixed-header .alarm-icon {
-  height: 27px;
-}
-
+.fixed-header .alarm-icon,
 .fixed-header .message-icon {
+  position: relative;
+  z-index: 2001;
   height: 27px;
 }
 
 .message-icon {
-  height: 27px;
   padding-right: 16px;
 }
 
 .fixed-header .menu-icon {
   width: 25px;
+  position: relative;
 }

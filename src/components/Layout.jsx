@@ -4,6 +4,7 @@ import Header from './Header';
 import HeaderSub from './Header_Sub';
 import HeaderMypage from './Header_Mypage';
 import BottomNav from './BottomNav';
+import SideMenu from './SideMenu';
 import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
@@ -14,7 +15,7 @@ const Layout = () => {
 
   if (
     path.startsWith('/main/mypage/ticket') ||
-    path.startsWith('/main/mypage/point')||
+    path.startsWith('/main/mypage/point') ||
     path.startsWith('/main/moreArtist')
   ) {
     HeaderComponent = HeaderSub;
@@ -29,13 +30,18 @@ const Layout = () => {
     HeaderComponent = Header;
   }
 
+  // ✅ mediaDetail 또는 postDetail 페이지일 때는 BottomNav 숨기기
+  const hideBottomNav =
+    // path.includes('/media/') || 
+    path.includes('/post/');
+
   return (
-    <div style={{ display: 'flex', minHeight: '100vh' }}>
+    <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column' }}>
       <HeaderComponent />
-      <main style={{ flex: 1, /*padding: '20px'*/ }}>
+      <main style={{ flex: 1 }}>
         <Outlet />
       </main>
-      <BottomNav />
+      {!hideBottomNav && <BottomNav />}
     </div>
   );
 };

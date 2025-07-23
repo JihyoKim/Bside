@@ -47,7 +47,7 @@
   transform: translateX(-50%);
 }
 
-.close-btn {
+.share-modal-wrapper .close-btn {
   width: 12px;
   height: auto;
   cursor: pointer;
