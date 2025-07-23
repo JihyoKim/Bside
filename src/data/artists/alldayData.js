@@ -13,11 +13,11 @@ import mv3 from '../../assets/ArtistPage/gdragon/mv3.png';
 import mv4 from '../../assets/ArtistPage/gdragon/mv4.png';
 
 
-const gdData = {
-    id: 'gdragon',
-    name: 'G-DRAGON',
-    memberTitle: 'Solo',
-    members: ['G-DRAGON',],
+const alldayData = {
+    id: 'alldayproject',
+    name: 'ALLDAYPROJECT',
+    memberTitle: 'Member',
+    members: ['ALLDAYPROJECT',],
     coverImg: Cover,
     isFollowing: true,
     followColor: '#CD3134',
@@ -358,4 +358,4 @@ const gdData = {
 
 };
 
-export default gdData;
+export default alldayData;

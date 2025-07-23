@@ -18,6 +18,8 @@ const PostDetail = () => {
   const navigate = useNavigate();
   const posts = artistData[artistId]?.fanPosts || [];
   const post = posts.find(p => String(p.id) === postId);
+  const [showTranslated, setShowTranslated] = useState(false);
+
 
   const [comment, setComment] = useState('');
   const [comments, setComments] = useState([]);
@@ -87,7 +89,19 @@ const PostDetail = () => {
         </div>
       </div>
 
-      <p className="post-text">{post.text}</p>
+      <h2 className="post-text">
+        {showTranslated && post.translatedText ? post.translatedText : post.text}
+      </h2>
+
+      <p className="post-content">
+        {showTranslated && post.translatedContent ? post.translatedContent : post.content}
+      </p>
+
+      {(post.translatedText || post.translatedContent) && (
+        <div className="translate-toggle" onClick={() => setShowTranslated(!showTranslated)}>
+          {showTranslated ? '원문 보기' : '번역 보기'}
+        </div>
+      )}
 
       {post.images.map((img, idx) => (
         <img key={idx} src={img} alt={`fan post ${idx + 1}`} className="fan-image" />

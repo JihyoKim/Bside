@@ -85,10 +85,7 @@ const Post = ({ onScrollToTop }) => {
       </div>
 
       {/* 하단 "맨 위로" 영역 */}
-      <div className="scroll-top-area" onClick={() => {
-  console.log('clicked');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}}>
+      <div className="scroll-top-area" onClick={onScrollToTop}>
         <img src={topIcon} alt="top" className="top-icon" />
         <span className="top-text">맨 위로</span>
       </div>

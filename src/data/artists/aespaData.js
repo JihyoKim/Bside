@@ -132,6 +132,8 @@ const aespaData = {
       profile: '/assets/ArtistPage/aespa/user5.png',
       text: '김민정은 사랑이에요 🤍',
       translatedText: '',
+      content: '이건 팬미팅에서 찍은 사진이에요! 정말 귀여웠어요.',
+      translatedContent: '',
       images: [
         '/assets/ArtistPage/aespa/aespa-fanPost1.png'
       ],
@@ -144,8 +146,10 @@ const aespaData = {
       nickname: '지젤리좋아',
       time: '29분전',
       profile: '/assets/ArtistPage/aespa/user2.png',
-      text: 'so cute with her STITCH hairband OMG',
-      translatedText: '스티치 머리띠 한 거 너무 귀여워 진짜 OMG',
+      text: '너무 예뻐요!',
+      translatedText: 'So pretty!',
+      content: '스티치 머리띠 한 모습 너무 귀여웠어요. 팬서비스 최고~',
+      translatedContent: 'She looked so cute with the Stitch hairband. Best fan service~',
       images: [
         '/assets/ArtistPage/aespa/aespa-fanPost2-1.png',
         '/assets/ArtistPage/aespa/aespa-fanPost2-2.png',
@@ -161,6 +165,8 @@ const aespaData = {
       profile: '/assets/ArtistPage/aespa/user3.png',
       text: '카닝의 조화 최고댜★ 닝닝 계속 뿌가머리해줘!!',
       translatedText: '',
+      content: 'test',
+      translatedContent: '',
       images: [
         '/assets/ArtistPage/aespa/aespa-fanPost3-1.png',
         '/assets/ArtistPage/aespa/aespa-fanPost3-2.png',
@@ -176,6 +182,8 @@ const aespaData = {
       profile: '/assets/ArtistPage/aespa/user4.png',
       text: '우리애들 너무 고생했어ㅠㅠ 다음 음악방송도 1위!!',
       translatedText: '',
+      content: 'test',
+      translatedContent: '',
       images: [
         '/assets/ArtistPage/aespa/aespa-fanPost4.png'
       ],
@@ -195,6 +203,8 @@ const aespaData = {
       profile: '/assets/ArtistPage/aespa/user5.png',
       text: '김민정은 사랑이에요 🤍',
       translatedText: '',
+      content: 'test',
+      translatedContent: '',
       images: [
         '/assets/ArtistPage/aespa/aespa-fanPost1.png'
       ],
@@ -209,6 +219,8 @@ const aespaData = {
       profile: '/assets/ArtistPage/aespa/user5.png',
       text: '에어팟 한쪽 잃어버렸다,,',
       translatedText: '',
+      content: 'test',
+      translatedContent: '',
       images: [
         '/assets/ArtistPage/aespa/aespa-fanPost5.png'
       ],
@@ -223,6 +235,8 @@ const aespaData = {
       profile: '/assets/ArtistPage/aespa/user5.png',
       text: '오늘은 졸린하루 입니댜 =v=',
       translatedText: '',
+      content: 'test',
+      translatedContent: '',
       images: [
         '/assets/ArtistPage/aespa/aespa-fanPost6.png'
       ],
@@ -326,6 +340,13 @@ const aespaData = {
   ],
 
 
+  voteMain: {
+    title: '떼창 곡 투표',
+    dDay: 'D-1',
+    options: ['Black Mamba', 'Next Level', 'Supernova',],
+    buttonLabel: '투표하러 가기',
+  },
+
   voteSubList : [
     {
       id: 1,
@@ -337,13 +358,13 @@ const aespaData = {
       id: 2,
       icon: 'blue',
       point: 20,
-      question: '블랙핑크가 찍어줬으면 하는 여름 콘텐츠는?',
+      question: '보고싶은 콘텐츠는? 👀',
     },
     {
       id: 3,
       icon: 'pink',
       point: 10,
-      question: '다음 가사 중 빈칸에 들어갈 말은 무엇일까요?',
+      question: '다음 가사 중 빈칸에 들어갈 말은? 📝',
     },
     {
       id: 4,
@@ -355,13 +376,13 @@ const aespaData = {
       id: 5,
       icon: 'gray',
       point: 5,
-      question: '오늘 로제의 공항패션 속 벌칙 아이템은?',
+      question: '오늘 공항패션 속 벌칙 아이템은? 🛫',
     },
     {
       id: 6,
       icon: 'gray',
       point: 5,
-      question: '최애가 찍어줬으면 하는 Vlog주제는?',
+      question: '찍어줬으면 하는 Vlog 주제는? 🎥',
     },
     {
       id: 7,

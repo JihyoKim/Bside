@@ -18,6 +18,7 @@ const FanPostList = ({ posts }) => {
   const [saves, setSaves] = useState(posts.map(() => false));
   const [followings, setFollowings] = useState(posts.map(() => false));
   const [showTranslated, setShowTranslated] = useState(posts.map(() => false));
+  const currentUserNickname = '쥐들에곤히잠들다';
 
   const toggleLike = (index, e) => {
     e.stopPropagation();
@@ -69,14 +70,18 @@ const FanPostList = ({ posts }) => {
               <span className="time">{post.time}</span>
             </div>
             <div className="fan-follow-more">
-              {post.showFollowButton && (
-                <button
-                  className="follow-btn"
-                  onClick={(e) => toggleFollow(index, e)}
-                  style={{ color: followings[index] ? '#fff' : '#00acee' }}
-                >
-                  {followings[index] ? '팔로잉' : '팔로우'}
-                </button>
+              {post.nickname === currentUserNickname ? (
+                <span className="my-post-label">나의 게시물</span>
+              ) : (
+                post.showFollowButton && (
+                  <button
+                    className="follow-btn"
+                    onClick={(e) => toggleFollow(index, e)}
+                    style={{ color: followings[index] ? '#fff' : '#00acee' }}
+                  >
+                    {followings[index] ? '팔로잉' : '팔로우'}
+                  </button>
+                )
               )}
               <img src={option} alt="more" />
             </div>

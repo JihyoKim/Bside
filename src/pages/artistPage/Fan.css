@@ -46,7 +46,7 @@
 }
 .fan-post-card .nickname {
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 00;
 }
 .fan-post-card .time {
   font-size: 12px;
@@ -56,6 +56,10 @@
   display: flex;
   align-items: center;
   gap: 8px;
+}
+.my-post-label {
+  font-size: 14px;
+  color: #aaa;
 }
 .follow-btn {
   background: none;
@@ -69,6 +73,7 @@
 .fan-text {
   margin-top: 10px;
   font-size: 14px;
+  font-weight: 300;
   white-space: pre-line;
 }
 .translate-toggle {
@@ -90,6 +95,7 @@
 }
 .fan-img-wrapper img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
   border-radius: 0;
@@ -101,6 +107,7 @@
   gap: 0;
   overflow: hidden;
   border-radius: 8px;
+  /* aspect-ratio: 3 / 2; */
 }
 
 /* 📌 이미지 3개 레이아웃 (왼쪽1 + 오른쪽 2단) */
