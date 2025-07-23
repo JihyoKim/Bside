@@ -7,6 +7,7 @@ import artist1 from '../../assets/artist1.png';
 import artist2 from '../../assets/artist2.png';
 import artist3 from '../../assets/artist3.png';
 import artist4 from '../../assets/artist4.png';
+import artist5 from '../../assets/artist5.png';
 import artistAdd from '../../assets/artistAdd2.png';
 
 import './ArtistList.css';
@@ -21,10 +22,8 @@ const ArtistList = () => {
     { name: 'ALLDAY PROJECT', img: artist3 },
     { name: 'RIIZE', img: artist2 },
     { name: 'G-DRAGON', img: artist1 },
-    { name: 'KiiiKiii', img: artist4 },
-    { name: 'KiiiKiii', img: artist4 },
-    { name: 'KiiiKiii', img: artist4 },
-    { name: 'KiiiKiii', img: artist4 },
+    { name: 'AESPA', img: artist4 },
+    { name: 'BLACKPINK', img: artist5 },
   ];
 
   const updateDragLimit = () => {
@@ -70,14 +69,14 @@ const ArtistList = () => {
                 className="artist-card"
                 key={idx}
                 onClick={() => {
-                  if (artist.name === 'KiiiKiii') {
+                  if (artist.name === 'AESPA') {
                     navigate('/main/artistPage/aespa');
                   } else if (artist.name === 'G-DRAGON') {
                     navigate('/main/artistPage/gdragon');
                   } 
                   // 그 외에는 클릭해도 이동 안 함
                 }}
-                style={{ cursor: artist.name === 'KiiiKiii' ? 'pointer' : 'default' }}
+                style={{ cursor: artist.name === 'AESPA' ? 'pointer' : 'default' }}
               >
                 <img src={artist.img} alt={artist.name} className="artist-img" />
                 <div className="artist-name">{artist.name}</div>
