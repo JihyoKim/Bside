@@ -4,9 +4,9 @@ import './ShareModal.css';
 import x from '../../../assets/live/x.png';
 import youtube from '../../../assets/live/youtube.png';
 import instagram from '../../../assets/live/Instagram.png';
-import tiktok from '../../../assets/live/tiktok.png';
-import weibo from '../../../assets/live/weibo.png';
-import more from '../../../assets/live/more.png';
+import tiktok from '../../../assets/live/TikTok.png';
+import weibo from '../../../assets/live/Weibo.png';
+import more from '../../../assets/live/More.png';
 import xBTN from '../../../assets/live/xBTN.png';
 
 const ShareModal = ({ onClose }) => {
