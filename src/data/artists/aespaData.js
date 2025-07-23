@@ -38,10 +38,10 @@ const aespaData = {
       {
         mediaId: 'live-giselle',
         img: media1,
-        title: 'aespa 에스파 지젤 생방송 라이브',
+        title: 'aespa 에스파 카리나 생방송 라이브',
         uploader: 'aespa',
         live: true,
-        viewers: '2.1만 명 시청 중'
+        viewers: '5.3만 명 시청 중'
       },
       {
         mediaId: 'dirtywork-mv',
