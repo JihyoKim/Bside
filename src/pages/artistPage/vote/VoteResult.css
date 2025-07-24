@@ -1,0 +1,144 @@
+.vote-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  padding: 40px 16px 40px;
+  box-sizing: border-box;
+}
+
+  .goback-btn {
+    position: absolute;
+    top: 65px;
+    left: 22px;
+    width: 11px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .goback-btn img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .vote-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .vote-main {
+    flex-grow: 1;
+    overflow-y: auto;  /* ✅ 스크롤 가능하게 */
+    padding-bottom: 20px;
+
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE 10+ */
+  }
+  .vote-main::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari, Opera */
+  }
+
+  .vote-question1 {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 110px 0 70px;
+    color: #fff;
+  }
+  
+  .vote-options2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .vote-option2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    margin-bottom: 15px;
+    border: 1px solid white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    cursor: default;
+    overflow: hidden;
+    z-index: 0;
+    min-height: 56px;
+  }
+  
+  .vote-option2 .number {
+    position: relative;
+    z-index: 2;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  .vote-option2 .text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-shrink: 0;
+  }
+  
+  .vote-bar-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .vote-bar1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 30px;
+    transition: width 0.7s ease-out;
+    z-index: 0;
+  }
+  
+  
+  .vote-result-total1 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .vote-submit2-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-top: auto; /* ✅ 항상 하단으로 밀림 */
+  }
+
+  .vote-option2 .text strong {
+    margin-right: 30px; font-weight: 500; font-size: 14px;
+  }
+  

@@ -11,9 +11,17 @@ const Layout = () => {
   const location = useLocation();
   const path = location.pathname;
 
+  // ✅ vote 상세 페이지에서는 header, nav 모두 숨김
+  const isVoteDetailPage =
+  path.includes('/vote/list') ||
+  path.includes('/vote/result') ||
+  path.includes('/vote/complete');
+
   let HeaderComponent;
 
-  if (
+  if (isVoteDetailPage) {
+    HeaderComponent = null;
+  } else if (
     path.startsWith('/main/mypage/ticket') ||
     path.startsWith('/main/mypage/point') ||
     path.startsWith('/main/moreArtist')
@@ -33,11 +41,12 @@ const Layout = () => {
   // ✅ mediaDetail 또는 postDetail 페이지일 때는 BottomNav 숨기기
   const hideBottomNav =
     // path.includes('/media/') || 
-    path.includes('/post/');
+    path.includes('/post/') ||
+    isVoteDetailPage ;
 
   return (
     <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column' }}>
-      <HeaderComponent />
+      {HeaderComponent && <HeaderComponent />}
       <main style={{ flex: 1 }}>
         <Outlet />
       </main>

@@ -1,0 +1,103 @@
+.vote-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  padding: 40px 16px 40px;
+  box-sizing: border-box;
+}
+
+.goback-btn {
+  position: absolute;
+  top: 65px;
+  left: 22px;
+  width: 11px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.goback-btn img {
+  width: 100%;
+  height: auto;
+}
+
+.vote-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  color: #fff;
+}
+
+.vote-main {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 20px;
+
+  /* ✅ 스크롤바 숨기기 */
+  scrollbar-width: none;           /* Firefox */
+  -ms-overflow-style: none;        /* IE */
+}
+
+.vote-main::-webkit-scrollbar {
+  display: none;                   /* Chrome, Safari */
+}
+
+.vote-question1 {
+  font-size: 23px;
+  font-weight: bold;
+  margin: 110px 0 70px;
+  color: #fff;
+}
+
+.vote-options1 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vote-option1 {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  margin-bottom: 15px;
+  border: 1px solid white;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.5s, color 0.5s;
+}
+
+.vote-option1 .number {
+  background: white;
+  color: black;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.vote-option1.selected {
+  background-color: #FFA3EB;
+  border: 1px solid #FFA3EB;
+  color: white;
+}
+
+.vote-submit1-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-top: auto; /* 항상 하단에 위치 */
+}

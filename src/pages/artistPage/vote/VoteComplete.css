@@ -1,0 +1,108 @@
+.vote-complete-container {
+  background-color: black;
+  color: white;
+  height: 100vh;
+  padding: 40px 20px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.vote-complete-close {
+  position: absolute;
+  top: 65px;
+  right: 22px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.vote-complete-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  padding-bottom: 20px;
+
+  /* ✅ 스크롤바 숨기기 */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE */
+}
+
+.vote-complete-content::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}
+
+.vote-floating-icon {
+  width: 170px;
+  height: 150px;
+  margin-top: 180px;
+  margin-bottom: 40px;
+  animation: bounce 1.9s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.vote-complete-message {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.vote-complete-point {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.vote-point-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.vote-point-text {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+/* ✅ 하단 고정 섹션 */
+.vote-complete-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.vote-complete-check-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.vote-next-icon {
+  width: 10px;
+  height: 10px;
+}
+
+.vote-complete-btn {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  padding: 10px 40px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+}
