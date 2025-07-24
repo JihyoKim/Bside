@@ -73,7 +73,7 @@ const ArtistList = () => {
                     navigate('/main/artistPage/aespa');
                   } else if (artist.name === 'G-DRAGON') {
                     navigate('/main/artistPage/gdragon');
-                  }  else if (artist.name === 'ALLDAYPROJECT') {
+                  }  else if (artist.name === 'ALLDAY PROJECT') {
                     navigate('/main/artistPage/alldayproject');
                   }
                   // 그 외에는 클릭해도 이동 안 됨

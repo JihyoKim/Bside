@@ -30,6 +30,8 @@ const Media = () => {
           loop={true}
           autoplay={{ delay: 1500, disableOnInteraction: false }}
           modules={[Autoplay]}
+          observer={true}              
+          observeParents={true} 
           className="media-swiper"
         >
           {newSlides.map((img, idx) => (
