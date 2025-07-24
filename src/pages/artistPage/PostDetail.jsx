@@ -5,7 +5,7 @@ import './PostDetail.css';
 
 import heartIcon from '../../assets/ArtistPage/like.svg';
 import heartIconFilled from '../../assets/ArtistPage/likeFilled.svg';
-import commentIcon from '../../assets/fanPost/comment.png';
+import commentIcon from '../../assets/ArtistPage/comment.svg';
 import arrowIcon from '../../assets/fanPost/arrow.png';
 import profile from '../../assets/fanPost/profile.png';
 import moreIcon from '../../assets/fanPost/more.png';

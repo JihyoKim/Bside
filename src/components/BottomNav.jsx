@@ -2,14 +2,14 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './BottomNav.css';
 
-import menuHomeOff from '../assets/symbol/homeOff.png';
-import menuHomeOn from '../assets/symbol/homeOn.png';
-import menuMusicOff from '../assets/symbol/musicOff.png';
-import menuMusicOn from '../assets/symbol/musicOn.png';
-import menuShopOff from '../assets/symbol/shopOff.png';
-import menuShopOn from '../assets/symbol/shopOn.png';
-import menuMyOff from '../assets/symbol/myOff.png';
-import menuMyOn from '../assets/symbol/myOn.png';
+import menuHomeOff from '../assets/symbol/homeOff.svg';
+import menuHomeOn from '../assets/symbol/homeOn.svg';
+import menuMusicOff from '../assets/symbol/musicOff.svg';
+import menuMusicOn from '../assets/symbol/musicOn.svg';
+import menuShopOff from '../assets/symbol/shopOff.svg';
+import menuShopOn from '../assets/symbol/shopOn.svg';
+import menuMyOff from '../assets/symbol/myOff.svg';
+import menuMyOn from '../assets/symbol/myOn.svg';
 
 const BottomNav = () => {
   const location = useLocation();

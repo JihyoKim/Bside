@@ -30,8 +30,17 @@ const alldayData = {
     underlineColor: '#FFBB00',
     inactiveColor: '#FFFFFF',
     gradientColor: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, rgba(229, 160, 33, 0.35) 55%, rgba(0, 0, 0, 0.35) 100%)'
-,
-  
+  ,
+
+  voteMain: {
+    title: '떼창 곡 투표',
+    dDay: 'D-1',
+    options: ['소년이여', '무제(無題)',],
+    buttonLabel: '투표하러 가기',
+    voteButtonColor: '#FFBB00',
+    voteTextColor: '#333',
+  },
+
   //Media 탭
     // ✅ New 슬라이드
     newSlides: [new1, new2, new3, new1, new2, new3],
@@ -356,13 +365,6 @@ const alldayData = {
     //   showFollowButton: false,
     // },
   ],
-
-  voteMain: {
-    title: '떼창 곡 투표',
-    dDay: 'D-1',
-    options: ['소년이여', '무제(無題)',],
-    buttonLabel: '투표하러 가기',
-  },
 
   voteSubList : [
     {

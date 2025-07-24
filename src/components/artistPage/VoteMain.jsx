@@ -32,6 +32,10 @@ const VoteMain = () => {
       <button
         className="vote-btn"
         onClick={() => navigate(`/main/artistPage/${artistId}/vote/list/`)}
+        style={{
+          backgroundColor: data.voteButtonColor || 'black',
+          color: data.voteTextColor || 'white' 
+        }}
       >
         {data.buttonLabel}
       </button>

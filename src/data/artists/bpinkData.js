@@ -27,9 +27,17 @@ const bpinkData = {
     tabColor: '#f7a7bb',
     underlineColor: '#f7a7bb',
     inactiveColor: '#FFFFFF',
-    gradientColor: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%,rgba(247, 167, 187, 0.35) 55%, rgba(0, 0, 0, 0.35) 100%)'
-,
+    gradientColor: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%,rgba(247, 167, 187, 0.35) 55%, rgba(0, 0, 0, 0.35) 100%)',
   
+    voteMain: {
+      title: '커버 곡 투표',
+      dDay: 'D-1',
+      options: ['소년이여', '무제(無題)',],
+      buttonLabel: '투표하러 가기',
+      voteButtonColor: '#f7a7bb',
+      voteTextColor: '#333',
+    },
+
   //Media 탭
     // ✅ New 슬라이드
     newSlides: [new1, new2, new3, new1, new2, new3],
@@ -37,32 +45,32 @@ const bpinkData = {
     // ✅ Media 콘텐츠 목록
     mediaThumbnails: [
       {
-        mediaId: 'riize-clip',
+        mediaId: 'media1',
         img: media1,
-        title: 'RIIZE 라이즈 단독 콘서트 비하인드 Clip',
-        uploader: 'RIIZE',
+        title: 'ROSÉ(로제) - APT. (Band VER.) (With. 이영지)',
+        uploader: 'KBSKpop',
         live: false,
-        time: '26:53',
-        viewers: '208만회 · 1시간 전',
+        time: '2:53',
+        viewers: '4240만회 · 1일 전',
         link: '',
       },
       {
-        mediaId: 'riize-japan-vlog',
+        mediaId: 'media2',
         img: media2,
-        title: "RIIZE 라이즈 성찬 in Japan Vlog",
-        uploader: 'RIIZE',
-        time: '8:39',
-        views: '433만회 · 7일 전',
+        title: "BLACKPINK 블랙핑크 in Paris Vlog",
+        uploader: 'BLACKPINK',
+        time: '35:47',
+        views: '1.9억회 · 1개월 전',
         link: '',
 
       },
       {
-        mediaId: 'riize-vouge6',
+        mediaId: 'media3',
         img: media3,
-        title: "RIIZE 라이즈 vogue 6월호 화보 현장",
-        uploader: 'RIIZE',
-        time: '18:56',
-        views: '625만회 · 12일 전',
+        title: "BLACKPINK 블랙핑크 월드투어 8K 하이라이트 다시보기",
+        uploader: 'BLACKPINK',
+        time: '2:35:14',
+        views: '4억회 · 2개월 전',
         link: ''
       }
     ],
@@ -71,26 +79,26 @@ const bpinkData = {
     mvThumbnails: [
       {
         img: mv1,
-        title: "RIIZE 라이즈 ‘Bag Bag Back’ MV",
-        uploader: 'SMTOWN',
-        time: '3:13',
-        views: '2038만회 · 1개월 전',
+        title: "BLACKPINK 블랙핑크 ‘뛰어(JUMP)’ M/V ",
+        uploader: 'BLACKPINK',
+        time: '3:14',
+        views: '6175만회 · 4일 전',
         link: ''
       },
       {
         img: mv2,
-        title: "RIIZE 라이즈 ‘Fly up’ MV",
-        uploader: 'SMTOWN',
-        time: '2:59',
-        views: '4886만회 · 1개월 전',
+        title: "BLACKPINK 블랙핑크 ‘Pink Venom’ M/V ",
+        uploader: 'BLACKPINK',
+        time: '3:14',
+        views: '9.9억회 · 2년 전',
         link: ''
       },
       {
         img: mv3,
-        title: "RIIZE 라이즈 ‘Boom Boom Bass’ MV",
-        uploader: 'SMTOWN',
-        time: '4:27',
-        views: '3097만회 · 1년 전',
+        title: "BLACKPINK 블랙핑크 ‘Shut Down’ M/V ",
+        uploader: 'BLACKPINK',
+        time: '3:01',
+        views: '7.4억회 · 2년 전',
         link: ''
       },
     ],
@@ -100,24 +108,24 @@ const bpinkData = {
   //Notice 탭
   noticeList: [
     {
-      title: '[알림] 라이즈 ‘Fly Up’ 응원법 안내',
+      title: '[안내] 블랙핑크 ‘뛰어(Jump)’ 응원법 안내!',
       // description: '',
-      date: '2025.08.11',
-      background: 'linear-gradient(to bottom, #FFB52E 0%, #FFA500 100%)',
+      date: '2025.08.10',
+      background: 'linear-gradient(to bottom, #EB65CE 0%, #FFC8F3 100%)',
       textColor: '#fff',
     },
     {
-      title: '[알림] 라이즈 X 메가커피 콜라보 메뉴 출시 EVENT',
+      title: '[알림] 블랙핑크 공지2',
       // description: '',
       date: '2025.08.03',
-      background: 'linear-gradient(to bottom, #FFB52E 0%, #FFA500 100%)',
+      background: 'linear-gradient(to bottom, #EB65CE 0%, #FFC8F3 100%)',
       textColor: '#fff',
     },
     {
-      title: '[공지] 라이즈 ‘ODYSSEY’ 음악방송 사전투표 안내',
+      title: '[공지] 블랙핑크 공지3',
       // description: '',
       date: '2025.08.12',
-      background: 'linear-gradient(to bottom, #FFB52E 0%, #FFA500 100%)',
+      background: 'linear-gradient(to bottom, #EB65CE 0%, #FFC8F3 100%)',
       textColor: '#fff',
     },
   ],
@@ -136,131 +144,131 @@ const bpinkData = {
   noticeSchedule: [
     {
       date: '2025-08-12',
-      type: 'anniversary',
-      typeName: '기념일',
-      title: "라이즈 쇼타로 생일 ",
-      time: "오전 12:00",
-      artists: ['RIIZE', '쇼타로']
+      type: 'event',
+      typeName: '공연/행사',
+      title: "블랙핑크 ‘Pink Venom’ 쇼음악중심 - 고양 스타디움 ",
+      time: "오전 05:00",
+      artists: ['BLACKPINK', '지수', '제니', '로제', '리사']
     },
     {
       date: '2025-08-12',
-      type: 'media',
-      typeName: '방송 미디어',
-      title: "라이즈 컴백 ‘아는 형님’ 방송 녹화",
+      type: 'fan',
+      typeName: '팬 소통',
+      title: "블랙핑크 in Shanghai 라이브 생방송",
       time: "오전 16:00",
-      artists: ['RIIZE']
+      artists: ['BLACKPINK', '지수', '제니', '로제', '리사']
     },
     {
-      date: '2025-07-26',
-      type: 'anniversary',
-      typeName: '기념일',
-      title: "(자동 추가) 2025-07-28 anniversary",
-      time: "",
-      artists: ['RIIZE']
+      date: '2025-07-28',
+      type: 'media',
+      typeName: '방송 미디어',
+      title: "(자동 추가) 2025-07-28 media",
+      time: '00:00',
+      artists: ['BLACKPINK']
     },
     {
       date: '2025-07-29',
-      type: 'event',
-      typeName: '공연/행사',
-      title: '(자동 추가) 2025-08-02 content',
-      time: '',
-      artists: ['RIIZE']
+      type: 'content',
+      typeName: '콘텐츠',
+      title: '(자동 추가) 2025-07-29 content',
+      time: '00:00',
+      artists: ['BLACKPINK']
+    },
+    {
+      date: '2025-08-01',
+      type: 'media',
+      typeName: '방송 미디어',
+      title: '(자동 추가) 2025-08-04 media',
+      time: '00:00',
+      artists: ['BLACKPINK']
+    },
+    {
+      date: '2025-08-03',
+      type: 'content',
+      typeName: '콘텐츠',    
+      title: '(자동 추가) 2025-08-04 content',
+      time: '00:00',
+      artists: ['BLACKPINK']
     },
     {
       date: '2025-08-04',
       type: 'media',
       typeName: '방송 미디어',
-      title: '(자동 추가) 2025-08-04 media',
-      time: '',
-      artists: ['RIIZE']
-    },
-    {
-      date: '2025-08-08',
-      type: 'media',
-      typeName: '방송 미디어',
-      title: '(자동 추가) 2025-08-04 content',
-      time: '',
-      artists: ['RIIZE']
-    },
-    {
-      date: '2025-08-08',
-      type: 'content',
-      typeName: '콘텐츠',
       title: '(자동 추가) 2025-08-05 media',
-      time: '',
-      artists: ['RIIZE']
+      time: '00:00',
+      artists: ['BLACKPINK']
     },
     {
-        date: '2025-08-09',
-        type: 'media',
-        typeName: '방송 미디어',
-        title: '(자동 추가) 2025-08-05 media',
-        time: '',
-        artists: ['RIIZE']
-      },
-      {
-        date: '2025-08-10',
+        date: '2025-08-05',
         type: 'event',
         typeName: '공연/행사',
-        title: '(자동 추가) 2025-08-05 media',
-        time: '',
-        artists: ['RIIZE']
+        title: '(자동 추가) 2025-08-05 event',
+        time: '00:00',
+        artists: ['BLACKPINK']
+      },
+      {
+        date: '2025-08-05',
+        type: 'event',
+        typeName: '공연/행사',
+        title: '(자동 추가) 2025-08-05 event',
+        time: '00:00',
+        artists: ['BLACKPINK']
+      },
+      {
+        date: '2025-08-05',
+        type: 'event',
+        typeName: '공연/행사',
+        title: '(자동 추가) 2025-08-05 event',
+        time: '00:00',
+        artists: ['BLACKPINK']
+      },
+      {
+        date: '2025-08-06',
+        type: 'media',
+        typeName: '방송 미디어',
+        title: '(자동 추가) 2025-08-06 media',
+        time: '00:00',
+        artists: ['BLACKPINK']
       },
     {
-      date: '2025-08-10',
-      type: 'event',
-      typeName: '공연/행사',
-      title: '(자동 추가) 2025-08-06 media',
-      time: '',
-      artists: ['RIIZE']
+      date: '2025-08-16',
+      type: 'anniversary',
+      typeName: '기념일',
+      title: '(자동 추가) 2025-08-16 media',
+      time: '00:00',
+      artists: ['BLACKPINK']
     },
     {
-      date: '2025-08-15',
+      date: '2025-08-17',
       type: 'media',
       typeName: '방송 미디어',
       title: '(자동 추가) 2025-08-15 media',
-      time: '',
-      artists: ['RIIZE']
+      time: '00:00',
+      artists: ['BLACKPINK']
     },
     {
-        date: '2025-08-15',
-        type: 'media',
-        typeName: '방송 미디어',
+        date: '2025-08-17',
+        type: 'content',
+        typeName: '콘텐츠',
         title: '(자동 추가) 2025-08-15 media',
-        time: '',
-        artists: ['RIIZE']
-      },
-      {
-        date: '2025-08-15',
-        type: 'media',
-        typeName: '방송 미디어',
-        title: '(자동 추가) 2025-08-15 media',
-        time: '',
-        artists: ['RIIZE']
+        time: '00:00',
+        artists: ['BLACKPINK']
       },
       {
         date: '2025-08-20',
-        type: 'media',
-        typeName: '방송 미디어',
-        title: '(자동 추가) 2025-08-20 media',
-        time: '',
-        artists: ['RIIZE']
-      },
-      {
-        date: '2025-08-20',
-        type: 'event',
-        typeName: '공연/행사',
-        title: '(자동 추가) 2025-08-20 media',
-        time: '',
-        artists: ['RIIZE']
+        type: 'fan',
+        typeName: '팬 소통',
+        title: '(자동 추가) 2025-08-15 media',
+        time: '00:00',
+        artists: ['BLACKPINK']
       },
       {
         date: '2025-08-21',
-        type: 'content',
-        typeName: '콘텐츠',
+        type: 'event',
+        typeName: '공연/행사',
         title: '(자동 추가) 2025-08-20 media',
-        time: '',
-        artists: ['RIIZE']
+        time: '00:00',
+        artists: ['BLACKPINK']
       },
   ],
 
@@ -278,7 +286,9 @@ const bpinkData = {
       content: 'test',
       translatedContent: '',
       images: [
-        '/assets/ArtistPage/blackpink/allpost1.png'
+        '/assets/ArtistPage/blackpink/allpost1-1.png',
+        '/assets/ArtistPage/blackpink/allpost1-2.png',
+        '/assets/ArtistPage/blackpink/allpost1-3.png',
       ],
       likes: 5,
       comments: 0,
@@ -310,7 +320,9 @@ const bpinkData = {
       content: 'test',
       translatedContent: '',
       images: [
-        '/assets/ArtistPage/blackpink/allpost3.png',
+        '/assets/ArtistPage/blackpink/allpost3-1.png',
+        '/assets/ArtistPage/blackpink/allpost3-2.png',
+        '/assets/ArtistPage/blackpink/allpost3-3.png',
       ],
       likes: 5,
       comments: 0,
@@ -354,13 +366,6 @@ const bpinkData = {
     //   showFollowButton: false,
     // },
   ],
-
-  voteMain: {
-    title: '떼창 곡 투표',
-    dDay: 'D-1',
-    options: ['소년이여', '무제(無題)',],
-    buttonLabel: '투표하러 가기',
-  },
 
   voteSubList : [
     {
