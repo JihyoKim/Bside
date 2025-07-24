@@ -28,7 +28,7 @@ const alldayData = {
     tabColor: '#1DE5FF',
     underlineColor: '#1DE5FF',
     inactiveColor: '#FFFFFF',
-    gradientColor: 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, #00A0B5 55%, rgba(0, 0, 0, 1) 100%)',
+    gradientColor: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 160, 181, 0.45) 55%, rgba(0, 0, 0, 0.45) 100%)',
   
   //Media 탭
     // ✅ New 슬라이드

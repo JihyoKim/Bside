@@ -1,6 +1,6 @@
 .share-modal-wrapper {
   position: absolute;
-  bottom: 120px;
+  bottom: var(--btm-nav);
   left: 0%;
   transform: translateX(-50%) translateY(100%); /* 초기: 아래 + 중앙 정렬 */
   width: 100%;

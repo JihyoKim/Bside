@@ -32,6 +32,7 @@ import PostDetail from '../pages/artistPage/PostDetail';
 import MoreArtist from '../pages/MoreArtist';
 import Ticket from '../pages/myPage/Ticket';
 import PointCard from '../pages/myPage/PointCard';
+import Following from '../pages/myPage/Following';
 import VoteList from '../pages/artistPage/vote/VoteList';
 import VoteResult from '../pages/artistPage/vote/VoteResult';
 import VoteComplete from '../pages/artistPage/vote/VoteComplete';
@@ -67,6 +68,7 @@ const App = () => {
         <Route path="mypage" element={<MyPage />} />
         <Route path="mypage/ticket" element={<Ticket />} />
         <Route path="mypage/point" element={<PointCard />} />
+        <Route path="mypage/following" element={<Following />} />
         <Route path="moreArtist" element={<MoreArtist />} />
         <Route path="artistPage/:artistId" element={<ArtistPage />}>
           <Route index element={<Media />} />

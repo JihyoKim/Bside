@@ -1,7 +1,8 @@
 .music-container {
   width: 100%;
   max-width: 480px;
-  margin: 0 auto 120px;
+  margin: 0 auto;
+  padding-bottom: var(--btm-nav);
   box-sizing: border-box;
   color: #fff;
   font-family: 'Pretendard Variable';

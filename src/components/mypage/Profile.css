@@ -103,6 +103,7 @@
     flex-direction: column;
     align-items: center;
     width: 60px; 
+    cursor: pointer;
 }
 
 .mypage-container .stat-top {

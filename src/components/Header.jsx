@@ -3,7 +3,7 @@ import './Header.css';
 
 import header from '../assets/header.png';
 import logo from '../assets/symbol/logo.png'
-import alarm from '../assets/symbol/alarmIcon_white_pink.svg'
+import alarm from '../assets/symbol/alarmIcon_pink.svg'
 import downWhite from '../assets/symbol/white/down.png'
 
 const Header = () => {

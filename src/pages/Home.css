@@ -2,7 +2,8 @@
     width: 100vw;
     max-width: var(--max-width);
     min-width: 320px;
-    padding: 80px clamp(9.56px, 3.08vw, 14.78px) 120px;
+    padding: 80px clamp(9.56px, 3.08vw, 14.78px) 0px;
+    padding-bottom: var(--btm-nav);
     box-sizing: border-box;
     background: #000 url('../assets/mainBg.png') no-repeat center / cover ;
     overflow: hidden

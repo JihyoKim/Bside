@@ -25,7 +25,7 @@ const gdData = {
     tabColor: '#CD3134',
     underlineColor: '#CD3134',
     inactiveColor: '#FFFFFF',
-    gradientColor: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.44) 0%, #CD3134 55%, rgba(0, 0, 0, 0.44) 100%)',
+    gradientColor: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(205, 49, 5, 0.45) 55%, rgba(0, 0, 0, 0.45) 100%)',
   
   //Media 탭
     // ✅ New 슬라이드

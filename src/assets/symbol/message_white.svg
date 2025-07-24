@@ -1,1 +1,5 @@
-<svg id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.3 26.8"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#ffa3eb;}.cls-3{fill:none;stroke:#000;}</style></defs><path class="cls-1" d="M15.5,24.2,8.8,17.7,19,5.2,6.5,15.5,0,9.2l24-9Z" transform="translate(0 -0.2)"/><path class="cls-2" d="M25.8,8h0a9.56,9.56,0,0,1,9.5,9.5h0A9.56,9.56,0,0,1,25.8,27h0a9.56,9.56,0,0,1-9.5-9.5h0A9.43,9.43,0,0,1,25.8,8Z" transform="translate(0 -0.2)"/><path class="cls-3" d="M25.8,8.5h0a9,9,0,0,1,9,9h0a9,9,0,0,1-9,9h0a9,9,0,0,1-9-9h0A9,9,0,0,1,25.8,8.5Z" transform="translate(0 -0.2)"/><path class="cls-1" d="M26.4,21.5H25.3V14.1h0l-2.1,1.4V14.4L25.3,13h1.1Z" transform="translate(0 -0.2)"/></svg>
+<svg width="34" height="26" viewBox="0 0 34 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.2061 9.02539C18.1173 10.5935 16 13.7988 16 17.5C16 18.7909 16.2582 20.0215 16.7246 21.1436L15.4668 24.5449L8.74219 17.8203L18.4922 6.05273L6.72461 15.8027L0 9.07812L24.5449 0L21.2061 9.02539Z" fill="white"/>
+<path d="M34 17.5C34 22.1944 30.1944 26 25.5 26C20.8056 26 17 22.1944 17 17.5C17 12.8056 20.8056 9 25.5 9C30.1944 9 34 12.8056 34 17.5Z" fill="#FFA3EB"/>
+<path d="M26.166 22H25.0996V14.6172H25.0527L22.9902 15.9883V14.9219L25.0996 13.5156H26.166V22Z" fill="white"/>
+</svg>

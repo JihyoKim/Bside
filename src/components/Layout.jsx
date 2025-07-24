@@ -24,6 +24,7 @@ const Layout = () => {
   } else if (
     path.startsWith('/main/mypage/ticket') ||
     path.startsWith('/main/mypage/point') ||
+    path.startsWith('/main/mypage/following') ||
     path.startsWith('/main/moreArtist')
   ) {
     HeaderComponent = HeaderSub;
@@ -31,7 +32,8 @@ const Layout = () => {
     HeaderComponent = HeaderMypage;
   } else if (
     path.startsWith('/main/music') ||
-    path.startsWith('/main/artistPage')
+    path.startsWith('/main/artistPage') ||
+    path.startsWith('/main/shop')
   ) {
     HeaderComponent = HeaderSub;
   } else {

@@ -2,7 +2,8 @@
     background: #000 url('../assets/Home_moreArtist/moreArtistBG.png') no-repeat top center;
     background-size: 100% auto; 
     background-repeat: no-repeat;
-    padding: 90px 24px 120px;
+    padding: 90px 24px 0px;
+    padding-bottom: var(--btm-nav);
     color: white;
     min-height: 100vh;
     max-width: var(--max-width);

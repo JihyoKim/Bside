@@ -10,6 +10,8 @@
 	--max-width: 390px;
 	--pagination-bullet: #FF72E0; 
 	/* var(--pagination-bullet) */
+	--btm-nav: 80px;
+	--app-btm-nav: 0px; /*120px일시 20px* 패딩버텀추가*/
 }
 
   * {

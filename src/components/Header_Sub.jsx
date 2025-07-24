@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
 import goback from '../assets/symbol/white/goback.png';
 import alarm from '../assets/symbol/alarmIcon_white_pink.svg';
+import cart from '../assets/symbol/header_cartIcon.png';
 
 const Header_Sub = () => {
   const navigate = useNavigate();
@@ -24,6 +25,9 @@ const Header_Sub = () => {
     }
   };
 
+  // ✅ 현재 위치가 /main/shop인지 확인
+  const isShopPage = location.pathname.startsWith('/main/shop');
+
   return (
     <header className="fixed-header pink">
       <div className="header-left">
@@ -31,12 +35,16 @@ const Header_Sub = () => {
           src={goback}
           alt="BackBtn"
           className="BackBtn"
-          onClick={handleGoBack} // ✅ 여기에 함수 연결
+          onClick={handleGoBack}
         />
       </div>
       <div className="header-right">
         <div className="alarm-wrapper">
-          <img src={alarm} alt="alarm" className="alarm-icon" />
+          <img
+            src={isShopPage ? cart : alarm} // ✅ 조건부 아이콘 변경
+            alt={isShopPage ? 'cart' : 'alarm'}
+            className={isShopPage ? 'cart-icon' : 'alarm-icon'}
+          />
         </div>
       </div>
     </header>

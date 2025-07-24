@@ -26,6 +26,11 @@ const Profile = () => {
     navigate('/main/mypage/point'); // ✅ 포인트 페이지로 이동
   };
 
+  const goToFollowing = (e) => {
+    e.preventDefault();
+    navigate('/main/mypage/following');
+  };
+
   return (
     <div className="profile-section">
       {/* 배경 이미지 + 그라데이션 */}
@@ -70,16 +75,16 @@ const Profile = () => {
           <div className="stat-bottom">1075</div>
         </div>
 
-        <div className="stat">
+        <div className="stat followers">
           <div className="stat-top stat-label">
             <a href="#" onClick={preventLink}>80</a>
           </div>
           <div className="stat-bottom">팔로워</div>
         </div>
 
-        <div className="stat">
+        <div className="stat following">
           <div className="stat-top stat-label">
-            <a href="#" onClick={preventLink}>88</a>
+            <a href="#" onClick={goToFollowing}>88</a>
           </div>
           <div className="stat-bottom">팔로잉</div>
         </div>

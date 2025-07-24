@@ -1,6 +1,7 @@
 .ticket-page {
     background-color: black;
-    padding: 100px 16px 120px;
+    padding: 100px 16px 0px;
+    padding-bottom: var(--btm-nav);
     min-height: max-content;
   }
 

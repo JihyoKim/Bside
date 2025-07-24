@@ -16,7 +16,14 @@ const ArtistList = () => {
   const navigate = useNavigate();
   const scrollRef = useRef();
   const [dragLimit, setDragLimit] = useState(0);
-  
+
+  const routeMap = {
+    'AESPA': '/main/artistPage/aespa',
+    'G-DRAGON': '/main/artistPage/gdragon',
+    'ALLDAY PROJECT': '/main/artistPage/alldayproject',
+    'RIIZE': '/main/artistPage/riize',
+    'BLACKPINK': '/main/artistPage/blackpink',
+  };
 
   const artists = [
     { name: 'ALLDAY PROJECT', img: artist3 },
@@ -29,18 +36,15 @@ const ArtistList = () => {
   const updateDragLimit = () => {
     const outer = scrollRef.current;
     if (!outer) return;
-  
+
     const wrapper = outer.querySelector('.artist-box-wrapper');
     if (!wrapper) return;
-  
+
     const outerWidth = outer.offsetWidth;
-    const wrapperWidth = wrapper.scrollWidth;  // 변경: scrollWidth로 전체 스크롤 가능 너비 구함
-  
+    const wrapperWidth = wrapper.scrollWidth;
     const maxScroll = wrapperWidth - outerWidth;
     const limit = maxScroll > 0 ? -maxScroll : 0;
-  
-    console.log('outerWidth:', outerWidth, 'wrapperWidth:', wrapperWidth, 'dragLimit:', limit);
-  
+
     setDragLimit(limit);
   };
 
@@ -69,16 +73,13 @@ const ArtistList = () => {
                 className="artist-card"
                 key={idx}
                 onClick={() => {
-                  if (artist.name === 'AESPA') {
-                    navigate('/main/artistPage/aespa');
-                  } else if (artist.name === 'G-DRAGON') {
-                    navigate('/main/artistPage/gdragon');
-                  }  else if (artist.name === 'ALLDAY PROJECT') {
-                    navigate('/main/artistPage/alldayproject');
+                  if (routeMap[artist.name]) {
+                    navigate(routeMap[artist.name]);
                   }
-                  // 그 외에는 클릭해도 이동 안 됨
                 }}
-                style={{ cursor: artist.name === 'AESPA' ? 'pointer' : 'default' }}
+                style={{
+                  cursor: routeMap[artist.name] ? 'pointer' : 'default'
+                }}
               >
                 <img src={artist.img} alt={artist.name} className="artist-img" />
                 <div className="artist-name">{artist.name}</div>
