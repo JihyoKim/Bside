@@ -2,11 +2,12 @@
     background: #000 url('../assets/Home_moreArtist/moreArtistBG.png') no-repeat top center;
     background-size: 100% auto; 
     background-repeat: no-repeat;
-    padding: 90px 24px 0px;
+    padding: 90px 20px 0px;
     padding-bottom: var(--btm-nav);
     color: white;
     min-height: 100vh;
     max-width: var(--max-width);
+    min-width: 320px;
   }
   
   .moreArtist-container  .moreArtist-title {
@@ -31,6 +32,7 @@
     display: flex;
     align-items: flex-start;
     gap: 18px;
+    min-width: 280px;
   }
   
   .moreArtist-container .artist-content {
@@ -84,6 +86,9 @@
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+
+    white-space: nowrap;  
+    text-align: ellipsis; 
   }
   
   .moreArtist-container .add-artist-button.added {
@@ -95,4 +100,52 @@
     padding-right: 5px;
     align-items: center;
     
+  }
+
+  @media (max-width: 370px) {
+    .moreArtist-container .artist-card {
+      padding: 5vw 4.5vw;
+      border-radius: 8vw;
+      gap: 5vw;
+    }
+  
+    .moreArtist-container .artist-img {
+      width: 28vw;
+      height: 28vw;
+      border-radius: 3.5vw;
+      object-fit: cover;
+      flex-shrink: 0; 
+    }
+  
+    .moreArtist-container .artist-content {
+      height: 28vw;  
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2vw;
+    }
+  
+    .moreArtist-container .artist-info strong {
+      font-size: 6vw;
+    }
+  
+    .moreArtist-container .artist-info p {
+      font-size: 4vw;
+      margin-top: 1vw;
+    }
+  
+    .moreArtist-container .add-artist-button-wrap {
+      margin-top: 4vw;
+    }
+  
+    .moreArtist-container .add-artist-button {
+      font-size: 4.2vw;
+      padding: 2.2vw 4vw;
+      border-radius: 8vw;
+    }
+  
+    .follow-icon {
+      width: 4vw;
+      padding-right: 1vw;
+    }
   }

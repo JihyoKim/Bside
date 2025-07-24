@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
 import goback from '../assets/symbol/white/goback.png';
 import alarm from '../assets/symbol/alarmIcon_white_pink.svg';
-import cart from '../assets/symbol/header_cartIcon.png';
+import cart from '../assets/symbol/header_cartIcon.svg';
 
 const Header_Sub = () => {
   const navigate = useNavigate();

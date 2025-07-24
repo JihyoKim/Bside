@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 
 import header from '../assets/header.png';
-import logo from '../assets/symbol/logo.png'
+import logo from '../assets/symbol/logo.svg'
 import alarm from '../assets/symbol/alarmIcon_pink.svg'
 import downWhite from '../assets/symbol/white/down.png'
 

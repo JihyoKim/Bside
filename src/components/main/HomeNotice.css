@@ -70,25 +70,9 @@
     overflow: hidden; /* ★ 중요! */
 }
 
-.home-notice-wrapper .info.black {
-    background: rgba(0, 0, 0, 0.25);
-}
-.home-notice-wrapper .info.white {
-    background: rgba(255, 255, 255, 0.25);
-}
-
-
 .home-notice-wrapper .info .artist {
     font-size: 16px;
     font-weight: 500;
-}
-/* G-DRAGON 핑크 글자 */
-.home-notice-wrapper .info .pink {
-    color: #FFBFF1;
-}
-
-.home-notice-wrapper .info .blue {
-    color: #8FD1FF;
 }
 
 /* 제목 */

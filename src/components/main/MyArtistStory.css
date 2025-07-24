@@ -31,8 +31,6 @@
 
 .artist-story-wrapper .info { padding: 16px 8px; background: #262626; width: 196px;}
 .artist-story-wrapper .info h3 { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
-.artist-story-wrapper .info h3.blue { color: #A7DAFF;}
-.artist-story-wrapper .info h3.pink { color: #FFBDF1;}
 .artist-story-wrapper .info p { font-size: 12px; font-weight: 300; color: #A0A0A0; }
 
 .artist-story-wrapper .artist-card {margin: 0; padding: 0; border-radius: 10px; overflow: hidden;}
