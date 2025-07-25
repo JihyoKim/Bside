@@ -1,0 +1,101 @@
+.post-write-container {
+  padding: 100px 16px 0;
+  background-color: #000;
+  color: white;
+  font-family: inherit;
+}
+
+/* 상단 이미지/링크 아이콘 영역 */
+.icon-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #333;
+}
+
+.icon-bar img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* 파일 input 숨김 */
+.hidden {
+  display: none;
+}
+
+/* 제목 입력 필드 */
+.title-input {
+  width: 100%;
+  padding: 12px 0 0;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  outline: none;
+}
+
+/* 위치 추가 영역 */
+.location-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #777777;
+  font-size: 13px;
+  margin: 21px 0 10px;
+  align-items: center;
+}
+
+.location-bar img {
+  width: 13px;
+}
+
+/* 내용 입력 텍스트 영역 */
+.content-textarea {
+  width: 100%;
+  height: calc(100vh - 250px - 32px);
+  padding-bottom: 10px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  color: white;
+  outline: none;
+  resize: none;
+  line-height: 1.5;
+  overflow-y: auto;
+}
+
+.content-textarea.with-image {
+  height: calc(100vh - 250px - 32px - 80px); 
+}
+
+/* 미리보기 이미지 영역 */
+.preview-images {
+  margin: 16px 0;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.preview-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.add-image-button {
+  width: 80px;
+  height: 80px;
+  background-color: #222;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+}

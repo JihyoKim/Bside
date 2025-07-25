@@ -29,6 +29,7 @@ import Fan from '../pages/artistPage/Fan';
 import FanAll from '../pages/artistPage/FanAll';
 import FanFollowing from '../pages/artistPage/FanFollowing';
 import PostDetail from '../pages/artistPage/PostDetail';
+import PostWrite from '../pages/artistPage/PostWrite';
 import MoreArtist from '../pages/MoreArtist';
 import Ticket from '../pages/myPage/Ticket';
 import PointCard from '../pages/myPage/PointCard';
@@ -82,6 +83,7 @@ const App = () => {
         </Route>
         <Route path="artistPage/:artistId/media/:mediaId" element={<MediaDetailLive />} />
         <Route path="artistPage/:artistId/post/:postId" element={<PostDetail />} />
+        <Route path="artistPage/:artistId/write" element={<PostWrite />} />
 
         <Route path="artistPage/:artistId/vote/list/" element={<VoteList />} />
         <Route path="artistPage/:artistId/vote/result/" element={<VoteResult />} />

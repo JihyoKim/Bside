@@ -1,3 +1,7 @@
+.fan-container {
+  position: relative;
+}
+
 /* 📌 상단 탭 (전체 / 팔로잉) */
 .fan-tab {
   display: flex;
@@ -67,6 +71,17 @@
   border: none;
   font-size: 14px;
   cursor: pointer;
+}
+
+.fan-location {
+  font-size: 12px;
+  color: #777;
+  margin: 6px 0;
+}
+
+.fan-location .location-icon {
+  width: 8px;
+  margin: 5px 5px 0;
 }
 
 /* 📌 게시글 내용 + 번역 */
@@ -178,3 +193,5 @@
   font-size: 15px;
   height: 250px;
 }
+
+

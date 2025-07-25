@@ -48,6 +48,17 @@
   }
   .fan-post-container .date {font-size: 12px; color:#999;}
   
+  .fan-post-container .post-location {
+    font-size: 14px;
+    color: #777;
+    margin: 6px 0;
+  }
+
+  .fan-post-container .post-location .location-icon {
+    /* width: 10px; */
+    margin-right: 8px;
+  }
+
   .fan-post-container .post-text {
     font-size: 18px;
     color: #fff;

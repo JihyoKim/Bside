@@ -8,13 +8,15 @@ import likeFilled from '../../assets/ArtistPage/likeFilled.svg';
 import comment from '../../assets/ArtistPage/comment.svg';
 import save from '../../assets/ArtistPage/save.svg';
 import saveFilled from '../../assets/ArtistPage/saveFilled.svg';
+import locationIcon from '../../assets/symbol/locationIcon.svg';
+
 
 const FanPostList = ({ posts }) => {
   const { artistId } = useParams();
   const navigate = useNavigate();
 
   const [likes, setLikes] = useState(posts.map(() => false));
-  const [likeCounts, setLikeCounts] = useState(posts.map(post => post.likes));
+  const [likeCounts, setLikeCounts] = useState(posts.map(post => post.likes || 0));
   const [saves, setSaves] = useState(posts.map(() => false));
   const [followings, setFollowings] = useState(posts.map(() => false));
   const [showTranslated, setShowTranslated] = useState(posts.map(() => false));
@@ -51,17 +53,19 @@ const FanPostList = ({ posts }) => {
     setShowTranslated(updated);
   };
 
-  const goToPost = (postId) => {
-    navigate(`/main/artistPage/${artistId}/post/${postId}`);
+  const goToPost = (postId, post) => {
+    navigate(`/main/artistPage/${artistId}/post/${postId}`, {
+      state: { post },
+    });
   };
 
   return (
     <div className="fan-posts">
-      {posts.map((post, index) => (
+      {posts.filter(post => post.showInFanList !== false).map((post, index) => (
         <div
           key={post.id}
           className="fan-post-card"
-          onClick={() => goToPost(post.id)}
+          onClick={() => goToPost(post.id, post)}
         >
           <div className="fan-header">
             <img src={post.profile} alt="profile" className="fan-profile-img" />
@@ -86,6 +90,13 @@ const FanPostList = ({ posts }) => {
               <img src={option} alt="more" />
             </div>
           </div>
+
+          {post.location && (
+            <div className="fan-location">
+              <img src={locationIcon} alt="location" className="location-icon" />
+              {post.location}
+            </div>
+          )}
 
           <div className="fan-text">
             {showTranslated[index] && post.translatedText
@@ -129,7 +140,7 @@ const FanPostList = ({ posts }) => {
               <span className="like-count">{likeCounts[index]}</span>
             </span>
             <span className="comment-icon">
-              <img src={comment} alt="comment" /> {post.comments}
+              <img src={comment} alt="comment" /> {post.comments || 0}
             </span>
             <img
               className="save-icon"

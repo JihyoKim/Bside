@@ -26,6 +26,8 @@ const gdData = {
     underlineColor: '#CD3134',
     inactiveColor: '#FFFFFF',
     gradientColor: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(205, 49, 5, 0.45) 55%, rgba(0, 0, 0, 0.45) 100%)',
+    addButtonColor: '#cd3134',    // 글작성 버튼 배경색
+    addButtonLine: '#ffffff',     // 글작성  + 선 색상
   
     voteMain: {
       title: '떼창 곡 투표',
@@ -247,14 +249,15 @@ const gdData = {
       profile: '/assets/ArtistPage/gdragon/user1.png',
       text: '더현대 팝업 MD 존 응원봉 구매 성공',
       translatedText: '',
-      content: 'test',
+      content: 'MD존 선착순 예매 겨우 성공해서 데이지봉+크래들 구매 성공! 진짜 이...',
       translatedContent: '',
       images: [
         '/assets/ArtistPage/gdragon/allpost1.png'
       ],
       likes: 2,
       comments: 0,
-      showFollowButton: true
+      showFollowButton: true,
+      showInFanList: true,
     },
     {
       id: 2,
@@ -271,7 +274,8 @@ const gdData = {
       ],
       likes: 37,
       comments: 3,
-      showFollowButton: true
+      showFollowButton: true,
+      showInFanList: true,
     },
     {
       id: 3,
@@ -288,7 +292,59 @@ const gdData = {
       ],
       likes: 88,
       comments: 4,
-      showFollowButton: true
+      showFollowButton: true,
+      showInFanList: true,
+    },
+    {
+      id: 5,
+      nickname: '쥐들에곤히잠들다',
+      time: '2025.07.28',
+      profile: '/assets/ArtistPage/gdragon/user1.png',
+      text: '지드래곤 네일 받고 옴 ㅎㅎ',
+      translatedText: '',
+      content: '여러분 드디어 저번에 예약했던 네일샵에서 웨버멘쉬 컨셉 네일 받았어욥 댓글 남겨주시면 샵 정보 드려요!! ...',
+      translatedContent: '',
+      images: [
+        '/assets/mypage/post2.png',
+      ],
+      likes: 112,
+      comments: 45,
+      showFollowButton: true,
+      showInFanList: false,
+    },
+    {
+      id: 6,
+      nickname: '쥐들에곤히잠들다',
+      time: '2025.06.11',
+      profile: '/assets/ArtistPage/gdragon/user1.png',
+      text: '이 사진 찍으신 분..b.b',
+      translatedText: '',
+      content: '이번에는 직접 보고 싶었는데 이렇게 사진으로라도 보다……',
+      translatedContent: '',
+      images: [
+        '/assets/mypage/post3.png',
+      ],
+      likes: 28,
+      comments: 8,
+      showFollowButton: true,
+      showInFanList: false,
+    },
+    {
+      id: 7,
+      nickname: '쥐들에곤히잠들다',
+      time: '2025.05.19',
+      profile: '/assets/ArtistPage/gdragon/user1.png',
+      text: '이번에 지용이가 키우는 고양이 캐릭터 브랜드 출시된다옹',
+      translatedText: '',
+      content: '프로필도 바로 바꿔버리기 히힝 !',
+      translatedContent: '',
+      images: [
+        '/assets/mypage/post4.png',
+      ],
+      likes: 50,
+      comments: 8,
+      showFollowButton: true,
+      showInFanList: false,
     },
   ],
 

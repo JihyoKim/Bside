@@ -1,0 +1,40 @@
+.floating-add-btn {
+    position: fixed;
+    bottom: 90px;
+    right: calc(50% - var(--max-width) + 24px);
+
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    border: none;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  /* + 선 교차 */
+  .plus-line {
+    position: relative;
+    width: 16px;
+    height: 2px;
+    background-color: white;
+  }
+  
+  .plus-line::after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 7px;
+    width: 2px;
+    height: 16px;
+    background-color: inherit;
+  }
+
+  @media (max-width: 1024px) {
+    .floating-add-btn {right: calc((100vw - var(--max-width)) / 2 + 24px);}
+  }
+  

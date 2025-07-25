@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { artistData } from '../../data/artistData';
 import './PostDetail.css';
 
@@ -12,15 +12,19 @@ import moreIcon from '../../assets/fanPost/more.png';
 import trashIcon from '../../assets/fanPost/trash.png';
 import save from '../../assets/ArtistPage/save.svg';
 import saveFilled from '../../assets/ArtistPage/saveFilled.svg';
+import locationIcon from '../../assets/symbol/locationIcon.svg';
+
 
 const PostDetail = () => {
   const { artistId, postId } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const passedPost = location.state?.post;
   const posts = artistData[artistId]?.fanPosts || [];
-  const post = posts.find(p => String(p.id) === postId);
+  const post = passedPost || posts.find(p => String(p.id) === postId);
+
   const [showTranslated, setShowTranslated] = useState(false);
-
-
   const [comment, setComment] = useState('');
   const [comments, setComments] = useState([]);
   const [showDeleteId, setShowDeleteId] = useState(null);
@@ -34,13 +38,8 @@ const PostDetail = () => {
   }
 
   const toggleLike = () => {
-    if (isLiked) {
-      setIsLiked(false);
-      setLikeCount(prev => prev - 1);
-    } else {
-      setIsLiked(true);
-      setLikeCount(prev => prev + 1);
-    }
+    setIsLiked(prev => !prev);
+    setLikeCount(prev => prev + (isLiked ? -1 : 1));
   };
 
   const toggleSave = () => {
@@ -92,6 +91,12 @@ const PostDetail = () => {
       <h2 className="post-text">
         {showTranslated && post.translatedText ? post.translatedText : post.text}
       </h2>
+
+      {post.location && (
+        <div className="post-location">
+          <img src={locationIcon} alt="location" className="location-icon" /> {post.location}
+        </div>
+      )}
 
       <p className="post-content">
         {showTranslated && post.translatedContent ? post.translatedContent : post.content}
@@ -182,13 +187,13 @@ const PostDetail = () => {
               </span>
             </div>
 
-            {showDeleteId && (
+            {showDeleteId === c.id && (
               <div className="delete-modal-overlay" onClick={() => setShowDeleteId(null)}>
                 <div className="delete-modal" onClick={(e) => e.stopPropagation()}>
                   <button
                     className="delete-btn"
                     onClick={() => {
-                      setConfirmDeleteId(showDeleteId);
+                      setConfirmDeleteId(c.id);
                       setShowDeleteId(null);
                     }}
                   >

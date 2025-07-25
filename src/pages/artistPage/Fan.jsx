@@ -1,14 +1,25 @@
 import React from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { Link, Outlet, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useOutletContext } from 'react-router-dom';
 import './Fan.css';
+import { artistData } from '../../data/artistData';
 
 const Fan = () => {
   const location = useLocation();
-  const { tabColor } = useOutletContext(); // ✅ 아티스트별 탭 색상 받아오기
+  const navigate = useNavigate();
+  const { artistId } = useParams();
+  const { tabColor } = useOutletContext();
 
   const isAllActive = location.pathname.endsWith('/fan');
   const isFollowingActive = location.pathname.includes('following');
+
+  const artist = artistData[artistId];
+  const bgColor = artist?.addButtonColor || '#FFA3EB';
+  const lineColor = artist?.addButtonLine || '#ffffff';
+
+  const handleAddClick = () => {
+    navigate(`/main/artistPage/${artistId}/write`);
+  };
 
   return (
     <div className="fan-container">
