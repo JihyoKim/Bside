@@ -21,11 +21,11 @@ import fff17 from '../../assets/profiles/fff17.png'
 import fff18 from '../../assets/profiles/fff18.png'
 import fff19 from '../../assets/profiles/fff19.png'
 import fff20 from '../../assets/profiles/fff20.png'
-import fff21 from '../../assets/profiles/fff21.png'
-import fff22 from '../../assets/profiles/fff22.png'
-import fff23 from '../../assets/profiles/fff23.png'
-import fff24 from '../../assets/profiles/fff24.png'
-import fff25 from '../../assets/profiles/fff25.png'
+import fff21 from '../../assets/profiles/fff21.PNG'
+import fff22 from '../../assets/profiles/fff22.PNG'
+import fff23 from '../../assets/profiles/fff23.PNG'
+import fff24 from '../../assets/profiles/fff24.PNG'
+import fff25 from '../../assets/profiles/fff25.PNG'
 
 const Following = () => {
   const [activeTab, setActiveTab] = useState('전체');
