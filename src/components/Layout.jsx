@@ -76,7 +76,7 @@ const Layout = () => {
   };
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column', position: 'relative' }}>
+    <div className="fullscreen-wrapper" style={{ display: 'flex', flexDirection: 'column', position: 'relative' }}>
       {HeaderComponent && <HeaderComponent />}
       <main style={{ flex: 1 }}>
         <Outlet />
