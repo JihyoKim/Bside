@@ -24,6 +24,11 @@ const VoteMain = () => {
           <span className="dday-badge">{data.dDay}</span>
         )}
       </h4>
+      <img
+        src={data.voteBannerImage}
+        alt="투표 배너"
+        className="vote-banner-image"
+      />
       <ul className="vote-options">
         {data.options.map((option, idx) => (
           <li key={idx}>{option}</li>

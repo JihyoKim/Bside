@@ -15,6 +15,7 @@ import media3 from '../../assets/ArtistPage/riize/media3.png';
 import mv1 from '../../assets/ArtistPage/riize/mv1.png';
 import mv2 from '../../assets/ArtistPage/riize/mv2.png';
 import mv3 from '../../assets/ArtistPage/riize/mv3.png';
+import voteBanner from '../../assets/ArtistPage/vote_bluegray.png'
 
 
 const alldayData = {
@@ -29,8 +30,9 @@ const alldayData = {
     tabColor: '#FFBB00',
     underlineColor: '#FFBB00',
     inactiveColor: '#FFFFFF',
-    gradientColor: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, rgba(229, 160, 33, 0.35) 55%, rgba(0, 0, 0, 0.35) 100%)'
-  ,
+    gradientColor: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, rgba(229, 160, 33, 0.35) 55%, rgba(0, 0, 0, 0.35) 100%)',
+    addButtonColor: '#FFBB00',
+    addButtonLine: '#ffffff',
 
   voteMain: {
     title: '떼창 곡 투표',
@@ -39,6 +41,7 @@ const alldayData = {
     buttonLabel: '투표하러 가기',
     voteButtonColor: '#FFBB00',
     voteTextColor: '#333',
+    voteBannerImage: voteBanner ,
   },
 
   //Media 탭

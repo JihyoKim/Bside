@@ -13,6 +13,8 @@ import media3 from '../../assets/ArtistPage/aespa/media3.png';
 import mv1 from '../../assets/ArtistPage/aespa/mv1.png';
 import mv2 from '../../assets/ArtistPage/aespa/mv2.png';
 import mv3 from '../../assets/ArtistPage/aespa/mv3.png';
+import voteBanner from '../../assets/ArtistPage/vote_gray.png'
+
 
 
 const aespaData = {
@@ -28,6 +30,8 @@ const aespaData = {
     underlineColor: '#FF8031',
     inactiveColor: '#FFFFFF',
     gradientColor: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.44) 0%, rgba(255, 128, 49, 0.44) 55%, rgba(0, 0, 0, 0.44) 100%)',
+    addButtonColor: '#FF8031',
+    addButtonLine: '#ffffff',
 
     voteMain: {
       title: '떼창 곡 투표',
@@ -36,6 +40,7 @@ const aespaData = {
       buttonLabel: '투표하러 가기',
       voteButtonColor: '#FF8031',
       voteTextColor: '#fff',
+      voteBannerImage: voteBanner ,
     },
 
   //Media 탭

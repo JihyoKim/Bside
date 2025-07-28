@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Header.css';
 import SideMenu from './SideMenu';
+import AlarmDetail from './AlarmDetail';
 
 import menuIcon from '../assets/symbol/white/menu.png';   
 import alarmIcon from '../assets/symbol/alarmIcon_white_pink.svg'; 
@@ -9,6 +10,7 @@ import messageIcon from '../assets/symbol/message_white.svg';
 const Header_Mypage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAlarmOpen, setIsAlarmOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,9 +20,8 @@ const Header_Mypage = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(prev => !prev);
-  };
+  const toggleMenu = () => {setIsMenuOpen(prev => !prev);};
+  const toggleAlarm = () => {setIsAlarmOpen(prev => !prev)};
 
   return (
     <>
@@ -36,12 +37,13 @@ const Header_Mypage = () => {
         <div className="header-right">
           <div className="icon-badge-wrapper">
             <img src={messageIcon} alt="message" className="message-icon" />
-            <img src={alarmIcon} alt="alarm" className="alarm-icon" />
+            <img src={alarmIcon} alt="alarm" className="alarm-icon" onClick={toggleAlarm} />
           </div>
         </div>
       </header>
 
       <SideMenu isOpen={isMenuOpen} onToggle={toggleMenu} />
+      <AlarmDetail isOpen={isAlarmOpen} onToggle={toggleAlarm} />
     </>
   );
 };

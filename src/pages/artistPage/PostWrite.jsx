@@ -44,7 +44,7 @@ const PostWrite = () => {
         const { latitude, longitude } = position.coords;
         console.log('현재 위치:', latitude, longitude);
   
-        const keywords = ['이젠', '맛집', '카페', '음식점', '편의점', '백화점'];
+        const keywords = ['이젠아카데미', '맛집', '카페', '음식점', '편의점', '백화점'];
         let allResults = [];
   
         try {
@@ -89,6 +89,15 @@ const PostWrite = () => {
       }
     );
   };
+  
+  const handleRemoveImage = (indexToRemove) => {
+    const confirmed = window.confirm('이 이미지를 삭제하시겠습니까?');
+    if (!confirmed) return;
+  
+    setImages((prevImages) =>
+      prevImages.filter((_, index) => index !== indexToRemove)
+    );
+  };
 
   const handlePlaceSelect = (place) => {
     setLocation(place.place_name);
@@ -105,7 +114,7 @@ const PostWrite = () => {
       id: Date.now(),
       nickname: '쥐들에곤히잠들다',
       time: '방금 전',
-      profile: `/assets/ArtistPage/${artistId}/user1.png`,
+      profile: '/assets/mypage/profile.png',
       text,
       translatedText: '',
       content,
@@ -125,32 +134,34 @@ const PostWrite = () => {
     <>
       <Header_Post onSubmit={handleSubmit} />
       <div className="post-write-container">
-        <div className="icon-bar">
-          <label htmlFor="image-upload">
-            <img src={imageIcon} alt="upload" />
-          </label>
+        <div className="title-row">
           <input
-            id="image-upload"
-            type="file"
-            multiple
-            accept="image/*"
-            onChange={handleImageChange}
-            className="hidden"
+            type="text"
+            placeholder="제목 입력"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            className="title-input"
           />
-          <img src={linkIcon} alt="link" />
+          <div className="icon-bar">
+            <label htmlFor="image-upload">
+              <img src={imageIcon} alt="upload" />
+            </label>
+            <input
+              id="image-upload"
+              type="file"
+              multiple
+              accept="image/*"
+              onChange={handleImageChange}
+              className="hidden"
+            />
+            <img src={linkIcon} alt="link" />
+          </div>
         </div>
-
-        <input
-          type="text"
-          placeholder="제목 입력"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          className="title-input"
-        />
+        <div className="title-underline" />
 
         <div className="preview-images">
           {images.map((img, idx) => (
-            <img key={idx} src={img} alt={`preview-${idx}`} className="preview-img" />
+            <img key={idx} src={img} alt={`preview-${idx}`} className="preview-img" onClick={() => handleRemoveImage(idx)}/>
           ))}
 
           {images.length > 0 && images.length < 3 && (

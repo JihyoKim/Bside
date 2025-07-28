@@ -11,6 +11,7 @@ import mv1 from '../../assets/ArtistPage/gdragon/mv1.png';
 import mv2 from '../../assets/ArtistPage/gdragon/mv2.png';
 import mv3 from '../../assets/ArtistPage/gdragon/mv3.png';
 import mv4 from '../../assets/ArtistPage/gdragon/mv4.png';
+import voteBanner from '../../assets/ArtistPage/vote_black.png'
 
 
 const gdData = {
@@ -36,6 +37,7 @@ const gdData = {
       buttonLabel: '투표하러 가기',
       voteButtonColor: '#CD3134',
       voteTextColor: '#fff',
+      voteBannerImage: voteBanner ,
     },
 
   //Media 탭

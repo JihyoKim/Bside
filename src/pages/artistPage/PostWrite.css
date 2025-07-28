@@ -1,18 +1,22 @@
 .post-write-container {
-  padding: 100px 16px 0;
+  padding: 100px 0px 0;
   background-color: #000;
   color: white;
   font-family: inherit;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px 0;
 }
 
 /* 상단 이미지/링크 아이콘 영역 */
 .icon-bar {
   display: flex;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 16px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid #333;
+  gap: 16px;
 }
 
 .icon-bar img {
@@ -21,6 +25,8 @@
   cursor: pointer;
 }
 
+
+
 /* 파일 input 숨김 */
 .hidden {
   display: none;
@@ -28,14 +34,18 @@
 
 /* 제목 입력 필드 */
 .title-input {
-  width: 100%;
-  padding: 12px 0 0;
+  flex: 1;
   background: none;
   border: none;
   font-size: 18px;
   font-weight: 600;
   color: white;
   outline: none;
+}
+
+.title-underline {
+  border-bottom: 1px solid #333;
+  margin: 12px 0 16px;
 }
 
 /* 위치 추가 영역 */
@@ -45,8 +55,8 @@
   gap: 8px;
   color: #777777;
   font-size: 13px;
-  margin: 21px 0 10px;
   align-items: center;
+  margin: 0 24px;
 }
 
 .location-bar img {
@@ -57,15 +67,16 @@
 .content-textarea {
   width: 100%;
   height: calc(100vh - 250px - 32px);
-  padding-bottom: 10px;
+  padding: 10px 0;
   background: none;
   border: none;
-  font-size: 15px;
+  font-size: 14px;
   color: white;
   outline: none;
   resize: none;
   line-height: 1.5;
   overflow-y: auto;
+  margin: 0 24px;
 }
 
 .content-textarea.with-image {
@@ -74,7 +85,7 @@
 
 /* 미리보기 이미지 영역 */
 .preview-images {
-  margin: 16px 0;
+  margin: 0 24px;
   display: flex;
   gap: 10px;
   overflow-x: auto;
@@ -85,6 +96,7 @@
   height: 80px;
   object-fit: cover;
   border-radius: 8px;
+  margin-bottom: 16px;
 }
 
 .add-image-button {
@@ -98,4 +110,5 @@
   justify-content: center;
   font-size: 28px;
   cursor: pointer;
+  margin-bottom: 16px;
 }

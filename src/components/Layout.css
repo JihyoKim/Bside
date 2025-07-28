@@ -1,0 +1,27 @@
+.layout-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* ✅ body 대신 여기서 스크롤 막음 */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .layout-scroll {
+    flex: 1;
+    overflow-y: auto; /* ✅ 실제 스크롤 가능한 영역 */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--btm-nav); /* 하단 여백 */
+  }
+  
+  .layout-scroll::-webkit-scrollbar,
+  .side-menu::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .layout-scroll,
+  .side-menu {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  

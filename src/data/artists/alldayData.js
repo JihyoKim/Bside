@@ -14,6 +14,7 @@ import media3 from '../../assets/ArtistPage/adproject/media3.png';
 import mv1 from '../../assets/ArtistPage/adproject/mv1.png';
 import mv2 from '../../assets/ArtistPage/adproject/mv2.png';
 import mv3 from '../../assets/ArtistPage/adproject/mv3.png';
+import voteBanner from '../../assets/ArtistPage/vote_blue.png'
 
 
 const alldayData = {
@@ -29,6 +30,8 @@ const alldayData = {
     underlineColor: '#1DE5FF',
     inactiveColor: '#FFFFFF',
     gradientColor: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 160, 181, 0.45) 55%, rgba(0, 0, 0, 0.45) 100%)',
+    addButtonColor: '#1DE5FF',
+    addButtonLine: '#ffffff',
     
     voteMain: {
       title: '커버 곡 투표',
@@ -37,6 +40,7 @@ const alldayData = {
       buttonLabel: '투표하러 가기',
       voteButtonColor: '#1DE5FF',
       voteTextColor: '#333',
+      voteBannerImage: voteBanner ,
     },
 
 

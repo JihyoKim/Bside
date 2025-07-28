@@ -13,6 +13,7 @@ import media3 from '../../assets/ArtistPage/blackpink/media3.png';
 import mv1 from '../../assets/ArtistPage/blackpink/mv1.png';
 import mv2 from '../../assets/ArtistPage/blackpink/mv2.png';
 import mv3 from '../../assets/ArtistPage/blackpink/mv3.png';
+import voteBanner from '../../assets/ArtistPage/vote_pink.png'
 
 
 const bpinkData = {
@@ -28,6 +29,8 @@ const bpinkData = {
     underlineColor: '#f7a7bb',
     inactiveColor: '#FFFFFF',
     gradientColor: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%,rgba(247, 167, 187, 0.35) 55%, rgba(0, 0, 0, 0.35) 100%)',
+    addButtonColor: '#f7a7bb',
+    addButtonLine: '#ffffff',
   
     voteMain: {
       title: '커버 곡 투표',
@@ -36,6 +39,7 @@ const bpinkData = {
       buttonLabel: '투표하러 가기',
       voteButtonColor: '#f7a7bb',
       voteTextColor: '#333',
+      voteBannerImage: voteBanner ,
     },
 
   //Media 탭

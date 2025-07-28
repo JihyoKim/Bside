@@ -92,12 +92,6 @@ const PostDetail = () => {
         {showTranslated && post.translatedText ? post.translatedText : post.text}
       </h2>
 
-      {post.location && (
-        <div className="post-location">
-          <img src={locationIcon} alt="location" className="location-icon" /> {post.location}
-        </div>
-      )}
-
       <p className="post-content">
         {showTranslated && post.translatedContent ? post.translatedContent : post.content}
       </p>
@@ -111,6 +105,12 @@ const PostDetail = () => {
       {post.images.map((img, idx) => (
         <img key={idx} src={img} alt={`fan post ${idx + 1}`} className="fan-image" />
       ))}
+
+      {post.location && (
+        <div className="post-location">
+          <img src={locationIcon} alt="location" className="location-icon" /> {post.location}
+        </div>
+      )}
 
       <div className="post-actions">
         <span className="action-item" onClick={toggleLike}>

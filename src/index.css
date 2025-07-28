@@ -45,7 +45,7 @@
 	display: flex;
 	margin: 0;
 	padding: 0;
-	background: #555 url('assets/indexBg.png') no-repeat center center;
+	background: #212121;
 	background-size: 100% 100%;
 	background-attachment: fixed;
   }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Following.css';
 import FollowingList from '../../components/mypage/FollowingList';
 import fff1 from '../../assets/profiles/fff1.png'
@@ -21,13 +21,105 @@ import fff17 from '../../assets/profiles/fff17.png'
 import fff18 from '../../assets/profiles/fff18.png'
 import fff19 from '../../assets/profiles/fff19.png'
 import fff20 from '../../assets/profiles/fff20.png'
+import fff21 from '../../assets/profiles/fff21.png'
+import fff22 from '../../assets/profiles/fff22.png'
+import fff23 from '../../assets/profiles/fff23.png'
+import fff24 from '../../assets/profiles/fff24.png'
+import fff25 from '../../assets/profiles/fff25.png'
 
 const Following = () => {
   const [activeTab, setActiveTab] = useState('전체');
+  const tabContainerRef = useRef(null);
+  const tabButtonRefs = useRef({});
 
   const tabs = ['전체', 'G-Dragon', 'RIIZE', 'ALLDAYPROJECT', 'aespa', 'BLACKPINK'];
 
-  // 샘플 데이터 - 실제로는 props나 API에서 받아올 데이터
+  // 탭 클릭 시 자동 스크롤 함수 (중앙 정렬)
+  const scrollToTab = (tabIndex) => {
+    const tabContainer = tabContainerRef.current;
+    const tabButton = tabButtonRefs.current[tabIndex];
+    
+    if (!tabContainer || !tabButton) return;
+
+    const containerRect = tabContainer.getBoundingClientRect();
+    const buttonRect = tabButton.getBoundingClientRect();
+    
+    // 버튼의 중앙 위치 계산
+    const buttonCenter = buttonRect.left - containerRect.left + tabContainer.scrollLeft + (buttonRect.width / 2);
+    
+    // 컨테이너의 중앙 위치
+    const containerCenter = containerRect.width / 2;
+    
+    // 목표 스크롤 위치 (버튼 중앙이 컨테이너 중앙에 오도록)
+    const targetScroll = buttonCenter - containerCenter;
+    
+    // 스크롤 범위 제한 (0 이하거나 최대 스크롤을 넘지 않도록)
+    const maxScroll = tabContainer.scrollWidth - tabContainer.clientWidth;
+    const finalScroll = Math.max(0, Math.min(targetScroll, maxScroll));
+    
+    // 부드러운 스크롤 애니메이션
+    tabContainer.scrollTo({
+      left: finalScroll,
+      behavior: 'smooth'
+    });
+  };
+
+  // 탭 클릭 핸들러
+  const handleTabClick = (tab, index) => {
+    setActiveTab(tab);
+    scrollToTab(index);
+  };
+
+  // 드래그 스크롤 기능
+  useEffect(() => {
+    const tabContainer = tabContainerRef.current;
+    if (!tabContainer) return;
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    const handleMouseDown = (e) => {
+      isDown = true;
+      startX = e.pageX - tabContainer.offsetLeft;
+      scrollLeft = tabContainer.scrollLeft;
+      tabContainer.style.cursor = 'grabbing';
+    };
+
+    const handleMouseLeave = () => {
+      isDown = false;
+      tabContainer.style.cursor = 'grab';
+    };
+
+    const handleMouseUp = () => {
+      isDown = false;
+      tabContainer.style.cursor = 'grab';
+    };
+
+    const handleMouseMove = (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - tabContainer.offsetLeft;
+      const walk = (x - startX) * 2;
+      tabContainer.scrollLeft = scrollLeft - walk;
+    };
+
+    tabContainer.addEventListener('mousedown', handleMouseDown);
+    tabContainer.addEventListener('mouseleave', handleMouseLeave);
+    tabContainer.addEventListener('mouseup', handleMouseUp);
+    tabContainer.addEventListener('mousemove', handleMouseMove);
+
+    tabContainer.style.cursor = 'grab';
+
+    return () => {
+      tabContainer.removeEventListener('mousedown', handleMouseDown);
+      tabContainer.removeEventListener('mouseleave', handleMouseLeave);
+      tabContainer.removeEventListener('mouseup', handleMouseUp);
+      tabContainer.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  // 샘플 데이터
   const followingData = [
     {
       id: 1,
@@ -44,6 +136,20 @@ const Following = () => {
       followingArtists: ['G-Dragon', 'RIIZE', 'ALLDAYPROJECT']
     },
     {
+      id: 25,
+      profileImage: fff25,
+      nickname: '형용돈죵',
+      statusMessage: '형돈이가 랩을 한다 홍홍홍',
+      followingArtists: ['G-Dragon']
+    },
+    {
+      id: 24,
+      profileImage: fff24,
+      nickname: 'n.young.k',
+      statusMessage: '💙💙💙',
+      followingArtists: ['G-Dragon']
+    },
+    {
       id: 3,
       profileImage: fff3,
       nickname: '자석즈01',
@@ -54,7 +160,7 @@ const Following = () => {
       id: 4,
       profileImage: fff4,
       nickname: '1더하기1은지용이',
-      statusMessage: '나이는 나만 먹지 o(TヘTo)',
+      statusMessage: '나이는 나만 먹지 o(THeTo)',
       followingArtists: ['G-Dragon', 'RIIZE']
     },
     {
@@ -116,7 +222,7 @@ const Following = () => {
     {
       id: 13,
       profileImage: fff13,
-      nickname: '밀을건 지용이뿐',
+      nickname: '밀을건지용이뿐',
       statusMessage: '모두 뱅나잇! 💙🤍',
       followingArtists: ['RIIZE']
     },
@@ -125,7 +231,7 @@ const Following = () => {
       profileImage: fff14,
       nickname: 'yehyehxing',
       statusMessage: 'International fan / follow for follow #fff',
-      followingArtists: ['RIIZE', 'ALLDAYPROJECT']
+      followingArtists: ['RIIZE', 'ALLDAYPROJECT', 'aespa']
     },
     {
       id: 15,
@@ -146,7 +252,7 @@ const Following = () => {
       profileImage: fff17,
       nickname: 'blackpink_inurarea',
       statusMessage: '',
-      followingArtists: ['BLACKPINK', 'ALLDAYPROJECT']
+      followingArtists: ['BLACKPINK', 'ALLDAYPROJECT', 'G-Dragon']
     },
     {
       id: 18,
@@ -167,8 +273,29 @@ const Following = () => {
       profileImage: fff20,
       nickname: 'proteiner',
       statusMessage: '펜싸인회 당첨의 기적;;',
-      followingArtists: ['RIIZE', 'ALLDAYPROJECT']
-    }
+      followingArtists: ['RIIZE', 'ALLDAYPROJECT', 'aespa']
+    },
+    {
+      id: 21,
+      profileImage: fff21,
+      nickname: '진수성찬이',
+      statusMessage: '정성찬! 정성찬! 정성찬!',
+      followingArtists: 'RIIZE',
+    },
+    {
+      id: 22,
+      profileImage: fff22,
+      nickname: 'godgiselle',
+      statusMessage: '지젤갓',
+      followingArtists: 'aespa',
+    },
+    {
+      id: 23,
+      profileImage: fff23,
+      nickname: 'noahschnapp',
+      statusMessage: 'London, UK 🤴🏻',
+      followingArtists: ['aespa', 'BLACKPINK']
+    },
   ];
 
   const getFilteredData = () => {
@@ -182,25 +309,31 @@ const Following = () => {
 
   return (
     <div className="following-container">
-      <div className="following-header">
-        <h1>내 팔로잉 목록</h1>
-      </div>
-      
-      <div className="tab-container">
-        <div className="tab-scroll">
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              className={`tab-button ${activeTab === tab ? 'active' : ''}`}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </button>
-          ))}
+      {/* 고정 헤더 */}
+      <div className="followingInner">
+        <div className="following-header">
+          <h1>내 팔로잉 목록</h1>
+          <div className="tab-container" ref={tabContainerRef}>
+            <div className="tab-scroll">
+              {tabs.map((tab, index) => (
+                <button
+                  key={tab}
+                  ref={(el) => (tabButtonRefs.current[index] = el)}
+                  className={`tab-button ${activeTab === tab ? 'active' : ''}`}
+                  onClick={() => handleTabClick(tab, index)}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
-      <FollowingList data={getFilteredData()} />
+      {/* 리스트 영역 */}
+      <div className="following-list-wrapper">
+        <FollowingList data={getFilteredData()} />
+      </div>
     </div>
   );
 };

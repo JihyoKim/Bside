@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './MediaDetailLive.css';
 
 import SubtitleBox from '../../components/artistPage/LiveChat/SubtitleBox';
@@ -41,15 +41,18 @@ const MediaDetailLive = () => {
   return (
     <div className="media-detail-container">
       {/* 🎥 배경 비디오 */}
-      <video
-        className="background-video"
-        autoPlay
-        loop
-        muted={!soundEnabled}
-        ref={videoRef}
-      >
-        <source src={videoFile} type="video/mp4" />
-      </video>
+      <div className="video-wrapper">
+        <video
+          className="background-video"
+          autoPlay
+          loop
+          muted={!soundEnabled}
+          ref={videoRef}
+          playsInline
+        >
+          <source src={videoFile} type="video/mp4" />
+        </video>
+      </div>
 
       {/* 🌑 어두운 배경 오버레이 */}
       {(showChat || showShare || showTranslate) && (
