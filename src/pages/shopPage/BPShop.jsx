@@ -29,6 +29,8 @@ const BPShop = () => {
 
   const activeTag = 'BLACKPINK';
 
+  const showLoadMore = false; 
+
   const buttons = [
     { name: 'G-Dragon', path: 'gdshop' },
     { name: 'ALLDAYPROJECT', path: 'adpshop' },
@@ -195,9 +197,11 @@ const BPShop = () => {
           ))}
         </div>
       </div>
-      <div className="shop-footer">
-        <button className="load-more-btn">더보기</button>
-      </div>
+      {showLoadMore && (
+        <div className="shop-footer">
+          <button className="load-more-btn">더보기</button>
+        </div>
+      )}
     </div>
   );
 }

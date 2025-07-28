@@ -47,6 +47,8 @@ const GDShop = () => {
 
   const activeTag = 'G-Dragon';
 
+  const showLoadMore = true; 
+
   const buttons = [
     { name: 'G-Dragon', path: 'gdshop' },
     { name: 'ALLDAYPROJECT', path: 'adpshop' },
@@ -177,19 +179,17 @@ const GDShop = () => {
         </div>
       </div>
 
-      {visibleCount < products.length ? (
-      <div className="shop-footer">
-        <button className="load-more-btn" onClick={showMore}>
-          더보기
-        </button>
-      </div>
-    ) : (
-      <div className="shop-footer">
-        <button className="load-more-btn" onClick={() => setVisibleCount(8)}>
-          접기
-        </button>
-      </div>
-    )}
+      {visibleCount < products.length && showLoadMore ? (
+        <div className="shop-footer">
+          <button className="load-more-btn" onClick={showMore}>더보기</button>
+        </div>
+      ) : (
+        <div className="shop-footer">
+          <button className="load-more-btn" onClick={() => setVisibleCount(8)}>
+            접기
+          </button>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 .floating-add-btn {
     position: fixed;
-    bottom: 90px;
+    bottom: calc(90px - 5px);
     right: calc(50% - var(--max-width) + 24px);
 
     width: 41px;
@@ -14,6 +14,9 @@
     align-items: center;
     justify-content: center;
     padding: 0;
+    margin: 5px;
+
+    cursor: pointer;
   }
   
   /* + 선 교차 */
@@ -35,6 +38,6 @@
   }
 
   @media (max-width: 1024px) {
-    .floating-add-btn {right: calc((100vw - var(--max-width)) / 2 + 24px);}
+    .floating-add-btn {right: calc((100vw - var(--max-width)) / 2 + 24px - 5px);}
   }
   

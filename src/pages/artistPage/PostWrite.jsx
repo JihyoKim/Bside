@@ -89,7 +89,7 @@ const PostWrite = () => {
       }
     );
   };
-  
+
   const handleRemoveImage = (indexToRemove) => {
     const confirmed = window.confirm('이 이미지를 삭제하시겠습니까?');
     if (!confirmed) return;
@@ -105,8 +105,18 @@ const PostWrite = () => {
   };
 
   const handleSubmit = () => {
-    if (!text || !content) {
-      alert('모든 내용을 입력해주세요.');
+    if (!artistId || artistId === 'undefined') {
+      alert('아티스트를 먼저 선택해주세요.');
+      return;
+    }
+
+    if (!text) {
+      alert('제목을 입력해주세요.');
+      return;
+    }
+    
+    if (!content) {
+      alert('내용을 입력해주세요.');
       return;
     }
 

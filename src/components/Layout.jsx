@@ -65,8 +65,9 @@ const Layout = () => {
     path.includes('/write') ||
     isVoteDetailPage ;
 
-  const isFanPage = path.includes('/artistPage') && path.includes('/fan');
-  const artist = artistData[artistId];
+  const isFanPage =
+    (path.includes('/artistPage') && path.includes('/fan')) ||
+    path === '/main/mypage';  const artist = artistData[artistId];
   const bgColor = artist?.addButtonColor || '#FFA3EB';
   const lineColor = artist?.addButtonLine || '#ffffff';
 

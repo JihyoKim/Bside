@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import profileHeader from '../../assets/mypage/profile_header.png';
 import profilePhoto from '../../assets/mypage/profile.png';
-import settingIcon from '../../assets/mypage/setting.png';
+import settingIcon from '../../assets/mypage/setting.svg';
 import ticketIcon from '../../assets/mypage/ticket.svg';
 import pointIcon from '../../assets/mypage/point_white.svg';
 
