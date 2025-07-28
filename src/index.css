@@ -6,6 +6,12 @@
 	src: url('/public/PretendardVariable.woff2') format('woff2-variations');
   }
   
+  .fullscreen-wrapper {
+	height: calc(var(--vh, 1vh) * 100);
+	background: #000; /* 필요 시 변경 */
+	overflow-y: auto;
+  }
+  
 :root {
 	--max-width: 390px;
 	--pagination-bullet: #FF72E0; 
