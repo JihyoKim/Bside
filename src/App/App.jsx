@@ -56,8 +56,7 @@ const App = () => {
   return (
     <Routes>
       {/* 진입 시 온보딩으로 이동 */}
-      <Route path="/" element={<Navigate to="/onboarding" replace />} />
-
+      <Route path="/" element={<Step1 />} />
       {/* 온보딩 경로 설정 */}
       <Route path="/onboarding">
         <Route index element={<Step1 />} />
