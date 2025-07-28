@@ -59,7 +59,7 @@ const albumData = [
   },
 ];
 
-const ShopTemp = () => {
+const NewAlbum = () => {
   return (
     <main className="shop-wrapper">
       <div className="shop-header">
@@ -100,4 +100,4 @@ const ShopTemp = () => {
   );
 };
 
-export default ShopTemp;
+export default NewAlbum;
