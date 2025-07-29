@@ -33,13 +33,13 @@
 .alarm-panel {
   position: absolute;
   top: 0;
-  right: -100%;
+  right: 0;
   width: 100vw;
   max-width: 390px;
   height: 100vh;
-  overflow-y: auto;
   background-color: #000;
-  transition: right 0.3s ease;
+  transition: transform 0.3s ease;
+  transform: translateX(100%); 
   z-index: 2;
   overflow-y: auto;
   pointer-events: auto;
@@ -48,7 +48,7 @@
 }
 
 .alarm-panel.open {
-  right: 0;
+  transform: translateX(0); 
 }
 
 .alarm-panel::-webkit-scrollbar {

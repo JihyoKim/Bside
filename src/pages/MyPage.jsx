@@ -18,7 +18,7 @@ const MyPage = () => {
 
   return (
     <div className="mypage-container">
-      <div className="mypage-scroll" ref={scrollRef}> {/* ✅ ref 적용 */}
+      <div className="mypage-scroll" ref={scrollRef}> 
         <Profile onToggleMenu={toggleMenu} />
         <Post onScrollToTop={scrollToTop} />
       </div>

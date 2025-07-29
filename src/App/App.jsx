@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 // 온보딩 페이지
@@ -39,20 +39,6 @@ import VoteResult from '../pages/artistPage/vote/VoteResult';
 import VoteComplete from '../pages/artistPage/vote/VoteComplete';
 
 const App = () => {
-
-  useEffect(() => {
-    const setVh = () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    };
-  
-    setVh(); // 초기 1회 설정
-    window.addEventListener('resize', setVh); // 리사이즈 대응
-  
-    return () => window.removeEventListener('resize', setVh); // 정리
-  }, []);
-
-  
   return (
     <Routes>
       {/* 진입 시 온보딩으로 이동 */}

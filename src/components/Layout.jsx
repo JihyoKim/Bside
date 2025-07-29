@@ -9,6 +9,7 @@ import SideMenu from './SideMenu';
 import FloatingAddButton from './FloatingAddButton';
 import { Outlet } from 'react-router-dom';
 import { artistData } from '../data/artistData';
+import './Layout.css';
 
 const Layout = () => {
   const location = useLocation();
@@ -76,11 +77,20 @@ const Layout = () => {
   };
 
   return (
-    <div className="fullscreen-wrapper" style={{ display: 'flex', flexDirection: 'column', position: 'relative' }}>
+    <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column', position: 'relative' }}>
       {HeaderComponent && <HeaderComponent />}
-      <main style={{ flex: 1 }}>
-        <Outlet />
-      </main>
+      <div className="layout-container">
+        {HeaderComponent && <HeaderComponent />}
+        
+        <div className="layout-scroll">
+          <Outlet />
+        </div>
+        
+        {!hideBottomNav && <BottomNav />}
+        {isFanPage && (
+          <FloatingAddButton onClick={handleAddClick} bgColor={bgColor} lineColor={lineColor} />
+        )}
+      </div>
       {!hideBottomNav && <BottomNav />}
       {isFanPage && (
         <FloatingAddButton onClick={handleAddClick} bgColor={bgColor} lineColor={lineColor} />
