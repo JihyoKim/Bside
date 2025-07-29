@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Header.css';
 import SideMenu from './SideMenu';
 import AlarmDetail from './AlarmDetail';
@@ -8,6 +9,7 @@ import alarmIcon from '../assets/symbol/alarmIcon_white_pink.svg';
 import messageIcon from '../assets/symbol/message_white.svg'; 
 
 const Header_Mypage = () => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAlarmOpen, setIsAlarmOpen] = useState(false);
@@ -22,6 +24,7 @@ const Header_Mypage = () => {
 
   const toggleMenu = () => {setIsMenuOpen(prev => !prev);};
   const toggleAlarm = () => {setIsAlarmOpen(prev => !prev)};
+  const goToMessage = () => navigate('message');
 
   return (
     <>
@@ -36,7 +39,7 @@ const Header_Mypage = () => {
         </div>
         <div className="header-right">
           <div className="icon-badge-wrapper">
-            <img src={messageIcon} alt="message" className="message-icon" />
+            <img src={messageIcon} alt="message" className="message-icon" onClick={goToMessage} />
             <img src={alarmIcon} alt="alarm" className="alarm-icon" onClick={toggleAlarm} />
           </div>
         </div>

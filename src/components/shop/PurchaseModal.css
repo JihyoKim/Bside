@@ -1,0 +1,199 @@
+.purchase-modal-overlay {
+    position: fixed;
+    /* top: 0;
+    left: 0;
+    right: 0; */
+    bottom: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .purchase-modal-content {
+    background: white;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    max-width: 390px;
+    padding: 20px;
+    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.3); /* 강화된 drop shadow */
+    animation: slideUp 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .purchase-modal-overlay .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .purchase-modal-overlay .modal-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .purchase-modal-overlay .close-button {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #999;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+  }
+  
+  .purchase-modal-overlay .close-button:hover {
+    background-color: #f5f5f5;
+    color: #666;
+  }
+  
+  .purchase-modal-overlay .product-summary {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    /* 🎨 Inner shadow 효과 */
+    box-shadow: 
+      inset 0 4px 10px rgba(0, 0, 0, 0.06),
+      inset 0 0px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f0f0f0;
+  }
+  
+  .purchase-modal-overlay .product-summary img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .purchase-modal-overlay .product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .purchase-modal-overlay .product-info h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+  }
+  
+  .purchase-modal-overlay .product-info p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFA3EB;
+  }
+  
+  .purchase-modal-overlay .quantity-selector {
+    margin-bottom: 32px;
+  }
+  
+  .purchase-modal-overlay .quantity-selector label {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .purchase-modal-overlay .quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px;
+    background-color: #f8f8f8;
+    border-radius: 12px;
+  }
+  
+  .purchase-modal-overlay .quantity-controls button {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .quantity-controls button:hover {
+    border-color: #FFA3EB;
+    color: #FFA3EB;
+  }
+  
+  /* .quantity-controls button:active {
+    transform: scale(0.95);
+  } */
+  
+  .quantity-controls span {
+    font-size: 20px;
+    font-weight: 700;
+    min-width: 40px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  .total-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .confirm-button {
+    background: linear-gradient(135deg, #FFA3EB 0%, #ffa3eb 100%);
+    color: #000;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(255, 185, 240, 0.3);
+  }
+  
+  .confirm-button:active {
+    transform: translateY(0);
+  }

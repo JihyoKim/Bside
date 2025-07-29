@@ -15,6 +15,8 @@ import Layout from '../components/Layout';
 import Home from '../pages/Home';
 import Music from '../pages/Music';
 import Shop from '../pages/Shop';
+import ProductDetail from '../pages/shopPage/ProductDetail';
+import Payment from '../pages/shopPage/Payment';
 import GDShop from '../pages/shopPage/GDShop';
 import ADPShop from '../pages/shopPage/ADPShop';
 import RiizeShop from '../pages/shopPage/RiizeShop';
@@ -34,6 +36,8 @@ import MoreArtist from '../pages/MoreArtist';
 import Ticket from '../pages/myPage/Ticket';
 import PointCard from '../pages/myPage/PointCard';
 import Following from '../pages/myPage/Following';
+import MessageRoom from '../pages/message/MessageRoom';
+import Message from '../pages/message/Message';
 import VoteList from '../pages/artistPage/vote/VoteList';
 import VoteResult from '../pages/artistPage/vote/VoteResult';
 import VoteComplete from '../pages/artistPage/vote/VoteComplete';
@@ -65,10 +69,14 @@ const App = () => {
           <Route path="riizeshop" element={<RiizeShop />} />
           <Route path="blackpinkshop" element={<BPShop />} />
         </Route>
+        <Route path="shop/product/:productId" element={<ProductDetail />} />
+        <Route path="shop/payment" element={<Payment />} />
         <Route path="mypage" element={<MyPage />} />
         <Route path="mypage/ticket" element={<Ticket />} />
         <Route path="mypage/point" element={<PointCard />} />
         <Route path="mypage/following" element={<Following />} />
+        <Route path="message/room/:userId" element={<MessageRoom />} />
+        <Route path="message" element={<Message />} />
         <Route path="moreArtist" element={<MoreArtist />} />
         <Route path="artistPage/:artistId" element={<ArtistPage />}>
           <Route index element={<Media />} />
@@ -87,9 +95,6 @@ const App = () => {
         <Route path="artistPage/:artistId/vote/list/" element={<VoteList />} />
         <Route path="artistPage/:artistId/vote/result/" element={<VoteResult />} />
         <Route path="artistPage/:artistId/vote/complete/" element={<VoteComplete />} />
-        {/* <Route path="artistPage/:artistId/vote/list/:voteId" element={<VoteList />} />
-        <Route path="artistPage/:artistId/vote/result/:voteId" element={<VoteResult />} />
-        <Route path="artistPage/:artistId/vote/complete/:voteId" element={<VoteComplete />} /> */}
       </Route>
 
       {/* 존재하지 않는 경로 → 온보딩으로 */}

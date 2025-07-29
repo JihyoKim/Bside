@@ -1,0 +1,83 @@
+.message-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 390px;
+    z-index: 100;
+    background-color: #000;
+    border-bottom: 1px solid #333;
+    padding: 100px 20px 20px;
+  }
+  
+  .message-header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: #fff;
+  }
+  
+  .chat-rooms-list {
+    flex: 1;
+    margin-top: 150px;
+    padding: 0 20px;
+    overflow-y: auto;
+  }
+  
+  .empty-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    text-align: center;
+    color: #666;
+  }
+  
+  .empty-message p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  /* 스크롤바 스타일링 */
+  .chat-rooms-list::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .chat-rooms-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .chat-rooms-list::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 2px;
+  }
+  
+  .chat-rooms-list::-webkit-scrollbar-thumb:hover {
+    background: #444;
+  }
+  
+  /* 반응형 */
+  @media (max-width: 1024px) {
+    .message-header {
+      padding: 80px 16px 20px;
+    }
+    
+    .message-header h1 {
+      font-size: 16px;
+    }
+    
+    .chat-rooms-list {
+      margin-top: 160px;
+      padding: 0 16px;
+    }
+  }

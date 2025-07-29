@@ -48,7 +48,7 @@ const BPShop = () => {
       name: 'BLACKPINK X Murakami Lightstick Collaboration',
       image: productBP1,
       price: 68000,
-      soldOut: true,
+      soldOut: false,
     },
     {
       id: 2,
@@ -105,6 +105,11 @@ const BPShop = () => {
   for (let i = 0; i < buttons.length; i += 3) {
     buttonRows.push(buttons.slice(i, i + 3));
   }
+
+    // 상품 클릭 핸들러 추가
+    const handleProductClick = (productId) => {
+      navigate(`/main/shop/product/${productId}`);
+    };
 
   return (
     <div
@@ -173,7 +178,11 @@ const BPShop = () => {
         </div>
         <div className="product-grid">
           {products.map((item) => (
-            <div className="product-card" key={item.id}>
+            <div 
+              className="product-card clickable" 
+              key={item.id}
+              onClick={() => handleProductClick(item.id)}
+            >
               <img src={item.image} alt={item.name} />
               <p className="product-name"
                 style={{ color: productFontColor }}>

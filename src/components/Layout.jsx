@@ -21,7 +21,9 @@ const Layout = () => {
   const isVoteDetailPage =
     path.includes('/vote/list') ||
     path.includes('/vote/result') ||
-    path.includes('/vote/complete');
+    path.includes('/vote/complete') ||
+    path.includes('/message/room/')
+    ;
 
   // ✅ Header 구성
   let HeaderComponent;
@@ -29,6 +31,7 @@ const Layout = () => {
   if (
     isVoteDetailPage
     || path.includes('/write')
+    || path.includes('/shop/payment')
   ) {
     HeaderComponent = null;
 
@@ -41,7 +44,8 @@ const Layout = () => {
     path.startsWith('/main/mypage/ticket') ||
     path.startsWith('/main/mypage/point') ||
     path.startsWith('/main/mypage/following') ||
-    path.startsWith('/main/moreArtist')
+    path.startsWith('/main/moreArtist') ||
+    path.startsWith('/main/message') 
   ) {
     HeaderComponent = HeaderSub;
 
@@ -64,6 +68,8 @@ const Layout = () => {
    // path.includes('/media/') || 
     path.includes('/post/') ||
     path.includes('/write') ||
+    path.includes('/shop/payment') ||
+    path.includes('/shop/product') ||
     isVoteDetailPage ;
 
   const isFanPage =

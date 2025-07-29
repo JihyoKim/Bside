@@ -1,0 +1,134 @@
+.message-bubble-wrapper {
+  display: flex;
+  margin: 8px 0;
+}
+
+.message-bubble-wrapper.me {
+  justify-content: flex-end;
+}
+
+.message-bubble-wrapper.other {
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.message-bubble.me {
+  background-color: #FFB9F0;
+  color: #000;
+  border-bottom-right-radius: 6px;
+}
+
+.message-bubble.other {
+  background-color: #333;
+  color: #fff;
+  border-bottom-left-radius: 6px;
+}
+
+.message-text {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.original-text {
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1px solid #444;
+}
+
+.message-timestamp {
+  font-size: 11px;
+  color: #666;
+  text-align: right;
+  margin-top: 2px;
+}
+
+.message-bubble.me .message-timestamp {
+  color: #555;
+}
+
+/* 말풍선 꼬리 효과 (선택사항) */
+.message-bubble.me::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -6px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-left-color: #FFB9F0;
+  border-bottom: none;
+}
+
+.message-bubble.other::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -6px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-right-color: #333;
+  border-bottom: none;
+}
+
+/* 이미지 메시지 스타일 */
+.message-image-container {
+  margin-bottom: 8px;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 250px;
+}
+
+.message-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.message-image:hover {
+  opacity: 0.9;
+}
+
+/* 이미지가 있을 때 말풍선 패딩 조정 */
+.message-bubble:has(.message-image-container) {
+  padding: 8px;
+}
+
+/* 이미지만 있고 텍스트가 없을 때 */
+.message-bubble:has(.message-image-container):not(:has(.message-text)) {
+  background: transparent;
+  padding: 0;
+}
+
+.message-bubble:has(.message-image-container):not(:has(.message-text))::after {
+  display: none;
+}
+@media (max-width: 390px) {
+  .message-bubble {
+    max-width: 75%;
+    padding: 10px 14px;
+  }
+  
+  .message-text {
+    font-size: 14px;
+  }
+  
+  .original-text {
+    font-size: 11px;
+  }
+}

@@ -22,14 +22,14 @@
   margin-bottom: 24px;
 }
 
-.search-bar {
+.artist-shop .search-bar {
   position: relative;
   width: 100%;
   max-width: 320px;
   margin: 16px auto;
 }
 
-.search-bar input {
+.artist-shop .search-bar input {
   width: 100%;
   padding: 10px 36px 10px 12px;
   border: none;
@@ -40,7 +40,7 @@
   outline: none;
 }
 
-.search-bar img {
+.artist-shop .search-bar img {
   position: absolute;
   right: 12px;
   top: 50%;
@@ -52,7 +52,7 @@
 }
 
 /* 아티스트 태그 영역 */
-.tag-buttons-wrapper {
+.artist-shop .tag-buttons-wrapper {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -60,13 +60,13 @@
   margin: 0 auto;
 }
 
-.tag-button-row {
+.artist-shop .tag-button-row {
   display: flex;
   gap: 16px;
   justify-content: center;
 }
 
-.tag-btn {
+.artist-shop .tag-btn {
   padding: 8px 16px;
   font-size: 12px;
   border-radius: 20px;
@@ -77,17 +77,17 @@
   text-align: center;
 }
 
-.tag-btn:disabled {
+.artist-shop .tag-btn:disabled {
   opacity: 0.3;
   cursor: default;
 }
 
 /* 상품 영역 */
-.artist-product-list {
+.artist-shop .artist-product-list {
   padding: 32px 0;
 }
 
-.product-title-box {
+.artist-shop .product-title-box {
   display: flex;
   justify-content: center;
   padding: 16px;
@@ -97,7 +97,7 @@
   -webkit-backdrop-filter: blur(3px); 
 }
 
-.product-title {
+.artist-shop .product-title {
   font-size: 21px;
   font-weight: 400;
   padding: 8px 24px;
@@ -105,29 +105,29 @@
   background: inherit; 
 }
 
-.product-grid {
+.artist-shop .product-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
-.product-card {
+.artist-shop .product-card {
   border-radius: 12px;
   text-align: left;
 }
 
-.product-card img {
+.artist-shop .product-card img {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 8px;
 }
 
-.product-name {
+.artist-shop .product-name {
   font-size: 14px;
   margin-bottom: 8px;
 }
 
-.product-meta {
+.artist-shop .product-meta {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -135,11 +135,11 @@
   font-size: 14px;
 }
 
-.product-price {
+.artist-shop .product-price {
   font-weight: 500;
 }
 
-.sold-out-badge {
+.artist-shop .sold-out-badge {
   background: #000;
   color: #fff;
   font-size: 10px;
@@ -148,7 +148,7 @@
 }
 
 
-.shop-footer {
+.artist-shop .shop-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,7 +156,7 @@
   padding: 0px 0px 40px;
 }
 
-.load-more-btn {
+.artist-shop .load-more-btn {
   padding: 16px 24px;
   border: 1px solid #ddd;
   border-radius: 12px;

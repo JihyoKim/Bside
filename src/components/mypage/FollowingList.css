@@ -89,8 +89,26 @@
   background: #444;
 }
 
+.dm-button {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background-color: #333;
+  color: #fcc0ef;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dm-button:hover {
+  background-color: #444;
+}
+
 /* 반응형 대응 */
-@media (max-width: ) {
+@media (max-width: 390px) {
   .following-list {
     padding: 0 16px;
   }
