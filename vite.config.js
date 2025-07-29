@@ -12,8 +12,8 @@ export default defineConfig({
         short_name: 'B-SIDE',
         start_url: '.',
         display: 'standalone',
-        background_color: '#ffffff',
-        theme_color: '#ffffff',
+        background_color: '#000',
+        theme_color: '#000',
         icons: [
           {
             src: '/bside.png', // ✅ public 폴더 안에 넣어야 함
