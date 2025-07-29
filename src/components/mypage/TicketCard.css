@@ -1,10 +1,14 @@
 .ticket-card {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 0px;
-    padding: 30px 0;
+    display: flex;  
+    margin: 0 16px 0px;
     color: white;
     border-bottom: 1px solid #414141;
+  }
+
+  .ticket-card-inner {
+    display: flex;
+    padding: 30px 16px;
+    gap: 1rem;
   }
   
   /* .ticket-img {
@@ -34,4 +38,9 @@
     font-weight: 600;
     font-size: 14px;
     color: #ccc;
+  }
+
+  .ticket-scroll-area {
+    max-height: 100vh; /* 아래 '맨 위로' 버튼 높이 제외 */
+    overflow-y: auto;
   }

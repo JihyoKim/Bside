@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import TicketCard from '../../components/mypage/TicketCard';
 import './Ticket.css';
 
@@ -11,6 +11,8 @@ import poster6 from '../../assets/ticket/img05.png';
 import topIcon from '../../assets/mypage/top.svg';
 
 const Ticket = () => {
+  const scrollRef = useRef(null); // ✅ 스크롤 제어용 ref
+
   const tickets = [
     {
       id: 1,
@@ -56,21 +58,26 @@ const Ticket = () => {
     },
   ];
 
-  return (
-    <div className="ticket-page">
-      <h2 className="ticket-headline"><b>쥐들에곤히잠들다</b>님의 추억이에요</h2>
-      {tickets.map((ticket) => (
-        <TicketCard key={ticket.id} {...ticket} />
-      ))}
+  const scrollToTop = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
-      {/* 하단 "맨 위로" 영역 */}
-            <div className="scroll-top-area" onClick={() => {
-        console.log('clicked');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }}>
-              <img src={topIcon} alt="top" className="top-icon" />
-              <span className="top-text">맨 위로</span>
-            </div>
+  return (
+    <div className="ticket-scroll-area" ref={scrollRef}> {/* ✅ 스크롤 대상 div */}
+      <div className="ticket-page">
+        <h2 className="ticket-headline"><b>쥐들에곤히잠들다</b>님의 추억이에요</h2>
+        {tickets.map((ticket) => (
+          <TicketCard key={ticket.id} {...ticket} />
+        ))}
+
+        {/* 하단 "맨 위로" 버튼 */}
+        <div className="scroll-top-area" onClick={scrollToTop}>
+          <img src={topIcon} alt="top" className="top-icon" />
+          <span className="top-text">맨 위로</span>
+        </div>
+      </div>
     </div>
   );
 };

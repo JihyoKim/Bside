@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './Header.css';
 
-import goback from '../assets/symbol/white/goback.png';
+import goback from '../assets/symbol/white/goback.svg';
 import alarm from '../assets/symbol/alarmIcon_white_pink.svg';
 import cart from '../assets/symbol/header_cartIcon.svg';
 import AlarmDetail from './AlarmDetail'; 

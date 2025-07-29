@@ -10,6 +10,7 @@ const Header_Post = ({ onSubmit }) => {
   const location = useLocation();
   const { artistId } = useParams();
   const [showArtistModal, setShowArtistModal] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
   const isPostDetail = location.pathname.includes('/post/');
 
@@ -37,6 +38,14 @@ const Header_Post = ({ onSubmit }) => {
     navigate(`/main/artistPage/${newId}/write`);
   };
 
+  const closeModal = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setShowArtistModal(false);
+      setIsClosing(false);
+    }, 300); 
+  };
+
   return (
     <>
       <header className="fixed-header pink">
@@ -45,15 +54,17 @@ const Header_Post = ({ onSubmit }) => {
         </div>
 
         <div className="header-center">
-          <div className="header-title">
-            {displayName}
+        <div className="header-title">
+          {displayName}
+          {!isPostDetail && (
             <img
               src={down}
               alt="down"
-              className="down-btn"
+              className={`down-btn ${showArtistModal && !isClosing ? 'rotated' : ''}`}
               onClick={() => setShowArtistModal(true)}
             />
-          </div>
+          )}
+        </div>
         </div>
 
         <div className="header-right">
@@ -66,8 +77,11 @@ const Header_Post = ({ onSubmit }) => {
       </header>
 
       {showArtistModal && (
-        <div className="artist-modal-overlay" onClick={() => setShowArtistModal(false)}>
-          <div className="artist-modal" onClick={(e) => e.stopPropagation()}>
+        <div className={`artist-modal-overlay ${isClosing ? 'fade-out' : ''}`} onClick={closeModal}>
+          <div
+            className={`artist-modal ${isClosing ? 'slide-down' : ''}`}
+            onClick={(e) => e.stopPropagation()}
+          >
             {artists.map((name, idx) => (
               <div
                 key={idx}
