@@ -3,6 +3,5 @@
     max-width: var(--max-width);
     min-width: 320px;
     padding: 80px 0 0;
-    padding-bottom: var(--btm-nav);
     box-sizing: border-box;
 }

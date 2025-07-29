@@ -1,4 +1,3 @@
-/* 전체 오버레이 구조 */
 .alarm-container {
   position: absolute;
   top: 0;
@@ -34,12 +33,13 @@
   position: absolute;
   top: 0;
   right: 0;
+  transform: translateX(100%);
   width: 100vw;
   max-width: 390px;
   height: 100vh;
+  overflow-y: auto;
   background-color: #000;
   transition: transform 0.3s ease;
-  transform: translateX(100%); 
   z-index: 2;
   overflow-y: auto;
   pointer-events: auto;
@@ -48,7 +48,7 @@
 }
 
 .alarm-panel.open {
-  transform: translateX(0); 
+  transform: translateX(0);
 }
 
 .alarm-panel::-webkit-scrollbar {

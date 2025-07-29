@@ -3,7 +3,6 @@
     background-size: 100% auto; 
     background-repeat: no-repeat;
     padding: 90px 20px 0px;
-    padding-bottom: var(--btm-nav);
     color: white;
     min-height: 100vh;
     max-width: var(--max-width);

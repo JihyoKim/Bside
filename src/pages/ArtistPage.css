@@ -2,7 +2,6 @@
     width: 100vw;
     max-width: var(--max-width);
     min-width: 320px;
-    padding-bottom: var(--btm-nav);
     box-sizing: border-box;
     overflow: hidden
 }
