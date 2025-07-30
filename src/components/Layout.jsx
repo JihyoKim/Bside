@@ -89,7 +89,7 @@ const Layout = () => {
     <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column', position: 'relative' }}>
       {HeaderComponent && <HeaderComponent />}
       <div className="layout-container">
-        <div className="layout-scroll" style={{ paddingBottom: isLiveDetailPage ? '0px' : 'var(--btm-nav)' }}>
+        <div className="layout-scroll" >
           <Outlet />
         </div>
         

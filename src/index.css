@@ -27,11 +27,10 @@
   }
   
   html, body {
-	height: 100%;
+	height: 100vh;
 	/* overflow: auto; */
-	overflow: hidden; 
 	scroll-behavior: smooth;
-	padding-bottom: env(safe-area-inset-bottom);
+	overflow: hidden; 
   }
 
   html::-webkit-scrollbar {
