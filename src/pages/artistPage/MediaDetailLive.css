@@ -13,6 +13,7 @@
   margin-top: 0%;
   object-fit: cover;
   z-index: 0;
+  pointer-events: none;
 }
 
 /* 🌑 어두운 배경 오버레이 */

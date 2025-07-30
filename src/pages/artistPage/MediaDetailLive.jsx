@@ -47,6 +47,7 @@ const MediaDetailLive = () => {
         loop
         muted={!soundEnabled}
         ref={videoRef}
+        playsInline
       >
         <source src={videoFile} type="video/mp4" />
       </video>
