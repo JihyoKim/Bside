@@ -12,8 +12,16 @@ setVh();
 window.addEventListener('resize', setVh);
 window.addEventListener('orientationchange', setVh);
 
+// ✅ 처음 로딩 시 max-width 값 복원
+const savedWidth = localStorage.getItem('app-max-width');
+if (savedWidth) {
+  document.documentElement.style.setProperty('--max-width', savedWidth);
+}
+
+
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <App />
   </BrowserRouter>
 );
+

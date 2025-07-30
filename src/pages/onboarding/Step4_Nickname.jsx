@@ -1,3 +1,4 @@
+// src/pages/onboarding/Step4_Nickname.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Step4_Nickname.css';
@@ -17,6 +18,7 @@ const Step4_Nickname = () => {
 
   return (
     <div className="step4-container">
+      {/* ✅ 상단 헤더 */}
       <div className="step4-header">
         <img
           src={prevB}
@@ -33,6 +35,19 @@ const Step4_Nickname = () => {
         />
       </div>
 
+      {/* ✅ 인디케이터: 헤더와 제목 사이 */}
+      <div className="step-indicator-wrapper">
+        <div className="step-indicator">
+          {[1, 2, 3, 4, 5].map((_, index) => (
+            <div className="step-bar" key={index}>
+              {(index === 0 || index === 1) && <div className="step-fill filled" />}
+              {index === 2 && <div className="step-fill animated" />}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ✅ 본문 */}
       <div className="step4-content">
         <div>
           <h2 className="step4-title">프로필을 설정해 주세요</h2>

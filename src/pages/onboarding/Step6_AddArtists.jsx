@@ -1,10 +1,10 @@
+// src/pages/onboarding/Step6_AddArtists.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Step6_AddArtists.css';
 import searchIcon from '../../assets/search.png';
 import heartIcon from '../../assets/heart.png';
 
-// ✅ 아티스트 이미지 import
 import aespa from '../../assets/onboarding/aespa.png';
 import ALLDAYPRO from '../../assets/onboarding/ALLDAYPRO.png';
 import BLACKPINK from '../../assets/onboarding/BLACKPINK.png';
@@ -63,11 +63,7 @@ const Step6_AddArtists = () => {
   const column6 = ['NewJeans', 'TOMORROW', 'ITZY'];
 
   const renderColumn = (list, columnIndex) => (
-    <div
-      className={`artist-column-wrapper ${
-        columnIndex === 2 || columnIndex === 5 ? 'extra-margin' : ''
-      }`}
-    >
+    <div className={`artist-column-wrapper ${columnIndex === 2 || columnIndex === 5 ? 'extra-margin' : ''}`}>
       <div className="artist-column">
         {list.map((name) => (
           <div
@@ -90,10 +86,20 @@ const Step6_AddArtists = () => {
 
   return (
     <div className="step6-container">
+      {/* ✅ 상단 헤더 */}
       <div className="step6-header">
-        <button className="step6-skip" onClick={() => navigate('/onboarding/complete')}>
-          건너뛰기
-        </button>
+        <button className="step6-skip" onClick={() => navigate('/onboarding/complete')}>건너뛰기</button>
+      </div>
+
+      {/* ✅ 인디케이터 */}
+      <div className="step-indicator">
+        {[1, 2, 3, 4, 5].map((step, index) => (
+          <div
+            key={index}
+            className={`step-bar ${index < 4 ? 'filled' : index === 4 ? 'active' : ''}`}
+            style={{ animationDelay: `${index * 0.1}s` }}
+          ></div>
+        ))}
       </div>
 
       <p className="step6-subtitle">이제 마지막 단계예요!</p>
@@ -123,7 +129,9 @@ const Step6_AddArtists = () => {
       </div>
 
       <div className="step6-gradient-overlay" />
-      <button className="step6-next-btn" onClick={() => navigate('/onboarding/complete')}>
+
+      {/* ✅ 다음 버튼 → 로딩 페이지로 이동 */}
+      <button className="step6-next-btn" onClick={() => navigate('/onboarding/loading')}>
         다음
       </button>
     </div>

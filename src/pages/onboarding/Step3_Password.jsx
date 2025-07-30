@@ -1,3 +1,4 @@
+// src/pages/onboarding/Step3_Password.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Step3_Password.css';
@@ -18,7 +19,7 @@ const Step3_Password = () => {
 
   return (
     <div className="step3-container">
-      {/* ✅ 이미지 헤더 */}
+      {/* ✅ 상단 헤더 */}
       <div className="step3-header">
         <img
           src={prevB}
@@ -33,6 +34,18 @@ const Step3_Password = () => {
           className="step3-icon-btn"
           onClick={() => navigate('/onboarding')}
         />
+      </div>
+
+      {/* ✅ 인디케이터: 헤더와 제목 사이 */}
+      <div className="step-indicator-wrapper">
+        <div className="step-indicator">
+          {[1, 2, 3, 4, 5].map((_, index) => (
+            <div className="step-bar" key={index}>
+              {index === 0 && <div className="step-fill filled" />}
+              {index === 1 && <div className="step-fill animated" />}
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* ✅ 본문 */}
@@ -75,7 +88,6 @@ const Step3_Password = () => {
           </div>
         </div>
 
-        {/* ✅ 하단 버튼 */}
         <button className="step3-next-btn" onClick={handleNext}>다음</button>
       </div>
     </div>

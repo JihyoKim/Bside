@@ -11,18 +11,6 @@
     z-index: 1;
   }
   
-  /* ✅ Tidio 기본 챗봇 아이콘 위치 조정 (반응형 대응은 필요 시 추가) */
-  #tidio-chat {
-    width: 100% !important;
-    position: fixed !important;
-    /* bottom: 90px !important; */
-    bottom: calc(var(--btm-nav) - 42px) !important;
-    right: calc(50% - var(--max-width) + 24px) !important;
-    transform: translateX(39px);  
-    /* 또는 -12px로 실험 */
-    #tidio-chat {transform: none !important;}
-    z-index: 1000 !important;
-  }
   
   /* 모바일 대응 (1024px 이하) */
   @media (max-width: 1024px) {

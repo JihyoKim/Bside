@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// src/pages/onboarding/Step5_Language.jsx
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Step5_Language.css';
 import dropdownIcon from '../../assets/dropdown.png';
@@ -51,8 +52,16 @@ const Step5_Language = () => {
   const navigate = useNavigate();
   const [selectedLanguage, setSelectedLanguage] = useState('한국어');
   const [showDropdown, setShowDropdown] = useState(false);
+  const [animateStep, setAnimateStep] = useState(false);
 
   const text = TEXTS[selectedLanguage] || TEXTS['한국어'];
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setAnimateStep(true);
+    }, 100);
+    return () => clearTimeout(timeout);
+  }, []);
 
   const containerClass = [
     'step5-container',
@@ -72,17 +81,41 @@ const Step5_Language = () => {
   return (
     <div className="step5-wrapper">
       <div className={containerClass}>
+        {/* ✅ 상단 헤더 */}
         <div className="step5-header">
           <img src={prevB} alt="뒤로가기" className="step5-icon-btn" onClick={() => navigate(-1)} />
           <span>{text.header}</span>
           <img src={closeIcon} alt="닫기" className="step5-icon-btn" onClick={() => navigate('/onboarding')} />
         </div>
 
+        {/* ✅ 인디케이터 (헤더 아래로 이동) */}
+        <div className="step5-indicator">
+          {[2, 3, 4, 5, 6].map((step, idx) => {
+            let width = '0%';
+            let transition = 'none';
+
+            if (idx < 3) {
+              width = '100%';
+            } else if (idx === 3) {
+              width = animateStep ? '100%' : '0%';
+              transition = 'width 0.6s ease-in-out';
+            }
+
+            return (
+              <div className="step-bar" key={step}>
+                <div
+                  className="step-fill"
+                  style={{ width, transition }}
+                ></div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* ✅ 본문 */}
         <h2 className="step5-title">{text.title}</h2>
         <p className="step5-subtext">{text.subtitle}</p>
-
         <img src={languageImg} alt="언어 이미지" className="step5-image" />
-
         <p className="step5-fixed-label">Language (번역 언어)</p>
 
         <div className="step5-dropdown" onClick={handleLanguageClick}>
@@ -118,11 +151,11 @@ const Step5_Language = () => {
             })}
           </div>
         )}
-      </div>
 
-      <button className="step5-next-btn" onClick={() => navigate('/onboarding/addartists')}>
-        {text.nextBtn}
-      </button>
+        <button className="step5-next-btn" onClick={() => navigate('/onboarding/addartists')}>
+          {text.nextBtn}
+        </button>
+      </div>
     </div>
   );
 };

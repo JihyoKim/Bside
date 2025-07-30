@@ -30,6 +30,19 @@ const Step2_Pin = () => {
         />
       </div>
 
+      {/* ✅ 인디케이터 위치 이동 */}
+      <div className="step-indicator-wrapper">
+        <div className="step-indicator">
+          {[1, 2, 3, 4, 5].map((step, index) => (
+            <div
+              key={index}
+              className={`step-bar ${index === 0 ? 'active' : ''}`}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            ></div>
+          ))}
+        </div>
+      </div>
+
       <h2 className="step2-title">인증번호를 입력해 주세요</h2>
 
       <label className="step2-label">인증번호</label>

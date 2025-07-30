@@ -1,6 +1,6 @@
 .music-container {
   width: 100%;
-  max-width: 480px;
+  max-width: var(--max-width);
   margin: 0 auto;
   box-sizing: border-box;
   color: #fff;

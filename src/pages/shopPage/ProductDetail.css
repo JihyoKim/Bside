@@ -19,7 +19,7 @@
     /* left: 50%;
     transform: translateX(-50%); */
     width: 100%;
-    max-width: 390px;
+    max-width: var(--max-width);
     height: 60px;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -141,7 +141,8 @@
   
   /* 상품 설명 섹션 */
   .product-detail-container .product-description-section {
-    padding: 24px 20px 100px;
+    padding: 24px 20px ;
+    margin-bottom: 90px;
     background-color: #fff;
   }
   

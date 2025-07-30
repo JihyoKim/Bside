@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  max-width: 390px;
+  max-width: var(--max-width);
   z-index: 100;
   background-color: #000;
   border-bottom: 1px solid #333;

@@ -15,7 +15,7 @@
     background: white;
     border-radius: 20px 20px 0 0;
     width: 100%;
-    max-width: 390px;
+    max-width: var(--max-width);
     padding: 20px;
     box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.3); /* 강화된 drop shadow */
     animation: slideUp 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);

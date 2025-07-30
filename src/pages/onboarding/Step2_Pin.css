@@ -5,17 +5,20 @@
   padding: 40px 16px;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box; user-select: none;
+  box-sizing: border-box;
+  user-select: none;
 }
+
 input, textarea {
   user-select: text !important;
 }
 
+/* ✅ 상단 로고 + 닫기버튼 */
 .step2-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 3px 10px 10px 10px;
 }
 
 .logo {
@@ -33,16 +36,52 @@ input, textarea {
   font-size: 14px;
 }
 
-/* ✅ 이미지 닫기버튼 (기존 텍스트 ✕ 대체) */
 .step2-close-btn {
   width: 15px;
-  height: 15px; margin-bottom: 8px;
+  height: 15px;
+  margin-bottom: 8px;
   object-fit: contain;
   cursor: pointer;
 }
 
+/* ✅ 인디케이터 위치 조정 */
+.step-indicator-wrapper {
+  margin-top: 8px;
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: center;
+}
+.step-indicator {
+  display: flex;
+  gap: 6px;
+}
+.step-bar {
+  width: 60px;
+  height: 4px;
+  background-color: #333;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+.step-bar.active::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #FFA3EB;
+  animation: fillBar 0.6s ease-in-out forwards;
+}
+@keyframes fillBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
 .step2-title {
-  margin: 40px 0 50px;
+  margin: 0 0 50px;
   font-size: 22px;
   font-weight: bold;
 }

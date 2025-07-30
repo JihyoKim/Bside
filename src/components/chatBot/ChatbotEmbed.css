@@ -1,0 +1,9 @@
+/* #chatbase-bubble-button { bottom: 5rem !important; right: 2rem !important;}
+#chatbase-bubble-window { bottom: 9rem !important; right: 2rem !important;}
+
+@media (max-width: 389px) {
+    #chatbase-bubble-window {
+      width: 100vw !important;
+      height: 85dvh !important;
+    }
+  } */

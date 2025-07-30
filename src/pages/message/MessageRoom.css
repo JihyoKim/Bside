@@ -4,7 +4,7 @@
   height: 100%;
   background-color: #000;
   color: #fff;
-  max-width: 390px;
+  max-width: var(--max-width);
   margin: 0 auto;
   position: relative;
   overflow: hidden;

@@ -1,37 +1,38 @@
+// src/components/chatBot/ChatbotEmbed.jsx
 import { useEffect } from 'react';
+import './ChatbotEmbed.css';
 
 const ChatbotEmbed = () => {
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '//code.tidio.co/8viqwi9qs2kf77ggmldwd0c5ijj4drpu.js';
-    script.async = true;
-
-    // 스크립트 로딩 완료 후 Tidio API 사용할 수 있도록 대기
-    script.onload = () => {
-      const checkTidioReady = () => {
-        if (window.tidioChatApi) {
-          // 위젯 열릴 때 자동으로 채팅 탭으로 이동
-          window.tidioChatApi.on("widgetOpened", function () {
-            window.tidioChatApi.open();
-            window.tidioChatApi.setVisitorData({
-              tab: 'chat'
-            });
-          });
-        } else {
-          setTimeout(checkTidioReady, 300);
-        }
+    if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+      window.chatbase = (...args) => {
+        if (!window.chatbase.q) window.chatbase.q = [];
+        window.chatbase.q.push(args);
       };
-      checkTidioReady();
-    };
+      window.chatbase = new Proxy(window.chatbase, {
+        get(target, prop) {
+          if (prop === "q") return target.q;
+          return (...args) => target(prop, ...args);
+        }
+      });
 
-    document.body.appendChild(script);
+      const onLoad = () => {
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "vAlTjnAGDPEYSt55Ea_lA"; // ✅ 너의 Chatbase ID
+        script.domain = "www.chatbase.co";
+        document.body.appendChild(script);
+      };
 
-    return () => {
-      script.remove();
-    };
+      if (document.readyState === "complete") {
+        onLoad();
+      } else {
+        window.addEventListener("load", onLoad);
+      }
+    }
   }, []);
 
-  return null;
+  return null; // 챗봇은 DOM에 직접 삽입되므로 리턴 컴포넌트 없음
 };
 
 export default ChatbotEmbed;
