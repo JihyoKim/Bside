@@ -1,38 +1,35 @@
-// src/components/chatBot/ChatbotEmbed.jsx
 import { useEffect } from 'react';
 import './ChatbotEmbed.css';
 
 const ChatbotEmbed = () => {
   useEffect(() => {
-    if (!window.chatbase || window.chatbase("getState") !== "initialized") {
-      window.chatbase = (...args) => {
-        if (!window.chatbase.q) window.chatbase.q = [];
-        window.chatbase.q.push(args);
-      };
-      window.chatbase = new Proxy(window.chatbase, {
-        get(target, prop) {
-          if (prop === "q") return target.q;
-          return (...args) => target(prop, ...args);
-        }
-      });
+    // ✅ Chatbase 중복 삽입 방지
+    const existingScript = document.getElementById('vAlTjnAGDPEYSt55Ea_lA');
+    if (existingScript) return;
 
-      const onLoad = () => {
-        const script = document.createElement("script");
-        script.src = "https://www.chatbase.co/embed.min.js";
-        script.id = "vAlTjnAGDPEYSt55Ea_lA"; // ✅ 너의 Chatbase ID
-        script.domain = "www.chatbase.co";
-        document.body.appendChild(script);
-      };
+    // ✅ 스크립트 생성
+    const script = document.createElement('script');
+    script.src = 'https://www.chatbase.co/embed.min.js';
+    script.id = 'vAlTjnAGDPEYSt55Ea_lA';
+    script.dataset.chatbotId = 'vAlTjnAGDPEYSt55Ea_lA';
+    script.dataset.domain = 'www.chatbase.co';
+    script.defer = true;
 
-      if (document.readyState === "complete") {
-        onLoad();
-      } else {
-        window.addEventListener("load", onLoad);
-      }
-    }
+    document.body.appendChild(script);
+
+    // ✅ 페이지 떠날 때 관련 요소 제거
+    return () => {
+      const bubble = document.getElementById('chatbase-bubble-window');
+      const bubbleBtn = document.getElementById('chatbase-bubble-button');
+      const loadedScript = document.getElementById('vAlTjnAGDPEYSt55Ea_lA');
+
+      if (bubble) bubble.remove();
+      if (bubbleBtn) bubbleBtn.remove();
+      if (loadedScript) loadedScript.remove();
+    };
   }, []);
 
-  return null; // 챗봇은 DOM에 직접 삽입되므로 리턴 컴포넌트 없음
+  return null;
 };
 
 export default ChatbotEmbed;
