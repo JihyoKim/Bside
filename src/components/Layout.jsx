@@ -92,16 +92,11 @@ const Layout = () => {
         <div className="layout-scroll" >
           <Outlet />
         </div>
-        
         {!hideBottomNav && <BottomNav />}
         {isFanPage && (
           <FloatingAddButton onClick={handleAddClick} bgColor={bgColor} lineColor={lineColor} />
         )}
       </div>
-      {!hideBottomNav && <BottomNav />}
-      {isFanPage && (
-        <FloatingAddButton onClick={handleAddClick} bgColor={bgColor} lineColor={lineColor} />
-      )}
     </div>
   );
 };
