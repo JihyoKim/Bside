@@ -4,7 +4,7 @@
 
 .subtitle-box-container {
   position: absolute;
-  bottom: calc( var(--btm-nav) + var(--app-btm-nav));
+  bottom: 15px;
   left: -20px;
   width: 100%;
   display: flex;

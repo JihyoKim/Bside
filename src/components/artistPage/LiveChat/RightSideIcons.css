@@ -1,7 +1,7 @@
 .icon-panel {
     position: absolute;
     right: 16px;
-    bottom: calc( var(--btm-nav) + var(--app-btm-nav));
+    bottom: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,7 +1,7 @@
 .media-detail-container {
   position: relative;
   width: 100%;
-  height: 100dvh;
+  height: calc(100vh - var(--btm-nav));
   overflow: hidden;
 }
 
@@ -12,6 +12,7 @@
   height: 100%;
   margin-top: 0%;
   object-fit: cover;
+  object-position: top;
   z-index: 0;
   pointer-events: none;
 }
