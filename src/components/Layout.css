@@ -2,10 +2,10 @@
   position: relative; /* AlarmDetail 기준 부모로 설정 */
   width: 100%;
   max-width: var(--max-width);
-  height: 100vh;
-  overflow: hidden;   /* body 스크롤 방지 */
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
+  overflow: hidden;   /* body 스크롤 방지 */
 }
 
 .layout-scroll {

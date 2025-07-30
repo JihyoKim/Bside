@@ -27,10 +27,11 @@
   }
   
   html, body {
-	height: auto;
+	height: 100%;
 	/* overflow: auto; */
-	scroll-behavior: smooth;
 	overflow: hidden; 
+	scroll-behavior: smooth;
+	padding-bottom: env(safe-area-inset-bottom);
   }
 
   html::-webkit-scrollbar {
