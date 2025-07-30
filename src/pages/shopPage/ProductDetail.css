@@ -141,7 +141,7 @@
   
   /* 상품 설명 섹션 */
   .product-detail-container .product-description-section {
-    padding: 24px 20px;
+    padding: 24px 20px 100px;
     background-color: #fff;
   }
   

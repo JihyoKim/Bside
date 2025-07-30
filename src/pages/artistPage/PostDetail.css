@@ -2,7 +2,7 @@
     background: #000;
     color: white;
     padding: 80px 16px 0px;
-    min-height: 100vh;
+    height: calc((var(--vh, 1vh) * 100));
   }
   
   /* .fan-header {
