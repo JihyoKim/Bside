@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -60,7 +60,10 @@ const slides = [
   },
 ];
 
+
 const NewItems = () => {
+  const swiperRef = useRef(null);
+  const [inputValues, setInputValues] = useState(Array(slides.length).fill('')); // 슬라이드 개수만큼 state
   return (
     <div className='home-notice-wrapper'>
       <div className="home-notice-text">NOTICES</div>
@@ -72,6 +75,9 @@ const NewItems = () => {
         autoplay={{ delay: 3000 }}
         loop={true}
         className="notice-swiper"
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
       >
         {slides.map((item, idx) => (
           <SwiperSlide key={idx}>
@@ -90,7 +96,33 @@ const NewItems = () => {
                   <p className="inline-message">{item.comment}</p>
                 </div>
                 <div className="write-comment">
-                  <input type="text" placeholder="댓글 추가..." />
+                  <input
+                    type="text"
+                    placeholder="댓글 추가..."
+                    value={inputValues[idx]}
+                    onFocus={() => swiperRef.current?.autoplay?.stop()}
+                    onBlur={() => {
+                      // 비어있으면 다시 autoplay 시작
+                      if (inputValues[idx].trim() === '') {
+                        swiperRef.current?.autoplay?.start();
+                      }
+                    }}
+                    onChange={(e) => {
+                      const newValues = [...inputValues];
+                      newValues[idx] = e.target.value;
+                      setInputValues(newValues);
+
+                      // 입력 도중이면 자동 슬라이드 멈춤
+                      if (e.target.value.trim() !== '') {
+                        swiperRef.current?.autoplay?.stop();
+                      } else {
+                        // 포커스 안 되어 있으면 다시 시작
+                        if (document.activeElement !== e.target) {
+                          swiperRef.current?.autoplay?.start();
+                        }
+                      }
+                    }}
+                  />
                   <div className="input-icons">
                     <img src={emoji} alt="emoji" className="icon emoji" />
                     <img src={send} alt="send" className="icon send" />

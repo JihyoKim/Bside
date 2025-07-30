@@ -34,14 +34,14 @@ import product24 from '../../assets/Shop/products/product24.png';
 const GDShop = () => {
   const navigate = useNavigate();
 
-  const tagColor = '#FF92C2';
+  const tagColor = '#CD3134';
   const fontColor = '#000';
   const productFontColor = '#000';
   const activeFontColor = '#fff';
-  const activeBackgroundColor = '#FF92C2';
+  const activeBackgroundColor = '#CD3134';
   const inactiveBackgroundColor = '#fff';
   const titleBackgroundColor = '#3A3A3A';
-  const priceColor = '#FF92C2';
+  const priceColor = '#CD3134';
   const soldOutBgColor = '#000';
   const soldOutTextColor = '#fff';
 

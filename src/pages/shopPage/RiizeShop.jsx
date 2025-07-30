@@ -16,14 +16,14 @@ import productR8 from '../../assets/Shop/products/productR8.png';
 const RiizeShop = () => {
   const navigate = useNavigate();
 
-  const tagColor = '#A6DAFE';
-  const fontColor = '#fff';
+  const tagColor = '#FFBB00';
+  const fontColor = '#000';
   const productFontColor = '#000';
   const activeFontColor = '#000';
-  const activeBackgroundColor = '#A6DAFE';
-  const inactiveBackgroundColor = 'rgba(0, 0, 0, 0.2)';
+  const activeBackgroundColor = '#FFBB00';
+  const inactiveBackgroundColor = 'rgba(255, 255, 255, 0.2)';
   const titleBackgroundColor = 'rgba(0, 0, 0, 0.3)';
-  const priceColor = '#A6DAFE';
+  const priceColor = '#FFBB00';
   const soldOutBgColor = '#000';
   const soldOutTextColor = '#fff';
 

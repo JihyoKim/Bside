@@ -16,14 +16,14 @@ import productBP8 from '../../assets/Shop/products/productBP8.png';
 const BPShop = () => {
   const navigate = useNavigate();
 
-  const tagColor = '#FF92C2';
+  const tagColor = '#f7a7bb';
   const fontColor = '#fff';
   const productFontColor = '#fff';
   const activeFontColor = '#fff';
-  const activeBackgroundColor = '#FF92C2';
+  const activeBackgroundColor = '#f7a7bb';
   const inactiveBackgroundColor = 'rgba(0, 0, 0, 0.2)';
   const titleBackgroundColor = 'rgba(255, 255, 255, 0.4)';
-  const priceColor = '#FF92C2';
+  const priceColor = '#f7a7bb';
   const soldOutBgColor = '#fff'; 
   const soldOutTextColor = '#000';
 

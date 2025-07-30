@@ -14,14 +14,14 @@ import productADP6 from '../../assets/Shop/products/productADP6.png';
 const ADPShop = () => {
   const navigate = useNavigate();
 
-  const tagColor = '#FF92C2';
+  const tagColor = '#1DE5FF';
   const fontColor = '#fff';
   const productFontColor = '#fff';
-  const activeFontColor = '#fff';
-  const activeBackgroundColor = '#FF92C2';
+  const activeFontColor = '#000';
+  const activeBackgroundColor = '#1DE5FF';
   const inactiveBackgroundColor = 'rgba(0, 0, 0, 0.2)';
   const titleBackgroundColor = 'rgba(255, 255, 255, 0.4)';
-  const priceColor = '#FF92C2';
+  const priceColor = '#1DE5FF';
   const soldOutBgColor = '#fff'; 
   const soldOutTextColor = '#000';
 
