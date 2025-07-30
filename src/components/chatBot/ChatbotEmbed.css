@@ -1,0 +1,29 @@
+#chatbase-bubble-button { 
+    bottom: 3rem !important; 
+    right: 2rem !important;
+}
+
+#chatbase-bubble-window { 
+    bottom: 7rem !important; 
+    right: 2rem !important;
+}
+
+@media (max-width: 389px) {
+    #chatbase-bubble-window {
+      width: 100vw !important;
+      height: 85dvh !important;
+    }
+  }
+
+  @media (max-width: 639px) {
+    #chatbase-bubble-window {
+      width: calc(100vw - 2rem) !important;
+      max-width: 406px !important;
+      height: 85dvh !important;
+      /* bottom: 5rem !important; */
+      right: 1rem !important;
+      top: unset !important;
+      left: unset !important;
+      border-radius: 1.25rem !important;
+    }
+  }
