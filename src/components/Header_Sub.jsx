@@ -38,6 +38,7 @@ const Header_Sub = () => {
 
   const isShopPage = location.pathname.startsWith('/main/shop');
   const isShopProductPage = location.pathname.startsWith('/main/shop/product');
+  const isMediaDetailPage = /^\/main\/artistPage\/[^/]+\/media\/[^/]+$/.test(location.pathname);
 
   return (
     <>
@@ -51,14 +52,16 @@ const Header_Sub = () => {
           />
         </div>
         <div className="header-right">
-          <div className="alarm-wrapper">
-            <img
-              src={isShopProductPage ? cartBlack : isShopPage ? cart : alarm}
-              alt={isShopProductPage ? 'cartBlack' : isShopPage ? 'cart' : 'alarm'}
-              className={isShopPage ? 'cart-icon' : 'alarm-icon'}
-              onClick={!isShopPage ? toggleAlarm : undefined}
-            />
-          </div>
+          {!isMediaDetailPage && (
+            <div className="alarm-wrapper">
+              <img
+                src={isShopProductPage ? cartBlack : isShopPage ? cart : alarm}
+                alt={isShopProductPage ? 'cartBlack' : isShopPage ? 'cart' : 'alarm'}
+                className={isShopPage ? 'cart-icon' : 'alarm-icon'}
+                onClick={!isShopPage ? toggleAlarm : undefined}
+              />
+            </div>
+          )}
         </div>
       </header>
 

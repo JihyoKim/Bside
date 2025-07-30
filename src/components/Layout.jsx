@@ -82,11 +82,14 @@ const Layout = () => {
     navigate(`/main/artistPage/${artistId}/write`);
   };
 
+  const isLiveDetailPage = path.includes('/media/live-');
+
+
   return (
     <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column', position: 'relative' }}>
       {HeaderComponent && <HeaderComponent />}
       <div className="layout-container">
-        <div className="layout-scroll">
+        <div className="layout-scroll" style={{ paddingBottom: isLiveDetailPage ? '0px' : 'var(--btm-nav)' }}>
           <Outlet />
         </div>
         

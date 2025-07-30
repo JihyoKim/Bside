@@ -4,16 +4,17 @@
 
 .language-dropdown-container {
   position: absolute;
-  bottom: var(--btm-nav);
+  bottom: 120px;
   left: 0;
   right: 0;
   margin: 0 auto;
   max-width: 380px;
-  height: 550px;
+  height: 530px;
   background: rgba(30, 30, 30, 0.85);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(30px);
-  border-radius: 14px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
   padding: 20px 16px 15px;
   z-index: 2000;
   animation: slideUp 0.3s ease-out;

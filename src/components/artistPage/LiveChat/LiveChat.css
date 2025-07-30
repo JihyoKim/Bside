@@ -1,6 +1,6 @@
 .live-chat-container {
   position: absolute;
-  bottom: 0;
+  bottom: 120px;
   left: 0;
   right: 0;
   max-width: 480px;
