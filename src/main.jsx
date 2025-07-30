@@ -10,6 +10,7 @@ const setVh = () => {
 };
 setVh();
 window.addEventListener('resize', setVh);
+window.addEventListener('orientationchange', setVh);
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
