@@ -264,15 +264,15 @@ const Payment = () => {
           </div>
         </div>
 
-        {/* 결제 버튼 */}
-        <div className="payment-footer">
-          <button 
-            className="payment-submit-button"
-            onClick={handlePayment}
-          >
-            결제하기
-          </button>
-        </div>
+      </div>
+      {/* 결제 버튼 */}
+      <div className="payment-footer">
+        <button 
+          className="payment-submit-button"
+          onClick={handlePayment}
+        >
+          결제하기
+        </button>
       </div>
     </div>
   );

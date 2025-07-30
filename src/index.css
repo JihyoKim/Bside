@@ -29,8 +29,10 @@
   html, body {
 	height: 100vh;
 	/* overflow: auto; */
-	scroll-behavior: smooth;
 	overflow: hidden; 
+	overscroll-behavior: none;
+	scroll-behavior: smooth;
+	/* position: fixed; */
   }
 
   html::-webkit-scrollbar {

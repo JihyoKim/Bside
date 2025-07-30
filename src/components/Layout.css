@@ -1,6 +1,6 @@
 .layout-container {
   position: relative; /* AlarmDetail 기준 부모로 설정 */
-  width: 100%;
+  width: 100vw;
   max-width: var(--max-width);
   height: calc((var(--vh, 1vh) * 100) - var(--btm-nav));
   overflow: hidden;   /* body 스크롤 방지 */

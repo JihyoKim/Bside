@@ -22,17 +22,21 @@ const Header_Sub = () => {
     const panel = document.querySelector('.lyrics-panel.show');
     if (panel) {
       window.dispatchEvent(new Event('closeLyricsPanel'));
+    } else if (
+      location.pathname === '/main/music' ||
+      (location.pathname.startsWith('/main/shop') && !location.pathname.startsWith('/main/shop/product')) ||
+      (location.pathname.startsWith('/main/artistPage') && location.pathname !== '/main/artistPage/aespa/media/live-giselle')
+    ) {
+      navigate('/main');
+    } else if (
+      location.pathname === '/main/mypage/ticket' ||
+      location.pathname === '/main/mypage/point'
+    ) {
+      navigate('/main/mypage');
+    } else if (location.pathname === '/main/message') {
+      navigate('/main/mypage'); 
     } else {
-      if (
-        location.pathname === '/main/mypage/ticket' ||
-        location.pathname === '/main/mypage/point'
-      ) {
-        navigate('/main/mypage');
-      } else if (location.pathname === '/main/message') {
-        navigate('/main/mypage'); // ✅ 추가된 조건
-      } else {
-        navigate(-1);
-      }
+      navigate(-1);
     }
   };
 

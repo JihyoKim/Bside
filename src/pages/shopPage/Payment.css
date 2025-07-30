@@ -57,9 +57,9 @@
     color: #000;
   }
   
-  /* .payment-container .payment-content {
+  .payment-container .payment-content {
     padding: 90px 16px 0; 
-  } */
+  }
   
   /* 상품 정보 카드 */
   .payment-container .product-info-card {
@@ -215,16 +215,26 @@
     justify-content: space-between;
     align-items: center;
     gap: 16px;
+    flex-wrap: nowrap;
   }
   
   .payment-container .bpoint-info p {
+    flex: 1;
     margin: 0;
     font-size: 14px;
     color: #666;
+    white-space: nowrap;       
+    overflow: hidden;        
+    text-overflow: ellipsis;
   }
   
+  .payment-container .bpoint-input {
+    flex-shrink: 0;
+  }
+
   .payment-container .bpoint-input input {
     width: 120px;
+    min-width: 80px;
     padding: 8px 12px;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
@@ -474,7 +484,7 @@
     }
     
     .bpoint-info {
-      flex-direction: column;
+      /* flex-direction: column; */
       align-items: stretch;
       gap: 12px;
     }

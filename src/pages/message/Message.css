@@ -30,6 +30,9 @@
     margin-top: 150px;
     padding: 0 20px;
     overflow-y: auto;
+    width: 100vw;
+    max-width: var(--max-width);
+    
   }
   
   .empty-message {
