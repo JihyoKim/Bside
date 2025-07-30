@@ -14,7 +14,7 @@
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   /* padding-bottom: var(--btm-nav); */
-  padding-bottom: env(safe-area-inset-bottom);
+  /* padding-bottom: env(safe-area-inset-bottom); */
   position: relative; /* 필요시 기준 요소 */
 }
   .layout-scroll::-webkit-scrollbar,
