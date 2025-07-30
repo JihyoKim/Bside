@@ -88,7 +88,7 @@ const Layout = () => {
   return (
     <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column', position: 'relative' }}>
       {HeaderComponent && <HeaderComponent />}
-      <div className="layout-container">
+      <div className={`layout-container ${hideBottomNav ? 'no-bottom-nav' : ''}`}>
         <div className="layout-scroll" >
           <Outlet />
         </div>

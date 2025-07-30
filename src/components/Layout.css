@@ -8,6 +8,10 @@
   flex-direction: column;
 }
 
+.layout-container.no-bottom-nav {
+  height: calc(var(--vh, 1vh) * 100); /* 하단 네비 없을 때는 전체 높이 */
+}
+
 .layout-scroll {
   flex: 1;
   overflow-y: auto;  /* ✅ 여기만 스크롤 허용 */
