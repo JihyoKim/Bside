@@ -65,7 +65,7 @@ const Ticket = () => {
   };
 
   return (
-    <div className="ticket-scroll-area" ref={scrollRef}> {/* ✅ 스크롤 대상 div */}
+    <div className="ticket-scroll-area page-scroll" ref={scrollRef}> {/* ✅ 스크롤 대상 div */}
       <div className="ticket-page">
         <h2 className="ticket-headline"><b>쥐들에곤히잠들다</b>님의 추억이에요</h2>
         {tickets.map((ticket) => (

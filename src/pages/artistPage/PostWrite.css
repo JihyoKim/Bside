@@ -1,4 +1,6 @@
 .post-write-container {
+  width: 100%;
+  max-width: var(--max-width);
   padding: 100px 0px 0;
   background-color: #000;
   color: white;
@@ -10,6 +12,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 24px 0;
+  max-width: var(--max-width);
+  gap: 12px;
 }
 
 /* 상단 이미지/링크 아이콘 영역 */
@@ -17,6 +21,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  flex-shrink: 0;
 }
 
 .icon-bar img {
@@ -35,6 +40,7 @@
 /* 제목 입력 필드 */
 .title-input {
   flex: 1;
+  min-width: 0;
   background: none;
   border: none;
   font-size: 18px;
@@ -66,8 +72,9 @@
 /* 내용 입력 텍스트 영역 */
 .content-textarea {
   width: 100%;
+  max-width: var(--max-width);
   height: calc(100vh - 250px - 32px);
-  padding: 10px 0;
+  padding: 10px 24px;
   background: none;
   border: none;
   font-size: 14px;
@@ -76,7 +83,6 @@
   resize: none;
   line-height: 1.5;
   overflow-y: auto;
-  margin: 0 24px;
 }
 
 .content-textarea.with-image {

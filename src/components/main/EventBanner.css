@@ -7,9 +7,9 @@
 .event-banner-wrapper .swiper-pagination-bullet-active { background-color: var(--pagination-bullet);}
 
 .event-banner-wrapper .event-text {
-    padding: 30px 0 12px 12px;
+    padding: 30px 0 12px 0;
     color: white;
-    font-size: 18px;
+    font-size: 21px;
     font-weight: bold;
     text-shadow: 0 0 5px rgba(0,0,0,0.7);
   }

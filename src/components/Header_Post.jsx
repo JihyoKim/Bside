@@ -27,15 +27,31 @@ const Header_Post = ({ onSubmit }) => {
 
   
   const artists = Object.keys(routeMap); // ['AESPA', 'G-DRAGON', ...]
+  const from = location.state?.from;
 
-  const handleGoBack = () => {
-    navigate(-1);
+const handleGoBack = () => {
+    if (from) {
+      navigate(from); // ✅ 지정된 이전 경로로 무조건 이동
+    } else {
+      // fallback
+      if (location.pathname.includes('/post/')) {
+        navigate(`/main/artistPage/${artistId}/fan`);
+      } else if (!artistId || artistId === 'undefined') {
+        navigate('/main/mypage');
+      } else {
+        navigate(-1); 
+      }
+    }
   };
 
   const handleArtistSelect = (name) => {
     const newId = routeMap[name];
     setShowArtistModal(false);
-    navigate(`/main/artistPage/${newId}/write`);
+  
+    navigate(`/main/artistPage/${newId}/write`, {
+      state: { from },
+      replace: true,
+    });
   };
 
   const closeModal = () => {
@@ -54,14 +70,13 @@ const Header_Post = ({ onSubmit }) => {
         </div>
 
         <div className="header-center">
-        <div className="header-title">
+        <div className="header-title" onClick={() => setShowArtistModal(true)}>
           {displayName}
           {!isPostDetail && (
             <img
               src={down}
               alt="down"
               className={`down-btn ${showArtistModal && !isClosing ? 'rotated' : ''}`}
-              onClick={() => setShowArtistModal(true)}
             />
           )}
         </div>

@@ -22,7 +22,8 @@ const Media = () => {
     <div className="media-container">
       {/* New 슬라이드 */}
       <div className="media-section new-section" style={{ background: gradientColor }}>
-        <h4>New</h4>
+        <h4>Latest</h4>
+        {/* <h4>New Arrivals</h4> */}
         <Swiper
           slidesPerView={'auto'}
           centeredSlides={true}

@@ -3,7 +3,7 @@
   max-width: var(--max-width);
   color: white;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .media-section {
@@ -25,7 +25,8 @@
 }
 
 .new-slide {
-  width: auto;
+  width: 175px;
+  flex-shrink: 0;
   box-sizing: border-box;
 }
 

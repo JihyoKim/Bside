@@ -28,9 +28,9 @@
   
   html, body {
 	height: auto;
-	overflow: auto;
+	/* overflow: auto; */
 	scroll-behavior: smooth;
-	overflow-x: hidden; 
+	overflow: hidden; 
   }
 
   html::-webkit-scrollbar {
@@ -58,8 +58,7 @@
 	min-width: 320px;
 	background: #050305;
 	height: auto;
-	overflow-y: visible;
-	overflow-x: hidden;
+	overflow: hidden;
 
 	margin-left: 50%;    /* 화면 가로의 중간쯤에서 시작 */
 	margin-right: auto;
@@ -79,6 +78,10 @@
 
   .page-scroll {
 	height: 100%;
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
+	overflow-y: auto;  
+ 	overflow-x: hidden;	
+  	-webkit-overflow-scrolling: touch;
+  }
+  .page-scroll::-webkit-scrollbar {
+	display: none;
   }

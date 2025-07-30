@@ -63,7 +63,7 @@ const slides = [
 const NewItems = () => {
   return (
     <div className='home-notice-wrapper'>
-      <div className="home-notice-text">Notice</div>
+      <div className="home-notice-text">NOTICES</div>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={'auto'}

@@ -16,7 +16,7 @@ import main5 from '../../assets/MainBanner/05x2.png'
 const MainBanner = () => {
   return (
     <div className="main-banner-wrapper">
-      <div className="now-open-text">Now Open</div>
+      <div className="now-open-text">NOW OPEN</div>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={1}

@@ -48,7 +48,7 @@ const storySlides = [
 const MyArtistStory = () => {
   return (
     <div className='artist-story-wrapper'>
-      <div className="artist-story-text">나의 아티스트 스토리</div>
+      <div className="artist-story-text">OFFICIAL COMMUNITY</div>
       <div className="artist-story-slider">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
