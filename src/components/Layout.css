@@ -2,7 +2,7 @@
   position: relative; /* AlarmDetail 기준 부모로 설정 */
   width: 100%;
   max-width: var(--max-width);
-  height: calc(100vh - var(--btm-nav));
+  height: calc((var(--vh) * 100) - var(--btm-nav));
   overflow: hidden;   /* body 스크롤 방지 */
   display: flex;
   flex-direction: column;
@@ -14,6 +14,7 @@
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   /* padding-bottom: var(--btm-nav); */
+  padding-bottom: env(safe-area-inset-bottom);
   position: relative; /* 필요시 기준 요소 */
 }
   .layout-scroll::-webkit-scrollbar,
