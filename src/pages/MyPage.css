@@ -12,6 +12,7 @@
     flex: 1;
     overflow-y: auto;   /* ✅ 여기에만 스크롤 허용 */
     -webkit-overflow-scrolling: touch; /* iOS 자연스러운 스크롤 */
+    height: 100vh;
   }
 
 .mypage-scroll::-webkit-scrollbar,

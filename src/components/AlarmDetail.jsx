@@ -1,19 +1,21 @@
 import React from 'react';
 import './AlarmDetail.css';
-import goback from '../assets/symbol/white/next.svg';
+import goback from '../assets/symbol/white/goback.svg';
 
 const AlarmDetail = ({ isOpen, onToggle }) => {
   return (
     <div className="alarm-container">
       <div className={`alarm-overlay ${isOpen ? 'show' : ''}`} onClick={onToggle} />
+
       <div className={`alarm-panel ${isOpen ? 'open' : ''}`}>
-        <button className="close-btn" onClick={onToggle}>
-          <img src={goback} alt="back" />
-        </button>
+        <div className="alarm-header-bar">
+          <button className="close-btn" onClick={onToggle}>
+            <img src={goback} alt="back" />
+          </button>
+          <h2 className="alarm-title">알림</h2>
+        </div>
 
         <div className="alarm-detail-container">
-          <h2 className="alarm-title">알림</h2>
-
           <section className="alarm-section">
             <h3 className="alarm-subtitle">오늘 받은 알림</h3>
             <div className="alarm-box today alarm-new">

@@ -20,7 +20,6 @@
 /* 기존 BackBtn 스타일 그대로 사용 */
 .header-left .BackBtn {
   height: 25px;
-  margin: 5px;
 }
 
 .user-info-section {
@@ -90,7 +89,7 @@
 
   
   /* 반응형 */
-  @media (max-width: 390px) {
+  /* @media (max-width: 390px) {
     .message-header-content {
       padding: 10px 16px;
       height: 56px;
@@ -109,4 +108,4 @@
       font-size: 13px;
       padding: 6px 12px;
     }
-  }
+  } */

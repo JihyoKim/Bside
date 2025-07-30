@@ -21,6 +21,7 @@ const BottomNav = () => {
     if (currentPath === path) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
+      sessionStorage.setItem('fromTabClick', 'true');
       navigate(path);
     }
   };

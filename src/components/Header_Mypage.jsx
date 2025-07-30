@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Header.css';
 import SideMenu from './SideMenu';
@@ -8,27 +8,19 @@ import menuIcon from '../assets/symbol/white/menu.png';
 import alarmIcon from '../assets/symbol/alarmIcon_white_pink.svg'; 
 import messageIcon from '../assets/symbol/message_white.svg'; 
 
-const Header_Mypage = () => {
+// ✅ scrolledBlack prop 받기
+const Header_Mypage = ({ scrolledBlack = false }) => {
   const navigate = useNavigate();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAlarmOpen, setIsAlarmOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 330);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const toggleMenu = () => {setIsMenuOpen(prev => !prev);};
-  const toggleAlarm = () => {setIsAlarmOpen(prev => !prev)};
+  const toggleMenu = () => setIsMenuOpen(prev => !prev);
+  const toggleAlarm = () => setIsAlarmOpen(prev => !prev);
   const goToMessage = () => navigate('message');
 
   return (
     <>
-      <header className={`fixed-header ${isScrolled ? 'black' : 'pink'}`}>
+      <header className={`fixed-header ${scrolledBlack ? 'black' : 'pink'}`}>
         <div className="header-left">
           <img
             src={menuIcon}

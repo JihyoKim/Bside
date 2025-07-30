@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import './Header.css';
 
-import goback from '../assets/symbol/white/goback.png';
+import goback from '../assets/symbol/white/goback.svg';
 import down from '../assets/symbol/downBtn.svg';
 
 const Header_Post = ({ onSubmit }) => {

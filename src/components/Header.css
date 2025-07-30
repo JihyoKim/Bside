@@ -15,12 +15,19 @@
 }
 
 .fixed-header.black {
-  /* background-color: #000; */
+  background-color: #000;
 }
 
 .fixed-header.pink {
   background-color: transparent;
 }
+
+
+
+.fixed-header.white {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 
 .header-left {
   display: flex;
@@ -33,6 +40,7 @@
 .header-left .BackBtn {
   width: auto;
   height: 25px;
+  margin: 5px 10px;
 }
 
 .fixed-header .dropdown-icon {
@@ -48,11 +56,19 @@
   padding-top: 5%;
 }
 
+
+.cart-icon {
+  height: 27px;    
+  display: block;   
+ margin: 5px 5px 10px;
+}
+
 .fixed-header .alarm-icon,
 .fixed-header .message-icon {
   position: relative;
   z-index: 2001;
   height: 27px;
+  margin: 5px;
 }
 
 .message-icon {
@@ -62,6 +78,7 @@
 .fixed-header .menu-icon {
   width: 25px;
   position: relative;
+  margin: 5px;
 }
 
 .header-center {

@@ -6,10 +6,12 @@ import './Shop.css'
 
 const Shop = () => {
   return (
-    <div className="shop-container">
-      <NewAlbum />
-      <Outlet />
-      <ShippingBanner />
+    <div className="page-scroll"> 
+      <div className="shop-container">
+        <NewAlbum />
+        <Outlet />
+        <ShippingBanner />
+      </div>
     </div>
   )
 }

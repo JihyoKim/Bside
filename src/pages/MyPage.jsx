@@ -22,7 +22,6 @@ const MyPage = () => {
         <Profile onToggleMenu={toggleMenu} />
         <Post onScrollToTop={scrollToTop} />
       </div>
-      <SideMenu isOpen={isMenuOpen} onToggle={toggleMenu} />
     </div>
   );
 };

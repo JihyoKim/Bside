@@ -5,7 +5,11 @@ import './Header.css';
 import goback from '../assets/symbol/white/goback.svg';
 import alarm from '../assets/symbol/alarmIcon_white_pink.svg';
 import cart from '../assets/symbol/header_cartIcon.svg';
-import AlarmDetail from './AlarmDetail'; 
+
+import gobackBlack from '../assets/symbol/black/goback.svg';
+import cartBlack from '../assets/symbol/header_cartIcon_black.svg';
+
+import AlarmDetail from './AlarmDetail';
 
 const Header_Sub = () => {
   const navigate = useNavigate();
@@ -24,6 +28,8 @@ const Header_Sub = () => {
         location.pathname === '/main/mypage/point'
       ) {
         navigate('/main/mypage');
+      } else if (location.pathname === '/main/message') {
+        navigate('/main/mypage'); // ✅ 추가된 조건
       } else {
         navigate(-1);
       }
@@ -31,13 +37,14 @@ const Header_Sub = () => {
   };
 
   const isShopPage = location.pathname.startsWith('/main/shop');
+  const isShopProductPage = location.pathname.startsWith('/main/shop/product');
 
   return (
     <>
-      <header className="fixed-header pink">
+      <header className={`fixed-header ${isShopProductPage ? 'white' : 'pink'}`}>
         <div className="header-left">
           <img
-            src={goback}
+            src={isShopProductPage ? gobackBlack : goback}
             alt="BackBtn"
             className="BackBtn"
             onClick={handleGoBack}
@@ -46,8 +53,8 @@ const Header_Sub = () => {
         <div className="header-right">
           <div className="alarm-wrapper">
             <img
-              src={isShopPage ? cart : alarm}
-              alt={isShopPage ? 'cart' : 'alarm'}
+              src={isShopProductPage ? cartBlack : isShopPage ? cart : alarm}
+              alt={isShopProductPage ? 'cartBlack' : isShopPage ? 'cart' : 'alarm'}
               className={isShopPage ? 'cart-icon' : 'alarm-icon'}
               onClick={!isShopPage ? toggleAlarm : undefined}
             />

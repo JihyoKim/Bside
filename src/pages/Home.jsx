@@ -12,16 +12,18 @@ import ChatbotEmbed from '../components/chatBot/ChatbotEmbed';
 
 const Home = () => {
   return (
-    <div className="home-container">
-      <ArtistList />
-      <MainBanner />
-      <ShopBanner />
-      <MyArtistStroy />
-      <HomeNotice />
-      <EventBanner />
-      <ArtistAD />
-      <MoreArtistBanner />
-      <ChatbotEmbed />
+    <div className="page-scroll"> 
+      <div className="home-container">
+        <ArtistList />
+        <MainBanner />
+        <ShopBanner />
+        <MyArtistStroy />
+        <HomeNotice />
+        <EventBanner />
+        <ArtistAD />
+        <MoreArtistBanner />
+        <ChatbotEmbed />
+      </div>
     </div>
   );
 };
