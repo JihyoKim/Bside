@@ -1,7 +1,7 @@
 .media-detail-container {
   position: relative;
   width: 100%;
-  height: calc(100vh - var(--btm-nav));
+  height: calc((var(--vh) * 100) - var(--btm-nav));
   overflow: hidden;
 }
 
