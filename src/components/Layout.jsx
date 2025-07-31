@@ -85,7 +85,7 @@ const Layout = () => {
   const isLiveDetailPage = path.includes('/media/live-');
 
   const isMobileDevice = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  if (isMobileDevice && window.innerWidth <= 820) {
+  if (isMobileDevice && window.innerWidth <= 900) {
     document.documentElement.classList.add('mobile-device');
   }
 

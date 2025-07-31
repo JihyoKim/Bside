@@ -16,7 +16,7 @@ import gdAlbum2 from '../assets/gdAlbum2.png';
 import option from '../assets/ArtistPage/option.svg';
 import scanIcon from '../assets/symbol/scanIcon.svg';
 import LyricsPanel from '../components/music/LyricsPanel';
-import LyricsOnly from '../components/music/LyricsOnly';
+import lyricsData from '../data/lyricsData'; // ✅ 변경된 부분
 
 const Music = () => {
   const [showLyrics, setShowLyrics] = useState(false);
@@ -29,10 +29,7 @@ const Music = () => {
   const [currentLyricIndex, setCurrentLyricIndex] = useState(0);
   const [isRotating, setIsRotating] = useState(false);
 
-
   const audioRef = useRef(null);
-
-  const fullLyrics = LyricsOnly().props.children.trim().split('\n').filter(line => line.trim() !== '');
 
   useEffect(() => {
     const vw = window.innerWidth;
@@ -59,70 +56,64 @@ const Music = () => {
     const handleCloseLyrics = () => {
       setShowLyrics(false);
     };
-  
     window.addEventListener('closeLyricsPanel', handleCloseLyrics);
-  
-    return () => {
-      window.removeEventListener('closeLyricsPanel', handleCloseLyrics);
-    };
+    return () => window.removeEventListener('closeLyricsPanel', handleCloseLyrics);
   }, []);
 
-  
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
-  
+
+    let frameId;
+
     const updateProgress = () => {
-      if (!audio.paused) {
-        const current = audio.currentTime;
-        const duration = audio.duration;
-  
-        if (!isNaN(duration) && duration > 0) {
-          setCurrentTime(current);
-          setProgress((current / duration) * 100);
-  
-          const adjustedCurrent = Math.max(current - 6, 0);
-          const estimatedIndex = Math.floor((adjustedCurrent / (duration - 9)) * fullLyrics.length);
-          setCurrentLyricIndex(estimatedIndex);
-        }
-  
-        requestAnimationFrame(updateProgress);
+      const current = audio.currentTime;
+      const duration = audio.duration;
+      if (!isNaN(duration) && duration > 0) {
+        setCurrentTime(current);
+        setProgress((current / duration) * 100);
+
+        const index = lyricsData.findIndex(line => current >= line.start && current < line.end);
+        if (index !== -1) setCurrentLyricIndex(index);
       }
+      frameId = requestAnimationFrame(updateProgress);
     };
-  
-    const handlePlay = () => requestAnimationFrame(updateProgress);
-    const handlePause = () => cancelAnimationFrame(updateProgress);
+
+    const handlePlay = () => {
+      frameId = requestAnimationFrame(updateProgress);
+    };
+
+    const handlePause = () => cancelAnimationFrame(frameId);
     const handleLoadedMetadata = () => setDuration(audio.duration);
     const handleEnded = () => {
       setIsPlaying(false);
-      setIsRotating(false); // ✅ 재생 종료 시 회전 멈춤
+      setIsRotating(false);
     };
-  
+
     audio.addEventListener('play', handlePlay);
     audio.addEventListener('pause', handlePause);
     audio.addEventListener('loadedmetadata', handleLoadedMetadata);
-    audio.addEventListener('ended', handleEnded); // ✅ 추가
-  
+    audio.addEventListener('ended', handleEnded);
+
     return () => {
       audio.removeEventListener('play', handlePlay);
       audio.removeEventListener('pause', handlePause);
       audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
       audio.removeEventListener('ended', handleEnded);
+      cancelAnimationFrame(frameId);
     };
-  }, [fullLyrics.length]);
+  }, []);
 
   const togglePlay = () => {
     const audio = audioRef.current;
     if (!audio) return;
-  
     if (isPlaying) {
       audio.pause();
-      setIsRotating(false); 
+      setIsRotating(false);
     } else {
       audio.play();
-      setIsRotating(true);  
+      setIsRotating(true);
     }
-  
     setIsPlaying(!isPlaying);
   };
 
@@ -169,8 +160,8 @@ const Music = () => {
 
       <div className="music-bottom">
         <div className="lyrics-preview" style={{ maxHeight: `${visibleLines * 1.75}em` }} onClick={() => setShowLyrics(true)}>
-          {fullLyrics.slice(currentLyricIndex, currentLyricIndex + visibleLines).map((line, idx) => (
-            <p key={idx} className={idx === 0 ? 'pink' : ''}>{line}</p>
+          {lyricsData.slice(currentLyricIndex, currentLyricIndex + visibleLines).map((line, idx) => (
+            <p key={idx} className={idx === 0 ? 'pink' : ''}>{line.text}</p>
           ))}
         </div>
         <div className="player-controls">
@@ -196,8 +187,8 @@ const Music = () => {
 
       <audio ref={audioRef} src="/FAMOUS.mp3" preload="metadata" />
 
-      {/* 스트리밍 미션 탭 */}
-      <div className="streaming-mission-container">
+{/* 스트리밍 미션 탭 */}
+<div className="streaming-mission-container">
         <div className="mission-tab" onClick={() => setIsMissionOpen((prev) => !prev)}>
           <span>스트리밍 미션</span>
           <img src={isMissionOpen ? downIconGray : upIconGray} alt="toggle" />
@@ -244,8 +235,6 @@ const Music = () => {
           </div>
         )}
       </div>
-
-      {/* 스트리밍 미션 탭 및 LyricsPanel 생략 */}
       <LyricsPanel visible={showLyrics} onClose={() => setShowLyrics(false)} />
     </div>
   );
