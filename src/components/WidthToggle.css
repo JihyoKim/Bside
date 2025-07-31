@@ -5,6 +5,11 @@
     left: calc(50% - var(--max-width) / 2 - 18vw);
     z-index: 1000;
   }
+
+  .leftSide.tablet-left {
+    left: calc(50% - var(--max-width) / 2);
+  }
+
 .leftSide .logo {
     width: 250px;
 }
@@ -20,7 +25,7 @@
     font-weight: 600;
     border: none;
     border-radius: 20px;
-    background-color: #FF72E0;
+    background-color: #ffa3eb;
     color: white;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -45,5 +50,13 @@
 @media (max-width: 1024px) {
     .leftSide {
         display: none;
+    }
+
+  }
+
+  @media (max-width: 1539px) {
+
+    .leftSide.tablet-left {
+      display: none;
     }
   }

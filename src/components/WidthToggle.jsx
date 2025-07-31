@@ -1,12 +1,29 @@
-// src/components/WidthToggle.jsx
-import React from 'react';
-import Logo from '../assets/BsideAppLogo.svg'; // 경로는 상황에 따라 조정
+import React, { useEffect } from 'react';
+import Logo from '../assets/BsideAppLogo.svg'; 
 import './WidthToggle.css'
 
 const WidthToggle = () => {
+  useEffect(() => {
+    const savedWidth = localStorage.getItem('app-max-width');
+    if (savedWidth === '768px') {
+      document.documentElement.classList.add('tablet-mode');
+    }
+  }, []);
+  
   const setMaxWidth = (size) => {
     document.documentElement.style.setProperty('--max-width', size);
-    localStorage.setItem('app-max-width', size); // 선택 기억용 (선택 사항)
+    localStorage.setItem('app-max-width', size);
+  
+    const leftSide = document.querySelector('.leftSide');
+    if (!leftSide) return;
+  
+    if (size === '768px') {
+      leftSide.classList.add('tablet-left');
+      document.documentElement.classList.add('tablet-mode'); 
+    } else {
+      leftSide.classList.remove('tablet-left');
+      document.documentElement.classList.remove('tablet-mode');
+    }
   };
 
   return (

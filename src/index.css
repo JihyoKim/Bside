@@ -79,10 +79,11 @@
 	/* body {background: #000;} */
   }
 
-  /* @media (min-width: 1539px) {
-	#root {
+  @media (max-width: 1540px) {
+	html.tablet-mode #root {
+	  margin: 0 auto; 
 	}
-  } */
+  }
 
 
   .page-scroll {
@@ -94,3 +95,4 @@
   .page-scroll::-webkit-scrollbar {
 	display: none;
   }
+
