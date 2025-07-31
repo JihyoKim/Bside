@@ -16,6 +16,7 @@ import gdAlbum2 from '../assets/gdAlbum2.png';
 import option from '../assets/ArtistPage/option.svg';
 import scanIcon from '../assets/symbol/scanIcon.svg';
 import LyricsPanel from '../components/music/LyricsPanel';
+import LyricsOnly from '../components/music/LyricsOnly';
 
 const Music = () => {
   const [showLyrics, setShowLyrics] = useState(false);
@@ -25,21 +26,11 @@ const Music = () => {
   const [currentTime, setCurrentTime] = useState(0);
   const [isMissionOpen, setIsMissionOpen] = useState(false);
   const [visibleLines, setVisibleLines] = useState(2);
+  const [currentLyricIndex, setCurrentLyricIndex] = useState(0);
 
   const audioRef = useRef(null);
 
-  const lyrics = [
-    "Oh, oh♪",
-    "Oh♪",
-    "분명 나쁜 아이는 아니어도",
-    "또 틀에 가두면, we break it",
-    "Bum, no bigger than the girl next door",
-    "무대 서면, we fake it",
-    "No white collar, 근데 얜 좀 쳐",
-    "When I put mans in their places",
-    "모든 시선들은 날 따라와",
-    "But we ain't even famous",
-  ];
+  const fullLyrics = LyricsOnly().props.children.trim().split('\n').filter(line => line.trim() !== '');
 
   useEffect(() => {
     const vw = window.innerWidth;
@@ -65,37 +56,40 @@ const Music = () => {
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
-  
+
     const updateProgress = () => {
       if (!audio.paused) {
         const current = audio.currentTime;
         const duration = audio.duration;
-  
+
         if (!isNaN(duration) && duration > 0) {
           setCurrentTime(current);
           setProgress((current / duration) * 100);
+
+          const estimatedIndex = Math.floor((current / duration) * fullLyrics.length);
+          setCurrentLyricIndex(estimatedIndex);
         }
-  
+
         requestAnimationFrame(updateProgress);
       }
     };
-  
+
     const handlePlay = () => requestAnimationFrame(updateProgress);
     const handlePause = () => cancelAnimationFrame(updateProgress);
     const handleLoadedMetadata = () => {
-      setDuration(audio.duration); // ✅ 여기서 duration 저장
+      setDuration(audio.duration);
     };
-  
+
     audio.addEventListener('play', handlePlay);
     audio.addEventListener('pause', handlePause);
-    audio.addEventListener('loadedmetadata', handleLoadedMetadata); // ✅ 추가
-  
+    audio.addEventListener('loadedmetadata', handleLoadedMetadata);
+
     return () => {
       audio.removeEventListener('play', handlePlay);
       audio.removeEventListener('pause', handlePause);
       audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
     };
-  }, []);
+  }, [fullLyrics.length]);
 
   const togglePlay = () => {
     const audio = audioRef.current;
@@ -109,9 +103,9 @@ const Music = () => {
     const audio = audioRef.current;
     if (!audio) return;
     const newProgress = e.target.value;
-    const newTime = (newProgress / 100) * duration;
+    const newTime = (newProgress / 1000) * duration;
     audio.currentTime = newTime;
-    setProgress(newProgress);
+    setProgress(newProgress / 10);
   };
 
   const formatTime = (seconds) => {
@@ -148,7 +142,7 @@ const Music = () => {
 
       <div className="music-bottom">
         <div className="lyrics-preview" style={{ maxHeight: `${visibleLines * 1.75}em` }} onClick={() => setShowLyrics(true)}>
-          {lyrics.slice(0, visibleLines).map((line, idx) => (
+          {fullLyrics.slice(currentLyricIndex, currentLyricIndex + visibleLines).map((line, idx) => (
             <p key={idx} className={idx === 0 ? 'pink' : ''}>{line}</p>
           ))}
         </div>
@@ -174,57 +168,8 @@ const Music = () => {
       </div>
 
       <audio ref={audioRef} src="/FAMOUS.mp3" preload="metadata" />
-      
-      {/* 스트리밍 미션 탭 */}
-      <div className="streaming-mission-container">
-        <div className="mission-tab" onClick={() => setIsMissionOpen((prev) => !prev)}>
-          <span>스트리밍 미션</span>
-          <img src={isMissionOpen ? downIconGray : upIconGray} alt="toggle" />
-        </div>
 
-        {isMissionOpen && (
-          <div className="mission-panel">
-            <div className="mission-content">
-              <div className="album-register">
-                <div className="scan-icon">
-                  <img src={scanIcon} alt="등록" />
-                </div>
-                <span>앨범 등록하기</span>
-              </div>
-
-              <ul className="album-list">
-                {[{img: alldayAlbum, title: "FAMOUS", artist: "ALLDAY PROJECT"},
-                  {img: gdAlbum1, title: "HOME SWEET HOME", artist: "G-DRAGON"},
-                  {img: gdAlbum2, title: "Übermensch", artist: "G-DRAGON"}].map((album, i) => (
-                  <li className="album-item" key={i}>
-                    <img src={album.img} alt={`앨범${i}`} className="album-img" />
-                    <div className="album-info">
-                      <p className="title">{album.title}</p>
-                      <p className="artist">{album.artist}</p>
-                    </div>
-                    <img src={option} alt="옵션" className="option-icon" />
-                  </li>
-                ))}
-              </ul>
-
-              <div className="streaming-card">
-                <h4>나의 스트리밍</h4>
-                <p className="highlight">
-                  <span className="blue">15회</span> 더 재생하면 리워드 지급!
-                </p>
-                <ul className="history">
-                  <li><span>2025.07.02</span> <strong>12회</strong></li>
-                  <li><span>2025.07.01</span> <strong>40회</strong></li>
-                  <li><span>2025.06.29</span> <strong>32회</strong></li>
-                </ul>
-                <button className="more-button">더보기</button>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-
-      {/* LyricsPanel, 미션 탭 등은 생략 */}
+      {/* 스트리밍 미션 탭 및 LyricsPanel 생략 */}
       <LyricsPanel visible={showLyrics} onClose={() => setShowLyrics(false)} />
     </div>
   );
