@@ -8,21 +8,19 @@
   flex-direction: column;
 }
 
-.layout-container.no-bottom-nav {
-  height: calc(var(--vh, 1vh) * 100); /* 하단 네비 없을 때는 전체 높이 */
-}
 
-.layout-scroll {
+.layout-container .layout-scroll {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
   padding-bottom: var(--btm-nav);
   -webkit-overflow-scrolling: touch;
   position: relative;
+  min-height: 0;
 }
 
 .layout-container.no-bottom-nav .layout-scroll {
-  padding-bottom: 0 !important; /* ✅ 바텀네비 없는 경우 여백 제거 */
+  padding-bottom: 0; /* ✅ 바텀네비 없는 경우 여백 제거 */
 }
 
   .layout-scroll::-webkit-scrollbar,
