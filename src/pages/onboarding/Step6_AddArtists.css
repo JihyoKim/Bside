@@ -2,7 +2,7 @@
 
 .step6-container {
   padding: 40px 16px;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background-color: black;
   color: white;
   position: relative;

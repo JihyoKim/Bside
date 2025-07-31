@@ -1,7 +1,7 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 .step7-container {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background: linear-gradient(to bottom, #000000 60%, #9B4A61 100%);
   display: flex;
   flex-direction: column;

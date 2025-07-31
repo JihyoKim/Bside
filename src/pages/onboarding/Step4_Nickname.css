@@ -1,7 +1,7 @@
 .step4-container {
   background: black;
   color: white;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   padding: 40px 16px;
   display: flex;
   flex-direction: column;
