@@ -27,6 +27,8 @@ const Music = () => {
   const [isMissionOpen, setIsMissionOpen] = useState(false);
   const [visibleLines, setVisibleLines] = useState(2);
   const [currentLyricIndex, setCurrentLyricIndex] = useState(0);
+  const [isRotating, setIsRotating] = useState(false);
+
 
   const audioRef = useRef(null);
 
@@ -69,47 +71,58 @@ const Music = () => {
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
-
+  
     const updateProgress = () => {
       if (!audio.paused) {
         const current = audio.currentTime;
         const duration = audio.duration;
-
+  
         if (!isNaN(duration) && duration > 0) {
           setCurrentTime(current);
           setProgress((current / duration) * 100);
-
-          const adjustedCurrent = Math.max(current - 6, 0); // 6초 딜레이
+  
+          const adjustedCurrent = Math.max(current - 6, 0);
           const estimatedIndex = Math.floor((adjustedCurrent / (duration - 9)) * fullLyrics.length);
           setCurrentLyricIndex(estimatedIndex);
         }
-
+  
         requestAnimationFrame(updateProgress);
       }
     };
-
+  
     const handlePlay = () => requestAnimationFrame(updateProgress);
     const handlePause = () => cancelAnimationFrame(updateProgress);
-    const handleLoadedMetadata = () => {
-      setDuration(audio.duration);
+    const handleLoadedMetadata = () => setDuration(audio.duration);
+    const handleEnded = () => {
+      setIsPlaying(false);
+      setIsRotating(false); // ✅ 재생 종료 시 회전 멈춤
     };
-
+  
     audio.addEventListener('play', handlePlay);
     audio.addEventListener('pause', handlePause);
     audio.addEventListener('loadedmetadata', handleLoadedMetadata);
-
+    audio.addEventListener('ended', handleEnded); // ✅ 추가
+  
     return () => {
       audio.removeEventListener('play', handlePlay);
       audio.removeEventListener('pause', handlePause);
       audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
+      audio.removeEventListener('ended', handleEnded);
     };
   }, [fullLyrics.length]);
 
   const togglePlay = () => {
     const audio = audioRef.current;
     if (!audio) return;
-    if (isPlaying) audio.pause();
-    else audio.play();
+  
+    if (isPlaying) {
+      audio.pause();
+      setIsRotating(false); 
+    } else {
+      audio.play();
+      setIsRotating(true);  
+    }
+  
     setIsPlaying(!isPlaying);
   };
 
@@ -144,7 +157,7 @@ const Music = () => {
           <span>{formatTime(currentTime)}</span>
           <span>{formatTime(duration)}</span>
         </div>
-        <div className="album-art-wrap">
+        <div className={`album-art-wrap ${isRotating ? 'rotating' : 'stopped'}`}>
           <div className="album-art-frame">
             <img className="album-art" src={albumImage} alt="앨범" />
             <div className="album-center-hole">

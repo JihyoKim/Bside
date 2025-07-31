@@ -50,9 +50,31 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: -150px;
-  width: 240px;
-  height: 240px;
+  width: 260px;
+  height: 260px;
   z-index: 2;
+
+}
+
+@keyframes spin {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+/* 재생 중일 때 회전 */
+.album-art-wrap.rotating {
+  animation: spin 20s linear infinite;
+}
+
+/* 정지되었을 때 회전 멈춤 + 초기화 */
+.album-art-wrap.stopped {
+  animation: none;
+  transform: translateX(-50%) rotate(0deg);
+  transition: transform 0.3s ease;
 }
 
 .album-art-frame {
