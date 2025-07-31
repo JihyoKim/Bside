@@ -61,6 +61,7 @@ const Layout = () => {
 
   // ✅ BottomNav 숨기기 조건
   const hideBottomNav =
+    isOnboarding ||
     isVoteDetailPage ||
     path.includes('/write') ||
     path.includes('/post/') ||
@@ -87,15 +88,15 @@ const Layout = () => {
   }
 
   // ✅ JS 기반 vh 세팅
-  useEffect(() => {
-    const setVh = () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    };
-    setVh();
-    window.addEventListener('resize', setVh);
-    return () => window.removeEventListener('resize', setVh);
-  }, []);
+useEffect(() => {
+  const setVh = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  };
+  setVh();
+  window.addEventListener('resize', setVh);
+  return () => window.removeEventListener('resize', setVh);
+}, []);
 
   return (
     <div
