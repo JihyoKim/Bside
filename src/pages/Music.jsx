@@ -54,6 +54,19 @@ const Music = () => {
   }, []);
 
   useEffect(() => {
+    const handleCloseLyrics = () => {
+      setShowLyrics(false);
+    };
+  
+    window.addEventListener('closeLyricsPanel', handleCloseLyrics);
+  
+    return () => {
+      window.removeEventListener('closeLyricsPanel', handleCloseLyrics);
+    };
+  }, []);
+
+  
+  useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
 
