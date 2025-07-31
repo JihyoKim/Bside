@@ -16,13 +16,13 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  /* padding-bottom: var(--btm-nav); */
+  padding-bottom: var(--btm-nav);
   -webkit-overflow-scrolling: touch;
   position: relative;
 }
 
 .layout-container.no-bottom-nav .layout-scroll {
-  padding-bottom: 0; /* ✅ 바텀네비 없는 경우 여백 제거 */
+  padding-bottom: 0 !important; /* ✅ 바텀네비 없는 경우 여백 제거 */
 }
 
   .layout-scroll::-webkit-scrollbar,

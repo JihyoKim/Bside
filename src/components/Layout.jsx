@@ -26,6 +26,7 @@ const Layout = () => {
     path.includes('/vote/complete') ||
     path.includes('/message/room/');
 
+    
   // ✅ Header 컴포넌트 결정
   let HeaderComponent = null;
   if (!isOnboarding) {
