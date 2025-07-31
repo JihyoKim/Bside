@@ -16,7 +16,7 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-bottom: var(--btm-nav);
+  /* padding-bottom: var(--btm-nav); */
   -webkit-overflow-scrolling: touch;
   position: relative;
 }
