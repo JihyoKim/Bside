@@ -55,13 +55,16 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           {/* 온보딩 경로들 */}
           <Route index element={<Step1 />} />
-          <Route path="/onboarding/pin" element={<Step2 />} />
-          <Route path="/onboarding/password" element={<Step3 />} />
-          <Route path="/onboarding/nickname" element={<Step4 />} />
-          <Route path="/onboarding/language" element={<Step5 />} />
-          <Route path="/onboarding/addartists" element={<Step6 />} />
-          <Route path="/onboarding/loading" element={<Loading />} />
-          <Route path="/onboarding/complete" element={<Step7 />} />
+          <Route path="onboarding">
+            <Route index element={<Step1 />} />
+            <Route path="pin" element={<Step2 />} />
+            <Route path="password" element={<Step3 />} />
+            <Route path="nickname" element={<Step4 />} />
+            <Route path="language" element={<Step5 />} />
+            <Route path="addartists" element={<Step6 />} />
+            <Route path="loading" element={<Loading />} />
+            <Route path="complete" element={<Step7 />} />
+          </Route>
 
           {/* 메인 앱 */}
           <Route path="main">
