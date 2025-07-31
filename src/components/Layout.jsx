@@ -90,20 +90,13 @@ const Layout = () => {
   // ✅ JS 기반 vh 세팅
   useEffect(() => {
     const setVh = () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      const vh = window.visualViewport?.height || window.innerHeight;
+      document.documentElement.style.setProperty('--vh', `${vh * 0.01}px`);
     };
-  
-    // 주소창이 사라질 때만 적용
-    if (window.innerHeight < window.outerHeight) {
-      setVh();
-      window.addEventListener('resize', setVh);
-      window.addEventListener('orientationchange', setVh);
-    }
-  
+    setVh();
+    window.visualViewport?.addEventListener('resize', setVh);
     return () => {
-      window.removeEventListener('resize', setVh);
-      window.removeEventListener('orientationchange', setVh);
+      window.visualViewport?.removeEventListener('resize', setVh);
     };
   }, []);
 

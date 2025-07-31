@@ -2,7 +2,7 @@
   position: relative; /* AlarmDetail 기준 부모로 설정 */
   width: 100vw;
   max-width: var(--max-width);
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;   /* body 스크롤 방지 */
   display: flex;
   flex-direction: column;
@@ -16,15 +16,24 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
+  padding-bottom: calc(var(--btm-nav) + env(safe-area-inset-bottom));
   -webkit-overflow-scrolling: touch;
   position: relative;
   min-height: 0;
 }
 
 .layout-scroll {
-  border: 1px solid red; /* 여백 디버깅 */
+  border: 1px solid blue; /* 여백 디버깅 */
+  padding-bottom: env(safe-area-inset-bottom, 0); /* iOS용 안전패딩 */
+  box-sizing: content-box;
 }
 
+.layout-scroll {
+  padding-bottom: env(safe-area-inset-bottom, var(--btm-nav));
+}
+.layout-container.no-bottom-nav .layout-scroll {
+  padding-bottom: 0 !important;
+}
 
   .layout-scroll::-webkit-scrollbar,
   .side-menu::-webkit-scrollbar {
