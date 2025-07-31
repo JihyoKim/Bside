@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams, Outlet } from 'react-router-dom';
 import Header from './Header';
 import HeaderSub from './Header_Sub';
 import HeaderMypage from './Header_Mypage';
@@ -7,7 +7,6 @@ import HeaderPost from './Header_Post';
 import BottomNav from './BottomNav';
 import SideMenu from './SideMenu';
 import FloatingAddButton from './FloatingAddButton';
-import { Outlet } from 'react-router-dom';
 import { artistData } from '../data/artistData';
 import './Layout.css';
 
@@ -16,19 +15,19 @@ const Layout = () => {
   const navigate = useNavigate();
   const { artistId } = useParams();
   const path = location.pathname;
-  const isOnboarding = path.startsWith('/onboarding') || path === '/';
 
-  // ✅ vote 상세 페이지에서는 header, nav 모두 숨김
+  // ✅ 온보딩 경로 포함 확인
+  const isOnboarding = path === '/' || path.startsWith('/onboarding');
+
+  // ✅ vote 상세 페이지 숨김 조건
   const isVoteDetailPage =
     path.includes('/vote/list') ||
     path.includes('/vote/result') ||
     path.includes('/vote/complete') ||
-    path.includes('/message/room/')
-    ;
+    path.includes('/message/room/');
 
-  // ✅ Header 구성
-  let HeaderComponent;
-
+  // ✅ Header 컴포넌트 결정
+  let HeaderComponent = null;
   if (!isOnboarding) {
     if (
       isVoteDetailPage ||
@@ -62,12 +61,13 @@ const Layout = () => {
   // ✅ BottomNav 숨기기 조건
   const hideBottomNav =
     isOnboarding ||
-    path.includes('/post/') ||
+    isVoteDetailPage ||
     path.includes('/write') ||
+    path.includes('/post/') ||
     path.includes('/shop/payment') ||
-    path.includes('/shop/product') ||
-    isVoteDetailPage;
+    path.includes('/shop/product');
 
+  // ✅ FloatingAddButton 노출 조건
   const isFanPage =
     (path.includes('/artistPage') && path.includes('/fan')) ||
     path === '/main/mypage';
@@ -80,33 +80,50 @@ const Layout = () => {
     navigate(`/main/artistPage/${artistId}/write`);
   };
 
-  const isLiveDetailPage = path.includes('/media/live-');
-
+  // ✅ 모바일 여부 class 부여
   const isMobileDevice = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
   if (isMobileDevice && window.innerWidth <= 900) {
     document.documentElement.classList.add('mobile-device');
   }
 
-  
-
+  // ✅ JS 기반 vh 세팅
+  useEffect(() => {
+    const setVh = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+    setVh();
+    window.addEventListener('resize', setVh);
+    return () => window.removeEventListener('resize', setVh);
+  }, []);
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column', position: 'relative' }}>
+    <div
+      style={{
+        display: 'flex',
+        minHeight: '100vh',
+        flexDirection: 'column',
+        position: 'relative',
+      }}
+    >
       {HeaderComponent && <HeaderComponent />}
       <div className={`layout-container ${hideBottomNav ? 'no-bottom-nav' : ''}`}>
-        <div className="layout-scroll" >
+        <div className="layout-scroll">
           <Outlet />
         </div>
-        
+
+        {/* ✅ 하단 네비게이션 */}
         {!hideBottomNav && <BottomNav />}
-        {isFanPage && (
-          <FloatingAddButton onClick={handleAddClick} bgColor={bgColor} lineColor={lineColor} />
+
+        {/* ✅ 플로팅 버튼 */}
+        {!hideBottomNav && isFanPage && (
+          <FloatingAddButton
+            onClick={handleAddClick}
+            bgColor={bgColor}
+            lineColor={lineColor}
+          />
         )}
       </div>
-      {!hideBottomNav && <BottomNav />}
-      {isFanPage && (
-        <FloatingAddButton onClick={handleAddClick} bgColor={bgColor} lineColor={lineColor} />
-      )}
     </div>
   );
 };

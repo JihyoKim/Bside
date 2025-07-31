@@ -2,7 +2,7 @@
   position: relative; /* AlarmDetail 기준 부모로 설정 */
   width: 100vw;
   max-width: var(--max-width);
-  height: calc((var(--vh, 1vh) * 100) - var(--btm-nav));
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;   /* body 스크롤 방지 */
   display: flex;
   flex-direction: column;
@@ -14,13 +14,17 @@
 
 .layout-scroll {
   flex: 1;
-  overflow-y: auto;  /* ✅ 여기만 스크롤 허용 */
+  overflow-y: auto;
   overflow-x: hidden;
+  padding-bottom: var(--btm-nav);
   -webkit-overflow-scrolling: touch;
-  /* padding-bottom: var(--btm-nav); */
-  /* padding-bottom: env(safe-area-inset-bottom); */
-  position: relative; /* 필요시 기준 요소 */
+  position: relative;
 }
+
+.layout-container.no-bottom-nav .layout-scroll {
+  padding-bottom: 0; /* ✅ 바텀네비 없는 경우 여백 제거 */
+}
+
   .layout-scroll::-webkit-scrollbar,
   .side-menu::-webkit-scrollbar {
     display: none !important;
