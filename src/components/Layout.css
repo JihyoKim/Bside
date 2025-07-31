@@ -13,14 +13,14 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-bottom: var(--btm-nav);
+  padding-bottom: calc(var(--btm-nav) + env(safe-area-inset-bottom));
   -webkit-overflow-scrolling: touch;
   position: relative;
   min-height: 0;
 }
 
 .layout-container.no-bottom-nav .layout-scroll {
-  padding-bottom: 0; /* ✅ 바텀네비 없는 경우 여백 제거 */
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
   .layout-scroll::-webkit-scrollbar,
