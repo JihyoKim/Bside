@@ -1,7 +1,7 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 .loading-container {
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
   background-color: black;
   color: white;
   font-family: 'Pretendard', sans-serif;
