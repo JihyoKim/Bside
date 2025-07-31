@@ -61,7 +61,6 @@ const Layout = () => {
 
   // ✅ BottomNav 숨기기 조건
   const hideBottomNav =
-    isOnboarding ||
     isVoteDetailPage ||
     path.includes('/write') ||
     path.includes('/post/') ||
