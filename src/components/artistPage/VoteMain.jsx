@@ -18,32 +18,28 @@ const VoteMain = () => {
 
   return (
     <div className="vote-main-container">
-      <h4 className="vote-title">
-        {data.title}
-        {data.dDay && (
-          <span className="dday-badge">{data.dDay}</span>
-        )}
-      </h4>
       <img
         src={data.voteBannerImage}
-        alt="투표 배너"
+        alt="오늘의 투표 배너"
         className="vote-banner-image"
       />
-      <ul className="vote-options">
-        {data.options.map((option, idx) => (
-          <li key={idx}>{option}</li>
-        ))}
-      </ul>
-      <button
-        className="vote-btn"
-        onClick={() => navigate(`/main/artistPage/${artistId}/vote/list/`)}
-        style={{
-          backgroundColor: data.voteButtonColor || 'black',
-          color: data.voteTextColor || 'white' 
-        }}
-      >
-        {data.buttonLabel}
-      </button>
+
+      <div className="vote-info-box">
+        <h4 className="vote-title">
+          {data.title}
+          {data.dDay && <span className="dday-badge">{data.dDay}</span>}
+        </h4>
+        <button
+          className="vote-btn"
+          onClick={() => navigate(`/main/artistPage/${artistId}/vote/list/`)}
+          style={{
+            backgroundColor: data.voteButtonColor || '#000',
+            color: data.voteTextColor || '#fff'
+          }}
+        >
+          {data.buttonLabel}
+        </button>
+      </div>
     </div>
   );
 };

@@ -59,7 +59,7 @@ const ArtistAD = () => {
   return (
     <div className="artist-ad-wrapper">
       <div className="ad-header">
-        ADS{' '}
+        AD{' '}
         <span className="info-icon tooltip">
           ⓘ
           <span className="tooltip-text right">이 영역은 광고 콘텐츠입니다.</span>

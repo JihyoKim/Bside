@@ -66,7 +66,7 @@ const NewItems = () => {
   const [inputValues, setInputValues] = useState(Array(slides.length).fill('')); // 슬라이드 개수만큼 state
   return (
     <div className='home-notice-wrapper'>
-      <div className="home-notice-text">NOTICES</div>
+      <div className="home-notice-text">NOTICE</div>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={'auto'}

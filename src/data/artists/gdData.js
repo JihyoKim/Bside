@@ -31,7 +31,7 @@ const gdData = {
     addButtonLine: '#ffffff',     // 글작성  + 선 색상
   
     voteMain: {
-      title: '떼창 곡 투표',
+      title: '커버 곡 투표',
       dDay: 'D-1',
       options: ['소년이여', '무제(無題)',],
       buttonLabel: '투표하러 가기',

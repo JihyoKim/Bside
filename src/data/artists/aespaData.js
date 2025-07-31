@@ -34,7 +34,7 @@ const aespaData = {
     addButtonLine: '#ffffff',
 
     voteMain: {
-      title: '떼창 곡 투표',
+      title: '커버 곡 투표',
       dDay: 'D-1',
       options: ['우즈 - Drowning', '10cm - 너에게 닿기를', '이영지 - Small girl', '아이유 - Love wins all'],
       buttonLabel: '투표하러 가기',
