@@ -70,6 +70,13 @@
   #root::-webkit-scrollbar {
 	display: none;
   }
+
+  @media (max-width: 768px) {
+	:root.mobile-device {
+	  --max-width: 100vw;
+	}
+  }
+  
   
   /* 👉 화면 너비가 1024px 이하일 경우: 가운데 정렬로 전환 */
   @media (max-width: 1024px) {

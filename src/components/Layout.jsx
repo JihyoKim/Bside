@@ -84,7 +84,12 @@ const Layout = () => {
 
   const isLiveDetailPage = path.includes('/media/live-');
 
+  const isMobileDevice = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if (isMobileDevice && window.innerWidth <= 768) {
+    document.documentElement.classList.add('mobile-device');
+  }
 
+  
   return (
     <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column', position: 'relative' }}>
       {HeaderComponent && <HeaderComponent />}
