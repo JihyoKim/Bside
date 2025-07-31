@@ -3,6 +3,7 @@ import './Lyrics.css';
 const LyricsOnly = () => (
     <p style={{ whiteSpace: 'pre-wrap' }}>
       {`
+♪     
 Oh, oh
 Oh
 

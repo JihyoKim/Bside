@@ -66,7 +66,8 @@ const Music = () => {
           setCurrentTime(current);
           setProgress((current / duration) * 100);
 
-          const estimatedIndex = Math.floor((current / duration) * fullLyrics.length);
+          const adjustedCurrent = Math.max(current - 6, 0); // 6초 딜레이
+          const estimatedIndex = Math.floor((adjustedCurrent / (duration - 9)) * fullLyrics.length);
           setCurrentLyricIndex(estimatedIndex);
         }
 
