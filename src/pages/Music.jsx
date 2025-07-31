@@ -183,6 +183,55 @@ const Music = () => {
 
       <audio ref={audioRef} src="/FAMOUS.mp3" preload="metadata" />
 
+      {/* 스트리밍 미션 탭 */}
+      <div className="streaming-mission-container">
+        <div className="mission-tab" onClick={() => setIsMissionOpen((prev) => !prev)}>
+          <span>스트리밍 미션</span>
+          <img src={isMissionOpen ? downIconGray : upIconGray} alt="toggle" />
+        </div>
+
+        {isMissionOpen && (
+          <div className="mission-panel">
+            <div className="mission-content">
+              <div className="album-register">
+                <div className="scan-icon">
+                  <img src={scanIcon} alt="등록" />
+                </div>
+                <span>앨범 등록하기</span>
+              </div>
+
+              <ul className="album-list">
+                {[{img: alldayAlbum, title: "FAMOUS", artist: "ALLDAY PROJECT"},
+                  {img: gdAlbum1, title: "HOME SWEET HOME", artist: "G-DRAGON"},
+                  {img: gdAlbum2, title: "Übermensch", artist: "G-DRAGON"}].map((album, i) => (
+                  <li className="album-item" key={i}>
+                    <img src={album.img} alt={`앨범${i}`} className="album-img" />
+                    <div className="album-info">
+                      <p className="title">{album.title}</p>
+                      <p className="artist">{album.artist}</p>
+                    </div>
+                    <img src={option} alt="옵션" className="option-icon" />
+                  </li>
+                ))}
+              </ul>
+
+              <div className="streaming-card">
+                <h4>나의 스트리밍</h4>
+                <p className="highlight">
+                  <span className="blue">15회</span> 더 재생하면 리워드 지급!
+                </p>
+                <ul className="history">
+                  <li><span>2025.07.02</span> <strong>12회</strong></li>
+                  <li><span>2025.07.01</span> <strong>40회</strong></li>
+                  <li><span>2025.06.29</span> <strong>32회</strong></li>
+                </ul>
+                <button className="more-button">더보기</button>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
       {/* 스트리밍 미션 탭 및 LyricsPanel 생략 */}
       <LyricsPanel visible={showLyrics} onClose={() => setShowLyrics(false)} />
     </div>
