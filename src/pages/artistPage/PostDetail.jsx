@@ -13,7 +13,7 @@ import moreIcon from '../../assets/fanPost/more.png';
 import trashIcon from '../../assets/fanPost/trash.png';
 import save from '../../assets/ArtistPage/save.svg';
 import saveFilled from '../../assets/ArtistPage/saveFilled.svg';
-import locationIcon from '../../assets/symbol/locationIcon.svg';
+import locationIcon from '../../assets/symbol/locationIcon_white.svg';
 
 
 const PostDetail = () => {

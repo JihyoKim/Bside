@@ -75,7 +75,8 @@ const lyricsData = [
     { start: 151.975, end: 154.067, text: "Don't you try me I want some more" },
     { start: 154.068, end: 155.867, text: "Don't you play me we on the floor" },
     { start: 155.868, end: 157.867, text: "Don't you try me I want some more" },
-    { start: 157.868, end: 160.4, text: "(We ain’t even famous)" }
+    { start: 157.868, end: 160.4, text: "(We ain’t even famous)" },
+    { start: 160.5, end: 180, text: "♪" },
   ];
   
   export default lyricsData;

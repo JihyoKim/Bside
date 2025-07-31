@@ -8,7 +8,7 @@ import likeFilled from '../../assets/ArtistPage/likeFilled.svg';
 import comment from '../../assets/ArtistPage/comment.svg';
 import save from '../../assets/ArtistPage/save.svg';
 import saveFilled from '../../assets/ArtistPage/saveFilled.svg';
-import locationIcon from '../../assets/symbol/locationIcon.svg';
+import locationIcon from '../../assets/symbol/locationIcon_white.svg';
 
 
 const FanPostList = ({ posts }) => {
@@ -91,13 +91,6 @@ const FanPostList = ({ posts }) => {
             </div>
           </div>
 
-          {post.location && (
-            <div className="fan-location">
-              <img src={locationIcon} alt="location" className="location-icon" />
-              {post.location}
-            </div>
-          )}
-
           <div className="fan-text">
             {showTranslated[index] && post.translatedText
               ? post.translatedText
@@ -131,6 +124,13 @@ const FanPostList = ({ posts }) => {
                   <img src={img} alt={`post-${idx}`} />
                 </div>
               ))}
+            </div>
+          )}
+
+          {post.location && (
+            <div className="fan-location">
+              <img src={locationIcon} alt="location" className="location-icon" />
+              {post.location}
             </div>
           )}
 

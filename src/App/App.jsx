@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
+import Layout from '../components/Layout';
 import WidthToggle from '../components/WidthToggle';
 
 // 온보딩 페이지
@@ -14,7 +15,6 @@ import Loading from '../pages/onboarding/Loading';
 import Step7 from '../pages/onboarding/Step7_Complete';
 
 // 메인 앱
-import Layout from '../components/Layout';
 import Home from '../pages/Home';
 import Music from '../pages/Music';
 import Shop from '../pages/Shop';
@@ -49,64 +49,66 @@ import VoteComplete from '../pages/artistPage/vote/VoteComplete';
 const App = () => {
   return (
     <>
-      {/* 항상 좌측 상단에 보일 UI */}
-      <WidthToggle /> 
+      <WidthToggle />
       <Routes>
-
-        {/* 진입 시 온보딩으로 이동 */}
-        <Route path="/" element={<Step1 />} />
-        {/* 온보딩 경로 설정 */}
-        <Route path="/onboarding">
+        {/* Layout 공통 */}
+        <Route path="/" element={<Layout />}>
+          {/* 온보딩 경로들 */}
           <Route index element={<Step1 />} />
-          <Route path="pin" element={<Step2 />} />
-          <Route path="password" element={<Step3 />} />
-          <Route path="nickname" element={<Step4 />} />
-          <Route path="language" element={<Step5 />} />
-          <Route path="addartists" element={<Step6 />} />
-          <Route path="loading" element={<Loading />} />
-          <Route path="complete" element={<Step7 />} />
-        </Route>
-
-        {/* 메인 앱 */}
-        <Route path="/main" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="music" element={<Music />} />
-          <Route path="shop" element={<Shop />}>
-            <Route index element={<GDShop />} />
-            <Route path="gdshop" element={<GDShop />} />
-            <Route path="adpshop" element={<ADPShop />} />
-            <Route path="riizeshop" element={<RiizeShop />} />
-            <Route path="blackpinkshop" element={<BPShop />} />
+          <Route path="onboarding">
+            <Route index element={<Step1 />} />
+            <Route path="pin" element={<Step2 />} />
+            <Route path="password" element={<Step3 />} />
+            <Route path="nickname" element={<Step4 />} />
+            <Route path="language" element={<Step5 />} />
+            <Route path="addartists" element={<Step6 />} />
+            <Route path="loading" element={<Loading />} />
+            <Route path="complete" element={<Step7 />} />
           </Route>
-          <Route path="shop/product/:productId" element={<ProductDetail />} />
-          <Route path="shop/payment" element={<Payment />} />
-          <Route path="mypage" element={<MyPage />} />
-          <Route path="mypage/ticket" element={<Ticket />} />
-          <Route path="mypage/point" element={<PointCard />} />
-          <Route path="mypage/following" element={<Following />} />
-          <Route path="message/room/:userId" element={<MessageRoom />} />
-          <Route path="message" element={<Message />} />
-          <Route path="moreArtist" element={<MoreArtist />} />
-          <Route path="artistPage/:artistId" element={<ArtistPage />}>
-            <Route index element={<Media />} />
-            <Route path="media" element={<Media />} />
-            <Route path="notice" element={<Notice />} />
-            <Route path="vote" element={<Vote />} />
-            <Route path="fan" element={<Fan />} >
-              <Route index element={<FanAll />} />
-              <Route path="following" element={<FanFollowing />} />
+
+          {/* 메인 앱 */}
+          <Route path="main">
+            <Route index element={<Home />} />
+            <Route path="music" element={<Music />} />
+            <Route path="shop" element={<Shop />}>
+              <Route index element={<GDShop />} />
+              <Route path="gdshop" element={<GDShop />} />
+              <Route path="adpshop" element={<ADPShop />} />
+              <Route path="riizeshop" element={<RiizeShop />} />
+              <Route path="blackpinkshop" element={<BPShop />} />
             </Route>
-          </Route>
-          <Route path="artistPage/:artistId/media/:mediaId" element={<MediaDetailLive />} />
-          <Route path="artistPage/:artistId/post/:postId" element={<PostDetail />} />
-          <Route path="artistPage/:artistId/write" element={<PostWrite />} />
+            <Route path="shop/product/:productId" element={<ProductDetail />} />
+            <Route path="shop/payment" element={<Payment />} />
+            <Route path="mypage" element={<MyPage />} />
+            <Route path="mypage/ticket" element={<Ticket />} />
+            <Route path="mypage/point" element={<PointCard />} />
+            <Route path="mypage/following" element={<Following />} />
+            <Route path="message/room/:userId" element={<MessageRoom />} />
+            <Route path="message" element={<Message />} />
+            <Route path="moreArtist" element={<MoreArtist />} />
 
-          <Route path="artistPage/:artistId/vote/list/" element={<VoteList />} />
-          <Route path="artistPage/:artistId/vote/result/" element={<VoteResult />} />
-          <Route path="artistPage/:artistId/vote/complete/" element={<VoteComplete />} />
+            <Route path="artistPage/:artistId" element={<ArtistPage />}>
+              <Route index element={<Media />} />
+              <Route path="media" element={<Media />} />
+              <Route path="notice" element={<Notice />} />
+              <Route path="vote" element={<Vote />} />
+              <Route path="fan" element={<Fan />}>
+                <Route index element={<FanAll />} />
+                <Route path="following" element={<FanFollowing />} />
+              </Route>
+            </Route>
+
+            <Route path="artistPage/:artistId/media/:mediaId" element={<MediaDetailLive />} />
+            <Route path="artistPage/:artistId/post/:postId" element={<PostDetail />} />
+            <Route path="artistPage/:artistId/write" element={<PostWrite />} />
+
+            <Route path="artistPage/:artistId/vote/list/" element={<VoteList />} />
+            <Route path="artistPage/:artistId/vote/result/" element={<VoteResult />} />
+            <Route path="artistPage/:artistId/vote/complete/" element={<VoteComplete />} />
+          </Route>
         </Route>
 
-        {/* 존재하지 않는 경로 → 온보딩으로 */}
+        {/* 잘못된 경로 → 온보딩으로 */}
         <Route path="*" element={<Navigate to="/onboarding" replace />} />
       </Routes>
     </>

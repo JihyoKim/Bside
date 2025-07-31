@@ -1,6 +1,8 @@
 import './Lyrics.css';
 
 const originalLyrics = `
+
+♪
 Oh, oh
 Oh
 
@@ -101,6 +103,8 @@ Bang— (Oh, oh)
 `;
 
 const translatedLyrics = `
+
+♪
 Oh, oh
 Oh
 

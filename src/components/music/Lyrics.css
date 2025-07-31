@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 80px 0 90px;
+  padding: 80px 0 var(--btm-nav);
 
   margin-left: 50%;
   margin-right: auto;
@@ -66,7 +66,7 @@
     flex: 1;
     overflow: hidden; /* 여기서 스크롤 안 함 */
     position: relative;
-    padding: 0px 4px 30px; 
+    padding: 0px 4px; 
     color: #fff;
     line-height: 2;
 
@@ -75,7 +75,7 @@
   .lyrics-scroll-inner {
     height: 100%;
     overflow-y: auto;
-    padding: 20px;
+    padding: 30px 20px 20px;
   }
   
   /* 스크롤바 */
@@ -90,7 +90,6 @@
 
   .lyrics-wrapper {
     white-space: pre-wrap;
-    padding: 20px;
   }
   
   .lyric-pair {

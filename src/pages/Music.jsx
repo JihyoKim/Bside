@@ -190,7 +190,7 @@ const Music = () => {
 {/* 스트리밍 미션 탭 */}
 <div className="streaming-mission-container">
         <div className="mission-tab" onClick={() => setIsMissionOpen((prev) => !prev)}>
-          <span>스트리밍 미션</span>
+          <span>등록된 앨범</span>
           <img src={isMissionOpen ? downIconGray : upIconGray} alt="toggle" />
         </div>
 
