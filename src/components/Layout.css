@@ -16,7 +16,6 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-bottom: calc(var(--btm-nav) + env(safe-area-inset-bottom));
   -webkit-overflow-scrolling: touch;
   position: relative;
   min-height: 0;
@@ -26,12 +25,6 @@
   border: 1px solid red; /* 여백 디버깅 */
 }
 
-.layout-scroll {
-  padding-bottom: env(safe-area-inset-bottom, var(--btm-nav));
-}
-.layout-container.no-bottom-nav .layout-scroll {
-  padding-bottom: 0 !important;
-}
 
   .layout-scroll::-webkit-scrollbar,
   .side-menu::-webkit-scrollbar {
