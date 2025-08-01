@@ -16,7 +16,7 @@ const NoticeSched = ({ schedule }) => {
 
   return (
     <div className="notice-sched-container">
-      <h4 className="sched-title">Timelines</h4>
+      <h4 className="sched-title">Timeline</h4>
       <div className="sched-date">{dateStr}</div>
 
       <div className="sched-list">

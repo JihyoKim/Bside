@@ -26,5 +26,5 @@
     position: relative;  /* 기본 absolute를 relative로 */
     margin-top: 16px;
     text-align: center;     /* 또는 center, 원하는 위치 */
-    padding-left: 8px;    /* 카드와 정렬 맞추기 위함 */
+    /* padding-left: 8px; */
 }

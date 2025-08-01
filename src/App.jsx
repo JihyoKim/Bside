@@ -1,49 +1,49 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-import Layout from '../components/Layout';
-import WidthToggle from '../components/WidthToggle';
+import Layout from './components/Layout';
+import WidthToggle from './components/WidthToggle';
 
 // 온보딩 페이지
-import Step1 from '../pages/onboarding/Step1_Account';
-import Step2 from '../pages/onboarding/Step2_Pin';
-import Step3 from '../pages/onboarding/Step3_Password';
-import Step4 from '../pages/onboarding/Step4_Nickname';
-import Step5 from '../pages/onboarding/Step5_Language';
-import Step6 from '../pages/onboarding/Step6_AddArtists';
-import Loading from '../pages/onboarding/Loading';
-import Step7 from '../pages/onboarding/Step7_Complete';
+import Step1 from './pages/onboarding/Step1_Account';
+import Step2 from './pages/onboarding/Step2_Pin';
+import Step3 from './pages/onboarding/Step3_Password';
+import Step4 from './pages/onboarding/Step4_Nickname';
+import Step5 from './pages/onboarding/Step5_Language';
+import Step6 from './pages/onboarding/Step6_AddArtists';
+import Loading from './pages/onboarding/Loading';
+import Step7 from './pages/onboarding/Step7_Complete';
 
 // 메인 앱
-import Home from '../pages/Home';
-import Music from '../pages/Music';
-import Shop from '../pages/Shop';
-import ProductDetail from '../pages/shopPage/ProductDetail';
-import Payment from '../pages/shopPage/Payment';
-import GDShop from '../pages/shopPage/GDShop';
-import ADPShop from '../pages/shopPage/ADPShop';
-import RiizeShop from '../pages/shopPage/RiizeShop';
-import BPShop from '../pages/shopPage/BPShop';
-import MyPage from '../pages/MyPage';
-import ArtistPage from '../pages/ArtistPage';
-import Media from '../pages/artistPage/Media';
-import MediaDetailLive from '../pages/artistPage/MediaDetailLive';
-import Notice from '../pages/artistPage/Notice';
-import Vote from '../pages/artistPage/Vote';
-import Fan from '../pages/artistPage/Fan';
-import FanAll from '../pages/artistPage/FanAll';
-import FanFollowing from '../pages/artistPage/FanFollowing';
-import PostDetail from '../pages/artistPage/PostDetail';
-import PostWrite from '../pages/artistPage/PostWrite';
-import MoreArtist from '../pages/MoreArtist';
-import Ticket from '../pages/myPage/Ticket';
-import PointCard from '../pages/myPage/PointCard';
-import Following from '../pages/myPage/Following';
-import MessageRoom from '../pages/message/MessageRoom';
-import Message from '../pages/message/Message';
-import VoteList from '../pages/artistPage/vote/VoteList';
-import VoteResult from '../pages/artistPage/vote/VoteResult';
-import VoteComplete from '../pages/artistPage/vote/VoteComplete';
+import Home from './pages/Home';
+import Music from './pages/Music';
+import Shop from './pages/Shop';
+import ProductDetail from './pages/shopPage/ProductDetail';
+import Payment from './pages/shopPage/Payment';
+import GDShop from './pages/shopPage/GDShop';
+import ADPShop from './pages/shopPage/ADPShop';
+import RiizeShop from './pages/shopPage/RiizeShop';
+import BPShop from './pages/shopPage/BPShop';
+import MyPage from './pages/MyPage';
+import ArtistPage from './pages/ArtistPage';
+import Media from './pages/artistPage/Media';
+import MediaDetailLive from './pages/artistPage/MediaDetailLive';
+import Notice from './pages/artistPage/Notice';
+import Vote from './pages/artistPage/Vote';
+import Fan from './pages/artistPage/Fan';
+import FanAll from './pages/artistPage/FanAll';
+import FanFollowing from './pages/artistPage/FanFollowing';
+import PostDetail from './pages/artistPage/PostDetail';
+import PostWrite from './pages/artistPage/PostWrite';
+import MoreArtist from './pages/MoreArtist';
+import Ticket from './pages/myPage/Ticket';
+import PointCard from './pages/myPage/PointCard';
+import Following from './pages/myPage/Following';
+import MessageRoom from './pages/message/MessageRoom';
+import Message from './pages/message/Message';
+import VoteList from './pages/artistPage/vote/VoteList';
+import VoteResult from './pages/artistPage/vote/VoteResult';
+import VoteComplete from './pages/artistPage/vote/VoteComplete';
 
 
 const App = () => {

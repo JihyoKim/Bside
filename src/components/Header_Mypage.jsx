@@ -16,7 +16,7 @@ const Header_Mypage = ({ scrolledBlack = false }) => {
 
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
   const toggleAlarm = () => setIsAlarmOpen(prev => !prev);
-  const goToMessage = () => navigate('message');
+  const goToMessage = () => navigate('/main/message');
 
   return (
     <>
