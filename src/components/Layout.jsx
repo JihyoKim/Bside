@@ -110,29 +110,7 @@ const Layout = () => {
     return () => target.removeEventListener('resize', setVh);
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      const scroll = document.querySelector('.layout-scroll');
-      if (!scroll) return;
-  
-      // 모바일에서만 실행
-      const isMobile = document.documentElement.classList.contains('mobile-device');
-      if (!isMobile) return;
-  
-      const viewportHeight = window.visualViewport?.height || window.innerHeight;
-      const layoutHeight = scroll.offsetHeight;
-  
-      // 키보드가 올라왔을 때 padding-bottom 제거
-      if (viewportHeight < layoutHeight - 100) {
-        scroll.style.paddingBottom = '0px';
-      } else {
-        scroll.style.paddingBottom = 'var(--btm-nav)';
-      }
-    };
-  
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+
   
 
   // ✅ 레이아웃 클래스 정리
@@ -143,7 +121,7 @@ const Layout = () => {
   ].filter(Boolean).join(' ');
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column', position: 'relative' }}>
+    <div className="layout-wrapper">
       {HeaderComponent && <HeaderComponent />}
       <div className={layoutClass}>
         <div className="layout-scroll">
