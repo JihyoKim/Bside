@@ -50,12 +50,13 @@ const aespaData = {
     // ✅ Media 콘텐츠 목록
     mediaThumbnails: [
       {
-        mediaId: 'live-giselle',
+        mediaId: 'dirtywork-giselle',
         img: media1,
-        title: 'aespa 에스파 카리나 생방송 라이브',
+        title: "aespa 에스파 'Dirty Work' Visualizer",
         uploader: 'aespa',
-        live: true,
-        viewers: '5.3만 명 시청 중'
+        live: false,
+        time: '3:00',
+        views: '120만회 · 1일 전'
       },
       {
         mediaId: 'dirtywork-mv',

@@ -59,7 +59,7 @@ const Media = () => {
             className="media-item"
             key={idx}
             onClick={() => {
-              if (item.mediaId === 'live-giselle') {
+              if (item.mediaId === 'live-rose') {
                 navigate(`/main/artistPage/${artistId}/media/${item.mediaId}`);
               } else if (item.link) {
                 window.open(item.link, '_blank');

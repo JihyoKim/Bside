@@ -62,7 +62,7 @@ const MediaDetailLive = () => {
         <div className="left-info">
           <img src={aespaLogo} alt="aespa" className="aespa-logo" />
           <div className="text-box">
-            <div className="group-name">에스파</div>
+            <div className="group-name">블랙핑크</div>
             <div className="viewer-count">
               5.3만 시청 중
               <img src={redBall} alt="live" className="live-dot" />

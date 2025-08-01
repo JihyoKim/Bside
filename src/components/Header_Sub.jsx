@@ -25,7 +25,7 @@ const Header_Sub = () => {
     } else if (
       location.pathname === '/main/music' ||
       (location.pathname.startsWith('/main/shop') && !location.pathname.startsWith('/main/shop/product')) ||
-      (location.pathname.startsWith('/main/artistPage') && location.pathname !== '/main/artistPage/aespa/media/live-giselle')
+      (location.pathname.startsWith('/main/artistPage') && location.pathname !== '/main/artistPage/blackpink/media/live-rose')
     ) {
       navigate('/main');
     } else if (

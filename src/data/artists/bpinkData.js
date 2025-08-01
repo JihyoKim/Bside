@@ -49,13 +49,12 @@ const bpinkData = {
     // ✅ Media 콘텐츠 목록
     mediaThumbnails: [
       {
-        mediaId: 'media1',
+        mediaId: 'live-rose',
         img: media1,
-        title: 'ROSÉ(로제) - APT. (Band VER.) (With. 이영지)',
-        uploader: 'KBSKpop',
-        live: false,
-        time: '2:53',
-        viewers: '4240만회 · 1일 전',
+        title: 'BLACKPINK 블랙핑크 로제 라이브',
+        uploader: 'BLACKPINK',
+        live: true,
+        viewers: '5.3만 명 시청 중',
         link: '',
       },
       {
