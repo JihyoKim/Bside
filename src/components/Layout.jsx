@@ -103,11 +103,23 @@ const Layout = () => {
       const vh = (window.visualViewport?.height || window.innerHeight) * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
-
+  
     setVh();
+  
     const target = window.visualViewport || window;
     target.addEventListener('resize', setVh);
-    return () => target.removeEventListener('resize', setVh);
+    target.addEventListener('scroll', setVh); // 💡 키보드 닫힌 직후에도
+    window.addEventListener('focusin', setVh);
+    window.addEventListener('focusout', () => {
+      setTimeout(setVh, 100); // 키보드 닫힘 후 복구 지연 대응
+    });
+  
+    return () => {
+      target.removeEventListener('resize', setVh);
+      target.removeEventListener('scroll', setVh);
+      window.removeEventListener('focusin', setVh);
+      window.removeEventListener('focusout', setVh);
+    };
   }, []);
   
 
