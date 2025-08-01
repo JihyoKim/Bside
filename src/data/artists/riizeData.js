@@ -168,7 +168,7 @@ const alldayData = {
       date: '2025-07-26',
       type: 'anniversary',
       typeName: '기념일',
-      title: "(자동 추가) 2025-07-28 anniversary",
+      title: "2025-07-28 anniversary",
       time: "",
       artists: ['RIIZE']
     },
@@ -176,7 +176,7 @@ const alldayData = {
       date: '2025-07-29',
       type: 'event',
       typeName: '공연/행사',
-      title: '(자동 추가) 2025-08-02 content',
+      title: '2025-08-02 content',
       time: '',
       artists: ['RIIZE']
     },
@@ -184,7 +184,7 @@ const alldayData = {
       date: '2025-08-04',
       type: 'media',
       typeName: '방송 미디어',
-      title: '(자동 추가) 2025-08-04 media',
+      title: '2025-08-04 media',
       time: '',
       artists: ['RIIZE']
     },
@@ -192,7 +192,7 @@ const alldayData = {
       date: '2025-08-08',
       type: 'media',
       typeName: '방송 미디어',
-      title: '(자동 추가) 2025-08-04 content',
+      title: '2025-08-04 content',
       time: '',
       artists: ['RIIZE']
     },
@@ -200,7 +200,7 @@ const alldayData = {
       date: '2025-08-08',
       type: 'content',
       typeName: '콘텐츠',
-      title: '(자동 추가) 2025-08-05 media',
+      title: '2025-08-05 media',
       time: '',
       artists: ['RIIZE']
     },
@@ -208,7 +208,7 @@ const alldayData = {
         date: '2025-08-09',
         type: 'media',
         typeName: '방송 미디어',
-        title: '(자동 추가) 2025-08-05 media',
+        title: '2025-08-05 media',
         time: '',
         artists: ['RIIZE']
       },
@@ -216,7 +216,7 @@ const alldayData = {
         date: '2025-08-10',
         type: 'event',
         typeName: '공연/행사',
-        title: '(자동 추가) 2025-08-05 media',
+        title: '2025-08-05 media',
         time: '',
         artists: ['RIIZE']
       },
@@ -224,7 +224,7 @@ const alldayData = {
       date: '2025-08-10',
       type: 'event',
       typeName: '공연/행사',
-      title: '(자동 추가) 2025-08-06 media',
+      title: '2025-08-06 media',
       time: '',
       artists: ['RIIZE']
     },
@@ -232,7 +232,7 @@ const alldayData = {
       date: '2025-08-15',
       type: 'media',
       typeName: '방송 미디어',
-      title: '(자동 추가) 2025-08-15 media',
+      title: '2025-08-15 media',
       time: '',
       artists: ['RIIZE']
     },
@@ -240,7 +240,7 @@ const alldayData = {
         date: '2025-08-15',
         type: 'media',
         typeName: '방송 미디어',
-        title: '(자동 추가) 2025-08-15 media',
+        title: '2025-08-15 media',
         time: '',
         artists: ['RIIZE']
       },
@@ -248,7 +248,7 @@ const alldayData = {
         date: '2025-08-15',
         type: 'media',
         typeName: '방송 미디어',
-        title: '(자동 추가) 2025-08-15 media',
+        title: '2025-08-15 media',
         time: '',
         artists: ['RIIZE']
       },
@@ -256,7 +256,7 @@ const alldayData = {
         date: '2025-08-20',
         type: 'media',
         typeName: '방송 미디어',
-        title: '(자동 추가) 2025-08-20 media',
+        title: '2025-08-20 media',
         time: '',
         artists: ['RIIZE']
       },
@@ -264,7 +264,7 @@ const alldayData = {
         date: '2025-08-20',
         type: 'event',
         typeName: '공연/행사',
-        title: '(자동 추가) 2025-08-20 media',
+        title: '2025-08-20 media',
         time: '',
         artists: ['RIIZE']
       },
@@ -272,7 +272,7 @@ const alldayData = {
         date: '2025-08-21',
         type: 'content',
         typeName: '콘텐츠',
-        title: '(자동 추가) 2025-08-20 media',
+        title: '2025-08-20 media',
         time: '',
         artists: ['RIIZE']
       },

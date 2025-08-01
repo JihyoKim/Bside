@@ -283,7 +283,7 @@ const aespaData = {
       date: '2025-07-28',
       type: 'media',
       typeName: '방송 미디어',
-      title: '(자동 추가) 2025-07-28 media',
+      title: '2025-07-28 media',
       time: '',
       artists: ['aespa']
     },
@@ -291,7 +291,7 @@ const aespaData = {
       date: '2025-07-29',
       type: 'content',
       typeName: '콘텐츠',
-      title: '(자동 추가) 2025-07-29 content',
+      title: '2025-07-29 content',
       time: '',
       artists: ['aespa']
     },
@@ -299,7 +299,7 @@ const aespaData = {
       date: '2025-08-01',
       type: 'media',
       typeName: '방송 미디어',
-      title: '(자동 추가) 2025-08-01 media',
+      title: '2025-08-01 media',
       time: '',
       artists: ['aespa']
     },
@@ -307,7 +307,7 @@ const aespaData = {
       date: '2025-08-03',
       type: 'content',
       typeName: '콘텐츠',
-      title: '(자동 추가) 2025-08-03 content',
+      title: '2025-08-03 content',
       time: '',
       artists: ['aespa']
     },
@@ -315,7 +315,7 @@ const aespaData = {
       date: '2025-08-04',
       type: 'media',
       typeName: '방송 미디어',
-      title: '(자동 추가) 2025-08-04 media',
+      title: '2025-08-04 media',
       time: '',
       artists: ['aespa']
     },
@@ -331,7 +331,7 @@ const aespaData = {
       date: '2025-08-19',
       type: 'event',
       typeName: '공연/행사',
-      title: '(자동 추가) 2025-08-19 event',
+      title: '2025-08-19 event',
       time: '',
       artists: ['aespa']
     },
@@ -339,7 +339,7 @@ const aespaData = {
       date: '2025-08-19',
       type: 'event',
       typeName: '공연/행사',
-      title: '(자동 추가) 2025-08-19 event2',
+      title: '2025-08-19 event2',
       time: '',
       artists: ['aespa']
     },
@@ -347,7 +347,7 @@ const aespaData = {
       date: '2025-08-19',
       type: 'event',
       typeName: '공연/행사',
-      title: '(자동 추가) 2025-08-19 event3',
+      title: '2025-08-19 event3',
       time: '',
       artists: ['aespa']
     },

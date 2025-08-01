@@ -168,7 +168,7 @@ const alldayData = {
       date: '2025-08-01',
       type: 'event',
       typeName: '공연/행사',
-      title: "(자동 추가) 2025-08-01 content",
+      title: "2025-08-01 content",
       time: "오후 21:00",
       artists: ['ALLDAY PROJECT']
     },
@@ -176,7 +176,7 @@ const alldayData = {
       date: '2025-08-02',
       type: 'event',
       typeName: '공연/행사',
-      title: '(자동 추가) 2025-08-02 content',
+      title: '2025-08-02 content',
       time: '',
       artists: ['ALLDAY PROJECT']
     },
@@ -184,7 +184,7 @@ const alldayData = {
       date: '2025-08-03',
       type: 'content',
       typeName: '콘텐츠',
-      title: '(자동 추가) 2025-08-03 media',
+      title: '2025-08-03 media',
       time: '',
       artists: ['ALLDAY PROJECT']
     },
@@ -192,7 +192,7 @@ const alldayData = {
       date: '2025-08-04',
       type: 'anniversary',
       typeName: '기념일',
-      title: '(자동 추가) 2025-08-04 content',
+      title: '2025-08-04 content',
       time: '',
       artists: ['ALLDAY PROJECT']
     },
@@ -200,7 +200,7 @@ const alldayData = {
       date: '2025-08-05',
       type: 'media',
       typeName: '방송 미디어',
-      title: '(자동 추가) 2025-08-05 media',
+      title: '2025-08-05 media',
       time: '',
       artists: ['ALLDAY PROJECT']
     },
@@ -208,7 +208,7 @@ const alldayData = {
         date: '2025-08-05',
         type: 'media',
         typeName: '방송 미디어',
-        title: '(자동 추가) 2025-08-05 media',
+        title: '2025-08-05 media',
         time: '',
         artists: ['ALLDAY PROJECT']
       },
@@ -216,7 +216,7 @@ const alldayData = {
         date: '2025-08-05',
         type: 'event',
         typeName: '공연/행사',
-        title: '(자동 추가) 2025-08-05 media',
+        title: '2025-08-05 media',
         time: '',
         artists: ['ALLDAY PROJECT']
       },
@@ -224,7 +224,7 @@ const alldayData = {
       date: '2025-08-06',
       type: 'media',
       typeName: '방송 미디어',
-      title: '(자동 추가) 2025-08-06 media',
+      title: '2025-08-06 media',
       time: '',
       artists: ['ALLDAY PROJECT']
     },
@@ -232,7 +232,7 @@ const alldayData = {
       date: '2025-08-16',
       type: 'anniversary',
       typeName: '기념일',
-      title: '(자동 추가) 2025-08-16 event3',
+      title: '2025-08-16 event3',
       time: '',
       artists: ['ALLDAY PROJECT']
     },

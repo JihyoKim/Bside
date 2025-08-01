@@ -8,7 +8,7 @@ import VoteList from '../../components/artistPage/VoteList';
 const Vote = () => {
   return (
     <div className="event-container">
-      <h2 className="voteTitle">투표목록</h2>
+      <h2 className="voteTitle">투표 목록</h2>
       <VoteBanner />
       <VoteMain />
       <VoteList />

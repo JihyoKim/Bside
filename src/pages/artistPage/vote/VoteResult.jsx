@@ -22,11 +22,19 @@ const VoteResult = () => {
   const [animatedPercents, setAnimatedPercents] = useState([0, 0, 0, 0]);
 
   useEffect(() => {
+    const maxPercent = Math.max(...voteResults.map(item => item.percent));
+    const visualPercents = voteResults.map(item => {
+      const normalized = (item.percent / maxPercent) * 65;
+      // 👉 최소 20%, 최대 65%로 보정
+      return Math.max(20, normalized);
+    });
+
     const timeout = setTimeout(() => {
-      setAnimatedPercents(voteResults.map(item => item.percent));
+      setAnimatedPercents(visualPercents);
     }, 100);
+
     return () => clearTimeout(timeout);
-  }, [voteResults]); // ✅ 이제 안전하게 사용 가능
+  }, [voteResults]);
 
   return (
     <div className="vote-container">
@@ -47,7 +55,7 @@ const VoteResult = () => {
                     className="vote-bar1"
                     style={{
                       width: `${animatedPercents[index]}%`,
-                      backgroundColor: selectedIndex === index ? '#FFA3EB' : '#FFCFF5'
+                      backgroundColor: selectedIndex === index ? '#FFA3EB' : 'rgba(255, 163, 235, 0.6)'
                     }}
                   ></div>
                 </div>
