@@ -27,7 +27,7 @@ const ChatRoomItem = ({ chatRoom, onClick }) => {
         </div>
       </div>
       
-      <div className="chat-room-content">
+      <div className="chat-room-content guide">
         <div className="chat-room-header">
           <div className="nickname">{nickname}</div>
           <div className="last-message-time">{lastMessageTime}</div>

@@ -32,7 +32,7 @@ const ProductBottomBar = ({
 
         {/* 구매하기 버튼 */}
         <button 
-          className={`purchase-button ${soldOut ? 'sold-out' : ''}`}
+          className={`purchase-button guide ${soldOut ? 'sold-out' : ''}`}
           onClick={onPurchaseClick}
           disabled={soldOut}
         >

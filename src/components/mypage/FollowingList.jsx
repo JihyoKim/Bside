@@ -56,7 +56,7 @@ const FollowingList = ({ data }) => {
               )}
             </div>
             {/* a 태그 제거하고 div만 사용 */}
-            <div className="dm-button" onClick={() => handleDMClick(user)}>
+            <div className="dm-button guide" onClick={() => handleDMClick(user)}>
             DM
             </div>
           </div>

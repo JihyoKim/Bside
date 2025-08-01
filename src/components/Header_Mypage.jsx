@@ -4,7 +4,7 @@ import './Header.css';
 import SideMenu from './SideMenu';
 import AlarmDetail from './AlarmDetail';
 
-import menuIcon from '../assets/symbol/white/menu.png';   
+import menuIcon from '../assets/symbol/white/menu.svg';   
 import alarmIcon from '../assets/symbol/alarmIcon_white_pink.svg'; 
 import messageIcon from '../assets/symbol/message_white.svg'; 
 
@@ -22,17 +22,23 @@ const Header_Mypage = ({ scrolledBlack = false }) => {
     <>
       <header className={`fixed-header ${scrolledBlack ? 'black' : 'pink'}`}>
         <div className="header-left">
+          <div className="guide">
           <img
             src={menuIcon}
             alt="menu"
             className="menu-icon"
             onClick={toggleMenu}
           />
+          </div>
         </div>
         <div className="header-right">
           <div className="icon-badge-wrapper">
-            <img src={messageIcon} alt="message" className="message-icon" onClick={goToMessage} />
-            <img src={alarmIcon} alt="alarm" className="alarm-icon" onClick={toggleAlarm} />
+            <span className="guide">
+              <img src={messageIcon} alt="message" className="message-icon" onClick={goToMessage} />
+            </span>
+            <span className="guide">
+              <img src={alarmIcon} alt="alarm" className="alarm-icon " onClick={toggleAlarm} />
+            </span>
           </div>
         </div>
       </header>

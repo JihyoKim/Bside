@@ -1,27 +1,36 @@
 .BottomNav {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    max-width: var(--max-width);
-    min-width: 320px;
-    height: var(--btm-nav);
-    background-color: #000;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 1000;
-    border-top: 1px solid #222;
-  }
-  
-  .BottomNav button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-  }
-  
-  .BottomNav img {
-    width: 100%;
-    padding: 0 20px;
-    padding-bottom: var(--app-btm-nav);
-  }
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  max-width: var(--max-width);
+  min-width: 320px;
+  height: var(--btm-nav);
+  background-color: #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+  border-top: 1px solid #222;
+}
+
+.BottomNav button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BottomNav img {
+  width: auto; 
+  height: 25px;
+  margin-bottom: 4px;
+}
+
+.BottomNav button span {
+  font-size: 10px;
+  color: #ccc;
+  line-height: 1;
+}

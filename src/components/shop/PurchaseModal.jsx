@@ -29,7 +29,7 @@ const PurchaseModal = ({ product, onClose, onConfirm }) => {
           <div className="quantity-controls">
             <button onClick={() => setQuantity(Math.max(1, quantity - 1))}>-</button>
             <span>{quantity}</span>
-            <button onClick={() => setQuantity(quantity + 1)}>+</button>
+            <button className=" guide" onClick={() => setQuantity(quantity + 1)}>+</button>
           </div>
         </div>
 
@@ -37,7 +37,7 @@ const PurchaseModal = ({ product, onClose, onConfirm }) => {
           <div className="total-price">
             총 ₩ {(product.price * quantity).toLocaleString()}
           </div>
-          <button className="confirm-button" onClick={handleConfirm}>
+          <button className="confirm-button guide" onClick={handleConfirm}>
             구매하기
           </button>
         </div>

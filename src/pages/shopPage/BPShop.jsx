@@ -141,7 +141,9 @@ const BPShop = () => {
                   <button
                     key={btn.name}
                     disabled={false}
-                    className={`tag-btn ${isActive ? 'active' : ''}`}
+                    className={`tag-btn ${
+                      isActive ? 'active' : btn.disabled ? '' : 'guide'
+                    }`}
                     style={{
                       borderColor: tagColor,
                       color: isActive ? activeFontColor : fontColor,
@@ -177,9 +179,9 @@ const BPShop = () => {
           </h2>
         </div>
         <div className="product-grid">
-          {products.map((item) => (
-            <div 
-              className="product-card clickable" 
+          {products.map((item, index) => (
+            <div
+              className={`product-card clickable ${index === 0 ? 'guide' : ''}`}
               key={item.id}
               onClick={() => handleProductClick(item.id)}
             >

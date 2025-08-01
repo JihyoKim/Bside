@@ -9,6 +9,8 @@ import ArtistAD from '../components/main/ArtistAD';
 import EventBanner from '../components/main/EventBanner';
 import MoreArtistBanner from '../components/main/MoreArtistBanner';
 import ChatbotEmbed from '../components/chatBot/ChatbotEmbed';
+import GuideToggleBtn from '../components/GuideToggleBtn'; 
+
 
 const Home = () => {
   return (
@@ -23,6 +25,7 @@ const Home = () => {
         <ArtistAD />
         <MoreArtistBanner />
         <ChatbotEmbed />
+        <GuideToggleBtn />
       </div>
     </div>
   );

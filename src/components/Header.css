@@ -71,8 +71,8 @@
   margin: 5px;
 }
 
-.message-icon {
-  padding-right: 16px;
+.fixed-header .alarm-icon {
+  padding-left: 16px;
 }
 
 .fixed-header .menu-icon {

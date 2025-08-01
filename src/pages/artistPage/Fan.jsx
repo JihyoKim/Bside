@@ -26,14 +26,14 @@ const Fan = () => {
       <div className="fan-tab">
         <Link
           to=""
-          className={isAllActive ? 'active' : ''}
+          className={isAllActive ? 'active' : 'guide'}
           style={isAllActive ? { background: tabColor, color: 'white' } : {}}
         >
           전체
         </Link>
         <Link
           to="following"
-          className={isFollowingActive ? 'active' : ''}
+          className={isFollowingActive ? 'active' : 'guide'}
           style={isFollowingActive ? { background: tabColor, color: 'white' } : {}}
         >
           팔로잉

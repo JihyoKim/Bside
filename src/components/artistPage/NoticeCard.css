@@ -10,7 +10,7 @@
     padding: 0 16px;
   }
   
-.notice-card {
+  .notice-card-wrapper .notice-card {
   width: 348px;              /* 고정 너비 */
   height: 104px;
   flex-shrink: 0;            /* 줄어들지 않게 */
@@ -25,18 +25,18 @@
 
 
 
-  .notice-date {
+.notice-card-wrapper .notice-date {
     font-size: 13px;
     opacity: 0.8;
   }
   
-  .notice-title {
+  .notice-card-wrapper .notice-title {
     font-size: clamp(12px, 4vw, 15px);
     font-weight: bold;
     margin: 10px 0 4px;
   }
   
-  .notice-description {
+  .notice-card-wrapper .notice-description {
     font-size: 14px;
     line-height: 1.3;
   }

@@ -37,12 +37,14 @@ const Media = () => {
         >
           {newSlides.map((img, idx) => (
             <SwiperSlide key={idx} className="new-slide">
+              <span className="guide">
               <img
                 src={img}
                 alt={`new${idx + 1}`}
                 className="new-slide-img"
                 onClick={() => setActiveImage(img)}
               />
+              </span>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -69,7 +71,9 @@ const Media = () => {
             }}
             style={{ cursor: 'pointer' }}
           >
-            <div className="media-thumbnail">
+            <div
+              className={`media-thumbnail${item.mediaId?.includes('live') ? ' guide' : ''}`}
+            >
               <img src={item.img} alt={item.title} />
               {item.live && <span className="live-badge">Live</span>}
               {item.time && <span className="time-badge">{item.time}</span>}

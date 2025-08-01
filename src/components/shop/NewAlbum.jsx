@@ -67,7 +67,7 @@ const NewAlbum = () => {
         <h2>NEW ALBUM</h2>
       </div>
 
-      <div className="shop-slider-container">
+      <div className="shop-slider-container guide2">
         <Swiper
           modules={[Autoplay, Pagination, Navigation]}
           autoplay={{ delay: 3000, disableOnInteraction: false }}

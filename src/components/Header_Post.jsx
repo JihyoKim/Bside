@@ -70,21 +70,32 @@ const handleGoBack = () => {
         </div>
 
         <div className="header-center">
-        <div className="header-title" onClick={() => setShowArtistModal(true)}>
-          {displayName}
-          {!isPostDetail && (
-            <img
-              src={down}
-              alt="down"
-              className={`down-btn ${showArtistModal && !isClosing ? 'rotated' : ''}`}
-            />
-          )}
-        </div>
+          <div
+            className="header-title"
+            onClick={() => {
+              if (!isPostDetail) setShowArtistModal(true);
+            }}
+            style={{
+              pointerEvents: !isPostDetail ? 'auto' : 'none',
+              cursor: !isPostDetail ? 'pointer' : 'default'
+            }}
+          >
+            {displayName}
+            {!isPostDetail && (
+              <span className="guide">
+                <img
+                  src={down}
+                  alt="down"
+                  className={`down-btn ${showArtistModal && !isClosing ? 'rotated' : ''}`}
+                />
+              </span>
+            )}
+          </div>
         </div>
 
         <div className="header-right">
           {!isPostDetail && (
-            <button className="submit-button" onClick={onSubmit}>
+            <button className="submit-button guide" onClick={onSubmit}>
               등록
             </button>
           )}

@@ -130,7 +130,7 @@ const Payment = () => {
             <p>{deliveryInfo.address}</p>
             
             {/* 새로운 배송 요청사항 드롭다운 */}
-            <div className="delivery-request-container">
+            <div className="delivery-request-container guide">
               <div className="delivery-input-wrapper">
                 <input 
                   type="text" 
@@ -268,7 +268,7 @@ const Payment = () => {
       {/* 결제 버튼 */}
       <div className="payment-footer">
         <button 
-          className="payment-submit-button"
+          className="payment-submit-button guide"
           onClick={handlePayment}
         >
           결제하기

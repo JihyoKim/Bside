@@ -66,7 +66,7 @@ const ArtistList = () => {
         dragConstraints={{ left: dragLimit, right: 0 }}
         dragElastic={dragLimit === 0 ? 0.05 : 0.2}
       >
-        <div className="artist-box-wrapper">
+        <div className="artist-box-wrapper guide2">
           <div className="artist-box">
             {artists.map((artist, idx) => (
               <div
@@ -86,7 +86,7 @@ const ArtistList = () => {
               </div>
             ))}
           </div>
-          <button className="artist-add-btn" onClick={goToMoreArtist}>
+          <button className="artist-add-btn guide" onClick={goToMoreArtist}>
             <img src={artistAdd} alt="Add" />
           </button>
         </div>

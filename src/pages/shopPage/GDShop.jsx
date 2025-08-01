@@ -125,7 +125,9 @@ const GDShop = () => {
                   <button
                     key={btn.name}
                     disabled={false}
-                    className={`tag-btn ${isActive ? 'active' : ''}`}
+                    className={`tag-btn ${
+                      isActive ? 'active' : btn.disabled ? '' : 'guide'
+                    }`}
                     style={{
                       borderColor: tagColor,
                       color: isActive ? activeFontColor : fontColor,
@@ -181,11 +183,11 @@ const GDShop = () => {
 
       {visibleCount < products.length && showLoadMore ? (
         <div className="shop-footer">
-          <button className="load-more-btn" onClick={showMore}>더보기</button>
+          <button className="load-more-btn guide" onClick={showMore}>더보기</button>
         </div>
       ) : (
         <div className="shop-footer">
-          <button className="load-more-btn" onClick={() => setVisibleCount(8)}>
+          <button className="load-more-btn guide" onClick={() => setVisibleCount(8)}>
             접기
           </button>
         </div>

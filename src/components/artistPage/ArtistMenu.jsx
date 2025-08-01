@@ -34,12 +34,13 @@ const ArtistMenu = ({ data }) => {
           const isActive =
             location.pathname.startsWith(`/main/artistPage/${artistId}/${tab}`) ||
             (location.pathname === `/main/artistPage/${artistId}` && tab === 'media');
+  
           return (
             <NavLink
               key={tab}
               to={`/main/artistPage/${artistId}/${tab}`}
               ref={(el) => (tabRefs.current[idx] = el)}
-              className="tab"
+              className={`tab ${isActive ? '' : 'guide'}`}
               style={{
                 color: isActive ? tabColor : inactiveColor,
                 fontWeight: isActive ? 600 : 400,

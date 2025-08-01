@@ -1,0 +1,15 @@
+.guide-toggle-btn {
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    z-index: 9999;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    background: #ff318c;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  

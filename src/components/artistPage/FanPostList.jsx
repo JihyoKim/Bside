@@ -67,7 +67,7 @@ const FanPostList = ({ posts }) => {
           className="fan-post-card"
           onClick={() => goToPost(post.id, post)}
         >
-          <div className="fan-header">
+          <div className="fan-header guide">
             <img src={post.profile} alt="profile" className="fan-profile-img" />
             <div className="fan-user-info">
               <span className="nickname">{post.nickname}</span>

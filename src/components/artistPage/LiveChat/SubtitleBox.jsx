@@ -8,13 +8,15 @@ const SubtitleBox = ({ videoRef, language = 'kr' }) => {
   const [isTyping, setIsTyping] = useState(false);
   const typingRef = useRef(null);
 
+  // ✅ 자막 끄기 선택 시 아무것도 렌더링하지 않음
+  if (language === 'off') return null;
+
   const getCurrentSubtitle = (subs, currentTime) => {
-    return subs.find(
-      (item, index) =>
-        currentTime >= item.time &&
-        currentTime <= item.end &&
-        index !== currentIndex
-    );
+    return subs.find((item, index) => (
+      currentTime >= item.time &&
+      currentTime <= item.end &&
+      index !== currentIndex
+    ));
   };
 
   const typeText = (text) => {
@@ -22,10 +24,11 @@ const SubtitleBox = ({ videoRef, language = 'kr' }) => {
     setIsTyping(true);
     let i = 0;
 
-    clearInterval(typingRef.current);
+    clearInterval(typingRef.current); // 이전 타이핑 중지
+
     typingRef.current = setInterval(() => {
       if (i < text.length) {
-        setDisplayText((prev) => (prev || '') + text.charAt(i));
+        setDisplayText(prev => (prev || '') + text.charAt(i));
         i++;
       } else {
         clearInterval(typingRef.current);
@@ -34,14 +37,17 @@ const SubtitleBox = ({ videoRef, language = 'kr' }) => {
     }, 80);
   };
 
+  // ✅ 영상 재생 시간 기반으로 자막 업데이트
   useEffect(() => {
     const interval = setInterval(() => {
       const currentTime = videoRef?.current?.currentTime || 0;
-      const subs = subtitlesData[language] || subtitlesData['kr'];
-      const subtitle = getCurrentSubtitle(subs, currentTime);
+      const subs = subtitlesData[language] || [];
 
-      if (subtitle && !isTyping) {
-        setCurrentIndex(subs.indexOf(subtitle));
+      const subtitle = getCurrentSubtitle(subs, currentTime);
+      const newIndex = subtitle ? subs.indexOf(subtitle) : null;
+
+      if (subtitle && !isTyping && newIndex !== currentIndex) {
+        setCurrentIndex(newIndex);
         typeText(subtitle.text);
       }
     }, 300);
@@ -49,21 +55,22 @@ const SubtitleBox = ({ videoRef, language = 'kr' }) => {
     return () => clearInterval(interval);
   }, [videoRef, language, currentIndex, isTyping]);
 
+  // ✅ 언어 변경 시 초기 자막 세팅
   useEffect(() => {
     const currentTime = videoRef?.current?.currentTime || 0;
-    const subs = subtitlesData[language] || subtitlesData['kr'];
-    const subtitle = getCurrentSubtitle(subs, currentTime);
+    const subs = subtitlesData[language] || [];
 
+    const subtitle = getCurrentSubtitle(subs, currentTime);
     if (subtitle) {
-      setCurrentIndex(subs.indexOf(subtitle));
+      const newIndex = subs.indexOf(subtitle);
+      setCurrentIndex(newIndex);
       typeText(subtitle.text);
     } else {
       setDisplayText('');
       setCurrentIndex(null);
     }
-  }, [language]);
+  }, [language, videoRef]);
 
-  // ✅ 클래스명: 'subtitle-box-container cn' or 'subtitle-box jp'
   return (
     <div className={`subtitle-box-container ${language}`}>
       <div className={`subtitle-box ${language}`}>

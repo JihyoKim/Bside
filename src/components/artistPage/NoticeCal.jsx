@@ -124,7 +124,7 @@ const NoticeCal = ({ noticeSchedule = [], selectedDate, onSelectDate, artistList
         <div className="calendar-toolbar">
           <div className="toolbar-left">
             <div className="artist-dropdown-container">
-              <button className="artist-select" onClick={toggleDropdown}>
+              <button className="artist-select guide" onClick={toggleDropdown}>
                 {selectedArtist}
                 <img src={arrow_down} alt="arrow down" className="arrow-down-icon" />
               </button>
@@ -136,7 +136,7 @@ const NoticeCal = ({ noticeSchedule = [], selectedDate, onSelectDate, artistList
                 </ul>
               )}
             </div>
-            <button className="today-btn" onClick={goToToday}>오늘</button>
+            <button className="today-btn guide" onClick={goToToday}>오늘</button>
           </div>
           <div className="alarm-icon-wrapper">
             <img

@@ -148,21 +148,21 @@ const Music = () => {
           <span>{formatTime(currentTime)}</span>
           <span>{formatTime(duration)}</span>
         </div>
-        <div className={`album-art-wrap ${isRotating ? 'rotating' : 'stopped'}`}>
+        <div className="album-art-wrap">
+          <div className={`album-rotate-ring ${isRotating ? 'rotating' : 'stopped'}`} />
           <div className="album-art-frame">
             <img className="album-art" src={albumImage} alt="앨범" />
-            <div className="album-center-hole">
-              <img className="album-cd" src={albumCD} alt="CD" />
-            </div>
           </div>
         </div>
       </div>
 
       <div className="music-bottom">
-        <div className="lyrics-preview" style={{ maxHeight: `${visibleLines * 1.75}em` }} onClick={() => setShowLyrics(true)}>
-          {lyricsData.slice(currentLyricIndex, currentLyricIndex + visibleLines).map((line, idx) => (
-            <p key={idx} className={idx === 0 ? 'pink' : ''}>{line.text}</p>
-          ))}
+        <div className="guide">
+          <div className="lyrics-preview" style={{ maxHeight: `${visibleLines * 1.75}em` }} onClick={() => setShowLyrics(true)}>
+            {lyricsData.slice(currentLyricIndex, currentLyricIndex + visibleLines).map((line, idx) => (
+              <p key={idx} className={idx === 0 ? 'pink' : ''}>{line.text}</p>
+            ))}
+          </div>
         </div>
         <div className="player-controls">
           <input
@@ -176,7 +176,7 @@ const Music = () => {
           <div className="control-icons">
             <img src={shuffleIcon} alt="셔플" />
             <img src={previousTrack} alt="이전곡" />
-            <button className="play-button" onClick={togglePlay}>
+            <button className="play-button guide" onClick={togglePlay}>
               <img src={isPlaying ? pauseIcon : playIcon} alt="재생" />
             </button>
             <img src={nextTrack} alt="다음곡" />
@@ -191,7 +191,9 @@ const Music = () => {
 <div className="streaming-mission-container">
         <div className="mission-tab" onClick={() => setIsMissionOpen((prev) => !prev)}>
           <span>등록된 앨범</span>
-          <img src={isMissionOpen ? downIconGray : upIconGray} alt="toggle" />
+          <span  className="guide" >
+            <img src={isMissionOpen ? downIconGray : upIconGray} alt="toggle" />
+          </span>
         </div>
 
         {isMissionOpen && (

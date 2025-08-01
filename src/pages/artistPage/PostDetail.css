@@ -100,6 +100,7 @@
   
   .fan-post-container .comments {
     margin: 24px 0 80px;
+    padding-bottom: 80px;
   }
   .fan-post-container .comment-actions {
     display: flex; gap: 16px;
@@ -174,7 +175,7 @@
   }
   
   .fan-post-container .comment-card {
-    margin-top: 16px;
+    margin-top: 20px;
     border-bottom: 1px solid #333;
     padding-bottom: 12px;
   }
@@ -235,6 +236,7 @@
   .fan-post-container .bookmark-item {
     display: flex;
     align-items: center;
+    padding: 0 10px;
   }
   
   .fan-post-container .action-icon {
@@ -249,12 +251,12 @@
   /* 댓글 삭제하기 css*/
   /* 삭제 모달 오버레이 */
   .fan-post-container .delete-modal-overlay {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.4);
     z-index: 1000;
     /* 부모 기준 중앙 정렬 */

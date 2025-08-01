@@ -30,15 +30,19 @@ const BottomNav = () => {
     <div className="BottomNav">
       <button onClick={() => handleNavClick('/main')}>
         <img src={currentPath === '/main' ? menuHomeOn : menuHomeOff} alt="Home" />
+        <span>HOME</span>
       </button>
       <button onClick={() => handleNavClick('/main/music')}>
         <img src={currentPath === '/main/music' ? menuMusicOn : menuMusicOff} alt="Music" />
+        <span>MUSIC</span>
       </button>
       <button onClick={() => handleNavClick('/main/shop')}>
         <img src={currentPath === '/main/shop' ? menuShopOn : menuShopOff} alt="Shop" />
+        <span>SHOP</span>
       </button>
       <button onClick={() => handleNavClick('/main/mypage')}>
         <img src={currentPath === '/main/mypage' ? menuMyOn : menuMyOff} alt="My Page" />
+        <span>MY</span>
       </button>
     </div>
   );

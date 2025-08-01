@@ -136,7 +136,9 @@ const RiizeShop = () => {
                   <button
                     key={btn.name}
                     disabled={false}
-                    className={`tag-btn ${isActive ? 'active' : ''}`}
+                    className={`tag-btn ${
+                      isActive ? 'active' : btn.disabled ? '' : 'guide'
+                    }`}
                     style={{
                       borderColor: tagColor,
                       color: isActive ? activeFontColor : fontColor,

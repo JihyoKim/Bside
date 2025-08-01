@@ -14,7 +14,7 @@ const ArtistCover = ({ data }) => {
       <div className="artist-info">
         <h2>{name}</h2>
         <button
-          className={`follow-btn ${isFollowing ? 'following' : 'follow'}`}
+          className={`follow-btn guide ${isFollowing ? 'following' : 'follow'}`}
           onClick={() => setIsFollowing(!isFollowing)}
           style={{
             backgroundColor: isFollowing ? 'rgba(255,255,255,0.8)' : followColor,

@@ -91,7 +91,9 @@ const LiveChat = ({ onClose }) => {
     <div className={`live-chat-container ${inputFocused ? 'fullscreen' : ''}`}>
       <div className="chat-header">
         <span>실시간 채팅</span>
-        <img src={xBTN} alt="닫기" className="chat-close" onClick={onClose} />
+        <span className="guide">
+          <img src={xBTN} alt="닫기" className="chat-close" onClick={onClose} />
+        </span>
       </div>
 
       <div className="chat-list" ref={chatListRef}>

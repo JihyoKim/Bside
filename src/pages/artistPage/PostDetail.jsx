@@ -114,7 +114,7 @@ const PostDetail = () => {
       )}
 
       <div className="post-actions">
-        <span className="action-item" onClick={toggleLike}>
+        <span className="action-item guide" onClick={toggleLike}>
           <img
             src={isLiked ? heartIconFilled : heartIcon}
             alt="heart"
@@ -125,7 +125,7 @@ const PostDetail = () => {
         <span className="action-item with-margin">
           <img src={commentIcon} alt="comment" className="action-icon" /> {comments.length}
         </span>
-        <span className="bookmark-item">
+        <span className="bookmark-item guide">
           <img
             className="save-icon"
             src={isSaved ? saveFilled : save}
@@ -138,7 +138,7 @@ const PostDetail = () => {
       <div className="comments">
         <p>댓글 {comments.length}</p>
 
-        <div className="comment-input">
+        <div className="comment-input guide3">
           <input
             type="text"
             placeholder="댓글을 입력해주세요"
@@ -146,7 +146,7 @@ const PostDetail = () => {
             onChange={(e) => setComment(e.target.value)}
           />
           <button
-            className={`send-btn ${comment.trim() ? 'active' : ''}`}
+            className={`send-btn ${comment.trim() ? 'active guide' : ''}`}
             onClick={handleSubmit}
           >
             <img src={arrowIcon} alt="send" className="send-icon" />
@@ -164,7 +164,7 @@ const PostDetail = () => {
                 </div>
               </div>
               <button
-                className="menu-btn"
+                className="menu-btn guide"
                 onClick={() => setShowDeleteId(prev => (prev === c.id ? null : c.id))}
               >
                 <img src={moreIcon} alt="더보기" className="more-icon" />
@@ -199,7 +199,7 @@ const PostDetail = () => {
                     }}
                   >
                     <img src={trashIcon} alt="삭제" className="trash-icon" />
-                    삭제하기
+                    <span className="guide">삭제하기</span>
                   </button>
                 </div>
               </div>
@@ -216,7 +216,7 @@ const PostDetail = () => {
                   취소
                 </button>
                 <button
-                  className="confirm-btn"
+                  className="confirm-btn guide"
                   onClick={() => handleDelete(confirmDeleteId)}
                 >
                   확인

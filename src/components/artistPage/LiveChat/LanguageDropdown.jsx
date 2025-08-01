@@ -51,18 +51,21 @@ const LanguageDropdown = ({ language, setLanguage, onClose }) => {
       </div>
 
       <ul className="language-dropdown-list">
-        {languages.map((lang) => (
-          <li
-            key={lang.code}
-            className={`language-item ${language === lang.code ? 'selected' : ''}`}
-            onClick={() => handleSelect(lang.code)}
-          >
-            {lang.label}
-            {language === lang.code && (
-              <img src={checkIcon} alt="selected" className="check-icon" />
-            )}
-          </li>
-        ))}
+        {languages.map((lang) => {
+          const isGuideLang = ['kr', 'en', 'jp', 'cn'].includes(lang.code);
+          return (
+            <li
+              key={lang.code}
+              className={`language-item ${language === lang.code ? 'selected' : ''} ${isGuideLang ? 'guide' : ''}`}
+              onClick={() => handleSelect(lang.code)}
+            >
+              {lang.label}
+              {language === lang.code && (
+                <img src={checkIcon} alt="selected" className="check-icon" />
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

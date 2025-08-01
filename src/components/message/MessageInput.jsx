@@ -81,12 +81,12 @@ const MessageInput = ({ onSendMessage }) => {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="message-input-form">
+      <form onSubmit={handleSubmit} className="message-input-form  guide3">
         <div className="input-wrapper" onClick={handleInputClick}>
           {/* 갤러리 버튼 */}
           <button 
             type="button"
-            className="gallery-button"
+            className="gallery-button guide"
             onClick={handleGalleryClick}
           >
             📷
@@ -114,7 +114,7 @@ const MessageInput = ({ onSendMessage }) => {
           />
           <button 
             type="submit" 
-            className={`send-button ${(inputText.trim() || selectedImage) ? 'active' : ''}`}
+            className={`send-button ${(inputText.trim() || selectedImage) ? 'active guide' : ''}`}
             disabled={!inputText.trim() && !selectedImage}
           >
             전송

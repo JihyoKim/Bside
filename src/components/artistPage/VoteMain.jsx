@@ -37,7 +37,7 @@ const VoteMain = () => {
             color: data.voteTextColor || '#fff'
           }}
         >
-          {data.buttonLabel}
+          <span className="guide">{data.buttonLabel}</span>
         </button>
       </div>
     </div>

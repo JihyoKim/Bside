@@ -144,7 +144,7 @@ const PostWrite = () => {
     <>
       <Header_Post onSubmit={handleSubmit} />
       <div className="post-write-container">
-        <div className="title-row">
+        <div className="title-row guide3">
           <input
             type="text"
             placeholder="제목 입력"
@@ -153,9 +153,11 @@ const PostWrite = () => {
             className="title-input"
           />
           <div className="icon-bar">
-            <label htmlFor="image-upload">
-              <img src={imageIcon} alt="upload" />
-            </label>
+            <div className="guide">
+              <label htmlFor="image-upload">
+                <img src={imageIcon} alt="upload"guide />
+              </label>
+            </div>
             <input
               id="image-upload"
               type="file"
@@ -205,7 +207,7 @@ const PostWrite = () => {
           {loadingLocation ? (
             <span>위치 가져오는 중...</span>
           ) : (
-            <span>{location ? location : '위치 추가'}</span>
+            <span className='guide'>{location ? location : '위치 추가'}</span>
           )}
         </div>
 

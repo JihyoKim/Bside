@@ -22,7 +22,7 @@ const Step1_Account = () => {
       <div className="step1-bottom-area">
         <div className="step1-button-group">
           <button
-            className="step1-google-btn"
+            className="step1-google-btn "
             onClick={() => handleSocialLogin('Google')}
           >
             <img
@@ -30,7 +30,7 @@ const Step1_Account = () => {
               alt="Google"
               style={{ width: '18px', marginRight: '8px' }}
             />
-            Continue with Google
+            <span className='guide'>Continue with Google</span>
           </button>
 
           <button
@@ -53,7 +53,7 @@ const Step1_Account = () => {
           </div>
           <button
             onClick={() => navigate('/onboarding/pin')}
-            className="step1-create-btn"
+            className="step1-create-btn guide"
           >
             Create an account
           </button>

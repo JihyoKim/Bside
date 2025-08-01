@@ -13,25 +13,25 @@ const RightSideIcons = ({ onToggleChat, onToggleShare, onToggleTranslate }) => {
   return (
     <div className="icon-panel">
       {/* ❤️ 좋아요 */}
-      <button onClick={() => setLiked(!liked)}>
+      <button onClick={() => setLiked(!liked)} className='guide'>
         <img src={liked ? heartRed : heartWhite} alt="like" />
         <span>1.3만</span>
       </button>
 
       {/* 💬 댓글 */}
-      <button onClick={onToggleChat}>
+      <button onClick={onToggleChat} className='guide'>
         <img src={commentIcon} alt="comment" />
         <span>795</span>
       </button>
 
       {/* 📤 공유 */}
-      <button onClick={onToggleShare}>
+      <button onClick={onToggleShare} className='guide'>
         <img src={shareIcon} alt="share" />
         <span>2천</span>
       </button>
 
       {/* 🌐 번역 */}
-      <button onClick={onToggleTranslate}>
+      <button onClick={onToggleTranslate} className='guide'>
         <img src={translateIcon} alt="translate" />
         <span>Trans</span>
       </button>
