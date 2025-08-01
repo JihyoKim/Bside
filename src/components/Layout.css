@@ -1,5 +1,5 @@
 .layout-scroll {
-  border: 1px solid green; /* 여백 디버깅 */
+  border: 1px solid purple; /* 여백 디버깅 */
 }
 
 /* 레이아웃 컨테이너: 페이지 전체 레이아웃 구조 */
@@ -28,10 +28,11 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-bottom: calc(var(--btm-nav) + env(safe-area-inset-bottom, 0));
-  -webkit-overflow-scrolling: touch;
   position: relative;
   min-height: 0;
+  padding-bottom: calc(var(--btm-nav) + env(safe-area-inset-bottom, 0));
+  /* padding-bottom: var(--btm-nav); */
+  -webkit-overflow-scrolling: touch;
   box-sizing: content-box;
 }
 

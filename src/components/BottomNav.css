@@ -1,9 +1,9 @@
 .BottomNav {
     position: fixed;
+    bottom: 0;
     width: 100vw;
     max-width: var(--max-width);
     min-width: 320px;
-    bottom: 0;
     height: var(--btm-nav);
     background-color: #000;
     display: flex;
@@ -22,5 +22,6 @@
   
   .BottomNav img {
     width: 100%;
-    padding: 0 20px var(--app-btm-nav);
+    padding: 0 20px env(safe-area-inset-bottom, 0);
+    box-sizing: content-box;
   }
