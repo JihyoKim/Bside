@@ -8,7 +8,7 @@
   flex-direction: column;
 }
 
-.layout-container.vh-fix {
+.vh-fix {
   height: calc(var(--vh, 1vh) * 100); /* 모바일 대응용 JS 기반 높이 */
 }
 

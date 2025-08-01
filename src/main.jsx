@@ -3,15 +3,6 @@ import './index.css';
 import App from './App/App';
 import { BrowserRouter } from 'react-router-dom';
 
-// ✅ 모바일 주소창 대응용 --vh 변수 설정
-const setVh = () => {
-  const vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-};
-setVh();
-window.addEventListener('resize', setVh);
-window.addEventListener('orientationchange', setVh);
-
 // ✅ 처음 로딩 시 max-width 값 복원
 const savedWidth = localStorage.getItem('app-max-width');
 if (savedWidth) {
