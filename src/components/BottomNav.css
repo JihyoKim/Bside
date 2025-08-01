@@ -22,6 +22,6 @@
   
   .BottomNav img {
     width: 100%;
-    padding: 0 20px env(safe-area-inset-bottom, 0);
-    box-sizing: content-box;
+    padding: 0 20px;
+    padding-bottom: var(--app-btm-nav);
   }
