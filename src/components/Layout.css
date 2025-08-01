@@ -1,50 +1,55 @@
+.layout-scroll {
+  border: 1px solid green; /* 여백 디버깅 */
+}
+
+/* 레이아웃 컨테이너: 페이지 전체 레이아웃 구조 */
 .layout-container {
-  position: relative; /* AlarmDetail 기준 부모로 설정 */
+  position: relative; /* AlarmDetail 등의 position 기준 */
   width: 100vw;
   max-width: var(--max-width);
   height: 100dvh;
-  overflow: hidden;   /* body 스크롤 방지 */
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
+/* JS 기반 vh 적용: 모바일 주소창 대응 */
 .vh-fix {
-  height: calc(var(--vh, 1vh) * 100); /* 모바일 대응용 JS 기반 높이 */
+  height: calc(var(--vh, 1vh) * 100);
 }
 
+/* 모바일 기기에서 vh 보정 */
+.mobile-device .layout-container {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+/* 내부 스크롤 영역 */
 .layout-container .layout-scroll {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-bottom: calc(var(--btm-nav) + env(safe-area-inset-bottom));
+  padding-bottom: calc(var(--btm-nav) + env(safe-area-inset-bottom, 0));
   -webkit-overflow-scrolling: touch;
   position: relative;
   min-height: 0;
-}
-
-.layout-scroll {
-  border: 1px solid orange; /* 여백 디버깅 */
-  padding-bottom: env(safe-area-inset-bottom, 0); /* iOS용 안전패딩 */
   box-sizing: content-box;
 }
 
-.layout-scroll {
-  padding-bottom: env(safe-area-inset-bottom, var(--btm-nav));
-}
+/* 하단 네비게이션이 없는 경우 패딩 제거 */
 .layout-container.no-bottom-nav .layout-scroll {
   padding-bottom: 0 !important;
 }
 
-  .layout-scroll::-webkit-scrollbar,
-  .side-menu::-webkit-scrollbar {
-    display: none !important;
-  }
-  
-  .layout-scroll,
-  .side-menu {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-  
+/* 스크롤바 제거 및 스타일 정리 */
+.layout-scroll,
+.side-menu {
+  -ms-overflow-style: none; /* IE */
+  scrollbar-width: none;    /* Firefox */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.layout-scroll::-webkit-scrollbar,
+.side-menu::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari */
+}

@@ -36,7 +36,7 @@ const Music = () => {
     const vh = window.innerHeight;
     const ratio = vh / vw;
     const minRatio = 2.093;
-    const maxRatio = 2.535;
+    const maxRatio = 2.635;
     const clampedRatio = Math.max(minRatio, Math.min(ratio, maxRatio));
     const lines = Math.round(((clampedRatio - minRatio) / (maxRatio - minRatio)) * 8 + 2);
     setVisibleLines(lines);
