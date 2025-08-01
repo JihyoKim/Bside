@@ -109,8 +109,6 @@ const Layout = () => {
     target.addEventListener('resize', setVh);
     return () => target.removeEventListener('resize', setVh);
   }, []);
-
-
   
 
   // ✅ 레이아웃 클래스 정리
@@ -121,7 +119,7 @@ const Layout = () => {
   ].filter(Boolean).join(' ');
 
   return (
-    <div className="layout-wrapper">
+    <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column', position: 'relative' }}>
       {HeaderComponent && <HeaderComponent />}
       <div className={layoutClass}>
         <div className="layout-scroll">
