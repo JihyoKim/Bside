@@ -23,7 +23,7 @@
 }
 
 .layout-scroll {
-  border: 1px solid blue; /* 여백 디버깅 */
+  border: 1px solid pink; /* 여백 디버깅 */
   padding-bottom: env(safe-area-inset-bottom, 0); /* iOS용 안전패딩 */
   box-sizing: content-box;
 }

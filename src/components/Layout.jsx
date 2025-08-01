@@ -86,6 +86,7 @@ const Layout = () => {
   if (isMobileDevice && window.innerWidth <= 900) {
     document.documentElement.classList.add('mobile-device');
   }
+  
 
   // ✅ JS 기반 vh 세팅
   useEffect(() => {
@@ -100,6 +101,12 @@ const Layout = () => {
     };
   }, []);
 
+  const layoutClass = [
+    'layout-container',
+    hideBottomNav && 'no-bottom-nav',
+    isMobileDevice && 'vh-fix'
+  ].filter(Boolean).join(' ');
+
   return (
     <div
       style={{
@@ -110,7 +117,7 @@ const Layout = () => {
       }}
     >
       {HeaderComponent && <HeaderComponent />}
-      <div className={`layout-container ${hideBottomNav ? 'no-bottom-nav' : 'vh-fix'}`}>
+      <div className={layoutClass}>
         <div className="layout-scroll">
           <Outlet />
         </div>
