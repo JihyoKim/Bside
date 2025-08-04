@@ -12,9 +12,10 @@ const Step3_Password = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleNext = () => {
-    if (password && password === confirmPassword) {
-      navigate('/onboarding/nickname');
-    }
+    // if (password && password === confirmPassword) {
+    //   navigate('/onboarding/nickname');
+    // }
+    navigate('/onboarding/nickname');
   };
 
   return (
@@ -56,13 +57,15 @@ const Step3_Password = () => {
           <div className="step3-input-block">
             <label>비밀번호</label>
             <div className="step3-input-wrapper">
-              <input
-                type="password"
-                className="step3-input"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="비밀번호 입력"
-              />
+              <span className="guide3">
+                <input
+                  type="password"
+                  className="step3-input"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="비밀번호 입력"
+                />
+              </span>
               <img src={eyeIcon} alt="눈 아이콘" className="step3-eye-icon" />
             </div>
             <p className="step3-guide">8 - 16자<br />영문, 숫자, 특수문자 모두 사용</p>
@@ -71,13 +74,15 @@ const Step3_Password = () => {
           <div className="step3-input-block">
             <label>비밀번호 확인</label>
             <div className="step3-input-wrapper">
-              <input
-                type="password"
-                className="step3-input"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                placeholder="비밀번호 다시 입력"
-              />
+              <span className="guide3">
+                <input
+                  type="password"
+                  className="step3-input"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  placeholder="비밀번호 다시 입력"
+                />
+              </span>
               <img src={eyeIcon} alt="눈 아이콘" className="step3-eye-icon" />
             </div>
             {password && confirmPassword && password !== confirmPassword ? (
@@ -88,7 +93,7 @@ const Step3_Password = () => {
           </div>
         </div>
 
-        <button className="step3-next-btn" onClick={handleNext}>다음</button>
+        <button className="step3-next-btn guide" onClick={handleNext}>다음</button>
       </div>
     </div>
   );

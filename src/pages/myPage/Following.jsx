@@ -313,7 +313,7 @@ const Following = () => {
       <div className="followingInner">
         <div className="following-header">
           <h1>내 팔로잉 목록</h1>
-          <div className="tab-container" ref={tabContainerRef}>
+          <div className="tab-container guide2" ref={tabContainerRef}>
             <div className="tab-scroll">
               {tabs.map((tab, index) => (
                 <button

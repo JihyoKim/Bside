@@ -46,7 +46,7 @@ const Step2_Pin = () => {
       <h2 className="step2-title">인증번호를 입력해 주세요</h2>
 
       <label className="step2-label">인증번호</label>
-      <div className="step2-input-group">
+      <div className="step2-input-group guide3">
         {inputs.map((ref, i) => (
           <input
             key={i}
@@ -62,7 +62,7 @@ const Step2_Pin = () => {
       </div>
 
       <button
-        className="step2-submit"
+        className="step2-submit guide"
         onClick={() => navigate('/onboarding/password')}
       >
         인증하기

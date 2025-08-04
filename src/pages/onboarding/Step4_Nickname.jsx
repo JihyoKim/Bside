@@ -11,9 +11,10 @@ const Step4_Nickname = () => {
   const [nickname, setNickname] = useState('');
 
   const handleNext = () => {
-    if (nickname.trim()) {
-      navigate('/onboarding/language');
-    }
+    // if (nickname.trim()) {
+    //   navigate('/onboarding/language');
+    // }
+    navigate('/onboarding/language');
   };
 
   return (
@@ -62,13 +63,15 @@ const Step4_Nickname = () => {
 
           <div className="step4-input-block">
             <label>Nickname 닉네임</label>
-            <input
-              type="text"
-              className="step4-input"
-              value={nickname}
-              onChange={(e) => setNickname(e.target.value)}
-              placeholder="닉네임을 입력하세요"
-            />
+              <span className="guide3">
+                <input
+                  type="text"
+                  className="step4-input"
+                  value={nickname}
+                  onChange={(e) => setNickname(e.target.value)}
+                  placeholder="닉네임을 입력하세요"
+                />
+              </span>
           </div>
         </div>
 

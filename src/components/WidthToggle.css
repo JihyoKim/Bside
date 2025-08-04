@@ -45,6 +45,30 @@
     margin-right: 24px;
   }
   
+  .leftSide .guide-toggle-btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 16px;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffa3eb;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .leftSide .guide-toggle-btn:hover {
+    background-color: #e85fc7;
+  }
+  
+  .leftSide .guide-toggle-btn:active {
+    background-color: #cc4fb1;
+    transform: scale(0.98);
+  }
 
 
 @media (max-width: 1024px) {

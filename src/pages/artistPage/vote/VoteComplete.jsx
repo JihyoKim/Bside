@@ -30,7 +30,7 @@ const VoteComplete = () => {
       </div>
 
       <button className="vote-complete-btn" onClick={() => navigate(`/main/artistPage/${artistId}/vote/`)}>
-        완료
+        <span className="guide">완료</span>
       </button>
     </div>
   );

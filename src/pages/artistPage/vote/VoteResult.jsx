@@ -71,7 +71,7 @@ const VoteResult = () => {
         </div>
 
         <button className="vote-submit2-btn" onClick={() => navigate(`/main/artistPage/${artistId}/vote/complete/`)}>
-          확인
+          <span className="guide">확인</span>
         </button>
       </div>
     </div>

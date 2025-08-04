@@ -1,15 +1,28 @@
-.guide-toggle-btn {
-    position: fixed;
-    bottom: 150px;
-    right: 20px;
-    z-index: 9999;
-    padding: 8px 16px;
-    font-size: 14px;
-    border: none;
-    border-radius: 20px;
-    background: #ff318c;
-    color: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    cursor: pointer;
-  }
-  
+.home-container .guide-toggle-btn {
+  position: fixed;
+  bottom: 145px;
+  right: 16px;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50%;
+  background: #ff318c;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  word-break: keep-all;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.1;
+  padding-top: 12px;
+}
+
+.home-container .guide-toggle-btn span {
+  font-size: 11px;
+}

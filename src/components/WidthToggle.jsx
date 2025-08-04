@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Logo from '../assets/BsideAppLogo.svg'; 
+import GuideToggleBtn from './GuideToggleBtn';
 import './WidthToggle.css'
 
 const WidthToggle = () => {
@@ -32,6 +33,7 @@ const WidthToggle = () => {
       <div className='toogleBtn'>
         <button className='mobileBtn' onClick={() => setMaxWidth('390px')}>모바일</button>
         <button className='tabletBtn' onClick={() => setMaxWidth('768px')}>태블릿</button>
+        <GuideToggleBtn />
       </div>
     </div>
   );

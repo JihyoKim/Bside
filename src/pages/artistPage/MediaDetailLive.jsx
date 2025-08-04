@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { useParams } from 'react-router-dom';
 import './MediaDetailLive.css';
 
 import SubtitleBox from '../../components/artistPage/LiveChat/SubtitleBox';
@@ -7,13 +8,15 @@ import ShareModal from '../../components/artistPage/LiveChat/ShareModal';
 import LanguageDropdown from '../../components/artistPage/LiveChat/LanguageDropdown';
 import LiveChat from '../../components/artistPage/LiveChat/LiveChat';
 
-import videoFile from '../../assets/idol-video.mp4';
+import videoFile1 from '../../assets/idol-video.mp4'; //live-rose용
+import videoFile2 from '../../assets/idol-video2.mp4'; // live-giselle용
 import aespaLogo from '../../assets/live/aespaLogo.png';
 import soundOn from '../../assets/live/soundOn.png';
 import soundOff from '../../assets/live/soundOff.png';
 import redBall from '../../assets/live/redBall.png'; // 🔴 빨간 점
 
 const MediaDetailLive = () => {
+  const { mediaId } = useParams();
   const videoRef = useRef(null);
   const [showChat, setShowChat] = useState(false);
   const [showShare, setShowShare] = useState(false);
@@ -38,6 +41,10 @@ const MediaDetailLive = () => {
     setShowTranslate(false);
   };
 
+  const isGiselleLive = mediaId === 'live-giselle';
+  const videoSrc = isGiselleLive ? videoFile2 : videoFile1;
+  const groupName = isGiselleLive ? '에스파' : '블랙핑크';
+
   return (
     <div className="media-detail-container">
       {/* 🎥 배경 비디오 */}
@@ -49,7 +56,7 @@ const MediaDetailLive = () => {
         ref={videoRef}
         playsInline
       >
-        <source src={videoFile} type="video/mp4" />
+        <source src={videoSrc} type="video/mp4" />
       </video>
 
       {/* 🌑 어두운 배경 오버레이 */}
@@ -62,7 +69,7 @@ const MediaDetailLive = () => {
         <div className="left-info">
           <img src={aespaLogo} alt="aespa" className="aespa-logo" />
           <div className="text-box">
-            <div className="group-name">블랙핑크</div>
+            <div className="group-name">{groupName}</div>
             <div className="viewer-count">
               5.3만 시청 중
               <img src={redBall} alt="live" className="live-dot" />
@@ -91,7 +98,7 @@ const MediaDetailLive = () => {
       )}
 
       {/* 💬 실시간 자막 */}
-      <SubtitleBox videoRef={videoRef} language={language} />
+      <SubtitleBox videoRef={videoRef} language={language} mediaId={mediaId} />
 
       {/* ➡️ 우측 아이콘 */}
       <RightSideIcons

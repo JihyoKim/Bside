@@ -118,7 +118,7 @@ const Step5_Language = () => {
         <img src={languageImg} alt="언어 이미지" className="step5-image" />
         <p className="step5-fixed-label">Language (번역 언어)</p>
 
-        <div className="step5-dropdown" onClick={handleLanguageClick}>
+        <div className="step5-dropdown guide" onClick={handleLanguageClick}>
           <span>{selectedLanguage}</span>
           <img src={dropdownIcon} alt="드롭다운" className="step5-dropdown-icon" />
         </div>

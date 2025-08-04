@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './SubtitleBox.css';
 import subtitlesData from './SubtitleData';
+import subtitlesData2 from './SubtitleData2'; 
 
-const SubtitleBox = ({ videoRef, language = 'kr' }) => {
+const SubtitleBox = ({ videoRef, language = 'kr', mediaId }) => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(null);
   const [isTyping, setIsTyping] = useState(false);
   const typingRef = useRef(null);
 
-  // ✅ 자막 끄기 선택 시 아무것도 렌더링하지 않음
   if (language === 'off') return null;
 
   const getCurrentSubtitle = (subs, currentTime) => {
@@ -23,8 +23,7 @@ const SubtitleBox = ({ videoRef, language = 'kr' }) => {
     setDisplayText('');
     setIsTyping(true);
     let i = 0;
-
-    clearInterval(typingRef.current); // 이전 타이핑 중지
+    clearInterval(typingRef.current);
 
     typingRef.current = setInterval(() => {
       if (i < text.length) {
@@ -37,11 +36,13 @@ const SubtitleBox = ({ videoRef, language = 'kr' }) => {
     }, 80);
   };
 
-  // ✅ 영상 재생 시간 기반으로 자막 업데이트
   useEffect(() => {
     const interval = setInterval(() => {
       const currentTime = videoRef?.current?.currentTime || 0;
-      const subs = subtitlesData[language] || [];
+
+      // ✅ mediaId에 따라 자막 데이터 선택
+      const selectedData = mediaId === 'live-giselle' ? subtitlesData2 : subtitlesData;
+      const subs = selectedData[language] || [];
 
       const subtitle = getCurrentSubtitle(subs, currentTime);
       const newIndex = subtitle ? subs.indexOf(subtitle) : null;
@@ -53,12 +54,12 @@ const SubtitleBox = ({ videoRef, language = 'kr' }) => {
     }, 300);
 
     return () => clearInterval(interval);
-  }, [videoRef, language, currentIndex, isTyping]);
+  }, [videoRef, language, currentIndex, isTyping, mediaId]);
 
-  // ✅ 언어 변경 시 초기 자막 세팅
   useEffect(() => {
     const currentTime = videoRef?.current?.currentTime || 0;
-    const subs = subtitlesData[language] || [];
+    const selectedData = mediaId === 'live-giselle' ? subtitlesData2 : subtitlesData;
+    const subs = selectedData[language] || [];
 
     const subtitle = getCurrentSubtitle(subs, currentTime);
     if (subtitle) {
@@ -69,7 +70,7 @@ const SubtitleBox = ({ videoRef, language = 'kr' }) => {
       setDisplayText('');
       setCurrentIndex(null);
     }
-  }, [language, videoRef]);
+  }, [language, videoRef, mediaId]);
 
   return (
     <div className={`subtitle-box-container ${language}`}>

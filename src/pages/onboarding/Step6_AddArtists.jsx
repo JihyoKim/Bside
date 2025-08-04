@@ -131,7 +131,7 @@ const Step6_AddArtists = () => {
       <div className="step6-gradient-overlay" />
 
       {/* ✅ 다음 버튼 → 로딩 페이지로 이동 */}
-      <button className="step6-next-btn" onClick={() => navigate('/onboarding/loading')}>
+      <button className="step6-next-btn guide" onClick={() => navigate('/onboarding/loading')}>
         다음
       </button>
     </div>

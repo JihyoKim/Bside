@@ -4,7 +4,7 @@ import './FloatingAddButton.css';
 const FloatingAddButton = ({ onClick, bgColor = '#cd3134', lineColor = '#fff' }) => {
   return (
     <button
-      className="floating-add-btn"
+      className="floating-add-btn guide"
       onClick={onClick}
       style={{ backgroundColor: bgColor }}
     >

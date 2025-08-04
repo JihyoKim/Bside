@@ -178,7 +178,7 @@ const PostWrite = () => {
 
           {images.length > 0 && images.length < 3 && (
             <>
-              <label htmlFor="additional-upload" className="add-image-button">+</label>
+              <label htmlFor="additional-upload" className="add-image-button guide">+</label>
               <input
                 id="additional-upload"
                 type="file"

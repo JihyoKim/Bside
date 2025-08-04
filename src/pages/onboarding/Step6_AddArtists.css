@@ -174,7 +174,7 @@ input, textarea {
 /* ✅ 아티스트 박스 */
 .step6-container .artist-box {
   position: relative;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   overflow: hidden;
   cursor: pointer;
   text-align: center;
