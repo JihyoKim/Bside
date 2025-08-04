@@ -183,12 +183,14 @@ const GDShop = () => {
 
       {visibleCount < products.length && showLoadMore ? (
         <div className="shop-footer">
-          <button className="load-more-btn guide" onClick={showMore}>더보기</button>
+          <button className="load-more-btn" onClick={showMore}>
+            <span className="guide">더보기</span>
+          </button>
         </div>
       ) : (
         <div className="shop-footer">
-          <button className="load-more-btn guide" onClick={() => setVisibleCount(8)}>
-            접기
+          <button className="load-more-btn" onClick={() => setVisibleCount(8)}>
+            <span className="guide">접기</span>
           </button>
         </div>
       )}

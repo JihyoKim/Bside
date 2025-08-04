@@ -86,7 +86,7 @@ const ArtistList = () => {
               </div>
             ))}
           </div>
-          <button className="artist-add-btn guide" onClick={goToMoreArtist}>
+          <button className="artist-add-btn guide1" onClick={goToMoreArtist}>
             <img src={artistAdd} alt="Add" />
           </button>
         </div>

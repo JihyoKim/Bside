@@ -57,8 +57,8 @@ const Profile = () => {
 
       {/* 하단 스탯 */}
       <div className="profile-stats">
-        <div className="stat guide">
-          <div className="stat-top">
+        <div className="stat">
+          <div className="stat-top guide">
             <a href="#" onClick={goToTicket}>
               <img src={ticketIcon} alt="ticket" className="ticket" />
             </a>
@@ -66,8 +66,8 @@ const Profile = () => {
           <div className="stat-bottom">6</div>
         </div>
 
-        <div className="stat guide">
-          <div className="stat-top">
+        <div className="stat">
+          <div className="stat-top guide">
             <a href="#" onClick={goToPoint}>
               <img src={pointIcon} alt="point" className="point" />
             </a>
@@ -82,8 +82,8 @@ const Profile = () => {
           <div className="stat-bottom">팔로워</div>
         </div>
 
-        <div className="stat following guide">
-          <div className="stat-top stat-label">
+        <div className="stat following">
+          <div className="stat-top stat-label guide">
             <a href="#" onClick={goToFollowing}>88</a>
           </div>
           <div className="stat-bottom">팔로잉</div>

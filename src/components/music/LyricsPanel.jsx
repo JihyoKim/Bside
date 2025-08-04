@@ -25,9 +25,15 @@ const LyricsPanel = ({ visible, onClose }) => {
       className={`lyrics-panel ${visible ? 'show' : ''}`}
     >
       <div className="lyrics-tabs">
-        <button className={selectedTab === 'lyrics' ? 'active' : 'guide'} onClick={() => setSelectedTab('lyrics')}>가사</button>
-        <button className={selectedTab === 'translation' ? 'active' : 'guide'} onClick={() => setSelectedTab('translation')}>해석</button>
-        <button className={selectedTab === 'pronunciation' ? 'active' : 'guide'} onClick={() => setSelectedTab('pronunciation')}>발음</button>
+        <button className={selectedTab === 'lyrics' ? 'active' : ''} onClick={() => setSelectedTab('lyrics')}>
+          <span className="guide">가사</span>
+        </button>
+        <button className={selectedTab === 'translation' ? 'active' : ''} onClick={() => setSelectedTab('translation')}>
+          <span className="guide">해석</span>
+        </button>
+        <button className={selectedTab === 'pronunciation' ? 'active' : ''} onClick={() => setSelectedTab('pronunciation')}>
+          <span className="guide">발음</span>
+        </button>
       </div>
       <div className="lyrics-content">
         <div className="lyrics-scroll-inner">

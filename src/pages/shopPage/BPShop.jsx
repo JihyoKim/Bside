@@ -181,7 +181,7 @@ const BPShop = () => {
         <div className="product-grid">
           {products.map((item, index) => (
             <div
-              className={`product-card clickable ${index === 0 ? 'guide' : ''}`}
+              className={`product-card clickable ${index === 0 ? 'guide1' : ''}`}
               key={item.id}
               onClick={() => handleProductClick(item.id)}
             >

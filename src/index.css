@@ -113,6 +113,25 @@ body {
 .guide::after {
 content: '';
 position: absolute;
+top: 0px;
+right: -10px;
+width: 4px;
+height: 4px;
+border-radius: 50%;
+background: #E91111;
+opacity: 100%;
+z-index: 10;
+}
+
+
+.guide1 {
+	position: relative;
+}
+
+
+.guide1::after {
+content: '';
+position: absolute;
 bottom: -10px;
 right: -20px;
 width: 30px;
@@ -206,6 +225,7 @@ z-index: 10;
 }
 
 .guide-off .guide::after,
+.guide-off .guide1::after,
 .guide-off .guide2::after,
 .guide-off .guide3::after {
   display: none !important;

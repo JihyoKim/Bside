@@ -176,7 +176,7 @@ const Music = () => {
           <div className="control-icons">
             <img src={shuffleIcon} alt="셔플" />
             <img src={previousTrack} alt="이전곡" />
-            <button className="play-button guide" onClick={togglePlay}>
+            <button className="play-button guide1" onClick={togglePlay}>
               <img src={isPlaying ? pauseIcon : playIcon} alt="재생" />
             </button>
             <img src={nextTrack} alt="다음곡" />

@@ -72,7 +72,7 @@ const Media = () => {
             style={{ cursor: 'pointer' }}
           >
             <div
-              className={`media-thumbnail${item.mediaId?.includes('live') ? ' guide' : ''}`}
+              className={`media-thumbnail${item.mediaId?.includes('live') ? ' guide1' : ''}`}
             >
               <img src={item.img} alt={item.title} />
               {item.live && <span className="live-badge">Live</span>}

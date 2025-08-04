@@ -142,7 +142,7 @@ const NewItems = () => {
                   />
                   <div className="input-icons">
                     <button
-                      className={`send ${inputValues[idx].trim() ? 'active guide' : ''}`}
+                      className={`send ${inputValues[idx].trim() ? 'active guide1' : ''}`}
                       onClick={() => handleSend(idx)}
                     >
                       ↑

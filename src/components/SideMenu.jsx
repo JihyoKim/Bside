@@ -60,7 +60,9 @@ const SideMenu = ({ isOpen, onToggle }) => {
             </ul>
           </div>
 
-          <p className="logout guide" onClick={handleLogout}>로그아웃</p>
+          <p className="logout" onClick={handleLogout}>
+            <span className="guide">로그아웃</span>
+          </p>
 
           <div className="bottom-actions">
             <div>

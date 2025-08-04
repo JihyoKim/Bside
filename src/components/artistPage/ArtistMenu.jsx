@@ -40,13 +40,15 @@ const ArtistMenu = ({ data }) => {
               key={tab}
               to={`/main/artistPage/${artistId}/${tab}`}
               ref={(el) => (tabRefs.current[idx] = el)}
-              className={`tab ${isActive ? '' : 'guide'}`}
+              className="tab"
               style={{
                 color: isActive ? tabColor : inactiveColor,
                 fontWeight: isActive ? 600 : 400,
               }}
             >
-              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              <span className={isActive ? '' : 'guide'}>
+                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              </span>
             </NavLink>
           );
         })}
