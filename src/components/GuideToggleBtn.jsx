@@ -11,7 +11,7 @@ const GuideToggleBtn = () => {
 
   return (
     <button className="guide-toggle-btn" onClick={() => setGuideOn(prev => !prev)}>
-      <span>가이드</span> {guideOn ? 'Off' : 'On'}
+      <span>가이드</span>{guideOn ? 'OFF' : 'ON'}
     </button>
   );
 };

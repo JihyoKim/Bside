@@ -29,23 +29,31 @@ const BottomNav = () => {
   return (
     <div className="BottomNav">
       <button onClick={() => handleNavClick('/main')}>
-        <img src={currentPath === '/main' ? menuHomeOn : menuHomeOff} alt="Home" />
-        <span className={currentPath !== '/main' ? 'guide' : ''}>HOME</span>
+        <span className={currentPath !== '/main' ? 'guide' : ''}>
+          <img src={currentPath === '/main' ? menuHomeOn : menuHomeOff} alt="Home" />
+        </span>
+        <span>HOME</span>
       </button>
 
       <button onClick={() => handleNavClick('/main/music')}>
-        <img src={currentPath === '/main/music' ? menuMusicOn : menuMusicOff} alt="Music" />
-        <span className={currentPath !== '/main/music' ? 'guide' : ''}>MUSIC</span>
+        <span className={currentPath !== '/main/music' ? 'guide' : ''}>
+          <img src={currentPath === '/main/music' ? menuMusicOn : menuMusicOff} alt="Music" />
+        </span>
+        <span>MUSIC</span>
       </button>
 
       <button onClick={() => handleNavClick('/main/shop')}>
-        <img src={currentPath === '/main/shop' ? menuShopOn : menuShopOff} alt="Shop" />
-        <span className={currentPath !== '/main/shop' ? 'guide' : ''}>SHOP</span>
+        <span className={currentPath !== '/main/shop' ? 'guide' : ''}>
+          <img src={currentPath === '/main/shop' ? menuShopOn : menuShopOff} alt="Shop" />
+        </span>
+        <span>SHOP</span>
       </button>
 
       <button onClick={() => handleNavClick('/main/mypage')}>
-        <img src={currentPath === '/main/mypage' ? menuMyOn : menuMyOff} alt="My Page" />
-        <span className={currentPath !== '/main/mypage' ? 'guide' : ''}>MY</span>
+        <span className={currentPath !== '/main/mypage' ? 'guide' : ''}>
+          <img src={currentPath === '/main/mypage' ? menuMyOn : menuMyOff} alt="My Page" />
+        </span>
+        <span>MY</span>
       </button>
     </div>
   );
