@@ -20,25 +20,45 @@ const Header_Sub = () => {
 
   const handleGoBack = () => {
     const panel = document.querySelector('.lyrics-panel.show');
+    const path = location.pathname;
+  
+    // 1) 가사 패널 열려 있으면 닫기
     if (panel) {
       window.dispatchEvent(new Event('closeLyricsPanel'));
-    } else if (
-      location.pathname === '/main/music' ||
-      (location.pathname.startsWith('/main/shop') && !location.pathname.startsWith('/main/shop/product')) ||
-      (location.pathname.startsWith('/main/artistPage') && location.pathname !== '/main/artistPage/blackpink/media/live-rose') ||
-      (location.pathname.startsWith('/main/artistPage') && location.pathname !== '/main/artistPage/aespa/media/live-giselle')
-    ) {
-      navigate('/main');
-    } else if (
-      location.pathname === '/main/mypage/ticket' ||
-      location.pathname === '/main/mypage/point'
-    ) {
-      navigate('/main/mypage');
-    } else if (location.pathname === '/main/message') {
-      navigate('/main/mypage'); 
-    } else {
-      navigate(-1);
+      return;
     }
+  
+    // 2) /main으로 보내는 기준들
+    const isMusic = path === '/main/music';
+    const isShopList = path.startsWith('/main/shop') && !path.startsWith('/main/shop/product');
+  
+    // 3) artistPage에서 /main으로 보내되, '예외 경로'는 제외
+    const artistPageExceptions = [
+      '/main/artistPage/blackpink/media/live-rose',
+      '/main/artistPage/aespa/media/live-giselle',
+    ];
+    const isArtistPageButNotException =
+      path.startsWith('/main/artistPage') && !artistPageExceptions.includes(path);
+  
+    if (isMusic || isShopList || isArtistPageButNotException) {
+      navigate('/main');
+      return;
+    }
+  
+    // 4) 마이페이지 티켓/포인트 -> 마이페이지 메인으로
+    if (path === '/main/mypage/ticket' || path === '/main/mypage/point') {
+      navigate('/main/mypage');
+      return;
+    }
+  
+    // 5) 메시지 페이지 -> 마이페이지 메인으로
+    if (path === '/main/message') {
+      navigate('/main/mypage');
+      return;
+    }
+  
+    // 6) 그 외에는 히스토리 뒤로
+    navigate(-1);
   };
 
   const isShopPage = location.pathname.startsWith('/main/shop');
